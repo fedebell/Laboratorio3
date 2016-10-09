@@ -1,0 +1,31 @@
+﻿-Capire meglio "teoricamente" la formula per la resistenza interna dell'amperometro data da forti
+
+-Le misure in continua che faremo in accoppiamento AC non saranno tutte nulle?
+
+-Non ci potrebbe essere uno sfasamento tra il pulse e l'onda quadra?
+
+-Fare le misure della parte e (veloci) e tutta la seconda parte.
+
+-Lo sapete usare github? Non è facile fare il versioning quando più persone devono lavorare sullo stesso file. 
+Si può anche usare google drive ma ognuno deve dichiarare esplicitamente su quale sottosezione lavora. 
+Quindi vi prego da adesso in avanti la relazione si divide in tre e ognuno lavora su un terzo e dichiara esplicitamente quale è il suo terzo, tenendo aggiornati tutti su un gruppo di wapp di solo noi tre che ora creo. 
+La cosa migliore certamente sarebbe lavorare insieme fisicmente quindi quanto più siste in bibblioteca meglio è.
+
+
+
+
+
+Giulia. (mettici anche la data)
+Ecco cosa ho fatto o aggiornato:
+- Ho cambiato gli errori di Vout/Vin con gli errori in quadratura, sia per 1K che per 4M.
+- Ho calcolato (nella parte del partitore di tensione) la somma e il prodotto delle intensità di corrente misurate con analogico e digitale e ho calcolato gli errori su somma e prodotto con quello in quadratura.
+	Non sono però sicura dell'errore sulla somma, riguardatelo per sicurezza.
+- Ho scritto i dati delle frequenze.
+
+
+Da Fare:
+- spiegazione del perchè misure di corrente con analogico e digitale sono così diverse.
+- Altre cose da fare/spiegare/migliorare le trovate nella relazione.
+
+Federico - 7/10/16
+Ho concluso la relazione io la manderei
