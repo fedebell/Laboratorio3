@@ -34,7 +34,9 @@ B_o = 20 * pylab.log10(A_o)
 dB_o = 8.7*dA_o/A_o
 
 
-par_o, cov_o = curve_fit(linear, logf_o, B_o)
+#Aggiungere errore sulle x con la stima del coeffiente angolare
+#par_o, cov_o = curve_fit(linear, logf_o, B_o, pylab.sqrt(dB_o*dB_o+0.1*dlog_o*dlog_o))
+par_o, cov_o = curve_fit(linear, logf_o, B_o, dB_o)
 
 #Trascuriamo la resistenza in in uscita del generatore di funzioni cosi che V_in sia circa costante. 
 Vin = 5 #Misurata una volta per tutte l'ampiezza massima
@@ -44,9 +46,13 @@ dA_a = A_a *(dVout_a/Vout_a + dVin/Vin)
 B_a = 20 * pylab.log10(A_a)
 dB_a = 8.7*dA_a/A_a
 
-par_a, cov_a = curve_fit(linear, logf_a, B_a)
+#Aggiungere errore sulle x con la stima del coeffiente angolare
+#par_a, cov_a = curve_fit(linear, logf_a, B_a, pylab.sqrt(dB_a*dB_a+0.1*dlog_a*dlog_a))
+par_a, cov_a = curve_fit(linear, logf_a, B_a, dB_a)
 
 
+A = numpy.concatenate((A_o, A_a))
+dA = numpy.concatenate((dA_o, dA_a))
 B = numpy.concatenate((B_o, B_a))
 dB = numpy.concatenate((dB_o, dB_a))
 f = numpy.concatenate((f_o, f_a))
@@ -59,7 +65,8 @@ pylab.figure(1)
 pylab.title('Bode diagram of low-pass RC filter')
 pylab.xlabel('frequency [kHz]')
 pylab.ylabel('gain [dB]')
-pylab.errorbar(f, B, dB, df, "o", color="black")
+pylab.errorbar(f_o, B_o, dB_o, df_o, "o", color="black")
+pylab.errorbar(f_a, B_a, dB_a, df_a, "o", color="black")
 
 #Routine per stampare due rette:
 div = 1000
@@ -85,5 +92,31 @@ for i in range(len(bucket)):
 
 pylab.plot(bucket, retta, color = "blue")
 
+
 pylab.show()
+
+pylab.figure(2)
+pylab.title('Bode diagram of low-pass RC filter')
+pylab.xlabel('frequency [kHz]')
+pylab.xscale("log")
+pylab.ylabel('gain [dB]')
+pylab.errorbar(f_o, B_o, dB_o, df_o, "o", color="black")
+pylab.errorbar(f_a, B_a, dB_a, df_a, "o", color="black")
+
+par, cov = curve_fit(linear, f, A, dA)
+
+div = 1000
+bucket = numpy.array([0.0 for i in range(div)])
+retta = numpy.array([0.0 for i in range(div)])
+inc = (f_a.max()-f_a.min())/div 
+for i in range(len(bucket)):
+        
+        bucket[i]=float(i)*inc
+        retta[i] = linear(bucket[i], par_a[0]) #non sono sciuro di doverci mttere questo [0]
+
+pylab.plot(bucket, retta, color = "green")
+
+
+pylab.show()
+
 
