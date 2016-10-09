@@ -90,6 +90,3 @@ Dove `-a` aggiunge in automatico i nuovi file e `-F -` vi fa digitare il messagg
 
 Per sapere quali file vanno aggiunti da `-a` e quali non interessano, `git` legge il file `.gitignore`. Dopo averci dato un occhiata, è abbastanza intuitivo come usarlo.
 
-## Makefile:
-
-È mio, lasciatelo pure perdere (AleCandido)
