@@ -17,9 +17,11 @@
 \section{Scopo e strumentazione}
 
 Misurare la frequenza di un filtro passa-basso e studiare la variazione della risposta del filtro in funzione del carico applicato a valle. In seguito studiare la l'attenuazione di un filto passa-banda.
+\rem{Aggiungere strumentazione}
 
 \section{Filtro passa-basso}
-\paragraph{Progettazione filtro}
+
+\paragraph{Progettazione filtro.}
 Si vogliono trovare i valori dei componenti resistivo e capacitivo del filtro perchè trasmetta un segnale sinusoidale di frequenza $2kHz$ e attenui il rumore a $20kHz$.
 
 \begin{figure}[h]
@@ -29,21 +31,22 @@ Si vogliono trovare i valori dei componenti resistivo e capacitivo del filtro pe
 \end{figure}
 
 Risolvendo il circuito e chiamando $r$ la resitenza di carico e $R$ la resistenza del passabasso si ottiene la seguente relazione per il modulo dell'attenuazione:
+
 $\vert A(\omega) \vert = \frac{1}{\sqrt{(1+x)^2+(\frac{f}{f_{0}})^2}} $. Dove $f_0$ è la frequenza di taglio del filtro. Definite $f_2 = 20 kHz$ e $f_1 = 2 kHz$ le freuenze del rumore e del segnale e $x = \frac {R}{r}$ otteniamo come rapporto di attenuazione: 
 $\vert \frac{A(2 kHz)}{A(20 kHz} \vert = \sqrt{\frac{{f_0}^2 (1+x)^2 + {f_2}^2}{{f_0}^2 (1+x)^2 + {f_1}^2}}$
 
-Selezionando una resistenza $R = 1 k\Omega$ del filtro molto minore del carico $r = 100 k\Omega$ otteniamo $x = 0.01$ cioè un valore per x trascurabile e possiamo scrivere (le unità sono state prese $kHz$): 
-$\vert \frac{A(2 kHz)}{A(20 kHz} \vert = \sqrt{\frac{{f_0}^2  + 400}{{f_0}^2 + 4}}$. Con n condensatore $C = 80 nF$ si ottiene una rapporto segnale rumore $\vert \frac{A(2 kHz)}{A(20 kHz} \vert \sim 7$ e una attenuazione del segnale $\vert A(2 kHz) \vert \sim \frac{1}{\sqrt{2}}$.
+Selezionando una resistenza $R = 1 k\Omega$ del filtro molto minore del carico $r = 100 k\Omega$ otteniamo $x = 0.01$ cioè un valore per $x$ trascurabile e possiamo scrivere (le unità sono state prese $kHz$): 
+$\vert \frac{A(2 kHz)}{A(20 kHz} \vert = \sqrt{\frac{{f_0}^2  + 400}{{f_0}^2 + 4}}$. Si sceglierà la frequenza di taglio del filtro essere $f_0 = 2kHz$. Con un condensatore $C = 80 nF$ si ottiene una rapporto segnale rumore $\vert \frac{A(2 kHz)}{A(20 kHz} \vert \sim 7$ e una attenuazione del segnale $\vert A(2 kHz) \vert \sim \frac{1}{\sqrt{2}}$.
 
-Abbiamo a disposizione un condensatore da $C = \pm nf$, e questo implica avere una resistenza $R = \pm k\Omega$.
+Abbiamo a disposizione un condensatore da $C = \pm nF$, e questo implica avere una resistenza $R = \pm k\Omega$.
 La frequenza di taglio quindi è $f_0 = \pm kHz$ e da questi valori stimiamo i valori di $\vert A(2 kHz) \vert = \pm $ e di $\vert \frac{A(2 kHz)}{A(20 kHz} \vert$.
 
-\paragraph{Misura frequenza di taglio}
+\paragraph{Misura frequenza di taglio.}
 
-Si è misurata la frequenza di taglio dall'intersezione delle due rette del fit. Chiamate le rette $y = a_1 x+b_1$ e $y = a_2 x+b_2$, il loro punto di intersezione è $f_0 = (b_1 - b_2)/(a_1 - a_2)$. 
+Si è misurata la frequenza di taglio dall'intersezione delle due rette del fit. Chiamate le rette $y = a_1 x+b_1$ e $y = a_2 x+b_2$, il loro punto di intersezione è $f_0 = \frac{b_1 - b_2}{a_1 - a_2}$. 
 
-\paragraph{Impedenza del circuito a bassa frequenza}
-L'impedenza di ingresso di un circuito come quello disegnatio all'inizio della relazione è $Z_ingresso = R+\frac{r}{j \omega C r+1}$ , dunque a bassa frequenza in condensatore è un aperto dunque l'impedenza di ingresso è $R+r$, mentre ad alta frequenza è un cortocircuito dunque l'impendenza è $R$. Alla frequenza di taglio abbiamo poi: $Z_ingresso = R + \frac{Rr}{jr+R}$. L'efetto della resistenza di carico sul circuito è di diminuirne il guadagno, secondo la formula: $\vert A(\omega) \vert = \frac{1}{\sqrt{(1+x)^2+(\frac{f}{f_{0}})^2}} $.
+\paragraph{Impedenza del circuito a bassa frequenza.}
+L'impedenza di ingresso di un circuito come quello disegnatio all'inizio della relazione è $Z_{ingresso} = R+\frac{r}{j \omega C r+1}$ , dunque a bassa frequenza in condensatore è un aperto dunque l'impedenza di ingresso è $R+r$, mentre ad alta frequenza è un cortocircuito dunque l'impendenza è $R$. Alla frequenza di taglio abbiamo poi: $Z_{ingresso} = R + \frac{Rr}{jr+R}$. L'efetto della resistenza di carico sul circuito è di diminuirne il guadagno, secondo la formula: $\vert A(\omega) \vert = \frac{1}{\sqrt{(1+x)^2+(\frac{f}{f_{0}})^2}} $.
 Lo scostamento della risposta da quella del filtro ideale è tanto maggiore quanto il carico resistivo è più vicino alla resistenza del filto.
 
 \section{Filtro passa-banda}
@@ -54,12 +57,12 @@ Lo scostamento della risposta da quella del filtro ideale è tanto maggiore quan
 \caption{Filtro passa banda}
 \end{figure}
 
-\paragraph{Verifiche sui circuiti passa alto e passa basso}
+\paragraph{Verifiche sui circuiti passa alto e passa basso.}
 
-\paragraph{Misure sul fitro passa banda}
+\paragraph{Misure sul fitro passa banda.}
 %misure delle frequenze di taglio e dell'ampiezza massima (dovrebbe essere -6 dB)
 
-\paragraph{Spegazioni teoriche}
+\paragraph{Spegazioni teoriche.}
 La funzione di trasferimento teorica per un circuito passa banda come quelli disegnati sopra è: 
 $V_{out} = A_{1} A_{2} \frac{Z_{in}^2}{Z_{out}^2+Z_{in}^2} V_{in}$, dove gli apici si riferiscono a al primo o al secondo circuito in sequenza. 
 
