@@ -59,6 +59,10 @@ Tuttavia c'è qualche dettaglio in più da sapere. Se abbiamo creato nuovi file,
 
 `git add file.estensione`
 
+Se abbiamo aggiunto molti file ci conviene metterli in una cartella e scrivere:
+
+`git add nomecartella`
+
 Ovviamente c'è anche il comando per rimuovere file:
 
 `git rm file.estensione`
