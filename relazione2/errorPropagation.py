@@ -28,16 +28,51 @@ print("Frequenza di taglio", f0)
 
 #Inserire a mano i risultati del fit
 
-print("Intersezione tra due rette.")
+print("Intersezione tra due rette. Passa basso")
+
 #Inserire la matrice di covarianza
-matrix = [[1.0, 1.0, 0.0, 0.0],
-	[1.0, 1.0, 0.0, 0.0],
-	[0.0, 0.0, 1.0, 1.0],
-	[0.0, 0.0, 1.0, 1.0]]
+matrix = [[0.00948684, 0.0, 0.0, 0.0],
+	[0.0, 0.0, 0.0, 0.0],
+	[0.0, 0.0, 0.12345903, -0.46197214],
+	[0.0, 0.0, -0.46197214, 1.73409314]]
 #Definisco le variabili correlate
-(a1, b1, a2, b2) = uncertainties.correlated_values((1,2,3,4), matrix)
-x = (b1-b2)/(a1-a2)
-print("Frequenza di taglio = ", x)
+(a1, b1, a2, b2) = uncertainties.correlated_values((0.0,0.21637946,-18.05254106,57.60008368), matrix)
+x = pow(10, (b1-b2)/(a2-a1))
+print("Frequenza di taglio _ Passa Basso = ", x)
+
+print("Intersezione tra due rette. Passa banda. Salita")
+
+
+
+#Inserire la matrice di covarianza
+matrix = [[0.00349517, 0.0, 0.0, 0.0],
+	[0.0, 0.0, 0.0, 0.0],
+	[0.0, 0.0, 2.28013502, -5.48270144],
+	[0.0, 0.0, -5.48270144, 13.26307781]]
+#Definisco le variabili correlate
+(a1, b1, a2, b2) = uncertainties.correlated_values((0.0,-6.23598879, 11.12716648, -35.97594446), matrix)
+x = pow(10, (b1-b2)/(a2-a1))
+print("Frequenza di taglio _ Passa Banda Salita = ", x)
+
+
+
+print("Intersezione tra due rette. Passa banda. Discesa")
+
+#Inserire la matrice di covarianza
+matrix = [[0.00349517, 0.0, 0.0, 0.0],
+	[0.0, 0.0, 0.0, 0.0],
+	[0.0, 0.0, 1.50457078, -6.41584978],
+	[0.0, 0.0, -6.41584978, 27.61611408]]
+#Definisco le variabili correlate
+(a1, b1, a2, b2) = uncertainties.correlated_values((0.0,-6.23598879,-12.7853335,40.61842064), matrix)
+x = pow(10, (b1-b2)/(a2-a1))
+print("Frequenza di taglio _ Passa Banda Salita = ", x)
+
+
+
+
+
+
 
 	
 
