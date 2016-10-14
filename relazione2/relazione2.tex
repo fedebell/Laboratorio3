@@ -37,11 +37,11 @@ $\vert \frac{A(2 kHz)}{A(20 kHz} \vert = \sqrt{\frac{{f_0}^2 (1+x)^2 + {f_2}^2}{
 Selezionando una resistenza $R = 1 k\Omega$ del filtro molto minore del carico $r = 100 k\Omega$ otteniamo $x = 0.01$ cioè un valore per $x$ trascurabile e possiamo scrivere (le unità sono state prese $kHz$): 
 $\vert \frac{A(2 kHz)}{A(20 kHz} \vert = \sqrt{\frac{{f_0}^2  + 400}{{f_0}^2 + 4}}$. Si sceglierà la frequenza di taglio del filtro essere $f_0 = 2kHz$. Con un condensatore $C = 80 nF$ si ottiene una rapporto segnale rumore $\vert \frac{A(2 kHz)}{A(20 kHz} \vert \sim 7$ e una attenuazione del segnale $\vert A(2 kHz) \vert \sim \frac{1}{\sqrt{2}}$.
 
-Abbiamo a disposizione un condensatore da $C = \pm nF$, e questo implica avere una resistenza $R = \pm k\Omega$.
-La frequenza di taglio quindi è $f_0 = \pm kHz$ e da questi valori stimiamo i valori di $\vert A(2 kHz) \vert = \pm $ e di $\vert \frac{A(2 kHz)}{A(20 kHz} \vert$.
+Abbiamo a disposizione un condensatore da $C = (70 \pm 3) \, nF$, e questo implica avere una resistenza $R = (1.20 \pm 0.01) \, k\Omega$.
+La frequenza di taglio quindi è $f_0 = (1.90 \pm 0.01) \, kHz$ e da questi valori stimiamo i valori di $\vert A(2 kHz) \vert = 0.69 \pm 0.02 $ e di $\vert \frac{A(2 kHz)}{A(20 kHz} \vert = 7.3 \pm 0.1$.
 
 \paragraph{Misura frequenza di taglio.}
-Abbiamo preso varie misure del segnale con frequenze comprese tra $100HZ$ e $1MHz$, riportiamo i dati relativi nella tabella.
+Abbiamo preso varie misure del segnale con frequenze comprese tra $100Hz$ e $1MHz$, riportiamo i dati relativi nella tabella.
 
 \begin{table}[h]
 \centering
@@ -93,7 +93,7 @@ Abbiamo eseguit 3 fit numerici:\\
 \begin{itemize}
 \item
 Fit numerico con una costante per il range di frequenze in cui il filtro passabasso non attenua il segnale in entrata. 
-La retta ottenuta come da aspettativa è concorde con $0dB$, ($A = (0.22 \pm 0.1) \, dB$ entro $3\sigma$. Come è evidente dal grafico il $\chi^2$ risulta essere molto piccolo: $\chi^2/ndof = 0.82/2$.
+La retta ottenuta come da aspettativa è concorde con $0\,dB$, $A = (0.22 \pm 0.1) \, dB$ entro $3\sigma$. Come è evidente dal grafico il $\chi^2$ risulta essere molto piccolo: $\chi^2/ndof = 0.82/2$.
 
 \begin{figure}[h]
 \centering
@@ -299,6 +299,6 @@ $A_{tot} = \frac{1}{2} \frac{1}{1+j \frac{omega}{2 \omega_1}}$.
 Se vogliamo che $A_{tot} = A_1 A_2$ deve essere $R_1 \ll R_2$ come è evidente.
 
 \section{Conclusioni e osservazioni}
-Abbiamo acquisito tutte le misure controlando che l'ampiezza di ingresso rimanese costante a $V_{in} = 5 \, V$, in accoppiamento AC, per eseguire le misure agli estremi dell'intervallo di frequenze sarebbe stato conveniente aumentare l'ampiezza del voltaggio in ingresso, per rendere meno influente il rumore ad alta frequenza. Un voltaggio di ingresso di $V_{in} = 30 \, V$ sarebbe stato più appropriato. L'altissimo errore sulle misure di frequenza ottenute con l'intersezione fra le rette è dovuto al fatto che l'errore sul coeffiente angolare è fortemente dipendente dall'errore sulle ordinate delle misure e essendo la scala di fequenza logaritmica l'errore viene amplificato esponenzialmente. E\' da notare che che l'errore sulle ampiezze è stato evidentemente sovrastimato, come si vede dal fatto che i $\chi^2$ vengono sistematicamente inferiori di quelli attesi. Infatti sui voltaggi si è sempre considerato un errore del $3\%$.
+Abbiamo acquisito tutte le misure controlando che l'ampiezza di ingresso rimanese costante a $V_{in} = 5 \, V$, in accoppiamento AC, per eseguire le misure agli estremi dell'intervallo di frequenze sarebbe stato conveniente aumentare l'ampiezza del voltaggio in ingresso, per rendere meno influente il rumore ad alta frequenza. Un voltaggio di ingresso di $V_{in} = 30 \, V$ sarebbe stato più appropriato. L'altissimo errore sulle misure di frequenza ottenute con l'intersezione fra le rette è dovuto al fatto che l'errore sul coeffiente angolare è fortemente dipendente dall'errore sulle ordinate delle misure e essendo la scala di fequenza logaritmica l'errore viene amplificato esponenzialmente. E' da notare che che l'errore sulle ampiezze è stato evidentemente sovrastimato, come si vede dal fatto che i $\chi^2$ vengono sistematicamente inferiori di quelli attesi. Infatti sui voltaggi si è sempre considerato un errore del $3\%$.
 
 \end{document} 

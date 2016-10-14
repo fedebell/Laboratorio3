@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  14 OCT 2016 02:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  14 OCT 2016 17:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -700,13 +700,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [5] [6 <./immagine7.png> <./immagine9.png>] (./relazione2.aux) ) 
 Here is how much of TeX's memory you used:
- 3319 strings out of 494910
- 42976 string characters out of 6179836
- 118720 words of memory out of 5000000
- 6538 multiletter control sequences out of 15000+600000
+ 3318 strings out of 494910
+ 42968 string characters out of 6179836
+ 117720 words of memory out of 5000000
+ 6537 multiletter control sequences out of 15000+600000
  11542 words of font info for 45 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,9n,24p,968b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,24p,967b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-d
@@ -722,7 +722,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on relazione2.pdf (6 pages, 458816 bytes).
+Output written on relazione2.pdf (6 pages, 458817 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
