@@ -44,14 +44,15 @@ pylab.errorbar(logf, B, dB, dlogf, "o", color="black")
 error = pylab.sqrt(dB**2+20.0*dlogf**2)
 print(error)
 init = numpy.array([0.0, 0.0])
-par, cov = curve_fit(linear, logf, B, init, error)
+par, cov = curve_fit(linear, logf, B, init, error, "true")
+#trattazione statistica degli errori
 print(par, cov)
 
 a = par[0]
 b = par[1]
 print(linear(logf, a, b))
 print(B)
-chisq = ((B-linear(logf, a, b)/error)**2)
+chisq = (((B-linear(logf, a, b))/error)**2)
 somma = sum(chisq)
 
 ndof = len(logf) - 2 #Tolgo due parametri estratti dal fit
