@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  16 OCT 2016 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  9 OCT 2016 22:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**relazione2.tex
-(./relazione2.tex
+**RelazioneTemplate.tex
+(./RelazioneTemplate.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -491,8 +491,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks22
 )
-(./relazione2.aux)
-\openout1 = `relazione2.aux'.
+(./RelazioneTemplate.aux)
+\openout1 = `RelazioneTemplate.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -610,134 +610,50 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <passabasso.png, id=1, 320.19624pt x 201.75375pt>
 File: passabasso.png Graphic file (type png)
  <use passabasso.png>
-Package pdftex.def Info: passabasso.png used on input line 29.
+Package pdftex.def Info: passabasso.png used on input line 27.
 (pdftex.def)             Requested size: 320.19545pt x 201.75325pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./passabasso.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+<passabanda.png, id=21, 896.34875pt x 471.7625pt>
+File: passabanda.png Graphic file (type png)
+ <use passabanda.png>
+Package pdftex.def Info: passabanda.png used on input line 53.
+(pdftex.def)             Requested size: 358.53316pt x 188.70164pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 86.
 
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 99.
-
-<immagine1.png, id=21, 782.925pt x 590.205pt>
-File: immagine1.png Graphic file (type png)
- <use immagine1.png>
-Package pdftex.def Info: immagine1.png used on input line 104.
-(pdftex.def)             Requested size: 313.16446pt x 236.0778pt.
-
-<immagine2.png, id=22, 787.94376pt x 615.29875pt>
-File: immagine2.png Graphic file (type png)
- <use immagine2.png>
-Package pdftex.def Info: immagine2.png used on input line 117.
-(pdftex.def)             Requested size: 315.17192pt x 246.11513pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2 <./immagine1.png>] <fitbassototale.png, id=26, 912.0474pt x 446.6286pt>
-File: fitbassototale.png Graphic file (type png)
-
-<use fitbassototale.png>
-Package pdftex.def Info: fitbassototale.png used on input line 128.
-(pdftex.def)             Requested size: 364.81248pt x 178.64827pt.
- <fitbassoresiduo.png, id=28, 934.4511pt x 433.62pt>
-File: fitbassoresiduo.png Graphic file (type png)
-
-<use fitbassoresiduo.png>
-Package pdftex.def Info: fitbassoresiduo.png used on input line 134.
-(pdftex.def)             Requested size: 373.77382pt x 173.44492pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<passabanda.png, id=29, 896.34875pt x 471.7625pt>
-File: passabanda.png Graphic file (type png)
- <use passabanda.png>
-Package pdftex.def Info: passabanda.png used on input line 150.
-(pdftex.def)             Requested size: 358.53316pt x 188.70164pt.
- [3 <./immagine2.png> <./fitbassototale.png>]
-<tabella2.png, id=34, 724.7075pt x 147.55125pt>
-File: tabella2.png Graphic file (type png)
- <use tabella2.png>
-Package pdftex.def Info: tabella2.png used on input line 159.
-(pdftex.def)             Requested size: 289.87787pt x 59.01944pt.
-
-<immagine5.png, id=35, 657.45625pt x 479.7925pt>
-File: immagine5.png Graphic file (type png)
- <use immagine5.png>
-Package pdftex.def Info: immagine5.png used on input line 169.
-(pdftex.def)             Requested size: 262.97784pt x 191.91359pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4 <./fitbassoresiduo.png> <./passabanda.png> <./tabella2.png>]
-<immagine6.png, id=40, 674.52pt x 489.83pt>
-File: immagine6.png Graphic file (type png)
- <use immagine6.png>
-Package pdftex.def Info: immagine6.png used on input line 253.
-(pdftex.def)             Requested size: 269.80322pt x 195.92853pt.
-
-<immagine7.png, id=41, 676.5275pt x 484.81125pt>
-File: immagine7.png Graphic file (type png)
- <use immagine7.png>
-Package pdftex.def Info: immagine7.png used on input line 262.
-(pdftex.def)             Requested size: 270.6062pt x 193.92105pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<immagine9.png, id=42, 662.475pt x 490.83376pt>
-File: immagine9.png Graphic file (type png)
- <use immagine9.png>
-Package pdftex.def Info: immagine9.png used on input line 275.
-(pdftex.def)             Requested size: 264.9853pt x 196.33002pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5 <./immagine5.png> <./immagine6.png>] [6] [7 <./immagine7.png> <./immagine9.p
-ng>] (./relazione2.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
+ [2 <./passabanda.png>] (./RelazioneTemplate.aux) ) 
 Here is how much of TeX's memory you used:
- 3330 strings out of 494910
- 43208 string characters out of 6179836
- 116720 words of memory out of 5000000
- 6547 multiletter control sequences out of 15000+600000
- 11542 words of font info for 45 fonts, out of 8000000 for 9000
+ 3281 strings out of 494910
+ 42427 string characters out of 6179836
+ 109720 words of memory out of 5000000
+ 6508 multiletter control sequences out of 15000+600000
+ 11196 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,9n,24p,967b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb>
-Output written on relazione2.pdf (7 pages, 521273 bytes).
+ 38i,9n,24p,589b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on RelazioneTemplate.pdf (2 pages, 171142 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

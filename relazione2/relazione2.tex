@@ -14,6 +14,7 @@
 
 \maketitle
 
+
 \section{Scopo e strumentazione}
 
 Misurare la frequenza di un filtro passa-basso e studiare la variazione della risposta del filtro in funzione del carico applicato a valle. In seguito studiare la l'attenuazione di un filto passa-banda. 
@@ -41,13 +42,15 @@ Abbiamo a disposizione un condensatore da $C = (70 \pm 3) \, nF$, e questo impli
 La frequenza di taglio quindi è $f_0 = (1.90 \pm 0.01) \, kHz$ e da questi valori stimiamo i valori di $\vert A(2 kHz) \vert = 0.69 \pm 0.02 $ e di $\vert \frac{A(2 kHz)}{A(20 kHz} \vert = 7.3 \pm 0.1$.
 
 \paragraph{Misura frequenza di taglio.}
+
+La frequenza di taglio del circuito è stimata essere la frequenza per cui l'attenuazione in decibel è risultata di $-3\,dB$, cioè $V_{out} = 0.707 V_{in}$, come errore abbiamo preso la semidispersione sull'intervallo di frequenze (misurate dal frequenzimetro) in cui ritenevamo che l'attenuazione (compatibilmente con la sensibilità del cursore) fosse quella attesa. Il valore così misurato è risultato essere: $f_0 = (1.77 \pm 0.05) \, kHz$. 
 Abbiamo preso varie misure del segnale con frequenze comprese tra $100Hz$ e $1MHz$, riportiamo i dati relativi nella tabella.
 
 \begin{table}[h]
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline 
-$V_{out} (V)$  &  $\sigma V_{out} (V)$ &  $f(kHZ)$ & $\sigma f(kHz)$ \\ 
+$V_{out} (V)$  &  $\sigma V_{out} (V)$ &  $f(kHz)$ & $\sigma f(kHz)$ \\ 
 \hline 
 5.2 & 0.2 & 0.100 & 0.001 \\ 
 \hline 
@@ -75,19 +78,20 @@ $V_{out} (V)$  &  $\sigma V_{out} (V)$ &  $f(kHZ)$ & $\sigma f(kHz)$ \\
 \hline 
 0.136 & 0.005 & 84.0 & 0.8 \\ 
 \hline 
-0.090 & 0.005 & 84.0 & 0.8 \\ 
+0.090 & 0.005 & 110 & 1 \\ 
 \hline 
-0.090 & 0.005 & 110.0 & 0.1 \\ 
+0.074 & 0.005 & 139 & 1 \\ 
 \hline 
-0.074 & 0.005 & 139.0 & 0.1 \\ 
+0.068 & 0.005 & 156 & 2 \\ 
 \hline 
-0.068 & 0.005 & 156.0 & 0.2 \\ 
-\hline 
-0.064 & 0.005 & 165.0 & 0.3 \\ 
+0.064 & 0.005 & 165 & 3 \\ 
 \hline 
 \end{tabular} 
 \caption{Dati tensioni filtro passa-basso.}
 \end{table}
+
+In particolare notiamo che l'attenuazione del segnale è risultato essere $\vert A(2\,kHz) \vert = 0.70 \pm 0.03$. 
+Misurando il segnale a $20\,kHz$ otteniamo un attenuazione $\vert A(20\,kHz) \vert = 0.10 \pm 0.01$. Dunque il rapporto delle attenuzioni misurate è: $\vert \frac{A(2\,kHz)}{A(20\,kHz} \vert = 7.0 \pm 0.8$, compatibile entro l'errore con il valore determinato teoricamente.
 
 Abbiamo eseguit 3 fit numerici:\\
 \begin{itemize}
@@ -114,12 +118,26 @@ $\left(\begin{array}{cc}
 \caption{Fit orizzontale}
 \end{figure}
 
-Si è misurata la frequenza di taglio dall'intersezione delle due rette del fit. Chiamate le rette $y = a_1 x+b_1$ e $y = a_2 x+b_2$, il loro punto di intersezione è $f_0 = \frac{b_1 - b_2}{a_2 - a_1}$. Se abbiamo $a_1 = 0$ allora otteniamo: $f_0 =  \frac{b_1 - b_2}{a_2}$ e da questo $f_{0} = (2.5 \pm 1.0) \, kHz$. 
+Si è misurata la frequenza di taglio dall'intersezione delle due rette del fit. Chiamate le rette $y = a_1 x+b_1$ e $y = a_2 x+b_2$, il loro punto di intersezione è $f_0 = \frac{b_1 - b_2}{a_2 - a_1}$. Se abbiamo $a_1 = 0$ allora otteniamo: $f_0 =  \frac{b_1 - b_2}{a_2}$ e da questo $f_{0} = (2.5 \pm 1.0) \, kHz$, compatibile entro l'altissimo errore con il valore calcolato. 
 
 \item
 Fit numerico su tutti i dati con la funzione di trasferimento: $\vert A(f) \vert = \frac{1}{\sqrt{(\frac{f}{f_0})^2}}$, ottenendo: $f_t = (196 \pm 1) \cdot 10 \, Hz$, con $\chi^2/ndof = 0.15$.
 
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{fitbassototale.png}
+\caption{Fit orizzontale}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.4]{fitbassoresiduo.png}
+\caption{Fit orizzontale}
+\end{figure}
+
 \end{itemize}
+
+Si è anche eseguita la misura del tempo di salita della risposta ad un gradino di potenziale. Da queste misura si può ricavare la frequenza di taglio. L'errore sul tempo di salita è stata valutato come la semidispersione del valori visulizzati dalla funzione (tempo di salita) dell'oscilloscopio. $t_{salita} = (186 \pm 4) \mu s$. Dalla formula $t_{salita} = \frac{2.2}{2 \pi f_0}$ si ricava $f_0 = (1.88 \pm 0.04) kHz$.
 
 \paragraph{Impedenza del circuito a bassa frequenza.}
 L'impedenza di ingresso di un circuito come quello disegnatio all'inizio della relazione è $Z_{ingresso} = R+\frac{r}{j \omega C r+1}$ , dunque a bassa frequenza in condensatore è un aperto dunque l'impedenza di ingresso è $R+r$, mentre ad alta frequenza è un cortocircuito dunque l'impendenza è $R$. Alla frequenza di taglio abbiamo poi: $Z_{ingresso} = R + \frac{Rr}{jr+R}$. L'efetto della resistenza di carico sul circuito è di diminuirne il guadagno, secondo la formula: $\vert A(\omega) \vert = \frac{1}{\sqrt{(1+x)^2+(\frac{f}{f_{0}})^2}} $.
@@ -141,6 +159,8 @@ I valori teorici delle frequenze per i filtri passa-basso e passa-alto utilizzat
 \includegraphics[scale=0.4]{tabella2.png}
 \caption{Filtro passa banda}
 \end{figure}
+
+Si è verificato che l'andamento generale per l'attenuazione fosse quello atteso per i due filtri e si è verificato che l'attenuazione massima fosse compatibile con $0\,dB$ entro l'erore sperimentale, le rispettive frequenze di taglio per il filtro passa alto e passa basso misurate cercando la frequenza per cui l'attenuazione è $-3\,dB$ (con ogni filtro collegato separatamente) sono risultate essere: $f_1 = (48 \pm 2) \cdot 10 Hz$ e $f_2 = (0.45 \pm 0.03) kHz$.
 
 Il seguente grafico riporta i dati del filtro passa-banda:
 
@@ -188,15 +208,15 @@ $V_{out}$ & $\sigma V_{out}$ & $f(kHZ)$ & $\sigma f(kHz)$ \\
 \hline 
 2.40 & 0.07 & 0.800 & 0.008 \\ 
 \hline 
-2.48 & 0.08 & 1.50 & 0.2 \\ 
+2.48 & 0.08 & 1.50 & 0.02 \\ 
 \hline 
-2.44 & 0.08 & 2.20 & 0.3 \\ 
+2.44 & 0.08 & 2.20 & 0.03 \\ 
 \hline 
-2.44 & 0.08 & 2.50 & 0.3 \\ 
+2.44 & 0.08 & 2.50 & 0.03 \\ 
 \hline 
-2.28 & 0.07 & 4.00 & 0.4 \\ 
+2.28 & 0.07 & 4.00 & 0.04 \\ 
 \hline 
-1.88 & 0.06 & 8.00 & 0.8 \\ 
+1.88 & 0.06 & 8.00 & 0.08 \\ 
 \hline 
 1.36 & 0.05 & 15.0 & 0.2 \\ 
 \hline 
