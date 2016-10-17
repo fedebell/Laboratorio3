@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  16 OCT 2016 23:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  17 OCT 2016 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,19 +613,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <circuito.png, id=1, 1022.31938pt x 475.7775pt>
 File: circuito.png Graphic file (type png)
  <use circuito.png>
-Package pdftex.def Info: circuito.png used on input line 32.
+Package pdftex.def Info: circuito.png used on input line 38.
 (pdftex.def)             Requested size: 408.9205pt x 190.30762pt.
 
 
-LaTeX Warning: Reference `tabella' on page 1 undefined on input line 41.
+LaTeX Warning: Reference `caricoTeorica' on page 1 undefined on input line 44.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./circuito.png>]
-<circuito2.png, id=18, 1023.07219pt x 456.20438pt>
+
+LaTeX Warning: Reference `tabella' on page 2 undefined on input line 51.
+
+<circuito2.png, id=22, 1023.07219pt x 456.20438pt>
 File: circuito2.png Graphic file (type png)
  <use circuito2.png>
-Package pdftex.def Info: circuito2.png used on input line 62.
+Package pdftex.def Info: circuito2.png used on input line 72.
 (pdftex.def)             Requested size: 409.22163pt x 182.4785pt.
  [2 <./circuito2.png>] (./relazione3mazzo.aux)
 
@@ -636,10 +639,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3269 strings out of 494910
- 42156 string characters out of 6179836
- 106780 words of memory out of 5000000
- 6498 multiletter control sequences out of 15000+600000
+ 3270 strings out of 494910
+ 42171 string characters out of 6179836
+ 107780 words of memory out of 5000000
+ 6499 multiletter control sequences out of 15000+600000
  11542 words of font info for 45 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,7n,24p,451b,226s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -655,7 +658,7 @@ msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on relazione3mazzo.pdf (2 pages, 170883 bytes).
+Output written on relazione3mazzo.pdf (2 pages, 174002 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream

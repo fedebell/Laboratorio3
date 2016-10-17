@@ -24,34 +24,54 @@ Per prima cosa abbiamo analizzando le polarità delle giunzioni del transistor,v
 
 \rem{Tecnicamente questa cosa non è esplicitamente richiesta}
 \paragraph{Misura delle resistenze del trimmer}
-Utilizzando il multimetro digitale abbiamo misurato le resistenze del trimmer: ai suoi estremi la resistenza è risultata costante $R_{tot}=$, mentre la resistenza tra il terminale intermedio e uno dei due estremi è risultata variabile,più precisamente aumentava  al ruotare in senso orario della vite.
-\section{Controllo dello stabilizzatore di tensione}
-Abbiamo montato il circuito in  figura \ref{circuito} verificando che  la $V_{out}$ rimanesse costante $5V$ (misurata con multimetro digitale) variando $V{in}$ da 6 a circa  $16V$ e misurando in precedenza le resistenze e il condensatore: $R_L=$  $R_B=$  $C=$
+Utilizzando il multimetro digitale abbiamo misurato le resistenze del trimmer: ai suoi estremi la resistenza è risultata costante $R_{tot}= (102.7 \pm 0.8) k\Omega$, mentre la resistenza tra il terminale intermedio e uno dei due estremi è risultata variabile, prendenso l'uscita dalla parte delle scritte sul case la resistenza aumenta in senso orario
+\paragraph{Controllo dello stabilizzatore di tensione}
+Abbiamo montato il circuito in  figura \ref{circuito} verificando che  la $V_{out}$ rimanesse costante $V_{out} = (5.00 \pm 0.03) \, V$ (misurata con multimetro digitale) variando $V{in}$ da 6 a circa  $20V$ e 
+
+\section{Misure in DC sul transistor}
+
+misurando in precedenza le resistenze e il condensatore: $R_L = (0.977 \pm 0.008) \, k\Omega$ e $R_B= (46.7 \pm 0.4) \, k\Omega $ e $C=9.8 \pm 0.4) \, nF$
+La tensione dell'alimentatore è stata misurata essere: $V_1 = (10.06 \pm 0.06) \, V$. 
+
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.4]{circuito}
 \caption{Circuito di amplificazione di correnti continue}
 \label{circuito}
 \end{figure}
-\section{Misure in DC sul transistor}
+
 \paragraph{Calcolo della retta di carico}
-Abbiamo collegato il multimetro digitale in parallelo alla resistenza $R_B$  ed i duei canali dell'oscilloscopio ai terminali B e C del transistor. In questo modo siamo stati in grado di misurare contemporaneamente la caduta di tensione $V_{R_B}$ ai capi della resristenza $R_B$, $V_{BE}$ e $V_{CE}$.
+La retta di carico teorica è stata disgnata come retta tra due punti sul grafico delle curve cartteristiche del transistor: $I_C=\frac{V_1-V_{CE}}{R_L}$, come si vede nella figura \ref{caricoTeorica}.
 \paragraph{Misure sul circuito}
-Abbiamo preso varie misure di $V_{R_B}$, $V_{BE}$ e $V_{CE}$  variando la resistenza del potenziometro (ruotando quindi la vite di regolazione). Grazie alle relazioni $I_B=V_{R_B}/R_B$ e $I_C=\frac{V_2-V_{CE}}{R_L}$ abbiamo potuto calcolare la corrente $I_B$ in ingresso alla base e la corrente del collettore $I_C$.
+Abbiamo collegato il multimetro digitale in parallelo alla resistenza $R_B$  ed i duei canali dell'oscilloscopio ai terminali B e C del transistor. In questo modo siamo stati in grado di misurare contemporaneamente la caduta di tensione $V_{R_B}$ ai capi della resristenza $R_B$, $V_{BE}$ e $V_{CE}$.
+Abbiamo preso varie misure di $V_{R_B}$, $V_{BE}$ e $V_{CE}$  variando la resistenza del potenziometro (ruotando quindi la vite di regolazione). Grazie alle relazioni $I_B=V_{R_B}/R_B$ e $I_C=\frac{V_1-V_{CE}}{R_L}$ abbiamo potuto calcolare la corrente $I_B$ in ingresso alla base e la corrente del collettore $I_C$.
+Il canale 1 è collegato alla base e il canale 2 è collegato al collettore.
+
+\rem{Vorremo accertarci che la tensione dell'alimentatore rimannga costante}
+\rem{Riservarsi di aumentare l'errore sulle misure di caduta di tensione perchè balla molto}
 Abbiamo riportato il tutto nella tabella \ref{tabella}
 \rem{aggiungi tabella}
+
+\rem{Aggiungo grafici}
+
+I punti a valore di $V_{B}E > 0.7$ sono dovuti al fatto che per alte correnti di base stiamo cambiando le caratteristiche fisiche della giunzione e dunque la tensione si ripartisce in modo variabile sulle due giunzioni.
+ 
 \paragraph{Misura del guadagno}
 Abbiamo calcolato il guadagno del transistor  eseguendo un fit lineare di $I_C$ e $I_B$ con la  relazione $I_C=h_{FE}I_B+q$.
 La massima corrente di collettore erogabile dal transistor è determinata dall'equazione di Kirchoff relativa alla maglia destra del circuito  $V_1 = R_L*I_C + V_{CE}$, quindi il massimo valore di $I_C$ si ha per il minimo valore di $V_{CE}$ che è  approsimativamente $V_{CE}$ in condizioni di saturazione.
   Indichiamo con $V_ {CE_{(SAT)}}$  il massimo valore di $V_{CE}$ per il quale $I_C = I_{C_{(SAT)}}$. Nel caso in esame, osservando la tabella, possiamo  stimare $V_{CE_{(SAT)}}=$. Svolgendo i conti, si trova $I_{C_{MAX}} = $. 
  
  \rem{Secondo me è più sensato misurare Ic e da questa dedurre la corrente di saturazione. La Ic si misura bene dai grafici la I di saturazione è piccola e non sono così convinto che si riesca a stimare bene dalla tabella}
+ 
 \paragraph{Variazione della retta di carico al variare della tensione di alimentazione.}
  
-Abbiamo ruotato la vite regolatrice del trimmer resistivo ottenendo $V_{CE}\simeq 5V$. Fissato quel valore  (facendo sì che $I_B$ restasse costante)  abbiamo misurato $V_{R_L}$ ai capi di $R_L$ con il multimetro digitale  e $V_{CE}$ tramite l'oscilloscopio al variare di $V_1$ tra $6 V$ e $16 V$. Tali dati sono riportati in tabella insieme a quelli di $I_C=V_{R_L}/R_L$.
+Abbiamo ruotato la vite regolatrice del trimmer resistivo ottenendo $V_{CE}\simeq 5V$ per una tensione di alimentazione di $V_1 = 10 \, V$. Fissiamo questo valore della corrente $I_B$. Misuriamo  $V_{R_L}$ ai capi di $R_L$ con il multimetro digitale  e $V_{CE}$ tramite l'oscilloscopio al variare di $V_1$ tra $6 V$ e $16 V$. Tali dati sono riportati in tabella insieme a quelli di $I_C=V_{R_L}/R_L$.
 
 %Questo ci permette di costruire una curva caratteristica del diodo a corrente di base costante. Questa può essere fittata da una legge esponenziale del tipo:
-%$I_c = I_s e^{\frac{V_{BE}}{V_T}} (1-e^{-\frac{V_{CE}}{V_T}}$ quando il transisto è polarizzato in saturazione o in diretta è circa costante duqnue la curva da un andamento esponenziale che uò essere fittato. IL coeffiente che compare davanti alla curva esponenziale è esattamente il coefficiente hfe * I_b che è legato al valore asistotico dellla corrente I_c.
+%$I_c = I_s e^{\frac{V_{BE}}{V_T}} (1-e^{-\frac{V_{CE}}{V_T}}$ quando il transistor è polarizzato in saturazione o in diretta è circa costante duqnue la curva da un andamento esponenziale che uò essere fittato. IL coeffiente che compare davanti alla curva esponenziale è esattamente il coefficiente hfe * I_b che è legato al valore asistotico dellla corrente I_c.
+%Se queste approssimazioni fossero vere sempre allora la tensione di saturazione sarebbe nulla e la corrente di saturazione corrispondereebbe all'intercetta della retta di carico con l'asse delle ascisse.
+
+Attraverso la misura della corrente di saturaturazione che estraiamo dal grafico $I_c - I_b$ possiamo fornire una stima della tensione di saturazione attraverso la legge delle maglie. Se valesse con esattattezza l'approssimazione enunciata sopra per correnti base arbitrariamente alte non potremmo avere tensioni di saturazione che sono un parametro fisico intrinseco della giunzione per cui l'approssimazione enunciata viene meno.
  
 \section{Uso del transistor in un circuito logico NOT }
 \paragraph{Montaggio del circuito}
@@ -66,9 +86,12 @@ Abbiamo montato il circuito rappresentato in  figura \ref{circuito2}.
 
 In ingresso abbiamo collegato  il generatore di funzioni in modalità output pulse, il quale genera un’onda quadra oscillante tra $0 V$ e $5 V$. Abbiamo usato  il generatore di tensione $V_{CC}=$, con un valore scelto in modo tale da far funzionare il transistor  in regime di saturazione e di interdizione al variare di $V_{in}$. Le resistenze usate ( misurate con un multimetro digitale ) sono : $R_1=$ $R_2=$ $R_L=$
 
+
 \paragraph{Verifica del corretto funzionamento del circuito}
 \paragraph{Misura dei tempi di transizione di $V_{out}$ }
 
-\paragraph{Discussione sui tempi di transizione di$ V_{out}$}
+\paragraph{Discussione sui tempi di transizione di $ V_{out}$}
+
+\rem{Non mi è chiaro perchè la capacità massima dovrebbe essere associata alla giunzione polarizzata diretta e non inversa dove la carica è maggiore, forse bisogna guardare la tensione}
 
 \end{document} 

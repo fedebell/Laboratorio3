@@ -50,11 +50,8 @@ print(par, cov)
 
 a = par[0]
 b = par[1]
-print(linear(logf, a, b))
-print(B)
-chisq = (((B-linear(logf, a, b))/error)**2)
+chisq = (((B-linear(logf, a, b))/error)**2).sum()
 somma = sum(chisq)
-
 ndof = len(logf) - 2 #Tolgo due parametri estratti dal fit
 p=1.0-scipy.stats.chi2.cdf(somma, ndof)
 print("Chisquare/ndof = %f/%d" % (somma, ndof))
