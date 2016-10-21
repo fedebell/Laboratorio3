@@ -1,0 +1,58 @@
+import pylab
+import numpy
+from scipy.optimize import curve_fit
+from scipy import stats
+import math
+
+#analisi pendolo uno
+
+t1, x1, t2, x2 = pylab.loadtxt("pendoloSmorzato1.txt", unpack=True)
+
+#Smorzamento aria: tau = 45.03
+#Smozamento galleggiante: tau = 22.79
+
+#4.44231, 4.4426, 4.4444, 4.4413, 4.43984
+
+#Smorzamenti di cinque misure
+#22.7905582294
+#19.8791741509
+#20.3915771783
+#17.1344642237
+#21.6210176574
+
+#media = 20.36335828794
+#semidispersione massima = 2.828047002849999
+
+
+pylab.title("Pendolo Singolo")
+pylab.xlabel("Tempo (s)")
+pylab.ylabel("Posizione")
+pylab.grid(color = "gray")
+
+pylab.xlim(0, 15)
+pylab.ylim(0, 600)
+pylab.grid(color = "gray")
+
+pylab.plot(t1, x1, "o", color="black") #aggiungere eventuali errori
+
+def fit_function(t, tau, a, omega, phi, k):
+    return a*(math.e)**(-t/tau)*pylab.sin(omega*t+phi)+k
+
+init = numpy.array([20, 100.0, 4.42, 0.0, 500.0]) #variare i parametri iniziali per ottenere diverse omega.
+
+popt, pcov = curve_fit(fit_function, t1, x1, init) #aggiungere l'errore
+tau, a, omega, phi, k = popt
+dtau, da, domega, dphi, dk = pylab.sqrt(pcov.diagonal())
+
+print(tau, a, omega, phi, k)
+
+div = 100000
+bucket = numpy.array([0.0 for i in range(div)])
+retta = numpy.array([0.0 for i in range(div)])
+inc = (t1.max())/div 
+for i in range(len(bucket)):
+        bucket[i]=float(i)*inc
+        retta[i] = fit_function(bucket[i], tau, a, omega, phi, k)
+        
+pylab.plot(bucket, retta, color = "black")
+

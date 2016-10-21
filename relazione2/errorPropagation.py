@@ -28,6 +28,9 @@ print("Frequenza di taglio", f0)
 
 #Inserire a mano i risultati del fit
 
+#IMPORTANTE: Formalismo per trattare variabili con associata una covarianza, non 
+#ho mai implementato per ora una analoga funzione sui vettori
+
 print("Intersezione tra due rette.")
 #Inserire la matrice di covarianza
 matrix = [[1.0, 1.0, 0.0, 0.0],

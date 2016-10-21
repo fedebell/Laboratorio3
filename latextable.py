@@ -3,29 +3,28 @@ Lettura di dati dal file "INPUT", scrittura in "OUTPUT"
 Legge i dati e li inserisce in una tabella Latex formattata
 '''
 
-INPUT = "/home/federico/Scaricati/tableinput.txt"
-OUTPUT = "/home/federico/Scaricati/tableoutput.txt"
+INPUT = "/home/federico/Laboratorio3/relazione3/dati1formattati.txt"
+OUTPUT = "/home/federico/Laboratorio3/relazione3/dati1formlatex.txt"
 
 
 import pylab
 import numpy
+import fpformat
 
 #La matrice dati contiene i valori
 dati = pylab.loadtxt(INPUT,unpack=True)
 dati = dati.transpose() #utlizziamo cos gli indici standard
 
+row = numpy.shape(dati)[0]
+col = numpy.shape(dati)[1] 
 
 file = open(OUTPUT,"w")
 
 #s la stringa da ritornare
-file.write("\\begin{table}[h]")
+file.write("\\begin{table}[!htb]")
 file.write("\\centering\n")
 #MODIFICARE
 file.write("\\begin{tabular}{|c|c|c|c|c|c|}\n\\hline\n")
-
-
-row = numpy.shape(dati)[0]
-col = numpy.shape(dati)[1] 
 
 
 for i in range(row):

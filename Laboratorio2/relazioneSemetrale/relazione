@@ -1,0 +1,31 @@
+Relazione semestrale
+Eseguo una simulazione precisa del comportameto del circuito, anzi no eseguo due
+una meno precisa dove l'input fornito è una semplicissima rampa di potenziale, un'altra dove integro il segnale di arduino nella modalità pwm, con il fourier di costa, vedo se c'è qualche differena e se la si riesce a rintracciare nei dati, cioè riesco a vedere nei miei dati che il segnale non è una rampa perfetta.
+Confronto il modello teorico elettrostatico (ercando magari di ampliarlo) con i dati del diodo reale cercando magari di fare delle stime tipo densità di portatori di carica nel silicio.
+Stimare il fattore di forma e separarlo da Vt.
+Studio effetto del digitalizzatore, magari sostituisco alla retta di punti un solo punto dotato di una grande barra di errore.
+(Questo è solo per fini estetici o campia proprio la natura del fit??? cioè migliora i parametri presi?) (Digresione su come funziona il digitalizzatore di Arduino)
+Mi sposto a lavorare a tensioni più alte aggiungendo un offset ad arduino utilizo per esempio una pila da nove volt messa in serie stando attento a non aumentare esageratamente la corrente che poi mi esplode
+e mi danneggia l'arduino, dovrei riuscire a prendere dati sufficienti in modo da stimare il comportamento asintotico della resistenza dinamica e poter  quindi ottenere un valore significativo
+
+Eseguo inoltre misure con varie reistenze diverse.
+
+Ha senso fare deelle simulazioni del comportamento stesso del digitalizzatore????
+
+
+Facendo il grafico logaritmico si riece a intuire una piccola deviazione dalla legge lineare
+Eseguo simulazione di diodo
+Studio effetto del digitalizzatore
+
+
+
+
+Scaletta vera per la relazione da iniziare a scrivere:
+Introduzione e scopo dell'esperienza misura della curva del diodo
+Riporto i dati, faccio fit esonenziale e faccioa nceh fit lineare mostrando che posso fittare cn cue rette diverse l'inizio e la fine dei dati
+Questo suggerisce la possiilità di avere una resistenza "parassita"?
+Eseguo una media per sostituire alle nuvolette di dati un solo punto
+Eseguo simulazione COMPLETA studiando effetto dell'integratore sul grafico stesso, verifico quindi quanro del rumore presente nel grafico è dato dal digitalizzatore e quanto
+è invece dato dall'integratore!!
+
+Eseguire simulazione del dioso usando la legge di fick??? E' davver possibile???

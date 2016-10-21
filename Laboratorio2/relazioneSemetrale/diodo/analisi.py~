@@ -1,0 +1,114 @@
+import numpy
+import pylab
+from scipy.optimize import curve_fit
+import math
+import scipy.stats
+
+def fit_function(x, a, b):
+	return a*(numpy.exp(V2/b)-1)
+
+
+def fit_function_1(x, a, b):
+	return a*(math.exp(V2/b)-1)
+
+
+FileName='/home/federico/Documenti/Laboratorio2/diodo/dati_arduino/dati.txt'
+N1, N2 = pylab.loadtxt(FileName, unpack="True")
+
+
+#Implementazione del filtro che fa la media
+datipuliti1 = numpy.array([])
+datipuliti2 = numpy.array([])
+inizio = N2[0]
+counter = 0
+somma = 0
+
+for i in range(len(N2)):
+        if(N2[i] == inizio):
+                somma += N1[i]
+                counter += 1
+        else:
+                datipuliti2 = numpy.append(datipuliti2, inizio)
+                datipuliti1 = numpy.append(datipuliti1, somma/counter)
+                inizio = N2[i]
+                counter = 1
+                somma = N1[i]
+
+#Devo farlo un'ultima volta alla fine
+datipuliti2 = numpy.append(datipuliti2, inizio)
+datipuliti1 = numpy.append(datipuliti1, somma/counter)
+
+print("Clean data\n")
+print(datipuliti1)
+print(datipuliti2)
+
+N1 = datipuliti1
+N2 = datipuliti2
+
+errN2 = numpy.array([1.0 for i in range(len(N2))])
+errN1 = numpy.array([1.0 for i in range(len(N2))])
+
+Rd = 220
+errRd = 10
+
+eta = 4.89/1000
+erreta = 0.02/1000
+
+V1 = eta*N1
+V2 = eta*N2
+
+I = (V1-V2)/Rd
+
+#Inserire errori per i i V
+errV2 = (erreta/eta + errN2/N2)*V2
+errV1 = (erreta/eta + errN1/N1)*V1
+
+errI = (errRd/Rd)*I
+
+print(V2)
+print(I)
+
+
+
+#pylab.figure(1)
+#pylab.subplot(211)
+pylab.title("Best fit numerico")
+pylab.xlabel("V2 (V)")
+pylab.ylabel("I (A)") 
+pylab.grid(color = "gray")
+pylab.grid(color = "gray")
+pylab.errorbar(V2, I, 0, 0, "o", color="black")
+
+
+init = numpy.array([6.9578837636719136e-09, 0.0513840])
+err = (errV2*errV2+errI*errI)**(0.5)
+popt, pcov = curve_fit(fit_function, V2, I, init, err)
+a, b = popt
+print(popt, pcov)
+vara, varb = pylab.sqrt(pcov.diagonal())
+covarab = pcov[0,1]
+
+
+print(covarab)
+print("Parametri del fit")
+print("a = ", a, "da = ", vara)
+print("b = ", b, "db = ", varb)
+
+chisq = (((I - fit_function(V2, a, b))/err)**2).sum()
+ndof = len(V2) - 2 #Tolgo due parametri estratti dal fit
+p=1.0-scipy.stats.chi2.cdf(chisq, ndof)
+print("Chisquare/ndof 2 = %f/%d" % (chisq, ndof))
+print("p = ", p)
+
+
+
+pylab.subplot(212)
+pylab.title("Residui normalizzati")
+pylab.xlabel("V2 (V)")
+pylab.ylabel("Sigma") #modificare gradi
+pylab.grid(color = "gray")
+pylab.grid(color = "gray")
+pylab.ylim(1.2*min((I-fit_function(V2, a, b))/(err)), 1.2*max((I-fit_function(V2, a, b))/(err)))
+pylab.plot(V2, (I-fit_function(V2, a, b))/(err), "o", color="black") #Studiare che errore mettere per i residui normalizzati
+
+pylab.show()

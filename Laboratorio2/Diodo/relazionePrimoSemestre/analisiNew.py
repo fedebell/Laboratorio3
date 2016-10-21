@@ -1,0 +1,41 @@
+import numpy
+import pylab
+from scipy.optimize import curve_fit
+import math
+import scipy.stats
+
+def fit_function(x, a, b):
+	return a*(numpy.exp(V2/b)-1)
+
+
+def fit_function_1(x, a, b):
+	return a*(math.exp(V2/b)-1)
+
+FileName='/home/federico/Documenti/Laboratorio2/diodo/dati_arduino/datiEstesi.txt'
+V, I, errI, errV = pylab.loadtxt(FileName, unpack="True")
+
+pylab.title("Curva I-V del diodo")
+pylab.xlabel("V (V)")
+pylab.ylabel("I (A)") 
+pylab.grid(color = "gray")
+pylab.grid(color = "gray")
+
+
+indices = range(13, 266)
+V2 = numpy.take(V, indices)
+I2 = numpy.take(I, indices)
+errV2 = numpy.take(errV, indices)
+errI2 = numpy.take(errI, indices)
+pylab.errorbar(V2, I2, errI2, errV2, "o", color="red")
+
+indices = range(267, 282)
+V3 = numpy.take(V, indices)
+I3 = numpy.take(I, indices)
+errV3 = numpy.take(errV, indices)
+errI3 = numpy.take(errI, indices)
+pylab.errorbar(V3, I3, errI3, errV3, "o", color="black")
+
+
+
+
+pylab.show()

@@ -1,0 +1,52 @@
+import numpy
+import math
+import pylab
+from scipy.optimize import curve_fit
+import math
+import scipy.stats
+import lab
+
+def fit_function(x, a, b, c):
+	return b*(numpy.exp(x/a)-1) + V/c
+
+def fit_function_1(x, a, b, c):
+	return b*(math.exp(x/a)-1) + V/c
+    
+FileName='/home/federico/Documenti/Laboratorio2/diodo/dati_arduino/datiResistenza.txt'
+V, I, dV, dI = pylab.loadtxt(FileName, unpack="True")
+
+
+pylab.title("Curva corrente tensione")
+pylab.xlabel("V (V)")
+pylab.ylabel("I (A)") 
+pylab.grid(color = "gray")
+pylab.grid(color = "gray")
+pylab.errorbar(V, I, dI, dV, "o", color="black")
+
+
+initial = numpy.array([0.048, 30e-10, 0.95])
+error = dI+dV/100 
+popt, pcov = curve_fit(fit_function, V, I, initial, error)
+a, b, c = popt
+print(a, b, c)
+print(pcov)
+
+div = 249
+bucket = numpy.array([0.0 for i in range(div)])
+retta = numpy.array([0.0 for i in range(div)])
+inc = (V.max()-V.min())/div 
+for i in range(len(bucket)):
+        bucket[i]=float(i)*inc + V.min()
+        
+pylab.plot(bucket, fit_function(bucket, a, b, c), color = "red")
+
+#calcolo il chi quadro
+chisq = (((I - fit_function_1(V, a, b, c))/error)**2).sum()
+ndof = len(V) - 2
+p=1.0-scipy.stats.chi2.cdf(chisq, len(V)-3)
+print("Carica Chisquare/ndof = %f/%d" % (chisq, ndof))
+print("p = ", p)
+
+
+pylab.show()
+

@@ -11,7 +11,7 @@ import numpy
 file = open(OUTPUT,"w")
 
 
-file.write("\\begin{figure}[h]\n\\centering\n\\includegraphics[scale=0.6]{NOME.ESTENSIONE}\n")
+file.write("\\begin{figure}[!htb]\n\\centering\n\\includegraphics[scale=0.6]{NOME.ESTENSIONE}\n")
 \centering
 \includegraphics[scale=0.6]{part2.jpg}
 file.write("\\caption{CAPTION}\n")

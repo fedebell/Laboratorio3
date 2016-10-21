@@ -1,0 +1,154 @@
+﻿import pylab
+import numpy
+import scipy
+from scipy.optimize import curve_fit
+from scipy import stats
+import math
+
+
+#come errore sui tempi dovrei mettere la deviazione statdard della dimensione degli intervalli di tempo
+
+t, dt, x, dx = pylab.loadtxt("dati1.txt", unpack=True)
+
+#ACTUNG --> Inserire i giusti errori restituiti dai programmi di acquisizione
+
+dt = pylab.array([2.0/1000 for i in range(len(t))])
+dx = pylab.array([5.0 for i in range(len(x))])
+
+error = (dt**2+dx**2)**(0.5)
+
+#Riscalo i tempi in secondi
+t = t/1.0e3
+
+pylab.figure(1)
+pylab.subplot(211)
+
+pylab.title("0,12 uF - ")
+pylab.xlabel("Tempo (ms)")
+pylab.ylabel("V (UA)")
+pylab.grid(color = "gray")
+
+pylab.grid(color = "gray")
+
+pylab.errorbar(t, x, dx, dt, "o", color="black") #aggiungere eventuali errori
+
+def fit_function(t, tau, a, omega, phi, k):
+    return a*(math.e)**(-t/tau)*pylab.sin(omega*t+phi)+k
+
+init = numpy.array([15, 450, 0.4, -3.14/2, 400]) #variare i parametri iniziali per ottenere diverse omega.
+
+popt, pcov = curve_fit(fit_function, t, x, init, error, "true") #aggiungere l'errore
+tau, a, omega, phi, k = popt
+#dtau = 0
+#da = 0
+#domega = 0
+#dphi = 0
+#dk 
+dtau, da, domega, dphi, dk = pylab.sqrt(((pcov.diagonal())))
+
+print("Parametri del fit:")
+print("tau = ", tau, "a = ", a, "omega = ", 1000*omega, "phi = ",  phi, "k = ",  k)
+print("dtau = ", dtau, "da = ", da, "domega = ", 1000*domega, "dphi = ", dphi, "dk = ", dk)
+print(dtau, da, 1000*domega, dphi, dk)
+
+div = 100000
+bucket = numpy.array([0.0 for i in range(div)])
+retta = numpy.array([0.0 for i in range(div)])
+inc = (t.max())/div 
+for i in range(len(bucket)):
+        bucket[i]=float(i)*inc
+        retta[i] = fit_function(bucket[i], tau, a, omega, phi, k)
+
+pylab.plot(bucket, retta, color = "black")
+
+#Elimino dal calolo del chi quadro quelli fuori più di un certo numero di sigma dal fit
+
+pylab.subplot(212)
+pylab.title("Grafico dei residui")
+pylab.xlabel("Tempo (ms)")
+pylab.ylabel("Residui")
+pylab.grid(color = "gray")
+pylab.plot(t, fit_function(t, tau, a , omega, phi, k) - x)
+
+
+y = numpy.array([])
+u = numpy.array([])
+dy = numpy.array([])
+du = numpy.array([])
+n = 10 #Numero di sigma fuori
+for i in range(len(x)):
+	if(numpy.abs((x[i]-fit_function(t[i], tau, a, omega, phi, k))/dx[i]) <= n):
+		y = numpy.append(y,  x[i])
+		u = numpy.append(u, t[i])
+		dy = numpy.append(dy, dx[i])
+		du = numpy.append(du, dt[i])
+                
+x = y
+t = u
+dx = dy
+dt = du
+
+#ACHTUNG in questo modo l'array x diminuisce la sua lunghezza
+
+error = (dt**2+dx**2)**(0.5)
+
+
+N = len(x)
+chi2 = (( (fit_function(t, tau, a , omega, phi, k)-x)/error )**2).sum()
+print("chiquadro =",chi2, "deg = ", N - 6)
+#(C.L. del valore x per un chi^2 a N-6 gradi di libertà) 5 parametri estratti
+print("C.L. = %.2f percento " % (scipy.stats.chi2.cdf( chi2, N-6)*100) )
+        
+#Valuto se inserire un plot in cui mostro esplititamente quello che ho tolto :)
+
+tau = tau/1000
+omega = omega*1000
+
+C = 0.20 * 10**(-6)#microFarad --> Mettere il volore nominale del condensatore
+dC = (20/100)*C #mettere l'errore sul condensatore
+
+#Calcolo deell'induttanza
+
+L = 1/(C*(omega**2+1/tau**2))
+
+#Errore su omega e tau è di natura statistica, quello su C è di natra sistematica --> Chiedere
+#a Costa se ha senso fare una propagazione dell'errore metà massimo e metà stocastico
+
+dL = 0.20 * L 
+#dL = (L/C)*dC + math.sqrt((((L**3)*(C**2)*omega)**2)*domega**2+(((L**3)*(C**2)/(tau**3))**2)*dtau**2)
+#Controlare il numero di parentesi
+
+print("Induttanza L = ", L)
+print("Errore Induttanza dL = ", dL)
+
+pylab.figure(2)
+pylab.subplot(211)
+
+pylab.title("0,2 uF - Niente - Rimossi outlier")
+pylab.xlabel("Tempo (ms)")
+pylab.ylabel("V (UA)")
+pylab.grid(color = "gray")
+
+
+
+pylab.errorbar(t, x, dx, dt, "o", color="black") #aggiungere eventuali errori
+
+pylab.subplot(212)
+pylab.title("Grafico dei residui - Rimossi outlier")
+pylab.xlabel("Tempo (ms)")
+pylab.ylabel("Residui")
+pylab.grid(color = "gray")
+pylab.plot(t, fit_function(t, tau, a , omega, phi, k) - x)
+
+pylab.figure(3)
+pylab.title("Trasformata Fourier - Vuoto")
+pylab.xlabel("Omega (rad/s)")
+pylab.ylabel("Unita arbitrarie")
+pylab.grid(color = "gray")
+N = len(abs(numpy.fft.rfft(x)))
+omega = numpy.array([(2*3.14*10000)/N *i for i in range(N)])
+pylab.plot(omega, abs(numpy.fft.rfft(x)))
+
+pylab.show()
+
+pylab.show()

@@ -1,0 +1,34 @@
+dati di fit:
+(0.048007729721048796, 3.0455537949880908e-09)
+[[  2.37559615e-08   1.75965007e-14]
+ [  1.75965007e-14   1.31647806e-20]]
+Carica Chisquare/ndof = 9194.172600/233
+('p = ', 0.0)
+
+parametri del fit della resistenza:
+
+covarianza normalizzata : 0.0286927267231
+Parametri del fit
+('R = ', 0.91893069377019021, 'dR = ', 0.025222203686483795)
+('I_0', -0.88581851102451259, 'dI_0', 0.027698512370059322)
+Chisquare/ndof 2 = 5.088030/12
+('p = ', 0.95497381178478158)
+("I' = ", -0.68341567219161803)
+
+parametri fit della retta che linearizza i dati
+-0.0506382848374
+Parametri del fit
+('R = ', 0.048154593603493077, 'dR = ', 0.00015722802508478137)
+('I_0', 0.040494408306988437, 'dI_0', 0.038177937455176364)
+Chisquare/ndof 2 = -2114652697.700470/233
+('p = ', 1.0)
+
+#Interpretazione: cosa diavolo significa che è a intercetta non nulla??
+Una intercetta non nulla significativamente significa una costante additiva nell'esponenziale.
+Tuttavia Con errore di fit si vede che il termine di incertezza tende è compatibile con l'essere nullo.
+
+Eseguo un fit lineare anche sulla parte dei dati in reverse
+
+Eseguendo un grafiso linearizzato dei dati in reverse ottengo che non seguono la legge di shockley, neanche i dati a alti voltaggi seguono legge di shockley,
+ma da essi si può ricavare ovvaimente una resistenza residua che si ottiene quando il
+comportamento homico vince su quello del diodo vero e proprio
