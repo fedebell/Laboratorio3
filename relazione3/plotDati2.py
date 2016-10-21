@@ -8,19 +8,22 @@ from scipy.optimize import curve_fit
 import math
 import scipy.stats
 
+import uncertainties 
+
 def linear(x, a, b):
 	return a*x+b
 
 
-V1, Vce, dV1, dVce = pylab.loadtxt('/home/federico/Laboratorio3/relazione3/dati2.txt', unpack=True)
+Vl, Vce, dVl, dVce = pylab.loadtxt('/home/federico/Laboratorio3/relazione3/dati2.txt', unpack=True)
+
 
 Rb = 46700 
 dRb = 400
 Rl = 977
 dRl = 8
 
-Ic = (V1 - Vce)/Rl
-dIc = Ic*((dV1**2 + dVce**2)/((V1-dVce)**2) + (dRl/Rl)**2)**0.5
+Ic = (Vl)/Rl
+dIc = Ic*((dVl/Vl)**2+(dRl/Rl)**2)**0.5
 
 
 pylab.figure(2)
