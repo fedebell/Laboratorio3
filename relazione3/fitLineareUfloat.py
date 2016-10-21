@@ -22,6 +22,10 @@ Vrb = unumpy.uarray(Vbe, dVbe)
 Rb = ufloat(46700, 400) 
 Rl = ufloat(977, 8)
 V1 = ufloat(10.06, 0.06)
+Isat = ufloat(10.03, 0.03)
+Isat = Isat/1000
+Vcesat = V1 - Rl* Isat  
+print(Vcesat)
 
 
 Ib = Vrb/Rb 

@@ -14,7 +14,7 @@ def linear(x, a, b):
 
 
 
-Vl, Vce, dVl, dVce = pylab.loadtxt('/home/federico/Laboratorio3/relazione3/dati2.txt', unpack=True)
+Vl, dVl, Vce, dVce = pylab.loadtxt('/home/federico/Laboratorio3/relazione3/dati2.txt', unpack=True)
 
 Rb = 46700 
 dRb = 400
@@ -43,6 +43,12 @@ print(par, cov)
 #Di nuovo co capisco il chi quadro, non cambia nulla se cambio da true a false
 a = par[0]
 b = par[1]
+
+a = ufloat(a, cov[0][0]**0.5)
+b = ufloat(b, cov[1][1]**0.5)
+
+print(a, b)
+
 print("Early = ", -b/a)
 chisq = ((Ic-linear(Vce, a, b))/error)**2
 somma = sum(chisq)
