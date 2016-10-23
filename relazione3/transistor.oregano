@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<ogo:schematic xmlns:ogo="http://www.dtek.chalmers.se/~d4hult/oregano/v1">
+  <ogo:author/>
+  <ogo:title>transistor.oregano</ogo:title>
+  <ogo:comments/>
+  <ogo:grid>
+    <ogo:visible>true</ogo:visible>
+    <ogo:snap>true</ogo:snap>
+  </ogo:grid>
+  <ogo:simulation-settings>
+    <ogo:transient>
+      <ogo:enabled>true</ogo:enabled>
+      <ogo:start>0</ogo:start>
+      <ogo:stop>0.005</ogo:stop>
+      <ogo:step>0.0001</ogo:step>
+      <ogo:step-enabled>false</ogo:step-enabled>
+      <ogo:init-conditions>false</ogo:init-conditions>
+    </ogo:transient>
+    <ogo:ac>
+      <ogo:enabled>false</ogo:enabled>
+      <ogo:npoints>50</ogo:npoints>
+      <ogo:start>1</ogo:start>
+      <ogo:stop>1e+06</ogo:stop>
+    </ogo:ac>
+    <ogo:dc-sweep>
+      <ogo:enabled>false</ogo:enabled>
+      <ogo:vsrc1/>
+      <ogo:start1>0</ogo:start1>
+      <ogo:stop1>0</ogo:stop1>
+      <ogo:step1>0</ogo:step1>
+      <ogo:vsrc2/>
+      <ogo:start2>0</ogo:start2>
+      <ogo:stop2>0</ogo:stop2>
+      <ogo:step2>0</ogo:step2>
+    </ogo:dc-sweep>
+  </ogo:simulation-settings>
+  <ogo:parts>
+    <ogo:part>
+      <ogo:rotation>90</ogo:rotation>
+      <ogo:name>Capacitor</ogo:name>
+      <ogo:library>Default</ogo:library>
+      <ogo:symbol>capacitor</ogo:symbol>
+      <ogo:position>(1130 640)</ogo:position>
+      <ogo:properties>
+        <ogo:property>
+          <ogo:name>Refdes</ogo:name>
+          <ogo:value/>
+        </ogo:property>
+        <ogo:property>
+          <ogo:name>Cap</ogo:name>
+          <ogo:value/>
+        </ogo:property>
+        <ogo:property>
+          <ogo:name>IC</ogo:name>
+          <ogo:value>0</ogo:value>
+        </ogo:property>
+        <ogo:property>
+          <ogo:name>Template</ogo:name>
+          <ogo:value>C_@refdes %1 %2 @cap IC=@IC</ogo:value>
+        </ogo:property>
+      </ogo:properties>
+      <ogo:labels>
+        <ogo:label>
+          <ogo:name>Reference designator</ogo:name>
+          <ogo:text>@refdes</ogo:text>
+          <ogo:position>(15 -10)</ogo:position>
+        </ogo:label>
+        <ogo:label>
+          <ogo:name>Capacitance</ogo:name>
+          <ogo:text>@cap</ogo:text>
+          <ogo:position>(15 40)</ogo:position>
+        </ogo:label>
+      </ogo:labels>
+    </ogo:part>
+    <ogo:part>
+      <ogo:rotation>90</ogo:rotation>
+      <ogo:flip>horizontal</ogo:flip>
+      <ogo:name>Resistor</ogo:name>
+      <ogo:library>Default</ogo:library>
+      <ogo:symbol>resistor</ogo:symbol>
+      <ogo:position>(1100 680)</ogo:position>
+      <ogo:properties>
+        <ogo:property>
+          <ogo:name>Refdes</ogo:name>
+          <ogo:value>h_ie</ogo:value>
+        </ogo:property>
+        <ogo:property>
+          <ogo:name>Res</ogo:name>
+          <ogo:value/>
+        </ogo:property>
+        <ogo:property>
+          <ogo:name>Template</ogo:name>
+          <ogo:value>R_@refdes %1 %2 @res</ogo:value>
+        </ogo:property>
+      </ogo:properties>
+      <ogo:labels>
+        <ogo:label>
+          <ogo:name>Reference designator</ogo:name>
+          <ogo:text>@refdes</ogo:text>
+          <ogo:position>(15 0)</ogo:position>
+        </ogo:label>
+        <ogo:label>
+          <ogo:name>Resistance</ogo:name>
+          <ogo:text>@res</ogo:text>
+          <ogo:position>(0 30)</ogo:position>
+        </ogo:label>
+      </ogo:labels>
+    </ogo:part>
+    <ogo:part>
+      <ogo:rotation>0</ogo:rotation>
+      <ogo:name>Gnd</ogo:name>
+      <ogo:library>Default</ogo:library>
+      <ogo:symbol>Ground</ogo:symbol>
+      <ogo:position>(1140 700)</ogo:position>
+      <ogo:properties>
+        <ogo:property>
+          <ogo:name>internal</ogo:name>
+          <ogo:value>ground</ogo:value>
+        </ogo:property>
+      </ogo:properties>
+      <ogo:labels/>
+    </ogo:part>
+    <ogo:part>
+      <ogo:rotation>0</ogo:rotation>
+      <ogo:flip>vertical</ogo:flip>
+      <ogo:name>CCCS</ogo:name>
+      <ogo:library>Default</ogo:library>
+      <ogo:symbol>CCCS</ogo:symbol>
+      <ogo:position>(1170 690)</ogo:position>
+      <ogo:properties>
+        <ogo:property>
+          <ogo:name>Refdes</ogo:name>
+          <ogo:value>I_c</ogo:value>
+        </ogo:property>
+        <ogo:property>
+          <ogo:name>Gain</ogo:name>
+          <ogo:value>h_FE</ogo:value>
+        </ogo:property>
+        <ogo:property>
+          <ogo:name>VCON</ogo:name>
+          <ogo:value>I_b</ogo:value>
+        </ogo:property>
+        <ogo:property>
+          <ogo:name>Template</ogo:name>
+          <ogo:value>F_@refdes %+ %- V_@vcon @gain</ogo:value>
+        </ogo:property>
+      </ogo:properties>
+      <ogo:labels>
+        <ogo:label>
+          <ogo:name>Reference designator</ogo:name>
+          <ogo:text>@refdes</ogo:text>
+          <ogo:position>(15 10)</ogo:position>
+        </ogo:label>
+        <ogo:label>
+          <ogo:name>Controlling source</ogo:name>
+          <ogo:text>@gain I ( @vcon )</ogo:text>
+          <ogo:position>(15 40)</ogo:position>
+        </ogo:label>
+      </ogo:labels>
+    </ogo:part>
+  </ogo:parts>
+  <ogo:wires>
+    <ogo:wire>
+      <ogo:points>(1120 670)(1120 680)</ogo:points>
+    </ogo:wire>
+    <ogo:wire>
+      <ogo:points>(1120 680)(1120 680)</ogo:points>
+    </ogo:wire>
+    <ogo:wire>
+      <ogo:points>(1110 680)(1110 680)</ogo:points>
+    </ogo:wire>
+    <ogo:wire>
+      <ogo:points>(1090 680)(1120 680)</ogo:points>
+    </ogo:wire>
+    <ogo:wire>
+      <ogo:points>(1040 640)(1120 640)</ogo:points>
+    </ogo:wire>
+    <ogo:wire>
+      <ogo:points>(1180 640)(1180 650)</ogo:points>
+    </ogo:wire>
+    <ogo:wire>
+      <ogo:points>(1180 680)(1180 700)</ogo:points>
+    </ogo:wire>
+    <ogo:wire>
+      <ogo:points>(1090 700)(1180 700)</ogo:points>
+    </ogo:wire>
+    <ogo:wire>
+      <ogo:points>(1090 680)(1090 700)</ogo:points>
+    </ogo:wire>
+    <ogo:wire>
+      <ogo:points>(1180 640)(1230 640)</ogo:points>
+    </ogo:wire>
+  </ogo:wires>
+  <ogo:textboxes>
+    <ogo:textbox>
+      <ogo:position>(1108 744)</ogo:position>
+      <ogo:text>Emettitore</ogo:text>
+    </ogo:textbox>
+    <ogo:textbox>
+      <ogo:position>(1008 624)</ogo:position>
+      <ogo:text>Emettitore</ogo:text>
+    </ogo:textbox>
+    <ogo:textbox>
+      <ogo:position>(1228 634)</ogo:position>
+      <ogo:text>Emettitore</ogo:text>
+    </ogo:textbox>
+  </ogo:textboxes>
+</ogo:schematic>
