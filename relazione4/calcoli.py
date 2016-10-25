@@ -12,7 +12,7 @@ from uncertainties import unumpy
 
 
 h_fe = ufloat(170, 10)
-V_BE = ufloat(0.6, 0.1)
+V_BE = ufloat(0.605, 0.004)
 V_CC = ufloat(20.2, 0.1)
 R_1 = ufloat(179000,1000)
 R_2 = ufloat(18000, 100)
@@ -39,6 +39,7 @@ print("V_CEteo = ", V_CEteo, "\n")
 
 V_E = I_Cteo*R_E
 V_C = V_CC-I_Cteo*R_C
+V_B = ufloat(1.77, 0.01)
 
 print("V_E = ", V_E, "\n")
 print("V_C = ", V_C, "\n")
@@ -61,6 +62,27 @@ I_B = I_C/h_fe
 R_INteo = 1/(1/R_1+1/R_2+ 1/(V_BE/I_B+h_fe*R_E))
 
 print("R_INteo = ", R_INteo, "\n")
+
+#Caduta di tensioni su R1 e R2:
+VR_2 = V_B
+VR_1 = V_CC - V_B
+I_2 = VR_2/R_2
+I_1 = VR_1/R_1
+I_B = I_2-I_1
+print("I_1 = ", I_2, "\n")
+print("I_2 = ", I_1, "\n")
+print("I_B = ", I_B, "\n")
+
+#Calcolo di I_B attesa:
+I_Bteo = I_C/h_fe
+print("I_B teorica = ", I_C/h_fe)
+
+#Calcolo della resistenza h_ie utilizzando il valore di I_b misurato
+print("h_ie = ", V_BE/I_Bteo, "\n")
+#Non mi torna questo valore
+
+
+
 
 
 
