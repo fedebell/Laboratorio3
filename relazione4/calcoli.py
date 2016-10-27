@@ -51,9 +51,9 @@ V_OUT2 = ufloat(2.94, 0.02)
 R_IN = R_S*1/(V_OUT1/V_OUT2 -1)
 print("R_IN = ", R_IN, "\n")
 
-V_OUT1 = ufloat(6.40, 0.02)
-R_L = ufloat(9.71, 0.01)
-V_OUT2 = ufloat(3.62, 0.02)
+V_OUT1 = ufloat(9.80, ((0.02)**2+(0.03*9.80)**2)**0.5)
+R_L = ufloat(10.05, 0.08)
+V_OUT2 = ufloat(5.04, ((0.02)**2+(0.03*5.04)**2)**0.5)
 R_OUT = R_L*(V_OUT1/V_OUT2 - 1)
 print("R_OUT = ", R_OUT, "\n")
 

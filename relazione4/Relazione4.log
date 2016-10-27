@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  25 OCT 2016 22:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  27 OCT 2016 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -619,40 +619,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--82
 
  []
 
-[2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 111.
+<clipping.png, id=19, 301.125pt x 225.84375pt>
+File: clipping.png Graphic file (type png)
+ <use clipping.png>
+Package pdftex.def Info: clipping.png used on input line 85.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [2]
+<bodeTutti.png, id=24, 1248.1029pt x 450.2421pt>
+File: bodeTutti.png Graphic file (type png)
+ <use bodeTutti.png>
+Package pdftex.def Info: bodeTutti.png used on input line 153.
+(pdftex.def)             Requested size: 499.23232pt x 180.09364pt.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+Overfull \hbox (15.53545pt too wide) in paragraph at lines 153--154
+ [][] 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.160 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 162.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
- [3]
-(./Relazione4.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 162.
+
+<salita.png, id=25, 1266.1704pt x 460.3599pt>
+File: salita.png Graphic file (type png)
+ <use salita.png>
+Package pdftex.def Info: salita.png used on input line 166.
+(pdftex.def)             Requested size: 633.08365pt x 230.17938pt.
+
+Overfull \hbox (149.38678pt too wide) in paragraph at lines 166--167
+ [][] 
+ []
+
+[3 <./clipping.png>] <orizzontale.png, id=32, 943.1235pt x 433.62pt>
+File: orizzontale.png Graphic file (type png)
+
+<use orizzontale.png>
+Package pdftex.def Info: orizzontale.png used on input line 182.
+(pdftex.def)             Requested size: 943.1212pt x 433.61894pt.
+
+Overfull \hbox (459.42433pt too wide) in paragraph at lines 182--183
+ [][] 
+ []
+
+<discesa.png, id=33, 1139.6979pt x 444.4605pt>
+File: discesa.png Graphic file (type png)
+ <use discesa.png>
+Package pdftex.def Info: discesa.png used on input line 195.
+(pdftex.def)             Requested size: 1139.69514pt x 444.45941pt.
+
+Overfull \hbox (655.99828pt too wide) in paragraph at lines 195--196
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./bodeTutti.png>] [5 <./salita.png>] [6 <./orizzontale.png>] [7 <./discesa.
+png>] (./Relazione4.aux) ) 
 Here is how much of TeX's memory you used:
- 3281 strings out of 494910
- 42322 string characters out of 6179836
- 116733 words of memory out of 5000000
- 6509 multiletter control sequences out of 15000+600000
- 11541 words of font info for 45 fonts, out of 8000000 for 9000
+ 3314 strings out of 494910
+ 42794 string characters out of 6179836
+ 117781 words of memory out of 5000000
+ 6536 multiletter control sequences out of 15000+600000
+ 11849 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,9n,24p,698b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmti10.pfb>
-Output written on Relazione4.pdf (3 pages, 186273 bytes).
+ 38i,9n,24p,715b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti10.pfb>
+Output written on Relazione4.pdf (7 pages, 349641 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 96 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
