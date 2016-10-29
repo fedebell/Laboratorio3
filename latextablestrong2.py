@@ -3,8 +3,8 @@ Lettura di dati dal file "INPUT", scrittura in "OUTPUT"
 Legge i dati e li inserisce in una tabella Latex formattata
 '''
 
-INPUT = "/home/federico/Laboratorio3/relazione4/datiBode2.txt"
-OUTPUT = "/home/federico/Laboratorio3/relazione4/datiBodeFormattati2.txt"
+INPUT = "/home/federico/Laboratorio3/relazione4/datiAmpiezzaEstesi.txt"
+OUTPUT = "/home/federico/Laboratorio3/relazione4/datiAmpiezzaFormattati.txt"
 
 
 import pylab
@@ -41,8 +41,12 @@ for i in range (0, col/2):
 				tmp = 10.0*tmp
 				n = n + 1
 			tmp = round(dati[j][2*i+1], n)
-			dati_s[j][2*i+1] = fpformat.fix(dati[j][2*i+1], n)
-			dati_s[j][2*i] = fpformat.fix(dati[j][2*i], n)
+			#dati_s[j][2*i+1] = fpformat.fix(dati[j][2*i+1], n)
+			#dati_s[j][2*i+1] = {":.*f"}.format(dati[j][2*i+1], n)
+			dati_s[j][2*i+1] = "%.*f" % (n, dati[j][2*i+1])
+			#dati_s[j][2*i] = fpformat.fix(dati[j][2*i], n)
+			#dati_s[j][2*i] = {":.*f"}.format(dati[j][2*i], n)
+			dati_s[j][2*i] = "%.*f" % (n, dati[j][2*i])
 		else:
 			n = 0
 			while(not(1 <= tmp <= 10)): #Controllare che vada bene
@@ -60,8 +64,12 @@ for i in range (0, col/2):
 			dati[j][2*i] = a
 			dati[j][2*i+1] = tmp
 
-			dati_s[j][2*i+1] = fpformat.fix(dati[j][2*i+1], 0)
-			dati_s[j][2*i] = fpformat.fix(dati[j][2*i], 0)
+			#dati_s[j][2*i+1] = fpformat.fix(dati[j][2*i+1], 0)
+			#dati_s[j][2*i+1] = {":.*f"}.format(dati[j][2*i+1], 0)
+			dati_s[j][2*i+1] = "%.*f" % (0, dati[j][2*i+1])
+			#dati_s[j][2*i] = fpformat.fix(dati[j][2*i], 0)
+			#dati_s[j][2*i] = {":.*f"}.format(dati[j][2*i], 0)
+			dati_s[j][2*i] = "%.*f" % (0, dati[j][2*i])
 		tmp = 0.0
 		a = 0.0
 

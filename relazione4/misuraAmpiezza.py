@@ -10,8 +10,8 @@ import scipy.stats
 import uncertainties 
 from uncertainties import unumpy
 
-INPUT = "/home/federico/Laboratorio3/relazione3/datiAmpiezza.txt"
-OUTPUT = "/home/federico/Laboratorio3/relazione3/datiAmpiezzaEstesi.txt"
+INPUT = "/home/federico/Laboratorio3/relazione4/datiAmpiezza.txt"
+OUTPUT = "/home/federico/Laboratorio3/relazione4/datiAmpiezzaEstesi.txt"
 
 Vin, dVin, Vout, dVout, t, dt = pylab.loadtxt(INPUT, unpack=True)
 
@@ -29,7 +29,19 @@ mediaA = A.mean()
 file = open(OUTPUT,"w")
 
 for i in range(len(A)):
-	#Da riscrivere (la file.write())
+	file.write(str(unumpy.nominal_values(VIN3)[i]))
+	file.write("\t")
+	file.write(str(unumpy.std_devs(VIN3)[i]))
+	file.write("\t")
+	file.write(str(unumpy.nominal_values(VOUT3)[i]))
+	file.write("\t")
+	file.write(str(unumpy.std_devs(VOUT3)[i]))
+	file.write("\t")
+	file.write(str(unumpy.nominal_values(A)[i]))
+	file.write("\t")
+	file.write(str(unumpy.std_devs(A)[i]))
+	file.write("\n")
+
 
 file.close()
 

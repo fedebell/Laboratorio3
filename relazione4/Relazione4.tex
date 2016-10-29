@@ -53,26 +53,28 @@ Tutti i dati mostrati nelle tabelle e nei grafici (in tutta la relazione) riport
 
 \begin{table}[!hbt]
 \centering
-\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline 
 $V_{IN}$ [V] & $\sigma V_{IN}$ [V] & $V_{OUT}$ [V]& $\sigma V_{OUT}$ [V] & $\phi - \pi$ [rad] & $\sigma \phi$ [rad] & $A_V$ & $\sigma A_V$ \\ 
 \hline
-0.206 & 0.006 & 2.00 & 0.06 & 0.06 & 0.07 & 9.7 & 0.1\\
-0.294 & 0.009 & 2.86 & 0.09 & 0.06 & 0.07 & 9.73 & 0.08\\
-0.42 & 0.01 & 2.00 & 0.06 & 0.09 & 0.07 & 4.76 & 0.05\\
-0.51 & 0.02 & 5.0 & 0.2 & 0.06 & 0.07 & 9.84 & 0.05\\
-0.62 & 0.02 & 6.0 & 0.2 & 0.03 & 0.07 & 9.61 & 0.04\\
-0.71 & 0.02 & 6.9 & 0.2 & 0.06 & 0.07 & 9.66 & 0.04\\
-0.80 & 0.02 & 7.7 & 0.2 & 0.06 & 0.07 & 9.60 & 0.05\\
-0.90 & 0.03 & 8.7 & 0.3 & 0.09 & 0.07 & 9.73 & 0.06\\
-1.03 & 0.03 & 9.9 & 0.3 & 0.06 & 0.07 & 9.63 & 0.05\\
-1.12 & 0.03 & 10.6 & 0.3 & 0.03 & 0.07 & 9.46 & 0.05\\
-1.21 & 0.04 & 11.5 & 0.3 & 0.09 & 0.07 & 9.50 & 0.05\\
-1.30 & 0.04 & 12.6 & 0.4 & 0.06 & 0.07 & 9.69 & 0.04\\
+0.21 & 0.08 & 2.0 & 0.2 & 9.7 & 0.1\\
+0.29 & 0.09 & 2.9 & 0.3 & 9.73 & 0.08\\
+0.4 & 0.1 & 2.0 & 0.2 & 4.76 & 0.05\\
+0.5 & 0.1 & 5.0 & 0.4 & 9.84 & 0.05\\
+0.6 & 0.1 & 6.0 & 0.4 & 9.61 & 0.04\\
+0.7 & 0.1 & 6.9 & 0.5 & 9.66 & 0.04\\
+0.8 & 0.2 & 7.7 & 0.5 & 9.60 & 0.05\\
+0.9 & 0.2 & 8.7 & 0.5 & 9.73 & 0.06\\
+1.0 & 0.2 & 9.9 & 0.5 & 9.63 & 0.05\\
+1.1 & 0.2 & 10.6 & 0.6 & 9.46 & 0.05\\
+1.2 & 0.2 & 11.5 & 0.6 & 9.50 & 0.05\\
+1.3 & 0.2 & 12.6 & 0.6 & 9.69 & 0.04\\
 \hline
 \end{tabular}
 \caption{Misure di tensione, guadagno e fase.} \label{ampiezza}
 \end{table}
+
+
 Si può vedere come il segnale in uscita sia sfasato di $\pi \, rad$ come atteso dai calcoli teorici. Tutte le misure dello sfasamento sono compatibili con zero entro l'errore sperimentale. Tuttavia si può osservare una fase sistematicamente maggiore di $\pi \, rad$ probabilmente a causa dell'impedenza dei condensatori in ingresso e uscita. Il valore medio dell'attenuzione (con errore propagato in maniera statistica sulla media di tutte le misure) è: $A = (-9.24 \pm 0.02)$.
 
 La tensione misurata a cui inizia il \emph{clipping} inferiore è circa $V_{inf} = 1.4 \,V$, mentre il clipping superiore inizia circa a $V_{sup} = 2.2 \, V$. Per referenza si gurdi l'immagine \ref{clipping}.\\
@@ -109,27 +111,28 @@ Nella tabella seguente l'errore sui voltaggi è stata considerato come errore qu
 \hline
 $V_{OUT} (V)$ & $\sigma V_{OUT} (V)$ & $f(kHz)$ & $\sigma f (kHz)$\\
 \hline
-2.02 & 0.02 & 0.0103 & 0.0001\\
-3.36 & 0.02 & 0.0178 & 0.0002\\
-4.72 & 0.02 & 0.0262 & 0.0003\\
-5.80 & 0.02 & 0.0341 & 0.0003\\
-6.28 & 0.04 & 0.0408 & 0.0004\\
-8.40 & 0.08 & 0.0803 & 0.0008\\
-8.88 & 0.08 & 0.118 & 0.001\\
-9.52 & 0.08 & 0.432 & 0.004\\
-9.52 & 0.08 & 0.752 & 0.008\\
-9.52 & 0.08 & 1.03 & 0.01\\
-9.60 & 0.08 & 5.13 & 0.05\\
-9.52 & 0.08 & 9.7 & 0.1\\
-9.12 & 0.08 & 31.5 & 0.3\\
-7.76 & 0.04 & 66.5 & 0.7\\
-5.16 & 0.04 & 141 & 1\\
-3.62 & 0.02 & 223 & 2\\
-2.76 & 0.02 & 303 & 3\\
-2.18 & 0.04 & 380 & 4\\
-1.70 & 0.02 & 505 & 5\\
-1.03 & 0.01 & 796 & 8\\
-0.85 & 0.01 & 1000 & 10\\
+2.02 & 0.06 & 0.0103 & 0.0001\\
+3.4 & 0.1 & 0.0178 & 0.0002\\
+4.7 & 0.1 & 0.0262 & 0.0003\\
+5.8 & 0.2 & 0.0341 & 0.0003\\
+6.3 & 0.2 & 0.0408 & 0.0004\\
+8.4 & 0.3 & 0.0803 & 0.0008\\
+8.9 & 0.3 & 0.118 & 0.001\\
+9.5 & 0.3 & 0.432 & 0.004\\
+9.5 & 0.3 & 0.752 & 0.008\\
+9.5 & 0.3 & 1.03 & 0.01\\
+9.6 & 0.3 & 5.13 & 0.05\\
+9.5 & 0.3 & 9.7 & 0.1\\
+9.1 & 0.3 & 31.5 & 0.3\\
+7.8 & 0.2 & 66.5 & 0.7\\
+5.2 & 0.2 & 141 & 1\\
+3.6 & 0.1 & 223 & 2\\
+2.76 & 0.09 & 303 & 3\\
+2.18 & 0.08 & 380 & 4\\
+1.70 & 0.05 & 505 & 5\\
+1.03 & 0.03 & 796 & 8\\
+0.85 & 0.03 & 1000 & 10\\
+\hline
 \hline
 \end{tabular}
 \caption{Tensioni in uscita in funzione della frequenza.}
@@ -184,8 +187,6 @@ $chi^2/ndof = 4.85/2$
 \label{orizz}
 \end{figure}
 
-
-
 Il parametro della retta di fit $y = q$ è: $q = 17.6 \pm 0.1 \, dB$. ($chi^2/ndof = 0.05/3$)
 
 \item \textbf{Fit parte di discesa del diagramma di Bode.}
@@ -213,28 +214,15 @@ In questa ultima parte si è inserita la resistenza $R_{es}= \pm k\Omega$ e si �
 
 \begin{table}[h]
 \centering
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline 
 $V_{IN}$ & $\sigma V_{IN}$ & $V_{OUT}$ & $\sigma V_{OUT}$ & $A_V$ & $\sigma A_V$ \\ 
-\hline 
-• & • & • & • & • & • \\ 
-\hline 
-• & • & • & • & • & • \\ 
-\hline 
-• & • & • & • & • & • \\ 
-\hline 
-• & • & • & • & • & • \\ 
-\hline 
-• & • & • & • & • & • \\ 
-\hline 
-• & • & • & • & • & • \\ 
-\hline 
-• & • & • & • & • & • \\ 
-\hline 
-• & • & • & • & • & • \\ 
-\hline 
-• & • & • & • & • & • \\ 
-\hline 
+\hline
+140 & 10 & 9.7 & 0.3\\
+75 & 8 & 5.2 & 0.2\\
+48 & 4 & 3.3 & 0.1\\
+110 & 10 & 7.0 & 0.2\\
+\hline
 \end{tabular}
 \caption{Guadagno per piccoli segnali?!.}
 \end{table}
