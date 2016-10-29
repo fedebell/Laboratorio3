@@ -12,8 +12,6 @@ def linear(x, a, b):
 	return a*x+b
 
 
-
-
 Vl, dVl, Vce, dVce = pylab.loadtxt('/home/federico/Laboratorio3/relazione3/dati2.txt', unpack=True)
 
 Rb = 46700 

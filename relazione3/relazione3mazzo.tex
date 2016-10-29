@@ -195,11 +195,11 @@ Abbiamo montato il circuito rappresentato in  figura \ref{circuito2}.
 \end{figure} 
 
 In ingresso abbiamo collegato  il generatore di funzioni in modalità output pulse, il quale genera un’onda quadra oscillante tra $0 V$ e $5 V$. Abbiamo usato  il generatore di tensione insieme allo stabilizzatore di tensione per ottenere  $V_{cc} = (5.00 \pm 0.03)$. \\ 
-Questa configurazione permette di far funzionare il transistor in regime di saturazione e di interdizione al variare di $V_{in}$. Le resistenze usate ( misurate con un multimetro digitale ) sono : $R_1=(14.6 \pm 0.2) \, k\Omega$, $R_2=(100 \pm 1) k\Omega$ e $R_L=(2.1 \pm 0.1) k\Omega$.
+Questa configurazione permette di far funzionare il transistor in regime di saturazione e di interdizione al variare di $V_{in}$. Le resistenze usate (misurate con un multimetro digitale ) sono : $R_1=(14.6 \pm 0.2) \, k\Omega$, $R_2=(100 \pm 1) k\Omega$ e $R_L=(2.1 \pm 0.1) k\Omega$.
 Il generatore si segnali fornisce un'onda quadra a circa $7.5 Hz$.
 
 \paragraph{Verifica del corretto funzionamento del circuito.}
-Si sono misurate le tensioni di base e di collettore nei due regimi in cui $V_{in} = 0 \, V$ e $V_{out} = 5 \, V$ le misure sno riportate nella tabella \ref{voltNot}.
+Si sono misurate le tensioni di base e di collettore nei due regimi in cui $V_{in} = 0 \, V$ e $V_{out} = 5 \, V$ le misure sono riportate nella tabella \ref{voltNot}.
 
 \begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|}
@@ -229,14 +229,14 @@ $I_C$ & $(2.4 \pm 0.1)\, mA$ & $(0.10\pm0.04) \, mA$ \\
 \caption{Correnti circuito NOT.} \label{correntiNot}
 \end{table}
 
-Come si può vedere dalle correnti al variare del valore di $V_{in}$ in circuito passa da condizione di interdizone (correnti basse nella base e nel collettore) a una situazione di saturazione. Questi stati corrispondono a voltaggi $V_{out} = V_C$ rispettivamente $V_{out} = (4.88\pm0.08) \ ,V$ e $V_{out} = (37.6\pm0.8)\, mV$. Duqnue il circuito può essere usato in logica TTL per implementare la funzione NOT.
+Come si può vedere dalle correnti al variare del valore di $V_{in}$ in circuito passa da condizione di interdizone (correnti basse nella base e nel collettore) a una situazione di saturazione. Questi stati corrispondono a voltaggi $V_{out} = V_C$ rispettivamente $V_{out} = (4.88\pm0.08) \, V$ e $V_{out} = (37.6\pm0.8)\, mV$. Duqnue il circuito può essere usato in logica TTL per implementare la funzione NOT.
 Nella zona di transizione il circuito passa in zona attiva.
 
 Si vede dalla figura come il comportamnto del cuircuito sia quello di eseguire un NOT:
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.7]{not.png} 
-\caption{Circuito NOT.} 
+\caption{Funzionamento del circuito come NOT.} 
 \end{figure} 
 
 
@@ -254,29 +254,29 @@ Ritardo & $(8.7\pm0.2)\, \mu s$ & $(244\pm8) \, ns$ \\
 Transizione & $(1.68\pm0.04)\, \mu s$ & $(224\pm8) \, ns$ \\ 
 \hline 
 \end{tabular} 
-\caption{Misure dei tempi.} 
+\caption{Misure dei tempi con $R_2 = 100 k\Omega$.} 
 \label{tempi1}
 \end{table}
 
 \paragraph{Discussione sui tempi di transizione di $ V_{out}$.}
-I tempi di transizione sono dovuti alla capacità della regione di svuotamento delle due giunzioni che si comporta come un condensatore, dove la larghezza della regione è propio la distanza tra le lastre. \\
-Nel modello h-ibrido tale capacità può essere aggiunta in parallelo alle resistenze dinamiche delle giunzioni. Nella situazione di interdizione la regione di svuotamento è grande e dunque la capacitò associata è piccola così come è piccolo il tempo di scarica del circuito RC associato. In zona di saturazione la capacità associata è piccola così come il tempo di salita. 
+I tempi di transizione sono dovuti alla capacità della regione di svuotamento delle due giunzioni, che si comporta come un condensatore, dove la larghezza della regione è propio la distanza tra le lastre. \\
+Nel modello h-ibrido tale capacità può essere aggiunta in parallelo alle resistenze dinamiche delle giunzioni. Nello stato di interdizione la regione di svuotamento è grande e dunque la capacitò associata è piccola così come è piccolo il tempo di scarica del circuito RC associato. In zona di saturazione la capacità associata è grande così come il tempo di salita. 
 \\Questo spiega perchè i tempi (di ritardo e di transizione) associati alla discesa sono minori di quelli associati alla salita.
 
 \paragraph{Cambiamento della resistenza $R_2$.}
-La resistenza $R_2$ è il parallelo alla resistenza dinamica della giunzione base emettitore ($h_{ie}$), utilizzando la formula di Shockley questa può essere stimata come: $h_ie = \frac{\eta V_T}{I_C} \sim 1 \, k \Omega$. \\
-La resistenza che compare nella stima della costante di tempo è il parallelo tra $R_2$ e $h_{ie}$, dunque per ottenere della variazioni nel tempo caratteristico bisogna scegliere resistenze $R_2$ dello stesso ordine di grandezza della resistenza dinamica. \\
-Togliendo la resistenza i tempi non cambiano significativamente questo perchè aggiungere una resistenza di $100 \, k\Omega$ in parallelo a una da $\ k\Omega$ non cambia la resistenza totale. Si riportano qui di seguito le misure dei tempi (\ref{tempi2}) per una resistenza $R_2 = 4.7 k\Omega$.
+La resistenza $R_2$ è il parallelo alla resistenza dinamica della giunzione base emettitore ($h_{ie}$), utilizzando la formula di Shockley questa può essere stimata come: $h_{ie} = \frac{\eta V_T}{I_C} \sim 1 \, k \Omega$. \\
+La resistenza che compare nella stima della costante di tempo è il parallelo tra $R_2$ e $h_{ie}$, dunque per ottenere della variazioni nel tempo caratteristico bisogna scegliere resistenze $R_2$ dello stesso ordine di grandezza della resistenza dinamica.\\
+Togliendo la resistenza i tempi non cambiano significativamente questo perchè aggiungere una resistenza di $100 \, k\Omega$ in parallelo a una da $1 \, k\Omega$ non cambia la resistenza totale. Si riportano qui di seguito le misure dei tempi in tabella (\ref{tempi2}) per una resistenza $R_2 = 4.7 k\Omega$.
 
 Nella figura \ref{condensatore}, si vede una chiara curva esponenziale dovuta alla scarica di un condensatore.\\
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.7]{condensatore.png} 
-\caption{Circuito logico NOT.} \label{condensatore}
+\caption{Tempi di ritardo e transizione.} \label{condensatore}
 \end{figure} 
 
-Dalla figura \ref{condensatore} si vedono anche qualitativamente le presenza dei tempi di ritardo e di transione.\\
+Dalla figura \ref{condensatore} si vedono anche qualitativamente le presenze dei tempi di ritardo e di transizione.\\
 
 \begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|}
@@ -291,8 +291,8 @@ Transizione & $(940\pm8)\,ns$ & $(220\pm10) \, ns$ \\
 \caption{Misure dei tempi con $R_2 = 4.7 \, k\Omega$.} \label{tempi2}
 \end{table}
 
-Diminuire la resistenza dovrebbe (secondo il modello prima esposto) abbassare i tempi sia di salita che di discesa. I tempi di Discesa rimangono tuttavia abbastanza stabili.\\
-E' necessario del tempo perchè la corrente di base della fase di saturazione si annulli per passare il fase di interdizione, diminuire la resistenza $R_2$ diminuisce la corrente di base e quindi anche il tempo associato alla salita (passaggio in interdizione).
+Diminuire la resistenza dovrebbe (secondo il modello prima esposto) abbassare i tempi sia di salita che di discesa. I tempi di discesa rimangono tuttavia abbastanza stabili.\\
+E' necessario un intervallo di tempo perchè la corrente di base della fase di saturazione si annulli per passare in fase di interdizione, diminuire la resistenza $R_2$ diminuisce la corrente di base e quindi anche il tempo associato alla salita (passaggio in interdizione). 
 
 \paragraph{Verifica funzionamento del circuito.}
 Si è verificato che le prime distorsioni apprezzabili dal comportamemento ideale del circuito si verificano alla frequenza di $20 \, kHz$.
