@@ -13,7 +13,7 @@ from uncertainties import unumpy
 def linear(x, b):
 	return b
 
-INPUT = "/home/federico/Laboratorio3/relazione4/orizzontale.txt"
+INPUT = "orizzontale.txt"
 
 Vout, dVout, f, df = pylab.loadtxt(INPUT, unpack=True)
 
@@ -25,7 +25,7 @@ VOUT3 = unumpy.uarray(Vout, (dVout**2 + (0.03*Vout)**2))
 VIN = ufloat(1.00, 0.01) 
 VIN3 = ufloat(1.00, ((0.01)**2+(0.03*1.00)**2)**0.5)
 #Per la visualizzazione inserisco il 3%
-A = VOUT3/VIN3
+A = VOUT/VIN
 dB = 20*unumpy.log10(A)
 #Attento a unita di misura della frequenza
 logF = unumpy.log10(F)

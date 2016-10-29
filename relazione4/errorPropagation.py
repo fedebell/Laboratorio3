@@ -23,8 +23,6 @@ matrix = [[0.0, 1.0, 0.0, 0.0],
 x = (b1-b2)/(a2-a1)
 print("Frequenza di taglio bassa = ", unumpy.pow(10.0, x))
 
-
-
 print("Frequenza di taglio alta:\n")
 #Inserire la matrice di covarianza
 matrix = [[0.0, 1.0, 0.0, 0.0],

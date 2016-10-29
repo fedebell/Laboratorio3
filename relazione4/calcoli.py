@@ -78,9 +78,21 @@ I_Bteo = I_C/h_fe
 print("I_B teorica = ", I_C/h_fe)
 
 #Calcolo della resistenza h_ie utilizzando il valore di I_b misurato
+h_ie = V_BE/I_Bteo
 print("h_ie = ", V_BE/I_Bteo, "\n")
 #Non mi torna questo valore
+#Rinuncio a propagare l'errore e do solo una stima al ribasso del 20% che e' l'errore sul condensatore.
+print("===========================")
+Rres = 98.7*1000
+C_E = 100*pow(10, -6)
+f = 5100.0
+omega = 2 * 3.1415 * f
+Z_E = 1/(1/complex(R_E.nominal_value)+1/(complex(Rres)+1/complex(0, omega*C_E)))
+A_V_appr = abs(complex(R_C.nominal_value)/Z_E)
 
+print("A_V_appr = ", A_V_appr)
+A_V = abs(complex(R_C.nominal_value)/(Z_E+complex(h_ie.nominal_value)/complex(h_fe.nominal_value)))
+print("A_V = ", A_V)
 
 
 

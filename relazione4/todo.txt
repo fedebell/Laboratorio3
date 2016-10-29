@@ -1,0 +1,4 @@
+ci sono delle prese dati non inserite(si vedono dalla relazionne, ci sono delle scritte tipo Vin= )
+ controllare la frequenza di taglio con errore troppo grande
+descrivere bene la parte finale sul guadagno
+ricontrollare tutto e vedere se qualcosa può essere scritto meglio
