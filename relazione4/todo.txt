@@ -1,4 +1,3 @@
-ci sono delle prese dati non inserite(si vedono dalla relazionne, ci sono delle scritte tipo Vin= )
- controllare la frequenza di taglio con errore troppo grande
-descrivere bene la parte finale sul guadagno
-ricontrollare tutto e vedere se qualcosa può essere scritto meglio
+-descrivere bene la parte finale sul guadagno, bsogma eseguire i due calcoli, non si possono usare le librerie uncertainties perchè non propagano glie rrori sui complessi. Io propongo di fregarcene fare il calcolo senza errore e attribuirgli un 20% che è l'errre sul condensatore che sarà di sicuro dominante (anche se compare in più pinti. facendo così, vedi fine dello script calcoli non si ottengono valori nenche vicino a quelli misurati. Non aggiungerei null'altro in questa parte.
+-ricontrollare tutto e vedere se qualcosa può essere scritto meglio - Ho dato una occhiata generale.
+

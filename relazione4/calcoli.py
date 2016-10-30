@@ -11,6 +11,7 @@ import uncertainties
 from uncertainties import unumpy
 
 
+
 h_fe = ufloat(170, 10)
 V_BE = ufloat(0.605, 0.004)
 V_CC = ufloat(20.2, 0.1)
@@ -26,6 +27,7 @@ print("Vpart = ", Vpart, "\n")
 
 V_CE = ufloat(7.50, 0.04)
 V_RC = ufloat(11.62, 0.05)
+
 I_C = V_RC/R_C
 
 print("I_C = ", I_C, "\n")
@@ -59,7 +61,8 @@ print("R_OUT = ", R_OUT, "\n")
 
 
 I_B = I_C/h_fe
-R_INteo = 1/(1/R_1+1/R_2+ 1/(V_BE/I_B+h_fe*R_E))
+h_ie = 0.025/(-I_B)
+R_INteo = 1/(1/R_1+1/R_2+ 1/(h_ie + h_fe*R_E))
 
 print("R_INteo = ", R_INteo, "\n")
 
@@ -77,19 +80,21 @@ print("I_B = ", I_B, "\n")
 I_Bteo = I_C/h_fe
 print("I_B teorica = ", I_C/h_fe)
 
+#Non posso usare i dati precedenti per stimare questa resistenza, poich essi si riferivano 
+#alla corrente di quiescenza, mentre qua voglio un valore dinamico della resistenza alla corrente di utilizzo.
+#Stima della reistenza dinamica
 #Calcolo della resistenza h_ie utilizzando il valore di I_b misurato
-h_ie = V_BE/I_Bteo
-print("h_ie = ", V_BE/I_Bteo, "\n")
+h_ie = 0.025/(-I_B)
+print("h_ie = ", h_ie, "\n")
 #Non mi torna questo valore
 #Rinuncio a propagare l'errore e do solo una stima al ribasso del 20% che e' l'errore sul condensatore.
 print("===========================")
-Rres = 98.7*1000
+Rres = 98.7
 C_E = 100*pow(10, -6)
 f = 5100.0
 omega = 2 * 3.1415 * f
 Z_E = 1/(1/complex(R_E.nominal_value)+1/(complex(Rres)+1/complex(0, omega*C_E)))
 A_V_appr = abs(complex(R_C.nominal_value)/Z_E)
-
 print("A_V_appr = ", A_V_appr)
 A_V = abs(complex(R_C.nominal_value)/(Z_E+complex(h_ie.nominal_value)/complex(h_fe.nominal_value)))
 print("A_V = ", A_V)
