@@ -72,22 +72,23 @@ Dalle stese equazioni della sezione precedente otteniamo la relazione: $A_V = \f
 Si osserva clipping inferiore alla tensione: $V_{clipping, inf} = \pm $. 
 \rem{Spiegare perchè non si ha clipping superiore}
 
-\rem{vedere se mettere l'immagine del modello a piccoli segnali}
+\rem{vedere se mettere l'immagine del modello a piccoli segnali, soprattuto quale mettere...}
 \section{Misura impedenza di ingresso}
 Trascurando le impedenze tra i terminali del JFET possiamo stimare $R_{int} = \frac{1}{j \omega C} + R_3 \sim R_3 = \pm$. Per eseguire la misura si sono misurate le uscite con e senza resistenza $R_{S}$ posta in serie al generatore di funzioni. La resistenza in ingresso attesa si ottiene dalla formula del partitore di tensione, $\frac{R_S}{R_IN} = \frac {V_1}{V_2} - 1$ (dove $V_1$ è la tensione misurata senza resistenza $R_S$). Si sono ripetute le misure per le frequenze $f_1 = 1 kHz$ e $f_2 = 10 kHz$.
+In tabella sono anche riportate le frequenze attese calcolate teoricamente alle due frequenze
 
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline 
-• & $V_1$ & $V_2$ & $R_{IN}$ \\ 
+• & $V_1$ & $V_2$ & $R_{IN}$ & $R_{IN, att}$ \\ 
+\hline
+$1 kHz$ & • & • & • & • \\ 
 \hline 
-$1 kHz$ & • & • & • \\ 
-\hline 
-$10 kHz$ & • & • & • \\ 
+$10 kHz$ & • & • & • & • \\ 
 \hline 
 \end{tabular} 
+L'impedenza misurata sperimentalmente è minore di quella calcolata teoricamente a causa delle impendenze delle capacità tra i terminali del JFET, che sono poste in parallelo alla resistenzea $R_3$.
 
 \section{Aumento del guadagno}
-
-
+In questa sezine si è mantenta costante la frequenza di lavoro e variando il potenziometro si sono effettuate diverse misure di tensione in uscita. \rem{abbiamo dovuto verificare che l'ingresso fosse costante?}. Il valore massimo del guadagno è risultato essere quello per cui la resistenza $R_S$ era minore (teoricamente nulla) ($R_{S, min}$). Il valore teorico del guadagno con questa resistenza è: $A_V = \pm $, che non è compatibile con il valore misurato.
 
 \end{document}
