@@ -32,7 +32,13 @@ Variando la resistenza del potenziometro (partitore di tensione) cambia la tensi
 \paragraph{Misura della corrente $I_D$ in funzione di $V_GS$.}
 Si sono prese misure della tensione $V_{GS}$ e di $V_{R1}$ utilizzando il multimetro digitale, da $V_{R1}$ si è ricavata poi $I_D = \frac{V_{R1}}{R_1}$. \rem{Ne possiamo usare due di multimetri?}. Nella tabella \ref{correnteId} e in figura \ref{graficoCorrenteId} sono riporati i dati presi. \\
 La retta di carico è: $V_1 - R_1 I_D-V_{\gamma}-V_{DS} = 0$ quando scorre corrente $I_D$ (cioè sono in zona ohmica o di saturazione), mentre $V_{DS} = V_1$ quando sono in zona di interdizione.\\
-Il grafico \ref{curveCaratteristiche} riporta un immagine delle curve caratteristiche del JFET nel caso in cui la tensione di \emph{pinch-off} sia $V_P = -2.0 V$, sul quale è riportata la retta di carico. Si vede che per i valori delle tensioni $V_{DS}$ esplorati (calcolati dalla retta di carico e riportati nella tabella \ref{correnteId} siamo semre in zona di saturazione. Dunque è possibile eseguire un fit di una funzione parabolica (togliendo i dati in cui siamo in interdizione) per stimare i parametri della legge empirica: $I_D = K_P (V_{GS} - V_P)^2$. Il punto del grafico per cui $V_{GS} = 0 V$ corrisponde alla corrente $I_{DSS}$, alternativamente si possono utilizzare le informazioni del fit: $I_{DSS} = K_P V_{P}^2$. I due valori sono compatibili entro l'errore.
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{char1.png}
+\caption{Curve caratteristiche del JFET dal datasheet.\label{curveCaratteristiche}}
+\end{figure}
+Il grafico \ref{curveCaratteristiche} riporta un immagine delle curve caratteristiche del JFET nel caso in cui la tensione di \emph{pinch-off} sia $V_P = -2.0 V$, sul quale è riportata la retta di carico. Si vede che per i valori delle tensioni $V_{DS}$ esplorati (calcolati dalla retta di carico e riportati nella tabella \ref{correnteId} siamo semre in zona di saturazione. Dunque è possibile eseguire un fit di una funzione parabolica (togliendo i dati in cui siamo in interdizione) per stimare i parametri della legge empirica: $I_D = K_P (V_{GS} - V_P)^2$. Il punto del grafico per cui $V_{GS} = 0 V$ corrisponde alla corrente $I_{DSS}$, alternativamente si possono utilizzare le informazioni del fit: $I_{DSS} = K_P V_{P}^2$. I due valori sono compatibili entro l'errore. Il valore di $V_P$ è molto variabile per costruzione, ma il valore misurato è compatibile con il \emph{range} indicato nel datasheet \rem{dire quale...}. 
+
 
 \paragraph{Stima della tensione $V_P$ e della corrente $I_DSS$}
 
