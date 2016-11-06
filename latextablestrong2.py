@@ -13,7 +13,7 @@ import fpformat
 
 #La matrice dati contiene i valori
 dati = pylab.loadtxt(INPUT,unpack=True)
-dati = dati.transpose() #utlizziamo cos gli indici standard
+dati = dati.transpose() #utilizziamo cos gli indici standard
 
 row = numpy.shape(dati)[0]
 col = numpy.shape(dati)[1] 
@@ -79,8 +79,11 @@ file = open(OUTPUT,"w")
 file.write("\\begin{table}[!htb]")
 file.write("\\centering\n")
 #MODIFICARE
-file.write("\\begin{tabular}{|c|c|c|c|}\n\\hline\n")
 
+file.write("\\begin{tabular}{|")
+for i in range(col):
+	file.write("c|")
+file.write("}\n\\hline\n")
 
 for i in range(row):
     for j in range(col):
