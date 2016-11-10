@@ -13,7 +13,10 @@ from uncertainties import unumpy
 def linear(x, a, b):
 	return a*(x-b)**2
 
-INPUT = "/home/federico/Laboratorio3/relazione5/datiParabola.txt"
+INPUT = "/home/federico/Laboratorio3/relazione5/dati.txt"
+OUTPUT = "/home/federico/Laboratorio3/relazione5/datiEstesi.txt"
+
+file = open(OUTPUT,"w")
 
 Vd, dVd, Vgs, dVgs = pylab.loadtxt(INPUT, unpack=True)
 
@@ -38,6 +41,21 @@ pylab.grid(color = "gray")
 pylab.errorbar(unumpy.nominal_values(V_GS), unumpy.nominal_values(I_D), 
 	unumpy.std_devs(I_D), unumpy.std_devs(V_GS), "o", color="black")
 
+for i in range(len(Vd)):
+	file.write(str(Vd[i]))
+	file.write("\t")
+	file.write(str(dVd[i]))
+	file.write("\t")
+	file.write(str(Vgs[i]))
+	file.write("\t")
+	file.write(str(dVgs[i]))
+	file.write("\t")
+	file.write(str(unumpy.nominal_values(I_D)[i]))
+	file.write("\t")
+	file.write(str(unumpy.std_devs(I_D)[i]))
+	file.write("\n")
+
+file.close()
 
 pylab.show()
 

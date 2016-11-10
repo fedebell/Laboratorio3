@@ -3,8 +3,8 @@ Lettura di dati dal file "INPUT", scrittura in "OUTPUT"
 Legge i dati e li inserisce in una tabella Latex formattata
 '''
 
-INPUT = "/home/federico/Laboratorio3/relazione5/datiParabola.txt"
-OUTPUT = "/home/federico/Laboratorio3/relazione5/datiParabolaFormattati.txt"
+INPUT = "/home/federico/Laboratorio3/relazione5/ampiezzaSourceFollowerEstesa.txt"
+OUTPUT = "/home/federico/Laboratorio3/relazione5/ampiezzaSourceFollowerEstesaFormattati.txt"
 
 
 import pylab
