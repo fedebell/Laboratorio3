@@ -77,6 +77,16 @@ print("A_V_att = ", A_V_att)
 A_V_att = R_part*g_m/(1+R_part*g_m)
 print("A_V_att = ", A_V_att)
 
+print("1/(j\omegaC) = ", 1/(2*1000*C))
+
+V_OUT = ufloat(2.62, 0.02)
+V_IN = ufloat(0.672, 0.008)
+A = V_OUT/V_IN
+print("A_max = ", A)
+R_part = ufloat(0.3, 0.3)
+A_V_att = - R_1*g_m/(1+R_part*g_m)
+print("A_V_att_max = ", A_V_att)
+
 
 
 
