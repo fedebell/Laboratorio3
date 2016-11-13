@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.7)  11 NOV 2016 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.7)  12 NOV 2016 18:21
 entering extended mode
 **./relaz6.tex
 (relaz6.tex
@@ -608,27 +608,83 @@ File: pinrelaz6.png Graphic file (type png)
  <use pinrelaz6.png>
 Package pdftex.def Info: pinrelaz6.png used on input line 19.
 (pdftex.def)             Requested size: 132.1196pt x 74.9807pt.
- [1
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./pinrelaz6.png>] (relaz6
-.aux)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<opampinvert.png, id=2, 1028.34187pt x 578.16pt>
+File: opampinvert.png Graphic file (type png)
+ <use opampinvert.png>
+Package pdftex.def Info: opampinvert.png used on input line 32.
+(pdftex.def)             Requested size: 514.16968pt x 289.07928pt.
+
+Overfull \hbox (30.47281pt too wide) in paragraph at lines 32--33
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `' on page 1 undefined on input line 37.
+
+
+LaTeX Warning: Reference `' on page 1 undefined on input line 38.
+
+[1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./pinrelaz6.png> <./opamp
+invert.png>]
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 45.
+
+
+LaTeX Warning: Reference `opampnoninvert' on page 2 undefined on input line 54.
+
+
+<opampnoninvert.png, id=15, 460.72125pt x 294.34969pt>
+File: opampnoninvert.png Graphic file (type png)
+
+<use opampnoninvert.png>
+Package pdftex.def Info: opampnoninvert.png used on input line 57.
+(pdftex.def)             Requested size: 230.36006pt x 147.17447pt.
+ [2 <./opampnoninvert.png>] (relaz6.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3893 strings out of 493334
- 49823 string characters out of 3136660
- 125904 words of memory out of 3000000
- 7372 multiletter control sequences out of 15000+200000
- 4245 words of font info for 16 fonts, out of 3000000 for 9000
+ 3965 strings out of 493334
+ 50846 string characters out of 3136660
+ 129920 words of memory out of 3000000
+ 7419 multiletter control sequences out of 15000+200000
+ 11001 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,7n,25p,793b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on relaz6.pdf (1 page, 60815 bytes).
+ 40i,8n,25p,793b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on relaz6.pdf (2 pages, 236989 bytes).
 PDF statistics:
- 15 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
