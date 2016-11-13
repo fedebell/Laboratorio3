@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  12 NOV 2016 12:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  13 NOV 2016 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -626,123 +626,87 @@ Package pdftex.def Info: char2.png used on input line 62.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./circuito1.png> <./ch
 ar2.png>]
-<parabolaTutti.png, id=25, 1033.461pt x 466.1415pt>
+<parabolaTutti.png, id=27, 1033.461pt x 466.1415pt>
 File: parabolaTutti.png Graphic file (type png)
  <use parabolaTutti.png>
-Package pdftex.def Info: parabolaTutti.png used on input line 83.
+Package pdftex.def Info: parabolaTutti.png used on input line 82.
 (pdftex.def)             Requested size: 516.72923pt x 233.07018pt.
 
-Overfull \hbox (33.03236pt too wide) in paragraph at lines 83--84
+Overfull \hbox (33.03236pt too wide) in paragraph at lines 82--83
  [][] 
  []
 
-<parabolaFit.png, id=27, 970.5861pt x 435.7881pt>
+<parabolaFit.png, id=28, 970.5861pt x 435.7881pt>
 File: parabolaFit.png Graphic file (type png)
  <use parabolaFit.png>
-Package pdftex.def Info: parabolaFit.png used on input line 89.
+Package pdftex.def Info: parabolaFit.png used on input line 88.
 (pdftex.def)             Requested size: 485.29187pt x 217.89351pt.
 
-Overfull \hbox (1.595pt too wide) in paragraph at lines 89--90
+Overfull \hbox (1.595pt too wide) in paragraph at lines 88--89
  [][] 
  []
 
-<circuito2.png, id=28, 843.15pt x 903.375pt>
+<circuito2.png, id=29, 843.15pt x 903.375pt>
 File: circuito2.png Graphic file (type png)
  <use circuito2.png>
-Package pdftex.def Info: circuito2.png used on input line 103.
+Package pdftex.def Info: circuito2.png used on input line 102.
 (pdftex.def)             Requested size: 252.94695pt x 271.01459pt.
  [3 <./parabolaTutti.png>] [4 <./parabolaFit.png> <./circuito2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 153--159
+Underfull \hbox (badness 10000) in paragraph at lines 152--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 167.
 
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 168.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 168.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 167.
 
-<image21.jpg, id=47, 451.6875pt x 202.50656pt>
+<image21.jpg, id=48, 451.6875pt x 202.50656pt>
 File: image21.jpg Graphic file (type jpg)
  <use image21.jpg>
-Package pdftex.def Info: image21.jpg used on input line 183.
+Package pdftex.def Info: image21.jpg used on input line 182.
 (pdftex.def)             Requested size: 361.35048pt x 162.00545pt.
-
-! Undefined control sequence.
-l.187 ...mpendenza associate sono $Z_C = 100 M\Ohm
-                                                  $ (a $f=1\kHz$) e  $Z_C = ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.187 ...ociate sono $Z_C = 100 M\Ohm$ (a $f=1\kHz
-                                                  $) e  $Z_C = 10 M\Ohm$ (a ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.187 ...0 M\Ohm$ (a $f=1\kHz$) e  $Z_C = 10 M\Ohm
-                                                  $ (a $f=10\kHz$). Si capis...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.187 ...=1\kHz$) e  $Z_C = 10 M\Ohm$ (a $f=10\kHz
-                                                  $). Si capisce che l'influ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[6 <./image21.jpg>] (./relazione5.aux) ) 
+ [6 <./image21.jpg>] (./relazione5.aux) ) 
 Here is how much of TeX's memory you used:
  3320 strings out of 494910
  42934 string characters out of 6179836
- 116787 words of memory out of 5000000
+ 115787 words of memory out of 5000000
  6539 multiletter control sequences out of 15000+600000
  12253 words of font info for 47 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,9n,24p,1128b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on relazione5.pdf (6 pages, 563220 bytes).
+</usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on relazione5.pdf (6 pages, 552878 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
+ 117 PDF objects out of 1000 (max. 8388607)
  78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)

@@ -63,8 +63,7 @@ La retta di carico è: $V_1 - R_1 I_D-V_{\gamma}-V_{DS} = 0$, dove $V_{\gamma} \
 \caption{Curve caratteristiche del JFET dal datasheet.\label{curveCaratteristiche}}
 \end{figure}
 
-\rem{Aggiungere retta di carico e discutere il fatto che siamo sempre in zona di saturazione}
-La fig. \ref{curveCaratteristiche} riporta un'immagine delle curve caratteristiche del JFET nel caso in cui la tensione di \emph{pinch-off} sia $V_P = -3.0\,V$, sul quale è riportata la retta di carico. Si vede che per i valori delle tensioni $V_{GS}$ esplorati (calcolati dalla retta di carico e riportati nella tabella \ref{correnteId} siamo sempre in zona di saturazione. 
+La fig. \ref{curveCaratteristiche} riporta un'immagine delle curve caratteristiche del JFET nel caso in cui la tensione di \emph{pinch-off} sia $V_P = -3.0\,V$, sul quale è riportata la retta di carico. Si vede che per i valori delle tensioni $V_{GS}$ esplorati (riportati nella tabella \ref{correnteId}) siamo sempre in zona di saturazione. 
 
 E' stato eseguito un fit di una funzione parabolica ($I_D = K_P (V_{GS} - V_P)^2$), considerando solamente i dati attorno alla tensione di \emph{pinch-off}, cioè in una regione in cui ci aspettiamo valga il comportamento ideale. 
 
@@ -184,13 +183,10 @@ L'impedenza misurata sperimentalmente è minore di quella calcolata teoricamente
 \caption{Modello a piccoli segnali del transistor JFET (con capacità parassite).}\label{piccoliSegnali}
 \end{figure}
 
-Le capacità parassite sono in parallelo alla resistenza $R_S$, esse sono molto variabili (come riportato nel \emph{datasheet}) ma sono dell'ordine del $pF$, pertanto le tipica impendenza associate sono $Z_C = 100 M\Ohm$ (a $f=1\kHz$) e  $Z_C = 10 M\Ohm$ (a $f=10\kHz$). Si capisce che l'influenza di queste capacità aumenta all'aumentare della frequenza poichè diventano sempre più simili al valore $R_S$. Quando la frequenza diventa così alta che le impendenze diminuscono sotto il $M\Omega$ queste diventano predominanti nella risposta del circuito.
+Le capacità parassite sono in parallelo alla resistenza $R_S$, esse sono molto variabili (come riportato nel \emph{datasheet}) ma sono dell'ordine del $pF$, pertanto le tipica impendenza associate sono $Z_C = 100 \, M\Omega$ (a $f=1\, kHz$) e  $Z_C = 10\, M\Omega$ (a $f=10 \, kHz$). Si capisce che l'influenza di queste capacità aumenta all'aumentare della frequenza poichè diventano sempre più simili al valore $R_S$. Quando la frequenza diventa così alta che le impendenze diminuscono sotto il $M\Omega$ queste diventano predominanti nella risposta del circuito.
 
 \section{Aumento del guadagno}
 In questa sezione si è mantenta costante la frequenza di lavoro ($f_0 = 1.00\pm0.01\, kHz$) e variando il potenziometro si sono effettuate diverse misure di tensione in uscita. Il valore massimo del guadagno è risultato essere quello per cui la resistenza $R_S$ era minore (teoricamente nulla), $R_{S, min} = 0.3 \pm 0.3 \, \Omega$. Per questa resistenza le tensioni  sono: $V_{IN} = 672\pm8 \, mV$ e $V_{OUT} = 2.72 \pm 0.02 \, V$, si ottiene:  $A_V = -3.90\pm0.05$.
 Il valore teorico del guadagno con questa resistenza è:  $A_V =-3.84\pm0.05$, questo valore è compatibile con quello misurato.
-Che il guadagno cresca monotonamente al diminuire della resistenza $R_{part}$ è evidente dal fatt che questa si trovi a denominatore della formula $A_V = -\frac{v_D}{v_G} = - \frac{R_1 g_m}{1+R_{part} g_m}$.
-
-\rem{Che vuol dire discuterne la relazione con i arametri del transistor?}
-
+Che il guadagno cresca monotonamente al diminuire della resistenza $R_{part}$ è evidente dal fatt che questa si trovi a denominatore della formula $A_V = -\frac{v_D}{v_G} = - \frac{R_1 g_m}{1+R_{part} g_m}$. Dobbiamo anche concludere che al variare del punto di lavoro la transconduttanza (che determina il guadagno) rimanga circa costante, mentre il modello da noi usato prevede che cambi con la radice della corrente $I_D$.
 \end{document}
