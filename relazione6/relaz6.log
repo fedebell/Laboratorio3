@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.7)  12 NOV 2016 18:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.7)  13 NOV 2016 21:59
 entering extended mode
 **./relaz6.tex
 (relaz6.tex
@@ -607,7 +607,7 @@ G,.JBIG2,.JB2,.eps]
 File: pinrelaz6.png Graphic file (type png)
  <use pinrelaz6.png>
 Package pdftex.def Info: pinrelaz6.png used on input line 19.
-(pdftex.def)             Requested size: 132.1196pt x 74.9807pt.
+(pdftex.def)             Requested size: 220.19711pt x 124.96657pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -618,15 +618,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<opampinvert.png, id=2, 1028.34187pt x 578.16pt>
+<opampinvert.png, id=2, 500.62032pt x 374.14781pt>
 File: opampinvert.png Graphic file (type png)
  <use opampinvert.png>
 Package pdftex.def Info: opampinvert.png used on input line 32.
-(pdftex.def)             Requested size: 514.16968pt x 289.07928pt.
-
-Overfull \hbox (30.47281pt too wide) in paragraph at lines 32--33
- [][] 
- []
+(pdftex.def)             Requested size: 250.30954pt x 187.07344pt.
 
 
 LaTeX Warning: Reference `' on page 1 undefined on input line 37.
@@ -641,29 +637,35 @@ invert.png>]
 
 LaTeX Warning: Reference `' on page 2 undefined on input line 45.
 
-
-LaTeX Warning: Reference `opampnoninvert' on page 2 undefined on input line 54.
-
-
-<opampnoninvert.png, id=15, 460.72125pt x 294.34969pt>
+<opampnoninvert.png, id=17, 472.01344pt x 304.88907pt>
 File: opampnoninvert.png Graphic file (type png)
 
 <use opampnoninvert.png>
 Package pdftex.def Info: opampnoninvert.png used on input line 57.
-(pdftex.def)             Requested size: 230.36006pt x 147.17447pt.
- [2 <./opampnoninvert.png>] (relaz6.aux)
+(pdftex.def)             Requested size: 236.00613pt x 152.44415pt.
+ <integratore.png, id=18, 517.935pt x 348.55219pt>
+File: integratore.png Graphic file (type png)
+
+<use integratore.png>
+Package pdftex.def Info: integratore.png used on input line 66.
+(pdftex.def)             Requested size: 258.96686pt x 174.27565pt.
+ <derivatore.png, id=19, 579.66562pt x 293.59688pt>
+File: derivatore.png Graphic file (type png)
+
+<use derivatore.png>
+Package pdftex.def Info: derivatore.png used on input line 72.
+(pdftex.def)             Requested size: 289.83209pt x 146.79807pt.
+ [2 <./opampnoninvert.png>] [3 <./integratore.png> <./derivatore.png>] (relaz6.
+aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 3965 strings out of 493334
- 50846 string characters out of 3136660
- 129920 words of memory out of 3000000
- 7419 multiletter control sequences out of 15000+200000
+ 3975 strings out of 493334
+ 51029 string characters out of 3136660
+ 130928 words of memory out of 3000000
+ 7427 multiletter control sequences out of 15000+200000
  11001 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,8n,25p,793b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -682,9 +684,9 @@ TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX
 fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmti10.pfb>
-Output written on relaz6.pdf (2 pages, 236989 bytes).
+Output written on relaz6.pdf (3 pages, 275590 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -16,7 +16,7 @@
 Misurare le caratteristiche di amplificatori invertenti e non invertenti realizzati con un op-amp TL081 in fig.\ref{pin}.
 \begin{figure}[!htb]
   \centering
-  \includegraphics[scale=0.3]{pinrelaz6.png}
+  \includegraphics[scale=0.5]{pinrelaz6.png}
 \caption{configurazione pin.}
 \label{pin}
 \end{figure}
@@ -48,7 +48,7 @@ Abbiamo notato che il circuito si comporta come un filtro passa-basso ed abbiamo
 
 
 \subsection{Slew rate}
-Abbiamo impostato il generatore di funzioni in modo che fornisse al circuito un’onda quadra di ampiezza $V_{IN} =$ e frequenza $f=$. abbiamo in seguito studiato l'andamento di $V_{OUT}$ nella parte del segnale corrispondente al transiente fra i due stati dell’onda:la tensione osservata presenta inizialmente un andamento qualitativamente esponenziale,successivamente un andamento lineare per poi rallentare in prossimità del suo valore limite. Nella zona di crescita lineare si è dunque presa una misura della differenza di tensione$dV_{OUT}$= relativa a un piccolo intervallo di tempo $dt=$.. Dal loro rapporto si ottiene il valore dello $\emph{slew rate}=$.
+Abbiamo impostato il generatore di funzioni in modo che fornisse al circuito un’onda quadra di ampiezza $V_{IN} =$ e frequenza $f=$. abbiamo in seguito studiato l'andamento di $V_{OUT}$ nella parte del segnale corrispondente al transiente fra i due stati dell’onda:la tensione osservata presenta inizialmente un andamento qualitativamente esponenziale,successivamente un andamento lineare per poi rallentare in prossimità del suo valore limite. Nella zona di crescita lineare si è dunque presa una misura della differenza di tensione $dV_{OUT}$= relativa a un piccolo intervallo di tempo $dt=$.. Dal loro rapporto si ottiene il valore dello $\emph{slew rate}=$.
 \rem{da confrontare con il valore dato dal costruttore}
 \section{Amplificatore non invertente}
 Abbiamo montato il circuito in fig. \ref{opampnoninvert} con $R_1=$ e  un potenziometro di resistenza massima $P_{1_{MAX}}=$.
@@ -60,4 +60,16 @@ Abbiamo montato il circuito in fig. \ref{opampnoninvert} con $R_1=$ e  un potenz
 \end{figure}
 
 abbiamo utilizzato come segnale di ingresso fornito dal generatore di funzioni  un onda sinusoidale di ampiezza $V_{IN}=$ \footnote{Anche in questo caso  ci siamo accertati che l'ampiezza del segnale in ingresso rimanesse costante al variare della frequenza, avendo cura in caso di necessità di agire sul generatore di funzioni in modo da avere il segnale voluto} 
+\section{Circuito integratore}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.5]{integratore.png}
+\caption{circuito integratore con OpAmp}
+\end{figure}
+\section{Circuito derivatore}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.5]{derivatore.png}
+\caption{circuito derivatore con OpAmp}
+\end{figure}
 \end{document}
