@@ -21,7 +21,7 @@ Studiare le caratteristiche e realizzare un amplificatore con il JFET a canale N
 \paragraph{Montaggio e ossevazioni qualitative.}
 E' stato montato il circuito in fig. \ref{circuito1}, con  $R_1 = 0.994\pm0.008 \, k\Omega$, $V_1 = 15.11\pm0.08 \, V$ e $V_2 = -15.01 \pm 0.08 \, V$ \footnote{Misure eseguite con il multimetro digitale}. Le due sorgenti di tensione DC sono state ottenute dalle due boccole del generatore in dotazione. Le resistenze massime e minime del potenziometro (indicato con $R_2$) sono:  $R_{max} = 1.95 \pm 0.01 \, k\Omega$ e $R_{min} = 0.3 \pm 0.3 \, \Omega$
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.3]{circuito1.png}
 \caption{Schema di amplificatore con JFET in corrente continua.\label{circuito1}}
@@ -30,8 +30,8 @@ E' stato montato il circuito in fig. \ref{circuito1}, con  $R_1 = 0.994\pm0.008 
 Variando la resistenza del potenziometro (partitore di tensione) cambia la tensione di \emph{gate} ($V_{GS}$), dunque il JFET entra in conduzione solamente quando si supera la tensione $V_{GS} > V_{P}$ (tensione di \emph{pinch-off}), quando ciò succede si accende il led. Qualitativamente stimiamo: $V_P \sim 3\,V$. 
 
 \paragraph{Misura della corrente $I_D$ in funzione di $V_{GS}$.}
-Si sono prese misure della tensione $V_{GS}$ e di $V_{R1}$ (caduta di potenziale ai capi di $R_1$) utilizzando il multimetro digitale \footnote{Abbiamo evitato l'uso dell'oscilloscopio perchè le nostre misure non fossero affette dall'errore sistematico del $3\%$}, da $V_{R1}$ si è ricavata $I_D = \frac{V_{R1}}{R_1}$. Nella tabella \ref{correnteId} e in fig. \ref{correnteIdVgs} sono riporati i dati presi.\\
-Gli errori delle misure di tensione nei grafici e nella tabella sono calcolati come specificato nel manuale del multimetro.
+Si sono prese misure della tensione $V_{GS}$ e di $V_{R1}$ (caduta di potenziale ai capi di $R_1$) utilizzando il multimetro digitale \footnote{Abbiamo evitato l'uso dell'oscilloscopio perchè le nostre misure non fossero affette dall'errore sistematico del $3\%$}, da $V_{R1}$ si è ricavata $I_D = \frac{V_{R1}}{R_1}$. Nella tabella \ref{correnteId} e in fig. \ref{tuttiIdati} sono riporati i dati presi. Gli errori delle misure di tensione nei grafici e nella tabella sono calcolati come specificato nel manuale del multimetro.\\
+La retta di carico è: $V_1 - R_1 I_D-V_{\gamma}-V_{DS} = 0$, dove $V_{\gamma} \sim 1.8 \, V$ è la caduta di tensione sul led rosso (caratteristica del led). Questa retta di carico è valida quando il led è acceso cioè quando vi è una corrente $I_D$: sono in zona ohmica o di saturazione, mentre $V_{DS} = V_1$ è la retta di carico quando sono in zona di interdizione.\\
 
 \begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|c|c|}
@@ -55,35 +55,39 @@ $ V_{R1} (V)$ & $ \sigma V_{R1} (V) $ & $V_{GS} (V) $ & $\sigma V_{GS} (V)$ & $I
 \label{correnteId}
 \end{table}
 
-La retta di carico è: $V_1 - R_1 I_D-V_{\gamma}-V_{DS} = 0$, dove $V_{\gamma} \sim 1.8 \, V$ è la caduta di tensione sul led rosso (caratteristica del led). Questa retta di carico è valida quando il led è acceso cioè quando vi è una corrente $I_D$: sono in zona ohmica o di saturazione, mentre $V_{DS} = V_1$ è la retta di carico quando sono in zona di interdizione.\\
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{parabolaTutti.png}
+\caption{Corrente di drain misurata in funzione della tensione $V_{GS}$.\label{tuttiIdati}}
+\end{figure}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[scale=0.4]{char2.png}
 \caption{Curve caratteristiche del JFET dal datasheet.\label{curveCaratteristiche}}
 \end{figure}
 
 La fig. \ref{curveCaratteristiche} riporta un'immagine delle curve caratteristiche del JFET nel caso in cui la tensione di \emph{pinch-off} sia $V_P = -3.0\,V$, sul quale è riportata la retta di carico. Si vede che per i valori delle tensioni $V_{GS}$ esplorati (riportati nella tabella \ref{correnteId}) siamo sempre in zona di saturazione, dunque valgono le approssimazioni note dalla teoria del JFET per questo regime (per esempio la dipendenza quadratica di $I_D$ da $V_{GS}$).\\
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{parabolaFit.png}
+\caption{Fit parabolico intorno alla tensione di pinch off.\label{correnteIdVgs}}
+\end{figure}
+
 E' stato eseguito un fit di una funzione parabolica ($I_D = K_P (V_{GS} - V_P)^2$), considerando solamente i dati attorno alla tensione di \emph{pinch-off}, cioè in una regione in cui ci aspettiamo valga il comportamento ideale. \\
 Per il fit numerico si è utilizzata la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "true"$}, poichè abbiamo considerando gli errori come statistici. Riportiamo il grafico in figura \ref{correnteIdVgs} e di seguito parametri fittati con la relativa matrice di covarianza: $K_P = 1.30 \pm 0.05 \, \frac{mA}{V^2}$, $V_P = -3.39 \pm 0.02 \, V$,  $ \Sigma_{ij} = \left( \begin{array}{cc}
 3.46 \cdot 10^{-3} & 8.40 \cdot 10^{-4} \\ 
 8.40 \cdot 10^{-4} & 2.69 \cdot 10^{-4}\\
 \end{array} \right)$. Con un $\chi^2/ndof = 3/4$.
 
+
 Il punto del grafico per cui $V_{GS} \sim 0\,V$ corrisponde alla corrente $I_{DSS} = 9.5 \pm 0.2\, mA$ \footnote{L'errore su $I_{DSS}$ è la semidispersione dell'intervallo massimo in cui è ragionevole si trovi $V_{GS} \sim 0\,V$.}, mentre $V_P \sim -3.3\,V$ (tensione a $I_D \sim 0 \, mA$), entrambe stimate dal grafico.\\
 Alternativamente si possono utilizzare le informazioni del fit: $I_{DSS} = K_P V_{P}^2 = 15.0 \pm 0.3 \, mA$. I due valori non sono compatibili, perchè il fit esguito non può essere estrapolato fino a tensioni prossime allo zero.\\
 
-\begin{figure}
-\centering
-\includegraphics[scale=0.5]{parabolaTutti.png}
-\caption{Corrente di drain misurata in funzione della tensione $V_{GS}$.\label{tuttiIdati}}
-\end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[scale=0.5]{parabolaFit.png}
-\caption{Fit parabolico intorno alla tensione di pinch off.\label{correnteIdVgs}}
-\end{figure}
+
+
 
 Il valore di $V_P$ è molto variabile per costruzione, ma il valore misurato è compatibile con quello tipico indicato nel \emph{datasheet}: $V_{P, datasheet} = -3 \, V$. Per $I_{DSS}$ sono riportati possibili valori tra $2 \, mA$ e $20 \, mA$, entrambi i valori ottenuti sono compatibili.\\
 
@@ -154,7 +158,7 @@ Essendo il sagnale non invertito, l'interpretazione del \emph{clipping} è ugual
 Nella formula per determinare il guadagno vediamo $g_m$ sia a numeratore che a denominatore, dunque non possiamo propagare l'errore considerandoli come indipendenti (sovrastimeremmo troppo l'errore sull'amplificazione). La propagazione statistica eseguita con le derivate parziali (di $A_V(g_m, R_1, R_{part})$) sommate in quadratura li considera come errori non indipendenti, quindi si è eseguito il calcolo in questo modo.\\
 
 \section{Misura impedenza di ingresso}
-Trascurando le impedenze tra i terminali del JFET possiamo stimare $R_{int} = \frac{1}{j \omega C} + R_3 \sim R_3 = 4.66\pm0.04 M\Omega$ \footnote{A $f = 1\,kHz$ l'impedenza del condensatore vale $Z_C = 5\,k\Omega$ dunque è trasurabile per entrambe le frequenze.}. Si sono misurate le tensioni in uscita con e senza resistenza $R_{S} = 5.20 \pm 0.05 \, M\Omega$ posta in serie al generatore di funzioni. La resistenza in ingresso misurata si ottiene dalla formula del partitore di tensione: $\frac{R_S}{R_IN} = \frac {V_1}{V_2} - 1$ (dove $V_1$ è la tensione misurata senza resistenza $R_S$). Si sono eseguite le misure per le frequenze $f_1 = 1 kHz$ e $f_2 = 10 kHz$.
+Trascurando le impedenze tra i terminali del JFET possiamo stimare $R_{int} = \frac{1}{j \omega C} + R_3 \sim R_3 = 4.66\pm0.04 M\Omega$ \footnote{A $f = 1\,kHz$ l'impedenza del condensatore vale $Z_C = 5\,k\Omega$ dunque è trasurabile per entrambe le frequenze.}. Si sono misurate le tensioni in uscita con ($V_1$) e senza ($V_2$) resistenza $R_{S} = 5.20 \pm 0.05 \, M\Omega$ posta in serie al generatore di funzioni. La resistenza in ingresso misurata si ottiene dalla formula del partitore di tensione: $\frac{R_S}{R_IN} = \frac {V_1}{V_2} - 1$ (dove $V_1$ è la tensione misurata senza resistenza $R_S$). Si sono eseguite le misure per le frequenze $f_1 = 1 kHz$ e $f_2 = 10 kHz$.
 
 In tabella \ref{tabellaInterna} sono anche riportate le resistenze attese calcolate teoricamente alle due frequenze:\\
 
