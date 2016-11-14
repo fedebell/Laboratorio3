@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  13 NOV 2016 14:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  14 NOV 2016 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -491,7 +491,30 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks22
 )
-(./relazione5.aux)
+(./relazione5.aux
+
+! Package babel Error: You haven't defined the language italian yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language{italian}
+                             
+Your command will be ignored, type <return> to proceed
+
+
+! Package babel Error: You haven't defined the language italian yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \select@language{italian}
+                             
+Your command will be ignored, type <return> to proceed
+
+)
 \openout1 = `relazione5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -506,8 +529,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
 \scratchdimen=\dimen122
@@ -613,45 +635,75 @@ File: circuito1.png Graphic file (type png)
 Package pdftex.def Info: circuito1.png used on input line 26.
 (pdftex.def)             Requested size: 201.45418pt x 239.99847pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
-<char2.png, id=2, 938.50626pt x 774.895pt>
-File: char2.png Graphic file (type png)
- <use char2.png>
-Package pdftex.def Info: char2.png used on input line 62.
-(pdftex.def)             Requested size: 375.39584pt x 309.95251pt.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./circuito1.png> <./ch
-ar2.png>]
-<parabolaTutti.png, id=27, 1033.461pt x 466.1415pt>
+<parabolaTutti.png, id=2, 1033.461pt x 466.1415pt>
 File: parabolaTutti.png Graphic file (type png)
  <use parabolaTutti.png>
-Package pdftex.def Info: parabolaTutti.png used on input line 82.
+Package pdftex.def Info: parabolaTutti.png used on input line 60.
 (pdftex.def)             Requested size: 516.72923pt x 233.07018pt.
 
-Overfull \hbox (33.03236pt too wide) in paragraph at lines 82--83
+Overfull \hbox (33.03236pt too wide) in paragraph at lines 60--61
  [][] 
  []
 
-<parabolaFit.png, id=28, 970.5861pt x 435.7881pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<char2.png, id=4, 938.50626pt x 774.895pt>
+File: char2.png Graphic file (type png)
+ <use char2.png>
+Package pdftex.def Info: char2.png used on input line 66.
+(pdftex.def)             Requested size: 375.39584pt x 309.95251pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./circuito1.png>]
+<parabolaFit.png, id=24, 970.5861pt x 435.7881pt>
 File: parabolaFit.png Graphic file (type png)
  <use parabolaFit.png>
-Package pdftex.def Info: parabolaFit.png used on input line 88.
+Package pdftex.def Info: parabolaFit.png used on input line 74.
 (pdftex.def)             Requested size: 485.29187pt x 217.89351pt.
 
-Overfull \hbox (1.595pt too wide) in paragraph at lines 88--89
+Overfull \hbox (1.595pt too wide) in paragraph at lines 74--75
  [][] 
  []
 
-<circuito2.png, id=29, 843.15pt x 903.375pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
+[2 <./parabolaTutti.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+[3 <./char2.png> <./parabolaFit.png>]
+<circuito2.png, id=39, 843.15pt x 903.375pt>
 File: circuito2.png Graphic file (type png)
  <use circuito2.png>
 Package pdftex.def Info: circuito2.png used on input line 102.
 (pdftex.def)             Requested size: 252.94695pt x 271.01459pt.
- [3 <./parabolaTutti.png>] [4 <./parabolaFit.png> <./circuito2.png>]
+ [4 <./circuito2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 152--158
 
  []
@@ -661,50 +713,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
-[5]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 167.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 167.
 
-<image21.jpg, id=48, 451.6875pt x 202.50656pt>
+<image21.jpg, id=45, 451.6875pt x 202.50656pt>
 File: image21.jpg Graphic file (type jpg)
  <use image21.jpg>
 Package pdftex.def Info: image21.jpg used on input line 182.
 (pdftex.def)             Requested size: 361.35048pt x 162.00545pt.
- [6 <./image21.jpg>] (./relazione5.aux) ) 
+ [5] [6 <./image21.jpg>] (./relazione5.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3320 strings out of 494910
- 42934 string characters out of 6179836
- 115787 words of memory out of 5000000
- 6539 multiletter control sequences out of 15000+600000
+ 3322 strings out of 494910
+ 42952 string characters out of 6179836
+ 114787 words of memory out of 5000000
+ 6541 multiletter control sequences out of 15000+600000
  12253 words of font info for 47 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,9n,24p,1128b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on relazione5.pdf (6 pages, 552878 bytes).
+ 38i,9n,24p,907b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmti8.pfb>
+Output written on relazione5.pdf (6 pages, 553854 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  78 compressed objects within 1 object stream
