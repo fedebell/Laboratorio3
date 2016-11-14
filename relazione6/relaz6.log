@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.7)  13 NOV 2016 21:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.10.7)  14 NOV 2016 09:26
 entering extended mode
 **./relaz6.tex
 (relaz6.tex
@@ -603,70 +603,70 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<pinrelaz6.png, id=1, 440.39531pt x 249.93375pt>
-File: pinrelaz6.png Graphic file (type png)
- <use pinrelaz6.png>
-Package pdftex.def Info: pinrelaz6.png used on input line 19.
-(pdftex.def)             Requested size: 220.19711pt x 124.96657pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 26.
-
+LaTeX Font Info:    Try loading font information for U+msa on input line 14.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 26.
+LaTeX Font Info:    Try loading font information for U+msb on input line 14.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+<pinrelaz6.png, id=1, 440.39531pt x 249.93375pt>
+File: pinrelaz6.png Graphic file (type png)
+ <use pinrelaz6.png>
+Package pdftex.def Info: pinrelaz6.png used on input line 20.
+(pdftex.def)             Requested size: 220.19711pt x 124.96657pt.
+
 <opampinvert.png, id=2, 500.62032pt x 374.14781pt>
 File: opampinvert.png Graphic file (type png)
  <use opampinvert.png>
-Package pdftex.def Info: opampinvert.png used on input line 32.
+Package pdftex.def Info: opampinvert.png used on input line 33.
 (pdftex.def)             Requested size: 250.30954pt x 187.07344pt.
 
 
-LaTeX Warning: Reference `' on page 1 undefined on input line 37.
-
-
 LaTeX Warning: Reference `' on page 1 undefined on input line 38.
+
+
+LaTeX Warning: Reference `' on page 1 undefined on input line 39.
 
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./pinrelaz6.png> <./opamp
 invert.png>]
 
-LaTeX Warning: Reference `' on page 2 undefined on input line 45.
+LaTeX Warning: Reference `' on page 2 undefined on input line 46.
 
 <opampnoninvert.png, id=17, 472.01344pt x 304.88907pt>
 File: opampnoninvert.png Graphic file (type png)
 
 <use opampnoninvert.png>
-Package pdftex.def Info: opampnoninvert.png used on input line 57.
+Package pdftex.def Info: opampnoninvert.png used on input line 58.
 (pdftex.def)             Requested size: 236.00613pt x 152.44415pt.
  <integratore.png, id=18, 517.935pt x 348.55219pt>
 File: integratore.png Graphic file (type png)
 
 <use integratore.png>
-Package pdftex.def Info: integratore.png used on input line 66.
+Package pdftex.def Info: integratore.png used on input line 67.
 (pdftex.def)             Requested size: 258.96686pt x 174.27565pt.
- <derivatore.png, id=19, 579.66562pt x 293.59688pt>
+ [2 <./opampnoninvert.png>]
+<derivatore.png, id=32, 579.66562pt x 293.59688pt>
 File: derivatore.png Graphic file (type png)
-
-<use derivatore.png>
-Package pdftex.def Info: derivatore.png used on input line 72.
+ <use derivatore.png>
+Package pdftex.def Info: derivatore.png used on input line 73.
 (pdftex.def)             Requested size: 289.83209pt x 146.79807pt.
- [2 <./opampnoninvert.png>] [3 <./integratore.png> <./derivatore.png>] (relaz6.
-aux)
+
+[3 <./integratore.png> <./derivatore.png>] (relaz6.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3975 strings out of 493334
- 51029 string characters out of 3136660
- 130928 words of memory out of 3000000
- 7427 multiletter control sequences out of 15000+200000
- 11001 words of font info for 42 fonts, out of 3000000 for 9000
+ 3987 strings out of 493334
+ 51172 string characters out of 3136660
+ 131928 words of memory out of 3000000
+ 7437 multiletter control sequences out of 15000+200000
+ 12547 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,8n,25p,793b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
@@ -677,16 +677,18 @@ gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program F
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on relaz6.pdf (3 pages, 275590 bytes).
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmti10.pfb>
+Output written on relaz6.pdf (3 pages, 300274 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
