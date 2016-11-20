@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  14 NOV 2016 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  20 NOV 2016 01:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,7 +490,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen120
 \Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks22
-) (./relaz6.aux)
+) (./relaz6.aux
+
+LaTeX Warning: Label `derivatore' multiply defined.
+
+)
 \openout1 = `relaz6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -505,7 +509,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
 \scratchdimen=\dimen122
@@ -621,11 +625,6 @@ File: opampinvert.png Graphic file (type png)
 Package pdftex.def Info: opampinvert.png used on input line 34.
 (pdftex.def)             Requested size: 250.30954pt x 187.07344pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--42
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
@@ -638,109 +637,181 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--69
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pinrelaz6.png>]
-<plotGuadagno.png, id=22, 1003.1076pt x 439.4016pt>
+<plotGuadagno.png, id=22, 867.24pt x 433.62pt>
 File: plotGuadagno.png Graphic file (type png)
  <use plotGuadagno.png>
 Package pdftex.def Info: plotGuadagno.png used on input line 73.
-(pdftex.def)             Requested size: 501.55258pt x 219.70026pt.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
+ [2 <./opampinvert.png> <./plotGuadagno.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
-Overfull \hbox (17.85571pt too wide) in paragraph at lines 73--74
- [][] 
  []
 
-[2 <./opampinvert.png> <./plotGuadagno.png>]
-<bodePlot.png, id=28, 1029.8475pt x 456.0237pt>
+<bodePlot.png, id=28, 867.24pt x 433.62pt>
 File: bodePlot.png Graphic file (type png)
  <use bodePlot.png>
-Package pdftex.def Info: bodePlot.png used on input line 122.
-(pdftex.def)             Requested size: 514.9225pt x 228.01129pt.
+Package pdftex.def Info: bodePlot.png used on input line 123.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
-Overfull \hbox (31.22563pt too wide) in paragraph at lines 122--123
- [][] 
- []
-
-
-Overfull \hbox (47.02417pt too wide) in paragraph at lines 127--132
-[]\OT1/cmr/m/n/10 Il fit for-nisce: $\OML/cmm/m/it/10 f[] \OT1/cmr/m/n/10 = 206
- \OMS/cmsy/m/n/10 ^^F \OT1/cmr/m/n/10 4 \OML/cmm/m/it/10 kHz$ \OT1/cmr/m/n/10 e
- $\OML/cmm/m/it/10 A[] \OT1/cmr/m/n/10 = 9\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 85 
-\OMS/cmsy/m/n/10 ^^F \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 04$, co
-n ma-trice di co-var-i-anza: $^^F[] = []$.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--132
+Underfull \hbox (badness 10000) in paragraph at lines 128--133
 
  []
 
-<opampnoninvert.png, id=29, 472.01344pt x 304.88907pt>
+
+Overfull \vbox (1.14183pt too high) has occurred while \output is active []
+
+
+[3] <opampnoninvert.png, id=37, 472.01344pt x 304.88907pt>
 File: opampnoninvert.png Graphic file (type png)
 
 <use opampnoninvert.png>
-Package pdftex.def Info: opampnoninvert.png used on input line 142.
+Package pdftex.def Info: opampnoninvert.png used on input line 146.
 (pdftex.def)             Requested size: 236.00613pt x 152.44415pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
-[3] <integratore.png, id=37, 517.935pt x 348.55219pt>
+[4 <./bodePlot.png> <./opampnoninvert.png>]
+<integratore.png, id=43, 837.1275pt x 671.50874pt>
 File: integratore.png Graphic file (type png)
  <use integratore.png>
-Package pdftex.def Info: integratore.png used on input line 151.
-(pdftex.def)             Requested size: 258.96686pt x 174.27565pt.
+Package pdftex.def Info: integratore.png used on input line 175.
+(pdftex.def)             Requested size: 209.28136pt x 167.87677pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
-LaTeX Warning: File `derivatore.png' not found on input line 157.
+ []
 
+<bodeIntegratore.png, id=44, 867.24pt x 433.62pt>
+File: bodeIntegratore.png Graphic file (type png)
+ <use bodeIntegratore.png>
+Package pdftex.def Info: bodeIntegratore.png used on input line 204.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
-! Package pdftex.def Error: File `derivatore.png' not found.
+<integratoreSfasamento.png, id=45, 867.24pt x 433.62pt>
+File: integratoreSfasamento.png Graphic file (type png)
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.157 ...ncludegraphics[scale=0.5]{derivatore.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use integratoreSfasamento.png>
+Package pdftex.def Info: integratoreSfasamento.png used on input line 211.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
-[4 <./bodePlot.png> <./opampnoninvert.png>] [5 <./integratore.png>]
-(./relaz6.aux)
+Overfull \hbox (50.05795pt too wide) in paragraph at lines 217--223
+\OT1/cmr/m/n/10 ot-te-ni-amo i val-ori: $\OML/cmm/m/it/10 f[] \OT1/cmr/m/n/10 =
+ 303 \OMS/cmsy/m/n/10 ^^F \OT1/cmr/m/n/10 2 \OML/cmm/m/it/10 Hz$ \OT1/cmr/m/n/1
+0 e $\OML/cmm/m/it/10 A[] \OT1/cmr/m/n/10 = 11\OML/cmm/m/it/10 :\OT1/cmr/m/n/10
+ 87 \OMS/cmsy/m/n/10 ^^F \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 02$
+, la ma-trice di co-var-i-anza ^^Re: $^^F[] = []$.
+ []
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+<immagini/integratore.png, id=46, 301.125pt x 225.84375pt>
+File: immagini/integratore.png Graphic file (type png)
+
+<use immagini/integratore.png>
+Package pdftex.def Info: immagini/integratore.png used on input line 233.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [5 <./integratore.png>]
+<immagini/pinnasqualo.png, id=51, 301.125pt x 225.84375pt>
+File: immagini/pinnasqualo.png Graphic file (type png)
+
+<use immagini/pinnasqualo.png>
+Package pdftex.def Info: immagini/pinnasqualo.png used on input line 242.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<immagini/bassafreqondaquadra.png, id=52, 301.125pt x 225.84375pt>
+File: immagini/bassafreqondaquadra.png Graphic file (type png)
+
+<use immagini/bassafreqondaquadra.png>
+Package pdftex.def Info: immagini/bassafreqondaquadra.png used on input line 25
+0.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
+<derivatore.png, id=53, 902.37125pt x 496.85625pt>
+File: derivatore.png Graphic file (type png)
+ <use derivatore.png>
+Package pdftex.def Info: derivatore.png used on input line 262.
+(pdftex.def)             Requested size: 225.59225pt x 124.21375pt.
+
+<bodeDerivatore.png, id=54, 867.24pt x 433.62pt>
+File: bodeDerivatore.png Graphic file (type png)
+ <use bodeDerivatore.png>
+Package pdftex.def Info: bodeDerivatore.png used on input line 291.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
+
+<derivatoreSfasamento.png, id=55, 867.24pt x 433.62pt>
+File: derivatoreSfasamento.png Graphic file (type png)
+
+<use derivatoreSfasamento.png>
+Package pdftex.def Info: derivatoreSfasamento.png used on input line 298.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
+ [6 <./bodeIntegratore.png> <./integratoreSfasamento.png>]
+
+LaTeX Warning: Text page 7 contains only floats.
+
+[7 <./immagini/integratore.png> <./immagini/pinnasqualo.png>] [8 <./immagini/ba
+ssafreqondaquadra.png> <./derivatore.png> <./bodeDerivatore.png>]
+<immagini/derivatore.png, id=72, 301.125pt x 225.84375pt>
+File: immagini/derivatore.png Graphic file (type png)
+
+<use immagini/derivatore.png>
+Package pdftex.def Info: immagini/derivatore.png used on input line 319.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [9 <./derivatoreSfasamento.png> <./immagini/derivatore.png>] <immagini/bassafr
+eqderivatore.png, id=78, 301.125pt x 225.84375pt>
+File: immagini/bassafreqderivatore.png Graphic file (type png)
+
+<use immagini/bassafreqderivatore.png>
+Package pdftex.def Info: immagini/bassafreqderivatore.png used on input line 33
+0.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<immagini/freq500derivatore.png, id=79, 301.125pt x 225.84375pt>
+File: immagini/freq500derivatore.png Graphic file (type png)
+
+<use immagini/freq500derivatore.png>
+Package pdftex.def Info: immagini/freq500derivatore.png used on input line 339.
+
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [10 <./immagini/bassafreqderivatore.png> <./immagini/freq500derivatore.png>] [
+11] (./relaz6.aux)
+
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3299 strings out of 494910
- 42596 string characters out of 6179836
- 114791 words of memory out of 5000000
- 6522 multiletter control sequences out of 15000+600000
- 12407 words of font info for 48 fonts, out of 8000000 for 9000
+ 3368 strings out of 494910
+ 44287 string characters out of 6179836
+ 115944 words of memory out of 5000000
+ 6581 multiletter control sequences out of 15000+600000
+ 12899 words of font info for 49 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,9n,24p,636b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on relaz6.pdf (5 pages, 356620 bytes).
+ 38i,9n,24p,713b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti8.pfb>
+Output written on relaz6.pdf (11 pages, 634933 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 148 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

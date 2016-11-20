@@ -1,14 +1,41 @@
 import numpy
 import pylab
 from scipy.optimize import curve_fit
-f, df, vout, dvout = pylab.loadtxt('/home/federico/Laboratorio3/relazione6/datiBode.txt', unpack = True)
-vin=0.800
-dvin=0.008
+import uncertainties
+from uncertainties import ufloat
+import math
+import numpy
+import numpy
+import pylab
+from scipy.optimize import curve_fit
+import math
+import scipy.stats
+import uncertainties 
+from uncertainties import unumpy
+
+f, df, vout, dvout, t, dt = pylab.loadtxt('/home/federico/Laboratorio3/relazione6/datiDerivatore.txt', unpack = True)
+t = t/1000000
+dt=dt/1000000
+vin=0.448
+dvin=0.004
 pylab.figure(1)
 A = vout/vin
+#dvin = pylab.sqrt(dvin**2 + (vin*3.0/100)**2)
+#dvout = pylab.sqrt(dvout**2 + (vout*3.0/100)**2)
 dvin = pylab.sqrt(dvin**2)
 dvout = pylab.sqrt(dvout**2)
 dA = (dvin/vin + dvout/vout)*A
+#Federico
+T = unumpy.uarray(t, dt)
+F = unumpy.uarray(f, df)
+PHI = 2*F*T
+#IMPORTANTE:Questo e' solo un aggiustamento
+PHI = 1-PHI
+phi = unumpy.nominal_values(PHI)
+dphi = unumpy.std_devs(PHI)
+#per come abbiamo preso le misure facciamo vedere che il circuito 
+print(PHI)
+
 ''''
 #fit due pars
 initial_values = ( 1.,1. )
@@ -56,7 +83,7 @@ print('ndof 2 pars = %f \n' % (ndof))
 #fit un par
 initial_values = (1.0, 1.0)
 def fit_function(f, ft, Amax):
-    return Amax/((1 + (f/ft)**2)**0.5)
+    return Amax/((1 + (ft/f)**2)**0.5)
 pars,covm = curve_fit(fit_function, f, A, initial_values)
 ft = pars[0]
 Amax = pars[1]
@@ -78,18 +105,20 @@ print(A)
 
 pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.xscale('log')
-pylab.errorbar(f, A, dA, df, linestyle='', marker = '', label = 'data' )
+pylab.errorbar(f, A, dA, df, linestyle='', marker = '')
 pylab.legend(numpoints=1, loc = 'upper right')
 pylab.xlabel('Frequency [kHz]', size = "16")
 pylab.ylabel('Gain [dB]', size = "16")
-#pylab.xlim(0,2000)
-pylab.title('Bode plot per amplificatore invertente.', fontsize = "18")
+#pylab.xlim(0.05, 100)
+pylab.title('Bode plot per circuito derivatore.', fontsize = "18")
 pylab.grid()
 
 
 #pylab.plot(f, 20*pylab.log10(fit_function(f, ft, Amax)), color = 'green', label = 'fit')
 #pylab.legend(numpoints=1, loc = 'upper right')
 
+pars[0]=3.425154700154
+pars[1]=11.5976908540
 div = 1000
 bucket = numpy.array([0.0 for i in range(div)])
 retta = numpy.array([0.0 for i in range(div)])
@@ -101,16 +130,30 @@ for i in range(len(bucket)):
 
 pylab.plot(bucket, retta, color = "red")
 
+pylab.savefig("bodeDerivatore.png", dpi=None, facecolor='w', edgecolor='w',
+        orientation='portrait', papertype=None, format=None,
+        transparent=False, bbox_inches=None, pad_inches=0.1,
+        frameon=None)
 
-pylab.savefig("bodePlot.png", dpi=None, facecolor='w', edgecolor='w',
+
+print(covm)
+
+pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
+pylab.xscale('log')
+pylab.errorbar(f, phi, dphi, df, linestyle='', marker = '')
+pylab.legend(numpoints=1, loc = 'upper right')
+pylab.xlabel('Frequency [kHz]', size = "16")
+pylab.ylabel(' $\phi$ [$\pi$ rad]', size = "16")
+#pylab.xlim(0,2000)
+pylab.title('Sfasamento dell\'uscita del circuito derivatore.', fontsize = "18")
+pylab.grid()
+
+pylab.savefig("derivatoreSfasamento.png", dpi=None, facecolor='w', edgecolor='w',
         orientation='portrait', papertype=None, format=None,
         transparent=False, bbox_inches=None, pad_inches=0.1,
         frameon=None)
 
 pylab.show()
-
-print(covm)
-
 
 '''
 #deltaphi

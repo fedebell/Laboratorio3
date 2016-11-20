@@ -33,7 +33,7 @@ print("V2 = ", V2)
 print("RS = ", RS)
 print("R_in_attesa = ", R_in_att)
 
-deltaV = ufloat(1.00, 0.02)
+deltaV = ufloat(1.00, 0.04)
 deltat = ufloat(90, 1)*10**(-3)
 s = deltaV/deltat
 print("s = ", s)
@@ -47,5 +47,27 @@ print("R1 = ", R1)
 print("P1 = ", P1)
 print("VIN = ", VIN)
 
+#Integratore
+R1 = ufloat(984, 984*0.008)
+R2 = ufloat(11.77, 11.77*0.008)*1000
+C = ufloat(45.2, 45.2*0.04)
+print("R1 = ", R1)
+print("R2 = ", R2)
+print("C = ", C)
+#Derivatore
 
+deltaV = ufloat(1.00, 0.03)
+deltat = ufloat(0.088, 0.004)
+slew = deltaV/deltat
+print("slew rate", slew)
 
+V_I = ufloat(4.68, 0.02)
+V_OUT = ufloat(1.02, 0.02)
+A = V_OUT/V_I
+print("Amplificazione derivatore a 100\,Hz:", A)
+
+f = 0.100
+f_t = 3.42515
+Amax = 11.597690
+A = Amax/(1+(f_t/f)**2)**0.5
+print("Amplificazione derivatore a 100\,Hz attesa:", A)

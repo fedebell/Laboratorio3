@@ -27,13 +27,19 @@ V_OUT = unumpy.uarray(Vout, dVout)
 
 A_V = -V_OUT/V_IN
 
+pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.rc('font',size=13)
 pylab.title('V_OUT vs V_IN', fontsize = "16")
 pylab.xlabel('V_IN (V)', size = "14")
-pylab.ylabel('I_OUT (V)', size = "14")
+pylab.ylabel('V_OUT (V)', size = "14")
 pylab.grid(color = "gray")
 pylab.errorbar(unumpy.nominal_values(V_IN), unumpy.nominal_values(V_OUT), 
 	unumpy.std_devs(V_OUT), unumpy.std_devs(V_IN), "o", color="black")
+
+pylab.savefig("plotGuadagno.png", dpi=None, facecolor='w', edgecolor='w',
+        orientation='portrait', papertype=None, format=None,
+        transparent=False, bbox_inches=None, pad_inches=0.1,
+        frameon=None)
 
 for i in range(len(V_IN)):
 	file.write(str(Vin[i]))

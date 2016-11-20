@@ -33,6 +33,8 @@ A_V = V_OUT/V_IN
 
 G = A_V * f
 
+print("Media = ", G.mean())
+
 for i in range(len(V_OUT)):
 	file.write(str(Vout[i]))
 	file.write("\t")

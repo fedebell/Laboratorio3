@@ -1,14 +1,40 @@
 import numpy
 import pylab
 from scipy.optimize import curve_fit
-f, df, vout, dvout = pylab.loadtxt('/home/federico/Laboratorio3/relazione6/datiBode.txt', unpack = True)
-vin=0.800
-dvin=0.008
+import uncertainties
+from uncertainties import ufloat
+import math
+import numpy
+import numpy
+import pylab
+from scipy.optimize import curve_fit
+import math
+import scipy.stats
+import uncertainties 
+from uncertainties import unumpy
+
+f, df, vout, dvout, t, dt = pylab.loadtxt('/home/federico/Laboratorio3/relazione6/datiIntegratore.txt', unpack = True)
+t = t/1000
+dt=dt/1000
+vin=0.460
+dvin=0.004
 pylab.figure(1)
 A = vout/vin
+#dvin = pylab.sqrt(dvin**2 + (vin*3.0/100)**2)
+#dvout = pylab.sqrt(dvout**2 + (vout*3.0/100)**2)
 dvin = pylab.sqrt(dvin**2)
 dvout = pylab.sqrt(dvout**2)
 dA = (dvin/vin + dvout/vout)*A
+#Federico
+T = unumpy.uarray(t, dt)
+F = unumpy.uarray(f, df)
+PHI = 2*F*T
+#IMPORTANTE:Questo e' solo un aggiustamento
+PHI = 2-PHI
+phi = unumpy.nominal_values(PHI)
+dphi = unumpy.std_devs(PHI)
+#per come abbiamo preso le misure facciamo vedere che il circuito 
+
 ''''
 #fit due pars
 initial_values = ( 1.,1. )
@@ -80,10 +106,10 @@ pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.xscale('log')
 pylab.errorbar(f, A, dA, df, linestyle='', marker = '', label = 'data' )
 pylab.legend(numpoints=1, loc = 'upper right')
-pylab.xlabel('Frequency [kHz]', size = "16")
+pylab.xlabel('Frequency [Hz]', size = "16")
 pylab.ylabel('Gain [dB]', size = "16")
-#pylab.xlim(0,2000)
-pylab.title('Bode plot per amplificatore invertente.', fontsize = "18")
+pylab.xlim(1, 5000)
+pylab.title('Bode plot per circuito integratore.', fontsize = "18")
 pylab.grid()
 
 
@@ -101,16 +127,33 @@ for i in range(len(bucket)):
 
 pylab.plot(bucket, retta, color = "red")
 
+pylab.savefig("bodeIntegratore.png", dpi=None, facecolor='w', edgecolor='w',
+        orientation='portrait', papertype="executive", format=None,
+        transparent=False, bbox_inches=None, pad_inches=0.1,
+        frameon=None)
 
-pylab.savefig("bodePlot.png", dpi=None, facecolor='w', edgecolor='w',
-        orientation='portrait', papertype=None, format=None,
+print(covm)
+
+pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
+pylab.xscale('log')
+pylab.errorbar(f, phi, dphi, df, linestyle='', marker = '', label = 'data' )
+pylab.legend(numpoints=1, loc = 'upper right')
+pylab.xlabel('Frequency [Hz]', size = "16")
+pylab.ylabel(' $\phi$ [$\pi$ rad]', size = "16")
+#pylab.xlim(0,2000)
+pylab.title('Sfasamento dell\'uscita del circuito integratore.', fontsize = "18")
+pylab.grid()
+
+
+f = 10.2573*1000
+print("Atteso di guadagno: ", fit_function(f, ft, Amax))
+
+pylab.savefig("integratoreSfasamento.png", dpi=None, facecolor='w', edgecolor='w',
+        orientation='portrait', papertype="executive", format=None,
         transparent=False, bbox_inches=None, pad_inches=0.1,
         frameon=None)
 
 pylab.show()
-
-print(covm)
-
 
 '''
 #deltaphi
