@@ -47,7 +47,7 @@ Il circuito da noi montato è costituito da tre parti distinte: un circuito di i
 La prima parte è costituita dal generatore di forme d'onda $V_S$ e dal condensatore $C_T$, dove viene fornita una carica pari a $Q_{IN}=V_S C_T$. Il formatore invece è rappresentato dal parallelodi $C_F$ e $R_1$, all'uscita di tale circuito si ha un segnale:\\
 \begin{center}
 $V_{SH}=\frac{Q_{IN}}{C_F} e^{-\frac{t}{\tau}} = V_S \frac{C_T}{C_F} e^{t/R_1 C_F}$\\
-\end{center}\\
+\end{center}
 
 Il resto del circuito rappresenta il discriminatore, analogo a quello descritto al punto A, ma con una tensione di soglia. I componenti $R_2$ e $C_1$ hanno il compito di disaccoppiare il circuito formatore da quello discriminatore e di ridurre il rumore sulla tensione di soglia ad alte frequenze.\\
 A frequenza fissata $f = /pm Hz$ si è misurata la risposta del circuito ad un segnale di ampiezza (picco_picco o no?!) $V_S = /pm V$.\\
@@ -58,10 +58,10 @@ Si è inoltre misurata l'ampiezza del segnale $V_{discr} = /pm V$.
 
 Sempre mantenendo una frequenza fissa $F = /pm Hz$, si è misurata, al variare dell'ampiezza, la durata nel tempo del segnale in uscita dal discriminatore, i dati sono riportati in tabella.\\
 
-Sapendo che $V_-=V_S \frac{C_T}{C_F} e^{- \Delta t/R_1 C_F$, si ottiene $\Delta t = -R_1 C_F log\left( \frac{V_- C_F}{V_S C_T}\right)$, dalla quale si ricava la relazione:
+Sapendo che $V_-=V_S \frac{C_T}{C_F} e^{- \Delta t/R_1 C_F}$, si ottiene $\Delta t = -R_1 C_F log\left( \frac{V_- C_F}{V_S C_T}\right)$, dalla quale si ricava la relazione:
 \begin{center}
 $\Delta t = R_1 C_F log(V_S) + R_1 C_f log\left( \frac{C_T}{V_- C_F}\right)$
-\end{center}\\
+\end{center}
 
 \rem{Analisi dati}
 
@@ -78,7 +78,7 @@ Questo circuito è un trigger di Schmitt, ovvero un circuito discriminatore con 
 Al circuito è stata inviata una tensione sinusoidale di ampiezza $V_S = /pm V$ a frequenza fissa $f = /pm Hz$, successivamente si sono misurate le tensioni in uscita nei due stati possibili del circuito: $V_{OH} = /pm V$ e $V_{OL} = /pm V$, dalle quali si sono ricavati i valori attesi per le tensioni di soglia $V_{1,ATT,TH}= -V_{OH}/(1+R_1/R_2)= /pm V$ e $V_{2,ATT,TH}= V_{OL}/(1+R_1/R_2) = /pm V$. Si sono poi misurate direttamente le tensioni $V_{1,TH}= /pm V$ e $V_{2,TH} = /pm V$ \rem{sono in accordo o no?!}.\\
 
 \subsection*{2. Dipendenza dall'ampiezza e dalla frequenza e limiti del circuito}
-\\
+
 
 
 \section*{D. Multivibratore astabile}
@@ -107,7 +107,6 @@ A questo punto abbiamo potuto montare il circuito con $R\,= /pm $, $C\,= /pm $, 
 \subsection*{3. Dipendenza dalla tensione di alimentazione}
 
 
-\\
 \subsection*{4. Limitazioni alla frequenza del segnale in ingresso}
 
 
