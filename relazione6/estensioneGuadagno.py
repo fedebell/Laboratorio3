@@ -36,10 +36,6 @@ pylab.grid(color = "gray")
 pylab.errorbar(unumpy.nominal_values(V_IN), unumpy.nominal_values(V_OUT), 
 	unumpy.std_devs(V_OUT), unumpy.std_devs(V_IN), "o", color="black")
 
-pylab.savefig("plotGuadagno.png", dpi=None, facecolor='w', edgecolor='w',
-        orientation='portrait', papertype=None, format=None,
-        transparent=False, bbox_inches=None, pad_inches=0.1,
-        frameon=None)
 
 for i in range(len(V_IN)):
 	file.write(str(Vin[i]))
@@ -61,7 +57,7 @@ file.close()
 #quindi nel coeffiente ci cade anche il fattore per passare da una unita di misura all'altra
 error = ((unumpy.std_devs(V_OUT))**2.0+(1.0*unumpy.std_devs(V_IN))**2.0)**0.5
 #error = unumpy.std_devs(I_D)
-init = numpy.array([1.27153396, -3.40100977])
+init = numpy.array([2.0, 0.0])
 #Errori tutti statistici
 par, cov = curve_fit(linear, unumpy.nominal_values(V_IN), unumpy.nominal_values(V_OUT), init, error, absolute_sigma = "true")
 #trattazione statistica degli errori
@@ -88,5 +84,10 @@ for i in range(len(bucket)):
 
 
 pylab.plot(bucket, retta, color = "red")
+
+pylab.savefig("plotGuadagno.png", dpi=None, facecolor='w', edgecolor='w',
+        orientation='portrait', papertype=None, format=None,
+        transparent=False, bbox_inches=None, pad_inches=0.1,
+        frameon=None)
 
 pylab.show()

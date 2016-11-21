@@ -26,7 +26,7 @@ Misurare le caratteristiche di amplificatori invertenti e non invertenti realizz
 \subsection{Realizzazione circuito}
 Si vuole realizzare un amplificatore invertente con un'impedenza di ingresso superiore a $1k\Omega$ e con un amplificazione di 10. 
 Per fare ciò abbiamo montato il circuito in fig. \ref{opampinvert}: Tale circuito infatti presenta una  resistenza di ingresso $R_{in}=R_1$ e un'amplificazione  $A_V=-R_2/R_1$ .\\
-Si sono scelte $R_1=2.18 \pm 0.02 \, k\Omega$ e $R_2=21.5 \pm0.02 \, k\Omega$ e abbiamo inoltre misurato le  tensioni di alimentazione dell'OpAmp $V_+=14.99 \pm 0.08 \, V$ $V_-=-15.00 \pm 0.08$.\\
+Si sono scelte $R_1=2.18 \pm 0.02 \, k\Omega$ e $R_2=21.5 \pm0.02 \, k\Omega$ e abbiamo inoltre misurato le  tensioni di alimentazione dell'OpAmp $V_+=14.99 \pm 0.08 \, V$ e $V_-=-15.00 \pm 0.08 \, V$.\\
 Con questo circuito la resistenza interna attesa è quindi $R_{in.ATT}= R_1 = 2.18 \pm 0.02 \, k\Omega$ e $A_{V.ATT}= -9.9 \pm 0.1$ in accordo con le richieste.\\
 
 \begin{figure}[!htb]
@@ -70,19 +70,20 @@ Per il fit si è utilizzata la funzione \emph{curvefit} della libreria \emph{pyl
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[scale=0.5]{plotGuadagno.png}
+  \includegraphics[scale=0.6]{plotGuadagno.png}
 \caption{Fit della tensione $V_{OUT}$ in funzione di $V_{IN}$.}
 \label{rettaGuadagno}
 \end{figure}
 
 \subsection{Misura dell'impedenza d'ingresso}
-Abbiamo misurato la tensione di uscita del circuito a $V_{IN}=1.00 \pm 0.01 \, V$, in modo da evitare fenomeni di clipping, dapprima con lo stesso circuito,poi successivamente aggiugendo una resistenza $R_S=2.19 \pm 0.02 \, k \Omega$ \footnote{$R_S$ è stata scelta dello stesso ordine della resistenza interna attesa, in modo da non alterare troppo il circuito, ma più grande, in modo da minimizzare l'incertezza} in serie al generatore di funzioni, ottenendo rispettivamente $V_1=9.68 \pm 0.08 \, V$ e $V_2= 4.88 \pm 0.04 \, V$ Dalla formula del partitore otteniamo $R_S/R_{IN}=\frac{V_1}{V_2}-1$, cioè:
+Ci aspettiamo una resistenza di ingresso pari a $R_1$.
+Abbiamo misurato la tensione di uscita del circuito a $V_{IN}=1.00 \pm 0.01 \, V$, in modo da evitare fenomeni di clipping, dapprima con lo stesso circuito, poi successivamente aggiugendo una resistenza $R_S=2.19 \pm 0.02 \, k \Omega$ \footnote{$R_S$ è stata scelta dello stesso ordine della resistenza interna attesa, in modo da non alterare troppo il circuito, ma più grande, in modo da minimizzare l'incertezza} in serie al generatore di funzioni, ottenendo rispettivamente $V_1=9.68 \pm 0.08 \, V$ e $V_2= 4.88 \pm 0.04 \, V$ Dalla formula del partitore otteniamo $R_S/R_{IN}=\frac{V_1}{V_2}-1$, cioè:
 $R_{IN} = R_S \frac{1}{\frac{V_1}{V_2}-1} = 2.22 \pm 0.06 \, k \Omega$, in buon accordo con quella prevista entro l'errore sperimentale.
 
 \section{Risposta in frequenza del circuito e slew rate}
 \subsection{Misura della risposta in frequenza}
 
-Abbiamo studiato la risposta in frequenza del circuito misurando $V_{OUT}$ al variare della frequenza (scegliere l'intervallo) con $V_{IN}=0.800 \pm 0.008 \, V$  sinusoidale fissata \footnote{$V_{IN}$ è stata scelta in modo da non avere effetti di distorsione e ci siamo accertati che l'ampiezza del segnale in ingresso rimanesse costante al variare della frequenza, avendo cura in caso di necessità di agire sul generatore di funzioni in modo da avere il segnale voluto.} \\
+Abbiamo studiato la risposta in frequenza del circuito misurando $V_{OUT}$ al variare della frequenza (scegliere l'intervallo) con $V_{IN}=0.800 \pm 0.008 \, V$  sinusoidale fissata. \footnote{$V_{IN}$ è stata scelta in modo da non avere effetti di distorsione e ci siamo accertati che l'ampiezza del segnale in ingresso rimanesse costante al variare della frequenza, avendo cura in caso di necessità di agire sul generatore di funzioni in modo da avere il segnale voluto.} \\
 I dati ottenuto sono stati riportati nella tabella \ref{tabellaBode} e sono stati graficati in un diagramma di Bode in fig. \ref{graficoBode}.\\
 Le frequenze sono state misurate con il frequenzimetro dell'oscilloscopio, ad esse si è assegnato un errore dell'$1\%$, poiché è anche l'errore con cui riusciremmo a stimare il periodo con il cursore dei tempi.\\
 
@@ -116,11 +117,10 @@ $f (kHz)$ & $\sigma f (kHz) $ & $ V_{OUT} (V)$ & $\sigma V_{OUT} (V)$\\
 \end{table}
 
 Abbiamo notato che il circuito si comporta come un filtro passa-basso ed abbiamo quindi  eseguito un fit con la funzione $ A=\frac{A_{MAX}}{\sqrt{1+(f/f_t)^2}}$.
-\rem{vedere se Amax è compatibile con il guadagno massimo dei primi punti}
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[scale=0.5]{bodePlot.png}
+  \includegraphics[scale=0.6]{bodePlot.png}
 \caption{Plot di Bode amplificatore invertente.}
 \label{graficoBode}
 \end{figure}
@@ -134,12 +134,12 @@ $ \Sigma_{ij} = \left( \begin{array}{cc}
 Il guadagno massimo anche in questo fit è compatibile con quello atteso, $A_{V.ATT}= -9.9 \pm 0.1$.
 
 \subsection{Slew rate}
-Abbiamo impostato il generatore di funzioni in modo che fornisse al circuito un’onda quadra. Si è studiato l'andamento di $V_{OUT}$ nella parte del segnale corrispondente al transiente fra i due stati dell’onda: la tensione osservata presenta inizialmente un andamento qualitativamente esponenziale, successivamente un andamento lineare per poi rallentare \rem{?} in prossimità del suo valore limite.\\
+Abbiamo impostato il generatore di funzioni in modo che fornisse al circuito un’onda quadra. Si è studiato l'andamento di $V_{OUT}$ nella parte del segnale corrispondente al transiente fra i due stati dell’onda: la tensione osservata presenta inizialmente un andamento qualitativamente esponenziale, successivamente un andamento lineare per poi rallentare in prossimità del suo valore limite.\\
 Nella zona di crescita lineare si è dunque presa una misura della differenza di tensione $dV_{OUT} = 1.00 \pm 0.04 \, V$ relativa a un piccolo intervallo di tempo $dt=90 \pm 1 \, ns$. Dal loro rapporto si ottiene il valore dello $\emph{slew rate}= 11.1 \pm 0.5 \, \frac{V}{\mu s}$ \footnote{Per calcolare lo \emph{slew rate}, nell'errore sulle misure di tensione è stato considerato anche l'errore sistematico del $3\%$ dell'oscilloscopio.}. Il \emph{datasheet} dell'integrato riporta un valore nominale di $13 \frac{V}{\mu s}$ che non è compatibile entro l'errore con il valore misurato, ma un valore di $11 \frac{V}{\mu s}$ rientra nella variabilità del processo di costruzione.
 
 \section{Amplificatore non invertente}
 Abbiamo montato il circuito in fig. \ref{opampnoninvert} con $R_1=218 \pm 2 \,  \Omega$ e  un potenziometro di resistenza massima $P_{1_{MAX}}= 97.8 \pm 0.8 \, k\Omega$. La tensione di ingresso è stata fissata a $V_{IN} = 340 \pm 2 \, mV$.
-Il valore di $V_{OUT}$ nella tabella si riferisce al massimo guadagno ($A_{max}$) ottenibile, mentre la frequenza di taglio $f_H$ è stata determinata cercando a quale frequenza il  guadagno è $A\,(dB)= A_{max}\,(dB) - 3 \,dB$. Questo  è in linea con l'ipotesi che la funzione di traferiemento dell'amplificatore  sia della stessa forma di un sitema passa-basso. Si vuole verificare l'ipotesi che il prodotto-banda guadagno definito come $BG = A_{max} f_H$ rimanda costante al variare della frequenza. 
+Il valore di $V_{OUT}$ nella tabella si riferisce al massimo guadagno ($A_{max}$) ottenibile, mentre la frequenza di taglio $f_H$ è stata determinata cercando a quale frequenza il  guadagno è $A\,(dB)= A_{max}\,(dB) - 3 \,dB$. Questo  è in linea con l'ipotesi che la funzione di traferiemento dell'amplificatore  sia della stessa forma di un sitema passa-basso. Si vuole verificare l'ipotesi che il prodotto-banda guadagno definito come $BG = A_{max} f_H$ rimanga costante al variare della frequenza. 
 
 \begin{figure}[!htb]
   \centering
@@ -161,7 +161,7 @@ $V_{OUT} (V)$ & $\sigma V_{OUT} (V)$ & $ f_H(kHz) $ & $ \sigma f_H(kHZ)$ & $A_{m
 \hline
 \end{tabular}
 \caption{Tensioni massime in uscita, frequenze di taglio e prodotto banda-guadagno.}
-\label{Inserire la label}
+\label{tabellaBG}
 \end{table}
 
 Come si può vedere dalla tabella il valore del prodotto BG rimane circa costante, è stato sottostimato l'errore sulla nostra capacità di individuazione della frequenza di taglio avendo inserito solamente l'errore di misura dell'$1\%$, e non un errore dovuto al fatto che la frequenza selezionata per il dato guadagno calcolato non fosse precisa.
@@ -181,7 +181,7 @@ Si sono misurate la tensione in uscita e lo sfasamento al variare della frequenz
 
 \begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|c|c|}
-\hline$f \, (Hz)$ & $ \sigma f \, (Hz)$ & $V_{OUT} \, (V)$ & $\sigma V_{OUT} \, (V)$ & $\phi (\pi rad$ & $\sigma \phi (\pi rad)$\\
+\hline$f \, (Hz)$ & $ \sigma f \, (Hz)$ & $V_{OUT} \, (V)$ & $\sigma V_{OUT} \, (V)$ & $\phi (\pi \, rad)$ & $\sigma \phi (\pi \,  rad)$\\
 \hline
 2.12 & 0.02 & 5.44 & 0.04 & 0.98 & 0.02\\
 5.23 & 0.05 & 5.44 & 0.04 & 1.00 & 0.02\\
@@ -201,24 +201,23 @@ Si sono misurate la tensione in uscita e lo sfasamento al variare della frequenz
 
 \begin{figure}[!htb]
 \centering
-  \includegraphics[scale=0.5]{bodeIntegratore.png}
+  \includegraphics[scale=0.6]{bodeIntegratore.png}
 \caption{Plot di Bode per il circuito integratore.}
 \label{plotIntegratore}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
-  \includegraphics[scale=0.5]{integratoreSfasamento.png}
+  \includegraphics[scale=0.6]{integratoreSfasamento.png}
 \caption{Sfasamento della risposta per il circuito integratore.}
 \label{plotIntegratore2}
 \end{figure}
 
 
-Il fit riportato nel grafico \ref{plotIntegratore} è stato eseguito con la funzione di trasferimento del passa-basso: $ A=\frac{A_{max}}{\sqrt{1+(f/f_t)^2}}$, otteniamo i valori: $f_t = 303 \pm 2 \, Hz$ e $A_{max} = 11.87 \pm 0.02$, la matrice di covarianza è: $ \Sigma_{ij} = \left( \begin{array}{cc}
+Il fit riportato nel grafico \ref{plotIntegratore} è stato eseguito con la funzione di trasferimento del passa-basso: $ A=\frac{A_{max}}{\sqrt{1+(f/f_t)^2}}$, otteniamo i valori: $f_t = 303 \pm 2 \, Hz$ e $A_{max} = 11.87 \pm 0.02$, la matrice di covarianza è:\\ $ \Sigma_{ij} = \left( \begin{array}{cc}
 4.27 & -2.45 \cdot 10^{-2} \\ 
 -2.45 \cdot 10^{-2} & 5.31 \cdot 10^{-4}\\
-\end{array} \right)$. 
-Con un $\chi^2/ndof = 1.36/7$.\\
+\end{array} \right)$. Con un $\chi^2/ndof = 1.36/7$.\\
 Il $\chi^2$ è inferiore al valore atteso questo significa che gli errori sono stati sovrastimati. 
 
 Il valore del guadagno massimo è decisamente superiore a quello atteso dal rapporto tra le resistenze: $A_{V.ATT}= -9.9 \pm 0.1$ , questo perchè la legge \emph{fittata} per l'integratore è da considerarsi un'approssimazione.
@@ -260,13 +259,13 @@ Senza la resistenza $R_2$ la funione di trasferimento del circuito sarebbe: $A =
 \begin{figure}[!htb]
 \centering
   \includegraphics[scale=0.25]{derivatore.png}
-\caption{circuito derivatore con OpAmp}
+\caption{Circuito derivatore con OpAmp}
 \label{derivatore}
 \end{figure}
 
 \begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|c|c|}
-\hline$f \, (Hz)$ & $ \sigma f \, (Hz)$ & $V_{OUT} \, (V)$ & $\sigma V_{OUT} \, (V)$ & $\phi (\pi rad$ & $\sigma \phi (\pi rad)$\\
+\hline$f \, (Hz)$ & $ \sigma f \, (Hz)$ & $V_{OUT} \, (V)$ & $\sigma V_{OUT} \, (V)$ & $\phi (\pi \, rad)$ & $\sigma \phi (\pi \, rad)$\\
 \hline
 695 & 7 & 1.25 & 0.01 & 0.46 & 0.01\\
 296 & 3 & 2.56 & 0.02 & 0.60 & 0.02\\
@@ -288,20 +287,20 @@ Senza la resistenza $R_2$ la funione di trasferimento del circuito sarebbe: $A =
 
 \begin{figure}[!htb]
 \centering
-  \includegraphics[scale=.5]{bodeDerivatore.png}
+  \includegraphics[scale=.6]{bodeDerivatore.png}
 \caption{Bode plot per il circuito derivatore.}
 \label{bodeDerivatore}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
-   \includegraphics[scale=.5]{derivatoreSfasamento.png}
+   \includegraphics[scale=.6]{derivatoreSfasamento.png}
 \caption{Sfasamento per il circuito derivatore.}
 \label{sfasamentoDerivatore}
 \end{figure}
 
 Si è eseguito un fit della funzione di trasferimento nota per il circuito passa-alto, cioè:
-$ A=\frac{A_{max}}{\sqrt{1+(f_t/f)^2}}$, l'algoritmo ha fornito i valori ottimali: $f_t = -3.4 \pm 0.1 \, kHz$ e $A_{max} = 11.6 \pm 0.1$, la matrice di covarianza è: $ \Sigma_{ij} = \left( \begin{array}{cc}
+$ A=\frac{A_{max}}{\sqrt{1+(f_t/f)^2}}$, l'algoritmo ha fornito i valori ottimali: $f_t = 3.4 \pm 0.1 \, kHz$ e $A_{max} = 11.6 \pm 0.1$, la matrice di covarianza è: $ \Sigma_{ij} = \left( \begin{array}{cc}
  0.018 & -6.75 \cdot 10^{-3} \\ 
 -6.75 \cdot 10^{-3} & 0.011\\
 \end{array} \right)$. 
@@ -310,7 +309,7 @@ Il $\chi^2$ ottenuto è maggiore del valore atteso, poichè ad alte frequenze (s
 
 Il valore del guadagno massimo è decisamente superiore a quello atteso dal rapporto tra le resistenze: $A_{V.ATT}= -9.9 \pm 0.1$ , questo perchè la legge \emph{fittata} per il derivatore è da considerarsi un'approssimazione.
 
-Sia il plot di bode che lo sfasamento sono in linea con quanto atteso per un circuito passa-alto per basse frequenze. Lo sfasamento è dato da $\phi = \pi - arctan \left( \frac{f_0}{f} \right)$, dove si aggiunge il $\pi$ perchè vi è inversione del segnale. Alle alte frequenze (ordine delle centinaia di $kHz$) il comportamento del circuito devia da quello ideale. Sappiamo che per alte frequenze l'amplificazione di ogni sistema fisico deve andare a 0, dunque il guadagno a $-\inf$ come si vede succede nel Bode. Anche lo sfasamento devia considerevolmente dal valore di $\pi$ atteso ad alta frequenza.
+Sia il plot di bode che lo sfasamento sono in linea con quanto atteso per un circuito passa-alto per basse frequenze. Lo sfasamento è dato da $\phi = arctan \left( \frac{f_0}{f} \right) - \pi$, dove si aggiunge il $\pi$ perchè vi è inversione del segnale. Alle alte frequenze (ordine delle centinaia di $kHz$) il comportamento del circuito devia da quello ideale. Sappiamo che per alte frequenze l'amplificazione di ogni sistema fisico deve andare a 0, dunque il guadagno a $-\inf$ come si vede succede nel Bode. Anche lo sfasamento devia considerevolmente dal valore di $\pi$ atteso ad alta frequenza.
 
 \paragraph{Risposta all'onda triangolare.} Come si vede nella fig. \ref{derivatore} per frequenze di $f = 100\,Hz$ il sistema si comporta bene come un derivatore. L'onda quadra presenta come una modulazione esponenziale dovuta probabilmente alla scarica del condensatore.
 

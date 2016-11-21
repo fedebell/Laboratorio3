@@ -30,7 +30,7 @@ T = unumpy.uarray(t, dt)
 F = unumpy.uarray(f, df)
 PHI = 2*F*T
 #IMPORTANTE:Questo e' solo un aggiustamento
-PHI = 1-PHI
+PHI = -1+PHI
 phi = unumpy.nominal_values(PHI)
 dphi = unumpy.std_devs(PHI)
 #per come abbiamo preso le misure facciamo vedere che il circuito 
