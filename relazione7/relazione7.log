@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  21 NOV 2016 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  24 NOV 2016 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -491,7 +491,17 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks22
 )
-(./relazione7.aux)
+(./relazione7.aux
+
+LaTeX Warning: Label `senoBasso' multiply defined.
+
+
+LaTeX Warning: Label `inizamorire' multiply defined.
+
+
+LaTeX Warning: Label `Vpiu' multiply defined.
+
+)
 \openout1 = `relazione7.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -506,8 +516,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
 \scratchdimen=\dimen122
@@ -613,115 +622,258 @@ File: Discriminatore.png Graphic file (type png)
 Package pdftex.def Info: Discriminatore.png used on input line 24.
 (pdftex.def)             Requested size: 308.27596pt x 173.14644pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--33
+
+LaTeX Warning: Reference `funzionaBene' on page 1 undefined on input line 30.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
-<amplificatoreCarica.png, id=2, 941.01563pt x 380.92313pt>
+<immagini/Vos.png, id=2, 301.125pt x 225.84375pt>
+File: immagini/Vos.png Graphic file (type png)
+ <use immagini/Vos.png>
+Package pdftex.def Info: immagini/Vos.png used on input line 40.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/slewRate.png, id=4, 301.125pt x 225.84375pt>
+File: immagini/slewRate.png Graphic file (type png)
+
+<use immagini/slewRate.png>
+Package pdftex.def Info: immagini/slewRate.png used on input line 49.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+<immagini/prodottoBandaGuadagno2.png, id=5, 301.125pt x 225.84375pt>
+File: immagini/prodottoBandaGuadagno2.png Graphic file (type png)
+
+<use immagini/prodottoBandaGuadagno2.png>
+Package pdftex.def Info: immagini/prodottoBandaGuadagno2.png used on input line
+ 60.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `senoAlto' on page 1 undefined on input line 65.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Discriminatore.png>]
+<immagini/sinusoidaleinBasso.png, id=20, 301.125pt x 225.84375pt>
+File: immagini/sinusoidaleinBasso.png Graphic file (type png)
+
+<use immagini/sinusoidaleinBasso.png>
+Package pdftex.def Info: immagini/sinusoidaleinBasso.png used on input line 69.
+
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/sinusoidaleinAlto.png, id=21, 301.125pt x 225.84375pt>
+File: immagini/sinusoidaleinAlto.png Graphic file (type png)
+
+<use immagini/sinusoidaleinAlto.png>
+Package pdftex.def Info: immagini/sinusoidaleinAlto.png used on input line 77.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+<amplificatoreCarica.png, id=22, 941.01563pt x 380.92313pt>
 File: amplificatoreCarica.png Graphic file (type png)
 
 <use amplificatoreCarica.png>
-Package pdftex.def Info: amplificatoreCarica.png used on input line 39.
+Package pdftex.def Info: amplificatoreCarica.png used on input line 90.
 (pdftex.def)             Requested size: 470.50667pt x 190.46109pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Discriminatore.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.53 ...circuito ad un segnale di ampiezza (picco_
-                                                  picco o no?!) $V_S = /pm V...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.53 ...gnale di ampiezza (picco_picco o no?!) $V_
-                                                  S = /pm V$.\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 52--56
-\OT1/cmr/m/n/10 A fre-quenza fis-sata $\OML/cmm/m/it/10 f \OT1/cmr/m/n/10 = \OM
-L/cmm/m/it/10 =pmHz$ \OT1/cmr/m/n/10 si ^^Re mis-urata la risposta del cir-cuit
-o ad un seg-nale di ampiezza (picco$[]\OML/cmm/m/it/10 iccoono\OT1/cmr/m/n/10 ?
-!)$V$[] =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
 
  []
 
-<triggerSchmitt.png, id=16, 616.55344pt x 484.05844pt>
+<immagini/esponenziale.png, id=23, 301.125pt x 225.84375pt>
+File: immagini/esponenziale.png Graphic file (type png)
+
+<use immagini/esponenziale.png>
+Package pdftex.def Info: immagini/esponenziale.png used on input line 108.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/periodoEsponenziale.png, id=24, 301.125pt x 225.84375pt>
+File: immagini/periodoEsponenziale.png Graphic file (type png)
+
+<use immagini/periodoEsponenziale.png>
+Package pdftex.def Info: immagini/periodoEsponenziale.png used on input line 11
+7.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [2 <./immagini/Vos.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: immagini/periodoEsponenziale.png Graphic file (type png)
+<use immagini/periodoEsponenziale.png>
+Package pdftex.def Info: immagini/periodoEsponenziale.png used on input line 12
+4.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 140.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
+
+
+LaTeX Warning: Reference `morto' on page 3 undefined on input line 153.
+
+<immagini/iniziaamorire.png, id=33, 301.125pt x 225.84375pt>
+File: immagini/iniziaamorire.png Graphic file (type png)
+
+<use immagini/iniziaamorire.png>
+Package pdftex.def Info: immagini/iniziaamorire.png used on input line 157.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/morto.png, id=34, 301.125pt x 225.84375pt>
+File: immagini/morto.png Graphic file (type png)
+ <use immagini/morto.png>
+Package pdftex.def Info: immagini/morto.png used on input line 164.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<triggerSchmitt.png, id=35, 616.55344pt x 484.05844pt>
 File: triggerSchmitt.png Graphic file (type png)
 
 <use triggerSchmitt.png>
-Package pdftex.def Info: triggerSchmitt.png used on input line 73.
+Package pdftex.def Info: triggerSchmitt.png used on input line 176.
 (pdftex.def)             Requested size: 308.27596pt x 242.02863pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--79
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
 
  []
 
-[2 <./amplificatoreCarica.png>]
-<multivibratoreAstabile.png, id=26, 700.86844pt x 484.05844pt>
+<multivibratoreAstabile.png, id=36, 700.86844pt x 484.05844pt>
 File: multivibratoreAstabile.png Graphic file (type png)
 
 <use multivibratoreAstabile.png>
-Package pdftex.def Info: multivibratoreAstabile.png used on input line 90.
+Package pdftex.def Info: multivibratoreAstabile.png used on input line 194.
 (pdftex.def)             Requested size: 350.43336pt x 242.02863pt.
- [3 <./triggerSchmitt.png> <./multivibratoreAstabile.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+ [3 <./immagini/slewRate.png>]
 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<funzionamentoOscillatore.png, id=43, 878.28125pt x 520.94624pt>
+File: funzionamentoOscillatore.png Graphic file (type png)
+
+<use funzionamentoOscillatore.png>
+Package pdftex.def Info: funzionamentoOscillatore.png used on input line 202.
+(pdftex.def)             Requested size: 439.13956pt x 260.47249pt.
+
+<immagini/multivibratoreVPIU.png, id=44, 301.125pt x 225.84375pt>
+File: immagini/multivibratoreVPIU.png Graphic file (type png)
+
+<use immagini/multivibratoreVPIU.png>
+Package pdftex.def Info: immagini/multivibratoreVPIU.png used on input line 225
+.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<immagini/multivibratoreVOUT.png, id=45, 301.125pt x 225.84375pt>
+File: immagini/multivibratoreVOUT.png Graphic file (type png)
+
+<use immagini/multivibratoreVOUT.png>
+Package pdftex.def Info: immagini/multivibratoreVOUT.png used on input line 235
+.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<immagini/multivibratoreVMENO.png, id=46, 301.125pt x 225.84375pt>
+File: immagini/multivibratoreVMENO.png Graphic file (type png)
+
+<use immagini/multivibratoreVMENO.png>
+Package pdftex.def Info: immagini/multivibratoreVMENO.png used on input line 24
+3.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [4 <./immagini/prodottoBandaGuadagno2.png>] [5 <./immagini/sinusoidaleinBasso.
+png>] [6 <./immagini/sinusoidaleinAlto.png> <./amplificatoreCarica.png> <./imma
+gini/esponenziale.png>] [7 <./immagini/periodoEsponenziale.png>] [8 <./immagini
+/iniziaamorire.png> <./immagini/morto.png>] [9 <./triggerSchmitt.png> <./multiv
+ibratoreAstabile.png>] [10 <./funzionamentoOscillatore.png> <./immagini/multivi
+bratoreVPIU.png>] [11 <./immagini/multivibratoreVOUT.png> <./immagini/multivibr
+atoreVMENO.png>] (./relazione7.aux)
+
+LaTeX Warning: There were undefined references.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+LaTeX Warning: There were multiply-defined labels.
 
- []
-
-[4] (./relazione7.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 3278 strings out of 494910
- 42449 string characters out of 6179836
- 109752 words of memory out of 5000000
- 6506 multiletter control sequences out of 15000+600000
- 11541 words of font info for 45 fonts, out of 8000000 for 9000
+ 3378 strings out of 494910
+ 44835 string characters out of 6179836
+ 111889 words of memory out of 5000000
+ 6588 multiletter control sequences out of 15000+600000
+ 11849 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,7n,24p,551b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb>
-Output written on relazione7.pdf (4 pages, 255910 bytes).
+ 38i,9n,24p,617b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on relazione7.pdf (11 pages, 687385 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
