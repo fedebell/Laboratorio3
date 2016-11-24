@@ -1,0 +1,13 @@
+\begin{table}[!htb]\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+17.4 & 0.2 & 41.0 & 0.4 & 51.2 & 0.7 & 2100 & 30\\
+6.56 & 0.02 & 111 & 1 & 19.3 & 0.1 & 2140 & 10\\
+1.96 & 0.02 & 380 & 4 & 5.76 & 0.07 & 2190 & 30\\
+4.00 & 0.04 & 187 & 2 & 11.8 & 0.1 & 2200 & 30\\
+13.0 & 0.1 & 55.0 & 0.6 & 38.2 & 0.4 & 2100 & 20\\
+\hline
+\end{tabular}
+\caption{Inserire la caption}
+\label{Inserire la label}
+\end{table}
