@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  21 NOV 2016 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.19)  25 NOV 2016 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -613,115 +613,340 @@ File: Discriminatore.png Graphic file (type png)
 Package pdftex.def Info: Discriminatore.png used on input line 24.
 (pdftex.def)             Requested size: 308.27596pt x 173.14644pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--33
+<immagini/discriminatore.png, id=2, 301.125pt x 225.84375pt>
+File: immagini/discriminatore.png Graphic file (type png)
+
+<use immagini/discriminatore.png>
+Package pdftex.def Info: immagini/discriminatore.png used on input line 34.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
 
-<amplificatoreCarica.png, id=2, 941.01563pt x 380.92313pt>
+<immagini/Vos.png, id=4, 301.125pt x 225.84375pt>
+File: immagini/Vos.png Graphic file (type png)
+ <use immagini/Vos.png>
+Package pdftex.def Info: immagini/Vos.png used on input line 44.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
+
+<immagini/slewRate.png, id=5, 301.125pt x 225.84375pt>
+File: immagini/slewRate.png Graphic file (type png)
+
+<use immagini/slewRate.png>
+Package pdftex.def Info: immagini/slewRate.png used on input line 53.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Discriminatore.png>]
+<immagini/prodottoBandaGuadagno2.png, id=19, 301.125pt x 225.84375pt>
+File: immagini/prodottoBandaGuadagno2.png Graphic file (type png)
+
+<use immagini/prodottoBandaGuadagno2.png>
+Package pdftex.def Info: immagini/prodottoBandaGuadagno2.png used on input line
+ 66.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/sinusoidaleinBasso.png, id=20, 301.125pt x 225.84375pt>
+File: immagini/sinusoidaleinBasso.png Graphic file (type png)
+
+<use immagini/sinusoidaleinBasso.png>
+Package pdftex.def Info: immagini/sinusoidaleinBasso.png used on input line 77.
+
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/sinusoidaleinAlto.png, id=21, 301.125pt x 225.84375pt>
+File: immagini/sinusoidaleinAlto.png Graphic file (type png)
+
+<use immagini/sinusoidaleinAlto.png>
+Package pdftex.def Info: immagini/sinusoidaleinAlto.png used on input line 85.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+<amplificatoreCarica.png, id=22, 941.01563pt x 380.92313pt>
 File: amplificatoreCarica.png Graphic file (type png)
 
 <use amplificatoreCarica.png>
-Package pdftex.def Info: amplificatoreCarica.png used on input line 39.
+Package pdftex.def Info: amplificatoreCarica.png used on input line 98.
 (pdftex.def)             Requested size: 470.50667pt x 190.46109pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Discriminatore.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.53 ...circuito ad un segnale di ampiezza (picco_
-                                                  picco o no?!) $V_S = /pm V...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.53 ...gnale di ampiezza (picco_picco o no?!) $V_
-                                                  S = /pm V$.\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 52--56
-\OT1/cmr/m/n/10 A fre-quenza fis-sata $\OML/cmm/m/it/10 f \OT1/cmr/m/n/10 = \OM
-L/cmm/m/it/10 =pmHz$ \OT1/cmr/m/n/10 si ^^Re mis-urata la risposta del cir-cuit
-o ad un seg-nale di ampiezza (picco$[]\OML/cmm/m/it/10 iccoono\OT1/cmr/m/n/10 ?
-!)$V$[] =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 110--113
 
  []
 
-<triggerSchmitt.png, id=16, 616.55344pt x 484.05844pt>
-File: triggerSchmitt.png Graphic file (type png)
+[2 <./immagini/discriminatore.png>]
+<immagini/esponenziale.png, id=31, 301.125pt x 225.84375pt>
+File: immagini/esponenziale.png Graphic file (type png)
 
-<use triggerSchmitt.png>
-Package pdftex.def Info: triggerSchmitt.png used on input line 73.
-(pdftex.def)             Requested size: 308.27596pt x 242.02863pt.
+<use immagini/esponenziale.png>
+Package pdftex.def Info: immagini/esponenziale.png used on input line 116.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/periodoEsponenziale.png, id=32, 301.125pt x 225.84375pt>
+File: immagini/periodoEsponenziale.png Graphic file (type png)
+
+<use immagini/periodoEsponenziale.png>
+Package pdftex.def Info: immagini/periodoEsponenziale.png used on input line 12
+5.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/tempoQuadra.png, id=33, 301.125pt x 225.84375pt>
+File: immagini/tempoQuadra.png Graphic file (type png)
+
+<use immagini/tempoQuadra.png>
+Package pdftex.def Info: immagini/tempoQuadra.png used on input line 132.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 148.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 148.
+
+<immagini/iniziaamorire.png, id=34, 301.125pt x 225.84375pt>
+File: immagini/iniziaamorire.png Graphic file (type png)
+
+<use immagini/iniziaamorire.png>
+Package pdftex.def Info: immagini/iniziaamorire.png used on input line 171.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/morto.png, id=35, 301.125pt x 225.84375pt>
+File: immagini/morto.png Graphic file (type png)
+ <use immagini/morto.png>
+Package pdftex.def Info: immagini/morto.png used on input line 178.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--79
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
-[2 <./amplificatoreCarica.png>]
-<multivibratoreAstabile.png, id=26, 700.86844pt x 484.05844pt>
+<triggerSchmitt.png, id=36, 616.55344pt x 484.05844pt>
+File: triggerSchmitt.png Graphic file (type png)
+
+<use triggerSchmitt.png>
+Package pdftex.def Info: triggerSchmitt.png used on input line 189.
+(pdftex.def)             Requested size: 308.27596pt x 242.02863pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./immagini/Vos.png>]
+<immagini/FotoRicordoVth1.png, id=43, 301.125pt x 225.84375pt>
+File: immagini/FotoRicordoVth1.png Graphic file (type png)
+
+<use immagini/FotoRicordoVth1.png>
+Package pdftex.def Info: immagini/FotoRicordoVth1.png used on input line 201.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/FotoRicordoVth2.png, id=44, 301.125pt x 225.84375pt>
+File: immagini/FotoRicordoVth2.png Graphic file (type png)
+
+<use immagini/FotoRicordoVth2.png>
+Package pdftex.def Info: immagini/FotoRicordoVth2.png used on input line 208.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<immagini/sottoSogliaInferiore.png, id=45, 301.125pt x 225.84375pt>
+File: immagini/sottoSogliaInferiore.png Graphic file (type png)
+
+<use immagini/sottoSogliaInferiore.png>
+Package pdftex.def Info: immagini/sottoSogliaInferiore.png used on input line 2
+22.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: immagini/slewRate.png Graphic file (type png)
+<use immagini/slewRate.png>
+Package pdftex.def Info: immagini/slewRate.png used on input line 234.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+[4 <./immagini/slewRate.png>]
+<multivibratoreAstabile.png, id=50, 700.86844pt x 484.05844pt>
 File: multivibratoreAstabile.png Graphic file (type png)
 
 <use multivibratoreAstabile.png>
-Package pdftex.def Info: multivibratoreAstabile.png used on input line 90.
+Package pdftex.def Info: multivibratoreAstabile.png used on input line 246.
 (pdftex.def)             Requested size: 350.43336pt x 242.02863pt.
- [3 <./triggerSchmitt.png> <./multivibratoreAstabile.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<funzionamentoOscillatore.png, id=51, 878.28125pt x 520.94624pt>
+File: funzionamentoOscillatore.png Graphic file (type png)
+
+<use funzionamentoOscillatore.png>
+Package pdftex.def Info: funzionamentoOscillatore.png used on input line 254.
+(pdftex.def)             Requested size: 439.13956pt x 260.47249pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
 
-[4] (./relazione7.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
+
+ []
+
+<immagini/multivibratoreVPIU.png, id=52, 301.125pt x 225.84375pt>
+File: immagini/multivibratoreVPIU.png Graphic file (type png)
+
+<use immagini/multivibratoreVPIU.png>
+Package pdftex.def Info: immagini/multivibratoreVPIU.png used on input line 281
+.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<immagini/multivibratoreVOUT.png, id=53, 301.125pt x 225.84375pt>
+File: immagini/multivibratoreVOUT.png Graphic file (type png)
+
+<use immagini/multivibratoreVOUT.png>
+Package pdftex.def Info: immagini/multivibratoreVOUT.png used on input line 291
+.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<immagini/multivibratoreVMENO.png, id=54, 301.125pt x 225.84375pt>
+File: immagini/multivibratoreVMENO.png Graphic file (type png)
+
+<use immagini/multivibratoreVMENO.png>
+Package pdftex.def Info: immagini/multivibratoreVMENO.png used on input line 30
+0.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [5 <./immagini/prodottoBandaGuadagno2.png>]
+Overfull \hbox (15.65135pt too wide) in paragraph at lines 309--310
+\OT1/cmr/m/n/10 Variando la ten-sione di al-i-men-tazione dell'opAmp [] non os-
+servi-amo sig-ni-fica-tive vari-azioni del pe-ri-odo dell'oscillatore
+ []
+
+<immagini/multivibSlewRate.png, id=61, 301.125pt x 225.84375pt>
+File: immagini/multivibSlewRate.png Graphic file (type png)
+
+<use immagini/multivibSlewRate.png>
+Package pdftex.def Info: immagini/multivibSlewRate.png used on input line 317.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [6 <./immagini/sinusoidaleinBasso.png>]
+[7 <./immagini/sinusoidaleinAlto.png> <./amplificatoreCarica.png> <./immagini/e
+sponenziale.png>] [8 <./immagini/periodoEsponenziale.png> <./immagini/tempoQuad
+ra.png>] [9 <./immagini/iniziaamorire.png> <./immagini/morto.png>] [10 <./trigg
+erSchmitt.png> <./immagini/FotoRicordoVth1.png>] [11 <./immagini/FotoRicordoVth
+2.png> <./immagini/sottoSogliaInferiore.png>] [12 <./multivibratoreAstabile.png
+>] [13 <./funzionamentoOscillatore.png> <./immagini/multivibratoreVPIU.png>]
+[14 <./immagini/multivibratoreVOUT.png> <./immagini/multivibratoreVMENO.png>]
+[15 <./immagini/multivibSlewRate.png>] (./relazione7.aux) ) 
 Here is how much of TeX's memory you used:
- 3278 strings out of 494910
- 42449 string characters out of 6179836
- 109752 words of memory out of 5000000
- 6506 multiletter control sequences out of 15000+600000
- 11541 words of font info for 45 fonts, out of 8000000 for 9000
+ 3416 strings out of 494910
+ 45819 string characters out of 6179836
+ 113945 words of memory out of 5000000
+ 6620 multiletter control sequences out of 15000+600000
+ 11893 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,7n,24p,551b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb>
-Output written on relazione7.pdf (4 pages, 255910 bytes).
+ 38i,9n,24p,624b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti8.pfb>
+Output written on relazione7.pdf (15 pages, 1021417 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 167 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
