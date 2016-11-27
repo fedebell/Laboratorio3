@@ -19,7 +19,7 @@ Questa esperienza ha come obbiettivo quello di studiare il funzionamento di un a
 
 Si è montato il circuito in fig. \ref{circuito1}, utilizzando $V_{CC} = 14.96\pm0.08 \, V$ e $V_{EE} = 14.96 \pm 0.08 \, V$ come tensioni di alimentazione.
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=0.5]{Discriminatore.png}
 \caption{Discriminatore realizzato con un OpAmp modello TL081.}
@@ -29,7 +29,7 @@ Si è montato il circuito in fig. \ref{circuito1}, utilizzando $V_{CC} = 14.96\p
 Si è studiata la risposta del circuito ad un segnale sinusoidale. Il circuito ideale dovrebbe funzionare come un comparatore che rileva se la tensione è positiva o negativa, infatti il segnale in ingresso viene invertito e amplificato in modo da mandare in saturazione l'uscita alla tensione di alimentazione  positiva o negativa a seconda del segno dell'ingresso.\\
 Per basse frequenze il comportamento è quello ideale del discriminatore (l'uscita è un'onda quadra), come si vede in fig.\ref{funzionaBene}.
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/discriminatore.png}
 \caption{Segnale in ingresso e in uscita (invertito) del circuito discriminatore.}
@@ -39,7 +39,7 @@ Per basse frequenze il comportamento è quello ideale del discriminatore (l'usci
 Purtroppo il circuito da noi analizzato non è un amplificatore ideale e come tale presenta dei limiti al suo funzionamento.\\
 Come primo limite vediamo l'influenza della tensione di offset $V_{OS}$, che dalla fig. \ref{Vos} è stimata essere $V_{OS} = 25.6 \pm 0.8 \, mV$.\\
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/Vos.png}
 \caption{Misura della tensione di offset $V_{os}$}
@@ -48,7 +48,7 @@ Come primo limite vediamo l'influenza della tensione di offset $V_{OS}$, che dal
 
 Inoltre all'aumentare della frequenza si notano gli effetti dello \emph{slew rate} finito dell'OpAmp. La pendenza delle rette che costituiscono la transizione tra uscita alta e bassa satura e il segnale diventa sempre più simile a un onda trapezoidale, per diventare poi un'onda triangolare, vedi fig. \ref{slewRate}.\\
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/slewRate.png}
 \caption{Effetto dello \emph{slew rate} sull'uscita del discriminatore.}
@@ -61,7 +61,7 @@ Ad alta frequenza e a basso segnale l'uscita ricorda il fenomeno di clipping inf
 Il valore a cui satura l'uscita dipende dal segno dell'offset (in continua) che il generatore di funzioni fornisce, infatti nell'opAmp un segnale a frequenza nulla viene integrato e l'uscita si satura alla tensione di alimentazione che ha segnale opposto all'offset.\\
 Tuttavia con un'ampiezza ridotta il segnale può diminuire tanto da non mandare in saturazione l'uscita e allora si osserva che per un certo intervallo di tempo il segnale in uscita è sinusoidale (fig. \ref{clipping}).\\
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/prodottoBandaGuadagno2.png}
 \caption{Segnale sinusoidale in ingresso ad alta frequenza.}
@@ -72,7 +72,7 @@ E' addirittura possibile scegliere un segnale tanto piccolo in ampiezza da non m
 
 Il comportamento descritto è consistente col fatto che alte frequenze il circuito si comporta da integratore (dove le impedenze sono da ricercarsi nelle giunzioni all'interno del'opAmp), dunque il segnale in uscita è sempre sinusoidale e sfasato. L'ampiezza diminuisce all'aumentare della frequenza come ci si aspetta per un circuito integratore. 
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/sinusoidaleinBasso.png}
 \caption{Segnale sinusoidale integrato con offset (in uscita) in basso.}
@@ -80,7 +80,7 @@ Il comportamento descritto è consistente col fatto che alte frequenze il circui
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/sinusoidaleinAlto.png}
 \caption{Segnale sinusoidale intgrarato con offset (in uscita) in alto.}
@@ -93,7 +93,9 @@ In altri termini il comportamento da integratore si può spiegare invocando la f
 
 Si è montato il circuito in fig. \ref{circuito2} utilizzando i componenti $C_T = 1.01\pm0.04 \, nF$, $C_F = 1.02 \pm 0.04 \, nF$, $C_1 = 21.9 \pm 0.9 \, nF$, $R_1 = 98.3 \pm 0.8 \, k \Omega$, $R_2 = 99.9 \pm 0.8 \, k\Omega$ e $R_3 = 97.8 \pm 0.8 \, k \Omega$ e le tensioni $V_{CC} = 14.96\pm0.08 \, V$ e $V_{EE} = 14.96 \pm 0.08 \, V$. Si è poi regolato il potenziometro $R_3$ in modo che la tensione di soglia del discriminatore fosse $V_{R3} = 200 \pm 4 \, mV$ e si è fornita in ingresso al sistema un'onda quadra.\\
 
-\begin{figure}[h]
+\rem{vedere se mettere un errore ai 200 mV}
+
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=0.5]{amplificatoreCarica.png}
 \caption{Amplificatore di carica realizzato con un OpAmp modello TL081.\label{circuito2}}
@@ -111,7 +113,7 @@ Il resto del circuito rappresenta il discriminatore, analogo a quello descritto 
 A frequenza fissata $f = 100\pm 1 \, Hz$ si è misurata la risposta del circuito ad un segnale di ampiezza picco-picco $V_S = 6.00 \pm 0.04 \, V$.\\
 L'ampiezza massima attesa per il segnale $V_{SH}$, secondo la formula sopra citata, è $V_{SH.MAX.ATT} = V_S \frac{C_T}{C_F} =  5.9 \pm 0.3 \, V$, mentre il valore misurato sperimentalmente è $V_{SH.MAX} = 5.72 \pm 0.04 \, V$, come si vede in figura \ref{esponenziale}.\\
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/esponenziale.png}
 \caption{Misura del massimo valore dell'esponenziale $V_{SH.MAX.}$}
@@ -120,14 +122,14 @@ L'ampiezza massima attesa per il segnale $V_{SH}$, secondo la formula sopra cita
 
 Si sono misurati sull'oscilloscopio il tempo impiegato dal segnale $V_{sh}$ a scendere sotto i  $200 \, mV$ (fig. \ref{tempoEspo}) e il tempo per cui il segnale di uscita $V_{discr}$ è alto (\ref{tempoUscita}), i due valori sono $t_1 = 340 \pm 4 \, \mu s$ e  $t_2 = 336 \pm 4 \mu s$ rispettivamente e come si vede sono compatibili tra di loro.
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/periodoEsponenziale.png}
 \caption{Tempo $t_1$ impiegato dall'ingresso del discriminatore a scendere sotto soglia.}
 \label{tempoEspo}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/tempoQuadra.png}
 \caption{Tempo $t_2$ in cui l'uscita del discriminatore si mantiene positiva.}
@@ -145,11 +147,11 @@ Sempre mantenendo una frequenza fissa $f = 100 \pm 1 \, Hz$, si è misurata, al 
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline 
-• & $V_{IN} (V)$ & $\Delta t _ {atteso} (\mu s)$ & $\Delta t _ {misurato} (\mu s)$ \\ 
+• & $V_{S} (V)$ & $\Delta t _ {atteso} (\mu s)$ & $\Delta t _ {misurato} (\mu s)$ \\ 
 \hline
-1 & $7.00 \pm 0.06$ & $355 \pm 11$ & $350 \pm 4$ \\
+1 & $6.99 \pm 0.06$ & $355 \pm 11$ & $350 \pm 4$ \\
 2 & $6.00 \pm 0.06$ & $340 \pm 10$ & $336 \pm 4$ \\  
-3 & $5.00 \pm 0.04$ & $321 \pm 10$ & $317 \pm 4$ \\  
+3 & $5.03 \pm 0.04$ & $321 \pm 10$ & $317 \pm 4$ \\  
 4 & $4.00 \pm 0.04$ & $300 \pm 10$ & $293 \pm 4$ \\ 
 5 & $2.98 \pm 0.04$ & $270 \pm 8$ & $263 \pm 4$ \\ 
 6 & $2.00 \pm 0.01$ & $230 \pm 8$ & $220 \pm 4$ \\ 
@@ -159,21 +161,35 @@ Sempre mantenendo una frequenza fissa $f = 100 \pm 1 \, Hz$, si è misurata, al 
 \label{dati}
 \end{table}
 
-
-\rem{Aggiungere dati e fare un fit.}
-
 I dati di tempo presi sono in accordo con quelli calcolati teoricamente.
 
-Per una tensione in ingresso di $330 \, mV$ si vede che il segnale in uscita dall'amplificatore di carica perde la forma d'onda quadra e incomincia a diventare sinusoidale (fig. \ref{inizamorire}), per una tensione in ingresso che scende sotto il valore di soglia di $200 \, mV$ il trigger non si attiva, come si vede in figura \ref{morto}.
+Abbiamo eseguito inoltre un grafico di $\Delta t$ in funzione di $log(V_{S})$ e un fit con una retta $y = mx + q$ riportato in fig. \ref{retta}. I parametri ottenuti dal fit sono poi stati confrontati con quelli attesi calcolati dai valori delle impedenze e della tensione di soglia.\\
+Per il fit si è utilizzata la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "true"$}, poichè abbiamo considerato gli errori come statistici. Riportiamo di seguito parametri $m$ e $q$ della retta $y=mx+q$, con la relativa matrice di covarianza: $m = 106 \pm 3 \, \mu s $, $q = 145\pm 3 \, \mu s$,  $ \Sigma_{ij} = \left( \begin{array}{cc}
+5.73 & -6.98 \\ 
+-6.98 & 10.8\\
+\end{array} \right)$. Con un $\chi^2/ndof = 0.6/5$.\\
 
-\begin{figure}[h]
+Il $\chi^2$ basso indica che gli errori sulle misure di tempo e di tensione sono stati sovrastimati.\\
+
+I valori teorici dei coefficienti $a$ e $b$ sono: $a = R_1 * C_F = 100 \pm 4 \, \mu s$ e $b = - R_1 * C_F * log \left( \frac{C_F}{V_S C_T}\right) = 160 \pm 5 \, \mu s$. Questi parametri teorici sono in buon accordo con quelli stimati dai dati sperimentali.\\
+
+\begin{figure}[htb!]
+\centering
+\includegraphics[scale=.5]{plot.png}
+\caption{Tempo sopra sogna $\Delta t$ in funzione della tensione $V_S$ (in scala logaritmica).}
+\label{retta}
+\end{figure}
+
+Per una tensione in ingresso di $330 \, mV$ si vede che il segnale in uscita dall'amplificatore di carica perde la forma d'onda quadra e incomincia a diventare sinusoidale (fig. \ref{inizamorire}), per una tensione in ingresso che scende sotto il valore di soglia di $200 \, mV$ il trigger non si attiva, come si vede in figura \ref{morto}.\\
+
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/iniziaamorire.png}
 \caption{Tensione in ingresso al trigger del valore di $300 \, mV$.}
 \label{inizamorire}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/morto.png}
 \caption{Tensione in ingresso al trigger del valore di $300 \, mV$.}
@@ -184,7 +200,7 @@ Per una tensione in ingresso di $330 \, mV$ si vede che il segnale in uscita dal
 \subsection{1. Montaggio, descrizione del circuito e valutazione tensioni di soglia}
 Si è montato il circuito in fig. \ref{circuito3} con $R_1 = 9.92\pm0.08 \, k\Omega$ e $R_2 = 2.14 \pm 0.03 \, k\Omega$, alimentando l'operazionale con $V_{CC} = 14.96\pm0.08 \, V$ e $V_{EE} = 14.96 \pm 0.08 \, V$.\\
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=0.5]{triggerSchmitt.png}
 \caption{Trigger di Schmitt realizzato con un OpAmp modello TL081.\label{circuito3}}
@@ -196,14 +212,14 @@ Al circuito è stata inviata in ingresso una tensione sinusoidale a frequenza di
 
 Dalle immagini fig. \ref{sogliameno} e fig. \ref{sogliapiu}, misurando a quale tensione dell'ingresso si ha la commutazione dell'uscita si sono trovati i due valori per le soglie: $V_{th, -} =-2.60 \pm 0.04 \, V $ e $V_{th, +} = +2.48 \pm 0.04 \, V$.
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/FotoRicordoVth1.png}
 \caption{Misura della soglia inferiore del trigger.}
 \label{sogliameno}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/FotoRicordoVth2.png}
 \caption{Misura della soglia superiore del trigger.}
@@ -217,7 +233,7 @@ I valori delle tensioni di \emph{threshold} misurati sono in accordo con quelli 
 Diminuendo l'ampiezza in ingresso questo non attraversa mai le soglia inferiore del trigger a $-2.60\,V$, come si vede nella fig. \ref{sottoSoglia}, quindi il segnale in uscita dal trigger rimane sempre basso (anche quando l'ampiezza in ingresso è diminuita tanto da non attraversare nemmeno la soglia a $+2.48\,V$).\\
 Chiaramente aumentando l'ampiezza non si ha un comportamento simile per la soglia superiore perchè se il segnale attraversa la soglia a $-2.60\,V$ esso attraversa anche quella a $+2.48\,V$. L'uscita satura al valore superiore solamente se si aggiunge un \emph{offset} verso il basso e si diminuisce l'ampiezza, così che il segnale possa attraversare la soglia a $-2.60\,V$ senza attraversare quella a $+2.48\,V$.
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/sottoSogliaInferiore.png}
 \caption{Segnale in ingresso che non attraversa la soglia inferiore del trigger a $-2.60V$.}
@@ -229,7 +245,7 @@ Salendo in frequenza la pendenza del segnale satura, raggiunta questa condizione
 Perchè il circuito lavori bene come trigger è necessario che sia $T >> \frac{V_{OH}+V_{OL}}{slew rate}$, cioè il periodo dell'onda da triggerare sia molto minore del tempo di commutazione.
 \rem{Non ho mai considerato il 3\% sulle misure del'oscilloscopio ma va bene così}
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/slewRate.png}
 \caption{Trigger di Schmitt ad alta frequenza e limitazione dovuta allo \emph{slew rate}}
@@ -241,7 +257,7 @@ Perchè il circuito lavori bene come trigger è necessario che sia $T >> \frac{V
 
 Un circuito multivibratore astabile (come quello in fig. \ref{circuito4}) può essere realizzato partendo dal trigger di Schmitt inserendo all'uscita un ramo contenente due diodi Zener (e una resistenza $R_3$), insieme a un circuito RC (che determina l'instabilità e la frequenza di oscillazione).\\
 
-\begin{figure}[h]
+\begin{figure}[htb!]
 \centering
 \includegraphics[scale=0.5]{multivibratoreAstabile.png}
 \caption{Multivibratore astabile realizzato con un OpAmp modello TL081.\label{circuito4}}

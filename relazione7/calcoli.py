@@ -32,6 +32,11 @@ R1 = ufloat(98.3, ((0.008*98.3)**2+0.1**2)**0.5)
 VIN = unumpy.uarray([6.00, 4.00, 2.02], [0.06, 0.04, 0.01])
 deltaT = unumpy.uarray([336, 293, 220], [4, 4, 4])
 
+a = R1*CF
+b = -R1*CF*unumpy.log(Vmeno*CF/CT)
+
+print(a, b)
+
 print("C1 = ", C1)
 print("CT = ", CT)
 print("CF = ", CF)
