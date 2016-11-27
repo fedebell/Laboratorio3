@@ -26,8 +26,7 @@ Si è montato il circuito in fig. \ref{circuito1}, utilizzando $V_{CC} = 14.96\p
 \label{circuito1}
 \end{figure}
 
-Si è studiata la risposta del circuito ad un segnale sinusoidale. Il circuito ideale dovrebbe funzionare come un comparatore che rileva se la tensione è positiva o negativa, infatti il segnale in ingresso viene invertito e amplificato in modo da mandare in saturazione l'uscita alla tensione di alimentazione  positiva o negativa a seconda del segno dell'ingresso.\\
-Per basse frequenze il comportamento è quello ideale del discriminatore (l'uscita è un'onda quadra), come si vede in fig.\ref{funzionaBene}.
+Si è studiata la risposta del circuito ad un segnale sinusoidale. Il circuito ideale dovrebbe funzionare come un comparatore che rileva se la tensione è positiva o negativa, infatti il segnale in ingresso viene invertito e amplificato in modo da mandare in saturazione l'uscita alla tensione di alimentazione  positiva o negativa a seconda del segno dell'ingresso. Per basse frequenze il comportamento è quello ideale del discriminatore (l'uscita è un'onda quadra), come si vede in fig.\ref{funzionaBene}.
 
 \begin{figure}[htb!]
 \centering
@@ -36,8 +35,7 @@ Per basse frequenze il comportamento è quello ideale del discriminatore (l'usci
 \label{funzionaBene}
 \end{figure}
 
-Purtroppo il circuito da noi analizzato non è un amplificatore ideale e come tale presenta dei limiti al suo funzionamento.\\
-Come primo limite vediamo l'influenza della tensione di offset $V_{OS}$, che dalla fig. \ref{Vos} è stimata essere $V_{OS} = 25.6 \pm 0.8 \, mV$.\\
+Purtroppo il circuito da noi analizzato non è un amplificatore ideale e come tale presenta dei limiti al suo funzionamento. Come primo limite vediamo l'influenza della tensione di offset $V_{OS}$, che dalla fig. \ref{Vos} è stimata essere $V_{OS} = 25.6 \pm 0.8 \, mV$.\\
 
 \begin{figure}[htb!]
 \centering
@@ -46,7 +44,7 @@ Come primo limite vediamo l'influenza della tensione di offset $V_{OS}$, che dal
 \label{Vos}
 \end{figure}
 
-Inoltre all'aumentare della frequenza si notano gli effetti dello \emph{slew rate} finito dell'OpAmp. La pendenza delle rette che costituiscono la transizione tra uscita alta e bassa satura e il segnale diventa sempre più simile a un onda trapezoidale, per diventare poi un'onda triangolare, vedi fig. \ref{slewRate}.\\
+Inoltre all'aumentare della frequenza si notano gli effetti dello \emph{slew rate} finito dell'OpAmp. La pendenza delle rette (che costituiscono la transizione tra uscita alta e bassa) satura e il segnale diventa sempre più simile a un onda trapezoidale, per diventare poi un'onda triangolare, vedi fig. \ref{slewRate}.\\
 
 \begin{figure}[htb!]
 \centering
@@ -57,9 +55,7 @@ Inoltre all'aumentare della frequenza si notano gli effetti dello \emph{slew rat
 
 Abbiamo valutato lo \emph{slew rate} con due misure di tensione e di tempo: $dV = 4.00 \pm 0.04 \, V$ e $dt = 336 \pm 4 \, ns$, da questa si ricava \emph{slew rate} = $11.9 \pm 0.4 \, \frac{V}{\mu s}$, questo valore è simile a quello trovato nell'esperienza precedente \emph{slew rate} = $11.4 \pm 0.6 \, \frac{V}{\mu s}$.\\
 
-Ad alta frequenza e a basso segnale l'uscita ricorda il fenomeno di clipping inferiore (o superiore), come si vede in fig. \ref{clipping}.\\
-Il valore a cui satura l'uscita dipende dal segno dell'offset (in continua) che il generatore di funzioni fornisce, infatti nell'opAmp un segnale a frequenza nulla viene integrato e l'uscita si satura alla tensione di alimentazione che ha segnale opposto all'offset.\\
-Tuttavia con un'ampiezza ridotta il segnale può diminuire tanto da non mandare in saturazione l'uscita e allora si osserva che per un certo intervallo di tempo il segnale in uscita è sinusoidale (fig. \ref{clipping}).\\
+Ad alta frequenza e a basso segnale l'uscita ricorda il fenomeno di clipping inferiore (o superiore), come si vede in fig. \ref{clipping}. Il valore a cui satura l'uscita dipende dal segno dell'offset (in continua) che il generatore di funzioni fornisce, infatti nell'opAmp un segnale a frequenza nulla viene integrato e l'uscita si satura alla tensione di alimentazione che ha segnale opposto all'offset. Tuttavia con un'ampiezza ridotta il segnale può diminuire tanto da non mandare in saturazione l'uscita e allora si osserva che per un certo intervallo di tempo il segnale in uscita è sinusoidale (fig. \ref{clipping}).\\
 
 \begin{figure}[htb!]
 \centering
@@ -69,8 +65,7 @@ Tuttavia con un'ampiezza ridotta il segnale può diminuire tanto da non mandare 
 \end{figure}
 
 E' addirittura possibile scegliere un segnale tanto piccolo in ampiezza da non mandare mai l'opAmp in saturazione, come si vede nelle fig. \ref{senoAlto} e fig. \ref{senoBasso}, riferiti a un caso di offset rispettivamente positivo e negativo.
-
-Il comportamento descritto è consistente col fatto che alte frequenze il circuito si comporta da integratore (dove le impedenze sono da ricercarsi nelle giunzioni all'interno del'opAmp), dunque il segnale in uscita è sempre sinusoidale e sfasato. L'ampiezza diminuisce all'aumentare della frequenza come ci si aspetta per un circuito integratore. 
+Il comportamento descritto è consistente col fatto che ad alte frequenze il circuito si comporta da integratore (dove le impedenze sono da ricercarsi nelle giunzioni all'interno del'opAmp), dunque il segnale in uscita è sempre sinusoidale e sfasato. L'ampiezza diminuisce all'aumentare della frequenza come ci si aspetta per un circuito integratore. 
 
 \begin{figure}[htb!]
 \centering
@@ -79,7 +74,6 @@ Il comportamento descritto è consistente col fatto che alte frequenze il circui
 \label{senoBasso}
 \end{figure}
 
-
 \begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/sinusoidaleinAlto.png}
@@ -87,13 +81,11 @@ Il comportamento descritto è consistente col fatto che alte frequenze il circui
 \label{senoAlto}
 \end{figure}
 
-In altri termini il comportamento da integratore si può spiegare invocando la finitezza del fattore GBW, che intruduce una frequenza di taglio nel sistema e una massima amplificazione alle basse frequenze. Il segnale in uscita è comunque limitato dalla tensioni $V_{CC}$ e $V_{EE}$ quindi non si può valutare con una misura l'ampificazione massima e pertanto risulta difficile dare un stima del prodotto $GBW = A_{max} * f_{taglio}$.
+In altri termini il comportamento da integratore si può spiegare invocando la finitezza del fattore GBW, che intruduce una frequenza di taglio nel sistema e una massima amplificazione alle basse frequenze. Il segnale in uscita è comunque limitato dalla tensioni $V_{CC}$ e $V_{EE}$ quindi non si può valutare con una misura l'amplificazione massima e pertanto risulta difficile dare un stima del prodotto $GBW = A_{max} * f_{taglio}$.
 
 \section*{B. Amplificatore di carica}
 
 Si è montato il circuito in fig. \ref{circuito2} utilizzando i componenti $C_T = 1.01\pm0.04 \, nF$, $C_F = 1.02 \pm 0.04 \, nF$, $C_1 = 21.9 \pm 0.9 \, nF$, $R_1 = 98.3 \pm 0.8 \, k \Omega$, $R_2 = 99.9 \pm 0.8 \, k\Omega$ e $R_3 = 97.8 \pm 0.8 \, k \Omega$ e le tensioni $V_{CC} = 14.96\pm0.08 \, V$ e $V_{EE} = 14.96 \pm 0.08 \, V$. Si è poi regolato il potenziometro $R_3$ in modo che la tensione di soglia del discriminatore fosse $V_{R3} = 200 \pm 4 \, mV$ e si è fornita in ingresso al sistema un'onda quadra.\\
-
-\rem{vedere se mettere un errore ai 200 mV}
 
 \begin{figure}[htb!]
 \centering
@@ -120,7 +112,7 @@ L'ampiezza massima attesa per il segnale $V_{SH}$, secondo la formula sopra cita
 \label{esponenziale}
 \end{figure}
 
-Si sono misurati sull'oscilloscopio il tempo impiegato dal segnale $V_{sh}$ a scendere sotto i  $200 \, mV$ (fig. \ref{tempoEspo}) e il tempo per cui il segnale di uscita $V_{discr}$ è alto (\ref{tempoUscita}), i due valori sono $t_1 = 340 \pm 4 \, \mu s$ e  $t_2 = 336 \pm 4 \mu s$ rispettivamente e come si vede sono compatibili tra di loro.
+Si sono misurati sull'oscilloscopio il tempo impiegato dal segnale $V_{sh}$ a scendere sotto i  $200 \, mV$ (fig. \ref{tempoEspo}) e il tempo per cui il segnale di uscita $V_{discr}$ è alto (fig. \ref{tempoUscita}), i due valori sono $t_1 = 340 \pm 4 \, \mu s$ e  $t_2 = 336 \pm 4 \mu s$ rispettivamente e come si vede sono compatibili tra di loro.
 
 \begin{figure}[htb!]
 \centering
@@ -135,8 +127,6 @@ Si sono misurati sull'oscilloscopio il tempo impiegato dal segnale $V_{sh}$ a sc
 \caption{Tempo $t_2$ in cui l'uscita del discriminatore si mantiene positiva.}
 \label{tempoUscita}
 \end{figure}
-
-\rem{Dire perchè il condensatore si carica a +6 e non a +3!!}
 
 
 \subsection*{2. Dipendenza del segnale in uscita dall'ampiezza del segnale in ingresso}
@@ -156,8 +146,9 @@ Sempre mantenendo una frequenza fissa $f = 100 \pm 1 \, Hz$, si è misurata, al 
 5 & $2.98 \pm 0.04$ & $270 \pm 8$ & $263 \pm 4$ \\ 
 6 & $2.00 \pm 0.01$ & $230 \pm 8$ & $220 \pm 4$ \\ 
 7 & $1.01 \pm 0.01$ & $160 \pm 5$ & $145 \pm 4$ \\   
-\hline 
+\hline
 \end{tabular} 
+\caption{Misure di tesione $V_S$ e $\Delta t _ {misurato}$ insieme a $\Delta t _ {atteso}$ calcolato.}
 \label{dati}
 \end{table}
 
@@ -171,28 +162,28 @@ Per il fit si è utilizzata la funzione \emph{curvefit} della libreria \emph{pyl
 
 Il $\chi^2$ basso indica che gli errori sulle misure di tempo e di tensione sono stati sovrastimati.\\
 
-I valori teorici dei coefficienti $a$ e $b$ sono: $a = R_1 * C_F = 100 \pm 4 \, \mu s$ e $b = - R_1 * C_F * log \left( \frac{C_F}{V_S C_T}\right) = 160 \pm 5 \, \mu s$. Questi parametri teorici sono in buon accordo con quelli stimati dai dati sperimentali.\\
+I valori teorici dei coefficienti $a$ e $b$ sono: $a = R_1 C_F = 100 \pm 4 \, \mu s$ e $b = - R_1 C_F log \left( \frac{C_F}{V_S C_T}\right) = 160 \pm 5 \, \mu s$. Questi parametri teorici sono in buon accordo con quelli stimati dai dati sperimentali.\\
 
 \begin{figure}[htb!]
 \centering
 \includegraphics[scale=.5]{plot.png}
-\caption{Tempo sopra sogna $\Delta t$ in funzione della tensione $V_S$ (in scala logaritmica).}
+\caption{Tempo sopra soglia $\Delta t$ in funzione della tensione $V_S$ (in scala logaritmica).}
 \label{retta}
 \end{figure}
 
-Per una tensione in ingresso di $330 \, mV$ si vede che il segnale in uscita dall'amplificatore di carica perde la forma d'onda quadra e incomincia a diventare sinusoidale (fig. \ref{inizamorire}), per una tensione in ingresso che scende sotto il valore di soglia di $200 \, mV$ il trigger non si attiva, come si vede in figura \ref{morto}.\\
+Per una tensione in ingresso di $330 \, mV$ si vede che il segnale in uscita dall'amplificatore di carica perde la forma d'onda quadra e incomincia a diventare sinusoidale (fig. \ref{inizamorire}), per una tensione in ingresso che scende sotto il valore di soglia di $200 \, mV$ il trigger non si attiva, come si vede in fig. \ref{morto}.\\
 
 \begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/iniziaamorire.png}
-\caption{Tensione in ingresso al trigger del valore di $300 \, mV$.}
+\caption{Uscita dell'amplificatore di tensione per un valore della tensione in ingresso di $300 \, mV$.}
 \label{inizamorire}
 \end{figure}
 
 \begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/morto.png}
-\caption{Tensione in ingresso al trigger del valore di $300 \, mV$.}
+\caption{Uscita dell'amplificatore di tensione per un valore della tensione in ingresso di $200 \, mV$.}
 \label{morto}
 \end{figure}
 
@@ -206,7 +197,7 @@ Si è montato il circuito in fig. \ref{circuito3} con $R_1 = 9.92\pm0.08 \, k\Om
 \caption{Trigger di Schmitt realizzato con un OpAmp modello TL081.\label{circuito3}}
 \end{figure}
 
-In questo trigger grazie alla caduta di potenziale sulla resistenza $R_2$ del partitore costituito da $R_1$ e $R_2$, che viene immessa al $V_{+}$ dell'opAmp ogni volta che si ha un attraversamento della soglia ($V_{+}$) da parte del segnale immesso su $V_{-}$ la soglia stessa cambia (perchè cambia l'uscita $V_{OUT}$ e quindi la caduta di poteziale $V_{+}$). Pertanto dopo una commutazione perchè l'uscita cambi nuovamente è necessario che l'ingresso superi la seconda soglia, questo rende il discrimintore stabile rispetto al rumore del segnale in ingresso.
+In questo trigger grazie alla caduta di potenziale sulla resistenza $R_2$ del partitore costituito da $R_1$ e $R_2$ (che viene immessa al $V_{+}$ dell'opAmp) ogni volta che si ha un attraversamento della soglia ($V_{+}$) da parte del segnale immesso su $V_{-}$ la soglia stessa cambia (perchè cambia l'uscita $V_{OUT}$ e quindi la caduta di poteziale su $R_2$ e su $V_{+}$). Pertanto dopo una commutazione perchè l'uscita cambi nuovamente è necessario che l'ingresso superi la seconda soglia, questo rende il discrimintore stabile rispetto al rumore del segnale in ingresso.
 
 Al circuito è stata inviata in ingresso una tensione sinusoidale a frequenza di circa $f \sim 710 \pm 7 \, Hz$, e si sono misurate le tensioni in uscita nei due stati possibili: $V_{OH} = 14.5\pm 0.2 \, V$ e $V_{OL} = 14.0\pm0.2 \, V$ (inferiori alle tensioni di alimentazione), dalle quali si sono ricavati i valori attesi per le tensioni di soglia $V_{1,ATT,TH}= -V_{OH}/(1+R_1/R_2)= -2.57 \pm 0.05 \, V$ e $V_{2,ATT,TH}= V_{OL}/(1+R_1/R_2) = 2.48 \pm 0.05 V$. 
 
@@ -243,7 +234,7 @@ Chiaramente aumentando l'ampiezza non si ha un comportamento simile per la sogli
 Aumentando la frequenza  lo \emph{slew rate} è il fattore limitante dell'uscita del trigger, come si vede dalla risposta a forma di onda trapezoidale della fig. \ref{slew}, presa a $f = 323 \pm 3 \, kHz$. \\
 Salendo in frequenza la pendenza del segnale satura, raggiunta questa condizione si è misurato lo \emph{slew rate} come rapporto incrementale: $dV = 8.00 \pm 0.08 \, V$ e $dt = 730 \pm 10 ns$, dai quali si ottiene \emph{slew rate} = $10.9 \pm 0.2 \, \frac{V}{\mu s}$, confrontabile con tutti i valori ottenuti nelle altre esperienze. Diminuendo la frequenza non si sono osservate deviazioni dal comportamento ideale degli opAmp. \\
 Perchè il circuito lavori bene come trigger è necessario che sia $T >> \frac{V_{OH}+V_{OL}}{slew rate}$, cioè il periodo dell'onda da triggerare sia molto minore del tempo di commutazione.
-\rem{Non ho mai considerato il 3\% sulle misure del'oscilloscopio ma va bene così}
+
 
 \begin{figure}[htb!]
 \centering
@@ -267,25 +258,25 @@ Un circuito multivibratore astabile (come quello in fig. \ref{circuito4}) può e
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[scale=.5]{funzionamentoOscillatore.png}
+\includegraphics[scale=.5]{immagini/ondeSovrapposte.jpg}
 \caption{Segnali del multivibratore.}
 \label{funzionamento}
 \end{figure}
 
 Il condensatore inizialmente carico si scarica sulla resistenza $R$ per raggiungere $-V_D$, finchè non raggiunge la tensione di \emph{threshold} inferiore del trigger (data da $V_{+}$), allora la tensione in uscita commuta a $+V_{D}$ e anche il \emph{threshold} cambia (principio del trigger di \emph{Schmitt}), il condensatore si carica per raggiungere la tensione $V_D = V_{OUT}$, ma quando raggiunge la tensione di \emph{threshold} superiore l'uscita commuta nuovamente e il condensatore ricomincia a scaricarsi. Il tempo caratteristico dell'oscillazione è determinato da $\tau = RC$.\\
 
-Si è determinato il periodo di oscillazione in funzione degli elementi resistivi: 
+
+Poichè $R_1 \simeq R_2$ per ottenere un periodo dell'onda quadra di $T \simeq 2 \, ms$ si deve scegliere $\tau = RC = \frac{T}{2 log(3)} = \simeq 0.9\,ms$.\\
+A questo punto abbiamo potuto montare il circuito con $R = 3.87 \pm 0.04 \, k\Omega$, e un condensatore $C = 229 \pm 9 \, nF$, $R_1\,= 9.78\pm0.08 \, k\Omega $, $R_2 = 9.80\pm0.08\, k\Omega $ e $R_3 = 0.961\pm0.008 \, k\Omega $, con un' alimentazione per l'OpAmp di $V_{CC} = 14.96\pm0.08 \, V$ e $V_{EE} = 14.96 \pm 0.08 \, V$.
+Si è determinato il periodo di oscillazione in funzione degli elementi resistivi e capacitivi: 
 \begin{center}
 $T=2\tau\, log\left( 1\,+\,2\frac{R_2}{R_1}\right) = 1.94 \pm 0.08 \, ms$ 
 \end{center}
-Dunque per ottenere un periodo dell'onda quadra di $\simeq 2 \, ms$ si deve scegliere $\tau = RC\simeq 0.9\,ms$.\\
-A questo punto abbiamo potuto montare il circuito con $R = 3.87 \pm 0.04 \, k\Omega$, e un condensatore $C = 229 \pm 9 \, nF$, $R_1\,= 9.78\pm0.08 \, k\Omega $, $R_2 = 9.80\pm0.08\, k\Omega $ e $R_3 = 0.961\pm0.008 \, k\Omega $, con un' alimentazione per l'OpAmp di $V_{CC} = 14.96\pm0.08 \, V$ e $V_{EE} = 14.96 \pm 0.08 \, V$.
-
 
 \subsection*{3. Verifica funzionamento del circuito}
 
 I diodi Zener servono per limitare la tensione $V_{OUT}$, che satura tra i due valori estremi $\pm V_{D}$, dove $V_{D} = V_{Z} + V_{ \gamma}$. Per il diodo Zener $V_Z \sim 6.2 \, V$ \footnote{Il costuttore non fornisce incertezza.} e $V_{\gamma} \sim 0.7\, V$, dunque $V_D \sim 6.9 \, V$. \\
-La tensione in uscita all'opAmp è vincolata alle tensioni di alimentazione ($\pm 15 \, V$), quindi tra l'uscita e il ramo dei diodi Zener vi è una caduta di potenziale pertantobisogna inserire una resistenza $R_3$ per evitare che i diodi si brucino a causa del passaggio di corrente elevato. \\ 
+La tensione in uscita all'opAmp è vincolata alle tensioni di alimentazione ($\pm 15 \, V$), quindi tra l'uscita e il ramo dei diodi Zener vi è una caduta di potenziale pertanto bisogna inserire una resistenza $R_3$ per evitare che i diodi si brucino a causa del passaggio di corrente elevato. \\ 
 
 Sappiamo che le tensioni di \emph{threshold} superiore e inferiore per il trigger di \emph{Schmitt} sono: $V_{TH} = \pm \frac{V_{D}}{1+\frac{R1}{R2}} = \pm 3.45 \pm 0.05 \, V$, 
 Ci aspettiamo per $V_{+}$ un'onda quadra la cui tensione picco-picco attesa è $V_{+, pp} = 6.9 \pm 0.1 \, V$, $V_{-}$ è costituito da cicli di carica e scarica del condensatore (quindi funzioni esponenziali) tra le tensioni di \emph{threshold}, quindi $V_{-, pp} = 6.9 \pm 0.1 \, V$. Essendo $V_{OUT}$ variabile tra $+V_{D}$ e $-V_{D}$, ci aspettiamo un'onda quadra con $V_{OUT, pp} \sim 13.8 \, V$.
