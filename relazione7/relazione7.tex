@@ -26,16 +26,12 @@ Si è montato il circuito in fig. \ref{circuito1}, utilizzando $V_{CC} = 14.96\p
 \label{circuito1}
 \end{figure}
 
-Si è studiata la risposta del circuito ad un segnale sinusoidale. Il circuito ideale dovrebbe funzionare come un comparatore che rileva se la tensione è positiva o negativa, infatti il segnale in ingresso viene invertito e amplificato in modo da mandare in saturazione l'uscita alla tensione di alimentazione  positiva o negativa a seconda del segno dell'ingresso. Per basse frequenze il comportamento è quello ideale del discriminatore (l'uscita è un'onda quadra), come si vede in fig.\ref{funzionaBene}.
-
 \begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/discriminatore.png}
 \caption{Segnale in ingresso e in uscita (invertito) del circuito discriminatore.}
 \label{funzionaBene}
 \end{figure}
-
-Purtroppo il circuito da noi analizzato non è un amplificatore ideale e come tale presenta dei limiti al suo funzionamento. Come primo limite vediamo l'influenza della tensione di offset $V_{OS}$, che dalla fig. \ref{Vos} è stimata essere $V_{OS} = 25.6 \pm 0.8 \, mV$.\\
 
 \begin{figure}[htb!]
 \centering
@@ -44,8 +40,6 @@ Purtroppo il circuito da noi analizzato non è un amplificatore ideale e come ta
 \label{Vos}
 \end{figure}
 
-Inoltre all'aumentare della frequenza si notano gli effetti dello \emph{slew rate} finito dell'OpAmp. La pendenza delle rette (che costituiscono la transizione tra uscita alta e bassa) satura e il segnale diventa sempre più simile a un onda trapezoidale, per diventare poi un'onda triangolare, vedi fig. \ref{slewRate}.\\
-
 \begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/slewRate.png}
@@ -53,19 +47,12 @@ Inoltre all'aumentare della frequenza si notano gli effetti dello \emph{slew rat
 \label{slewRate}
 \end{figure}
 
-Abbiamo valutato lo \emph{slew rate} con due misure di tensione e di tempo: $dV = 4.00 \pm 0.04 \, V$ e $dt = 336 \pm 4 \, ns$, da questa si ricava \emph{slew rate} = $11.9 \pm 0.4 \, \frac{V}{\mu s}$, questo valore è simile a quello trovato nell'esperienza precedente \emph{slew rate} = $11.4 \pm 0.6 \, \frac{V}{\mu s}$.\\
-
-Ad alta frequenza e a basso segnale l'uscita ricorda il fenomeno di clipping inferiore (o superiore), come si vede in fig. \ref{clipping}. Il valore a cui satura l'uscita dipende dal segno dell'offset (in continua) che il generatore di funzioni fornisce, infatti nell'opAmp un segnale a frequenza nulla viene integrato e l'uscita si satura alla tensione di alimentazione che ha segnale opposto all'offset. Tuttavia con un'ampiezza ridotta il segnale può diminuire tanto da non mandare in saturazione l'uscita e allora si osserva che per un certo intervallo di tempo il segnale in uscita è sinusoidale (fig. \ref{clipping}).\\
-
 \begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/prodottoBandaGuadagno2.png}
 \caption{Segnale sinusoidale in ingresso ad alta frequenza.}
 \label{clipping}
 \end{figure}
-
-E' addirittura possibile scegliere un segnale tanto piccolo in ampiezza da non mandare mai l'opAmp in saturazione, come si vede nelle fig. \ref{senoAlto} e fig. \ref{senoBasso}, riferiti a un caso di offset rispettivamente positivo e negativo.
-Il comportamento descritto è consistente col fatto che ad alte frequenze il circuito si comporta da integratore (dove le impedenze sono da ricercarsi nelle giunzioni all'interno del'opAmp), dunque il segnale in uscita è sempre sinusoidale e sfasato. L'ampiezza diminuisce all'aumentare della frequenza come ci si aspetta per un circuito integratore. 
 
 \begin{figure}[htb!]
 \centering
@@ -80,6 +67,23 @@ Il comportamento descritto è consistente col fatto che ad alte frequenze il cir
 \caption{Segnale sinusoidale integrato con offset (in uscita) in alto.}
 \label{senoAlto}
 \end{figure}
+
+Si è studiata la risposta del circuito ad un segnale sinusoidale. Il circuito ideale dovrebbe funzionare come un comparatore che rileva se la tensione è positiva o negativa, infatti il segnale in ingresso viene invertito e amplificato in modo da mandare in saturazione l'uscita alla tensione di alimentazione  positiva o negativa a seconda del segno dell'ingresso. Per basse frequenze il comportamento è quello ideale del discriminatore (l'uscita è un'onda quadra), come si vede in fig.\ref{funzionaBene}.
+
+Purtroppo il circuito da noi analizzato non è un amplificatore ideale e come tale presenta dei limiti al suo funzionamento. Come primo limite vediamo l'influenza della tensione di offset $V_{OS}$, che dalla fig. \ref{Vos} è stimata essere $V_{OS} = 25.6 \pm 0.8 \, mV$.\\
+
+Inoltre all'aumentare della frequenza si notano gli effetti dello \emph{slew rate} finito dell'OpAmp. La pendenza delle rette (che costituiscono la transizione tra uscita alta e bassa) satura e il segnale diventa sempre più simile a un onda trapezoidale, per diventare poi un'onda triangolare, vedi fig. \ref{slewRate}.\\
+
+Abbiamo valutato lo \emph{slew rate} con due misure di tensione e di tempo: $dV = 4.00 \pm 0.04 \, V$ e $dt = 336 \pm 4 \, ns$, da questa si ricava \emph{slew rate} = $11.9 \pm 0.4 \, \frac{V}{\mu s}$, questo valore è simile a quello trovato nell'esperienza precedente \emph{slew rate} = $11.4 \pm 0.6 \, \frac{V}{\mu s}$.\\
+
+Ad alta frequenza e a basso segnale l'uscita ricorda il fenomeno di clipping inferiore (o superiore), come si vede in fig. \ref{clipping}. Il valore a cui satura l'uscita dipende dal segno dell'offset (in continua) che il generatore di funzioni fornisce, infatti nell'opAmp un segnale a frequenza nulla viene integrato e l'uscita si satura alla tensione di alimentazione che ha segnale opposto all'offset. Tuttavia con un'ampiezza ridotta il segnale può diminuire tanto da non mandare in saturazione l'uscita e allora si osserva che per un certo intervallo di tempo il segnale in uscita è sinusoidale (fig. \ref{clipping}).\\
+
+
+
+E' addirittura possibile scegliere un segnale tanto piccolo in ampiezza da non mandare mai l'opAmp in saturazione, come si vede nelle fig. \ref{senoAlto} e fig. \ref{senoBasso}, riferiti a un caso di offset rispettivamente positivo e negativo.
+Il comportamento descritto è consistente col fatto che ad alte frequenze il circuito si comporta da integratore (dove le impedenze sono da ricercarsi nelle giunzioni all'interno del'opAmp), dunque il segnale in uscita è sempre sinusoidale e sfasato. L'ampiezza diminuisce all'aumentare della frequenza come ci si aspetta per un circuito integratore. 
+
+
 
 In altri termini il comportamento da integratore si può spiegare invocando la finitezza del fattore GBW, che intruduce una frequenza di taglio nel sistema e una massima amplificazione alle basse frequenze. Il segnale in uscita è comunque limitato dalla tensioni $V_{CC}$ e $V_{EE}$ quindi non si può valutare con una misura l'amplificazione massima e pertanto risulta difficile dare un stima del prodotto $GBW = A_{max} * f_{taglio}$.
 
@@ -112,8 +116,6 @@ L'ampiezza massima attesa per il segnale $V_{SH}$, secondo la formula sopra cita
 \label{esponenziale}
 \end{figure}
 
-Si sono misurati sull'oscilloscopio il tempo impiegato dal segnale $V_{sh}$ a scendere sotto i  $200 \, mV$ (fig. \ref{tempoEspo}) e il tempo per cui il segnale di uscita $V_{discr}$ è alto (fig. \ref{tempoUscita}), i due valori sono $t_1 = 340 \pm 4 \, \mu s$ e  $t_2 = 336 \pm 4 \mu s$ rispettivamente e come si vede sono compatibili tra di loro.
-
 \begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/periodoEsponenziale.png}
@@ -128,6 +130,7 @@ Si sono misurati sull'oscilloscopio il tempo impiegato dal segnale $V_{sh}$ a sc
 \label{tempoUscita}
 \end{figure}
 
+Si sono misurati sull'oscilloscopio il tempo impiegato dal segnale $V_{sh}$ a scendere sotto i  $200 \, mV$ (fig. \ref{tempoEspo}) e il tempo per cui il segnale di uscita $V_{discr}$ è alto (fig. \ref{tempoUscita}), i due valori sono $t_1 = 340 \pm 4 \, \mu s$ e  $t_2 = 336 \pm 4 \mu s$ rispettivamente e come si vede sono compatibili tra di loro.
 
 \subsection*{2. Dipendenza del segnale in uscita dall'ampiezza del segnale in ingresso}
 
@@ -199,10 +202,6 @@ Si è montato il circuito in fig. \ref{circuito3} con $R_1 = 9.92\pm0.08 \, k\Om
 
 In questo trigger grazie alla caduta di potenziale sulla resistenza $R_2$ del partitore costituito da $R_1$ e $R_2$ (che viene immessa al $V_{+}$ dell'opAmp) ogni volta che si ha un attraversamento della soglia ($V_{+}$) da parte del segnale immesso su $V_{-}$ la soglia stessa cambia (perchè cambia l'uscita $V_{OUT}$ e quindi la caduta di poteziale su $R_2$ e su $V_{+}$). Pertanto dopo una commutazione perchè l'uscita cambi nuovamente è necessario che l'ingresso superi la seconda soglia, questo rende il discrimintore stabile rispetto al rumore del segnale in ingresso.
 
-Al circuito è stata inviata in ingresso una tensione sinusoidale a frequenza di circa $f \sim 710 \pm 7 \, Hz$, e si sono misurate le tensioni in uscita nei due stati possibili: $V_{OH} = 14.5\pm 0.2 \, V$ e $V_{OL} = 14.0\pm0.2 \, V$ (inferiori alle tensioni di alimentazione), dalle quali si sono ricavati i valori attesi per le tensioni di soglia $V_{1,ATT,TH}= -V_{OH}/(1+R_1/R_2)= -2.57 \pm 0.05 \, V$ e $V_{2,ATT,TH}= V_{OL}/(1+R_1/R_2) = 2.48 \pm 0.05 V$. 
-
-Dalle immagini fig. \ref{sogliameno} e fig. \ref{sogliapiu}, misurando a quale tensione dell'ingresso si ha la commutazione dell'uscita si sono trovati i due valori per le soglie: $V_{th, -} =-2.60 \pm 0.04 \, V $ e $V_{th, +} = +2.48 \pm 0.04 \, V$.
-
 \begin{figure}[htb!]
 \centering
 \includegraphics[scale=1.0]{immagini/FotoRicordoVth1.png}
@@ -216,6 +215,10 @@ Dalle immagini fig. \ref{sogliameno} e fig. \ref{sogliapiu}, misurando a quale t
 \caption{Misura della soglia superiore del trigger.}
 \label{sogliapiu}
 \end{figure}
+
+Al circuito è stata inviata in ingresso una tensione sinusoidale a frequenza di circa $f \sim 710 \pm 7 \, Hz$, e si sono misurate le tensioni in uscita nei due stati possibili: $V_{OH} = 14.5\pm 0.2 \, V$ e $V_{OL} = 14.0\pm0.2 \, V$ (inferiori alle tensioni di alimentazione), dalle quali si sono ricavati i valori attesi per le tensioni di soglia $V_{1,ATT,TH}= -V_{OH}/(1+R_1/R_2)= -2.57 \pm 0.05 \, V$ e $V_{2,ATT,TH}= V_{OL}/(1+R_1/R_2) = 2.48 \pm 0.05 V$. 
+
+Dalle immagini fig. \ref{sogliameno} e fig. \ref{sogliapiu}, misurando a quale tensione dell'ingresso si ha la commutazione dell'uscita si sono trovati i due valori per le soglie: $V_{th, -} =-2.60 \pm 0.04 \, V $ e $V_{th, +} = +2.48 \pm 0.04 \, V$.
 
 I valori delle tensioni di \emph{threshold} misurati sono in accordo con quelli stimati teoricamente entro gli errori.
 
