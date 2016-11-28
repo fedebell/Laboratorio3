@@ -13,16 +13,19 @@
 \begin{document}
 \maketitle
 \section{Scopo dell'esperienza}
-Lo scopo dell'esperienza è realizzare un oscillatore ad onda sinusoidale a ponte di Wien utilizzando un OpAmp.
+Lo scopo dell'esperienza è realizzare un oscillatore ad onda sinusoidale a ponte di Wien utilizzando un OpAmp.\\
 \section{Montaggio del circuito e misura del loop gain}
-Abbiamo montato il circuito in fig. \ref{oscillatore} utilizzando $R_1=$, $R_2=$, $R_3=$, $R_4=$, $R_5=$, un potenziometro con $P_{MAX}=$, due condensatori $C_1=$ e $C_2=$.
+Abbiamo montato il circuito in fig. \ref{oscillatore} utilizzando $R_1=9.95\pm0.08\,k\Omega$, $R_2=9.81\pm0.08\,k\Omega$, $R_3=9.82\pm0.08\,k\Omega$, $R_4=9.89\pm0.08\,k\Omega$, $R_5=9.88\pm0.08\,k\Omega$, un potenziometro con $P_{MAX}=10.47\pm0.09\,k\Omega$, due condensatori $C_1=9.9\pm0.4\,nF$ e $C_2=9.9\pm0.4\,nF$. Le tensioni di alimentazione sono $V_{+} = 15.09 \pm 0.08 \, V$ e $V_{-} = -15.08 \pm 0.08 \, V$.
+
 \begin{figure}[!htb]
   \centering
-  \includegraphics[scale=0.5]{pontediWien.png}
+  \includegraphics[scale=0.25]{ponteDiWien.png}
 \caption{Circuito oscillatore a ponte di Wien.}
 \label{oscillatore}
 \end{figure}
-Dal circuito si attendono quindi per i due sottocircuiti $R_1C_1$ e $R_2C_2$ le frequenze di taglio $f_1=\frac{1}{2 \pi R_1C_1}$ e $f_2=\frac{1}{2 \pi R_2C_2}$
+
+Dal circuito si attendono quindi per i due sottocircuiti $R_1 C_1$ e $R_2 C_2$ le frequenze di taglio $f_1=\frac{1}{2 \pi R_1C_1} = 1.62 \pm 0.07 \, kHz $ e $f_2=\frac{1}{2 \pi R_2C_2} = 1.62 \pm 0.07 \, kHz$.\\
+
 Abbiamo scollegato il punto A dall'ingresso non invertente dell'OpAmp, inviando al suo posto attraverso il generatore di funzioni un segnale sinusoidale di ampiezza pari a circa $250\,mV$ con frequenza tra $500\,Hz$ e $3\,kHz$ \footnote{Da notare il fatto che l'intervallo considerato comprende anche la frequenza di taglio $f_1 \sim f_2$}
 In tab.\ref{} abbiamo riportato i valori di $V_+$, $V_A$, del loro sfasamento $\phi$ e del loro rapporto $A_v=$. 
 \rem{ INSERIRE TABELLA}
