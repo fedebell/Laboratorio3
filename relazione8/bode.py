@@ -22,7 +22,7 @@ VIN = ufloat(252, 2)/1000
 T = unumpy.uarray(t, dt)/10**6
 VA = unumpy.uarray(Va, dVa)
 F = unumpy.uarray(f, df)
-PHI = 2*3.1415*F*T
+PHI = 2*F*T
 phi = unumpy.nominal_values(PHI)
 dphi = unumpy.std_devs(PHI)
 Ai = VA/VIN
@@ -30,7 +30,31 @@ A = unumpy.nominal_values(Ai)
 dA = unumpy.std_devs(Ai)
 print(A)
 
-pylab.figure(1)
+INPUT = "/home/federico/Laboratorio3/relazione8/dati.txt"
+OUTPUT = "/home/federico/Laboratorio3/relazione8/datiEstesi.txt"
+
+file = open(OUTPUT,"w")
+
+for i in range(len(f)):
+	file.write(str(f[i]))
+	file.write("\t")
+	file.write(str(df[i]))
+	file.write("\t")
+	file.write(str(unumpy.nominal_values(VA)[i]))
+	file.write("\t")
+	file.write(str(unumpy.std_devs(VA)[i]))
+	file.write("\t")
+	file.write(str(unumpy.nominal_values(Ai)[i]))
+	file.write("\t")
+	file.write(str(unumpy.std_devs(Ai)[i]))
+	file.write("\t")
+	file.write(str(unumpy.nominal_values(PHI)[i]))
+	file.write("\t")
+	file.write(str(unumpy.std_devs(PHI)[i]))
+	file.write("\n")
+
+file.close()
+
 
 ''''
 #fit due pars
@@ -76,37 +100,31 @@ print('ndof 2 pars = %f \n' % (ndof))
 '''
 #tutto con 1 par
 
-#fit un par
-initial_values = (1600.0, 4)
-
-def fitBasso(f, ft):
-	return 1/(1+(ft/f)**2)
-def fitAlto(f, ft):
-	return 1/(1+(f/ft)**2)
-
-#def fit_function(f, ft, Amax):
-#    return Amax*fitBasso(f, ft)*fitAlto(f, ft)/(1+fitBasso(f, ft)*fitAlto(f, ft))
 
 def fit_function(f, ft, Amax):
-	return Amax*ft*f/((ft**2-f**2)**2+9*ft**2*f**2)*0.5
+	return Amax*ft*f/((ft**2-f**2)**2+9*ft**2*f**2)**0.5
+
+#fit un par
+initial_values = (1000.0, 40.0)
 
 pars, covm = curve_fit(fit_function, f, A, initial_values)
 
-#pars = initial_values
-#covm = [[0.0, 0.0], [0.0, 0.0]]
-
-ft = pars[0]
+ft = pars[0] 
 Amax = pars[1]
 
-pars = initial_values
 dft = pylab.sqrt(covm.diagonal())[0]
 dAmax = pylab.sqrt(covm.diagonal())[1]
+
+
+print('frequenza di taglio  = ', pars[0], '+/-', dft)
+print('ampiezza_massima_alto  = ', pars[1], '+/-', dAmax)
+
+print(covm)
 
 #dft = 0
 #dAmax = 0
 
-print('frequenza di taglio  = ', pars[0], '+/-', dft)
-print('ampiezza_massima_alto  = ', pars[1], '+/-', dAmax)
+
 
 #chi2
 z = (A - fit_function(f, ft, Amax))/dA
@@ -121,6 +139,7 @@ print(A)
 
 pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.xscale('log')
+pylab.xlim(400, 3200)
 pylab.errorbar(f, A, dA, df, linestyle='', marker = '')
 pylab.legend(numpoints=1, loc = 'upper right')
 pylab.xlabel('Frequency [kHz]', size = "16")
@@ -130,8 +149,7 @@ pylab.title('Bode plot', fontsize = "18")
 pylab.grid()
 
 
-#pylab.plot(f, 20*pylab.log10(fit_function(f, ft, Amax)), color = 'green', label = 'fit')
-#pylab.legend(numpoints=1, loc = 'upper right')
+pylab.legend(numpoints=1, loc = 'upper right')
 
 
 div = 1000
@@ -142,10 +160,7 @@ for i in range(len(bucket)):
         bucket[i]=float(i)*inc + f.min()
         retta[i] = 20*pylab.log10(fit_function(bucket[i], pars[0], pars[1]))
 
-print(20*pylab.log10(fit_function(bucket[i], pars[0], pars[1])))
-
-
-#pylab.plot(bucket, retta, color = "red")
+pylab.plot(bucket, retta, color = 'red', label = 'fit')
 
 pylab.savefig("bode.png", dpi=None, facecolor='w', edgecolor='w',
         orientation='portrait', papertype=None, format=None,
@@ -156,34 +171,40 @@ pylab.savefig("bode.png", dpi=None, facecolor='w', edgecolor='w',
 print(covm)
 
 
-logF = unumpy.log(F)
+logF = unumpy.log10(F)
 logf =  unumpy.nominal_values(logF)
 dlogf =  unumpy.std_devs(logF)
 
 
 pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.errorbar(logf, phi, dphi, dlogf, linestyle='', marker = '')
+#pylab.xscale("log")
+#pylab.xlim(400, 3200)
 pylab.legend(numpoints=1, loc = 'upper right')
-pylab.xlabel('Frequency [kHz]', size = "16")
+pylab.xlabel('log(f/1kHz)', size = "16")
 pylab.ylabel(' $\phi$ [$\pi$ rad]', size = "16")
 #pylab.xlim(0,2000)
-pylab.title('Sfasamento dell\'uscita del circuito.', fontsize = "18")
+pylab.title('Sfasamento', fontsize = "18")
 pylab.grid()
 
 
 #Fare attenzione che gli errori devono essere sempre sommati con le stesse unita di misura, 
 #quindi nel coeffiente ci cade anche il fattore per passare da una unita di misura all'altra
-error = ((unumpy.std_devs(F))**2.0+(1.0*unumpy.std_devs(PHI))**2.0)**0.5
+error = ((unumpy.std_devs(logF))**2.0+(1.0*unumpy.std_devs(PHI))**2.0)**0.5
 #error = unumpy.std_devs(I_D)
 init = numpy.array([-2.0, 0.0])
 #Errori tutti statistici
-par, cov = curve_fit(linear, unumpy.nominal_values(F), unumpy.nominal_values(PHI), init, error, absolute_sigma = "true")
+par, cov = curve_fit(linear, unumpy.nominal_values(logF), unumpy.nominal_values(PHI), init, error, absolute_sigma = "true")
 #trattazione statistica degli errori
 print(par, cov)
 
 #Di nuovo co capisco il chi quadro, non cambia nulla se cambio da true a false
 a = par[0]
 b = par[1]
+
+print("Fit lineare!!!!!!")
+print(par, cov)
+
 
 chisq = ((unumpy.nominal_values(PHI)-linear(unumpy.nominal_values(logF), a, b))/error)**2
 somma = sum(chisq)
@@ -201,7 +222,7 @@ for i in range(len(bucket)):
         retta[i] = linear(bucket[i], par[0], par[1])
 
 
-#pylab.plot(bucket, retta, color = "red")
+pylab.plot(bucket, retta, color = "red")
 
 pylab.savefig("sfasamento.png", dpi=None, facecolor='w', edgecolor='w',
         orientation='portrait', papertype=None, format=None,

@@ -34,3 +34,13 @@ print("R5 = ", R5)
 print("POTmax = ", POTmax)
 print("f1 =", f1)
 print("f2 =", f2)
+
+
+a = ufloat(0.49045784, 6.84085000e-05**0.5)
+b = ufloat(1.560314760390, 6.98740094e-04**0.5)
+f = b/a
+print("a =", a)
+print("b =", b)
+print("frequenza fit lineare = ", 10**f)
+
+
