@@ -40,7 +40,7 @@ Di seguito è riportato un riassunto della nomenclatura riguardante le tensioni 
 \begin{itemize}
 %TODO giusto (?)
 \item $U_F$: differenza di potenziale applicata al filamento (catodo) rispetto alla terra (?) che ne regola la temperatura, è posta uguale a circa $U_F = 8.0 \,V$ e tenuta costante.
-\item $U_G$: differenza di potenziale applicata alla griglia di controllo rispetto al catodo, regola l'estrazione degli elettroni dal metallo per effetto fotoelettrico a freddo (effetto tunnel), questa tensione regola l'emissività del catodo cioè il numero di elettroni emessi per unità di tempo.
+\item $U_G$: differenza di potenziale applicata alla griglia di controllo rispetto al catodo, regola l'estrazione degli elettroni dal metallo per effetto fotoelettrico a freddo (effetto tunnel), questa tensione regola l'emissività del catodo cioè il numero di elettroni emessi per unità di tempo e quindi l'intensità della fluorescenza.
 \item $U_A$: differenza di potenziale applicata tra il catodo e la griglia anodo al fine di accelerare gli elettroni, nella configurazione a rampa di potenziale questo valore indica il massimo potenziale raggiunto dall'anodo.
 \item $U_E$: differenza di potenziale tra la griglia anodo e il collettore applicata al fine di stabilire un campo elettrico frenante per gli elettroni che emergono dall'anodo.
 \end{itemize}
@@ -60,7 +60,9 @@ Un amplificatore operazionale a transimpedenza fornisce in uscita una tensione p
 \section{Osservazioni qualitative}
 \begin{itemize}
 \item Per un valore fisso di $U_G = \, $ (fisso durante l'esperienza) alla tensione $U_A = \, $ si ottiene la prima luminescenza intono alla griglia anodica. Il parametro $U_G$ regola la sola intensità della luminescenza (a causa del diverso numero di elettroni che fanno urto elastico) ma non influenza il fatto che la luminescenza appaia o meno.
-\item Per un valore fisso di $U_A$ (massimo potenziale sull'anodo) il numero minimi e massimi della curva $I_A-U_A$ non cambia ma cambia la sua ampiezza e viene traslata da un valore massimo (corrispondente a $U_E = 0 \, V$) fino a raggiungere lo zero quando vale $U_A = U_E$ cioè ogni elettrone emesso (anche quelli che non hanno interagito con il neon) viene bloccato. In particolare esiste un valore di $U_E$ per cui i minimi della corrente sono a $I_C = 0$ che significa per ogni valore di $U_A$ per cui si ha la creazione di una nuova banda di fluorescenza $U_E$ è sufficiente a bloccare tutti gli elettroni che non hanno interagito o che hanno nuovamente accelerato dopo l'interazione. (cosa succede se aumento  ancora $U_E$ non posso andare sotto 0, probabilmente la curva si rovina).
+\item Mostrare tre grafici in cui si fa vedere come al variare di $U_E$ varia la risposta.
+
+\item Per un valore fisso di $U_A$ (massimo potenziale sull'anodo) il numero minimi e massimi della curva $I_A-U_A$ non cambia ma cambia la sua ampiezza e viene traslata da un valore massimo (FIXME: too sloppy) (corrispondente a $U_E = 0 \, V$) fino a raggiungere lo zero (?) quando vale $U_A = U_E$ cioè ogni elettrone emesso (anche quelli che non hanno interagito con il neon) viene bloccato. Si posso avere elettroni che dall'anodo vengo accelerati in senso contrario verso il catodo e mantenere la struttura oscillante tipica di Franck-Hertz?. In particolare esiste un valore di $U_E$ per cui i minimi della corrente sono a $I_C = 0$ che significa per ogni valore di $U_A$ per cui si ha la creazione di una nuova banda di fluorescenza $U_E$ è sufficiente a bloccare tutti gli elettroni che non hanno interagito o che hanno nuovamente accelerato dopo l'interazione. (cosa succede se aumento  ancora $U_E$ non posso andare sotto 0, probabilmente la curva si rovina).
 \item Al diminuire del potenziale $U_E$ è più difficile l'individuazione dei minimi e dei massimi, tuttavia la posizione di questi non varia significativamente al 
 variare di $U_E$ 
 \end{itemize}

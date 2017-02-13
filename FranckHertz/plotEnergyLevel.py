@@ -14,14 +14,16 @@ from scipy.signal import argrelextrema
 
 #Prendo in due file ognuno contenenti i valori di U_E e quelli dei relativi massimi e minimi.
 
-INPUTUMIN = "/home/federico/Laboratorio3/FrankHertz/MIN.txt"
-INPUTUMAX = "/home/federico/Laboratorio3/FrankHertz/MAX.txt"
+INPUTMIN = "/home/federico/Laboratorio3/FranckHertz/MIN.txt"
+INPUTMAX = "/home/federico/Laboratorio3/FranckHertz/MAX.txt"
 
 #Continuare a inserire gli errori e plottare i grafici e i fit con uan costante
 #Indicare sul grafico il miglior valore da cui si sceglie di eseguire il fit succesivo
 
+#L'errore su ue si prende dalle manopoline
+
 ue, due, min1, dmin1, min2, dmin2, min3, dmin3 = pylab.loadtxt(INPUTMIN, unpack=True)
-ue, due, min1, dmax1, min2, dmax2, min3, dmax3 = pylab.loadtxt(INPUTMAX, unpack=True)
+ue, due, max1, dmax1, max2, dmax2, max3, dmax3 = pylab.loadtxt(INPUTMAX, unpack=True)
 
 UE = unumpy.uarray(ue, due)
 MIN1 = unumpy.uarray(min1, dmin1)
@@ -36,8 +38,8 @@ pylab.figure(num=1, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.rc('font',size=13)
 pylab.title('MIN', fontsize = "16")
 #How to determine the unity of measure
-pylab.xlabel('U_E (V)', size = "14")
-pylab.ylabel('U_A (V)', size = "14")
+pylab.xlabel('$U_E$ (V)', size = "14")
+pylab.ylabel('$U_A$ (V)', size = "14")
 pylab.grid(color = "gray")
 pylab.errorbar(unumpy.nominal_values(UE), unumpy.nominal_values(MIN1), 
 	unumpy.std_devs(MIN1), unumpy.std_devs(UE), "o", color="black")
@@ -55,7 +57,7 @@ pylab.savefig("min.png", dpi=None, facecolor='w', edgecolor='w',
 
 pylab.figure(num=2, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.rc('font',size=13)
-pylab.title('MIN', fontsize = "16")
+pylab.title('MAX', fontsize = "16")
 #How to determine the unity of measure
 pylab.xlabel('U_E (V)', size = "14")
 pylab.ylabel('U_A (V)', size = "14")
@@ -66,6 +68,11 @@ pylab.errorbar(unumpy.nominal_values(UE), unumpy.nominal_values(MAX2),
 	unumpy.std_devs(MAX2), unumpy.std_devs(UE), "o", color="black")
 pylab.errorbar(unumpy.nominal_values(UE), unumpy.nominal_values(MAX3), 
 	unumpy.std_devs(MAX3), unumpy.std_devs(UE), "o", color="black")
+
+pylab.savefig("max.png", dpi=None, facecolor='w', edgecolor='w',
+        orientation='portrait', papertype=None, format=None,
+        transparent=False, bbox_inches=None, pad_inches=0.1,
+        frameon=None)
 
 pylab.show()
 

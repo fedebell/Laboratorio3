@@ -12,40 +12,31 @@ from uncertainties import unumpy
 import numpy as np
 from scipy.signal import argrelextrema
 
-INPUT = "/home/federico/Laboratorio3/FrankHertz/data1.txt"
+INPUT = "/home/federico/Laboratorio3/FranckHertz/data2.txt"
 
-t, V = pylab.loadtxt(INPUT, unpack=True)
+ua, ic = pylab.loadtxt(INPUT, unpack=True)
 
-dt = numpy.array[0.0 for i in len(t)]
-dV = numpy.array[0.0 for i in len(V)]
+dic = numpy.array([0.0 for i in range(len(ic))])
+dua = numpy.array([0.0 for i in range(len(ua))])
 
-T = unumpy.urray(t, dt)
-V = unumpy.uarray(V, dV)
+U_A = unumpy.uarray(ua, dua)
+I_C = unumpy.uarray(ic, dic)
 
 #FIXME You should convolve and smooth here!
 
 pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.rc('font',size=13)
-pylab.title('I_C vs U_A at U_E = ', fontsize = "16")
+#FIXME: Fix the title
+pylab.title('$I_C$ vs $U_A$ at $U_E = 2,0$', fontsize = "16")
 #How to determine the unity of measure
-pylab.xlabel('U_A (V)', size = "14")
-#FIXME UNità di misura
-pylab.ylabel('I_C (mA)', size = "14")
+pylab.xlabel('$U_A$ (V)', size = "14")
+#FIXME Unita' di misura
+pylab.ylabel('$I_C$ (mA)', size = "14")
 pylab.grid(color = "gray")
 pylab.errorbar(unumpy.nominal_values(U_A), unumpy.nominal_values(I_C), 
 	unumpy.std_devs(I_C), unumpy.std_devs(U_A), "o", color="black")
 
-
-# for local maxima
-posmax =argrelextrema(x, np.greater)
-for i in len(posmax):
-	print("Maximum number" & i & ": " & T[posmax[i]] & V[posmax[i]] & "\n")
-
-
-# for local minima
-posmin = argrelextrema(x, np.less)
-for i in len(posmin):
-	print("Minumum number" & i & ": " & T[posmin[i]] & V[posmin[i]] & "\n")
+#Per prendere il massimo locale dovrei eseguire una interpolazione con delle parabole, ma non ne ho troppa voglia.
 
 pylab.savefig("plot.png", dpi=None, facecolor='w', edgecolor='w',
         orientation='portrait', papertype=None, format=None,
@@ -53,7 +44,4 @@ pylab.savefig("plot.png", dpi=None, facecolor='w', edgecolor='w',
         frameon=None)
 
 pylab.show()
-
-
-
 
