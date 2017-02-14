@@ -62,9 +62,10 @@ Un amplificatore operazionale a transimpedenza fornisce in uscita una tensione p
 \item Per un valore fisso di $U_G = \, $ (fisso durante l'esperienza) alla tensione $U_A = \, $ si ottiene la prima luminescenza intono alla griglia anodica. Il parametro $U_G$ regola la sola intensità della luminescenza (a causa del diverso numero di elettroni che fanno urto elastico) ma non influenza il fatto che la luminescenza appaia o meno.
 \item Mostrare tre grafici in cui si fa vedere come al variare di $U_E$ varia la risposta.
 
-\item Per un valore fisso di $U_A$ (massimo potenziale sull'anodo) il numero minimi e massimi della curva $I_A-U_A$ non cambia ma cambia la sua ampiezza e viene traslata da un valore massimo (FIXME: too sloppy) (corrispondente a $U_E = 0 \, V$) fino a raggiungere lo zero (?) quando vale $U_A = U_E$ cioè ogni elettrone emesso (anche quelli che non hanno interagito con il neon) viene bloccato. Si posso avere elettroni che dall'anodo vengo accelerati in senso contrario verso il catodo e mantenere la struttura oscillante tipica di Franck-Hertz?. In particolare esiste un valore di $U_E$ per cui i minimi della corrente sono a $I_C = 0$ che significa per ogni valore di $U_A$ per cui si ha la creazione di una nuova banda di fluorescenza $U_E$ è sufficiente a bloccare tutti gli elettroni che non hanno interagito o che hanno nuovamente accelerato dopo l'interazione. (cosa succede se aumento  ancora $U_E$ non posso andare sotto 0, probabilmente la curva si rovina).
+\item Per un valore fisso di $U_A$ (massimo potenziale sull'anodo) il numero minimi e massimi della curva $I_A-U_A$ non cambia ma cambia la sua ampiezza e viene traslata da un valore massimo (FIXME: too sloppy) (corrispondente a $U_E = 0 \, V$) fino a raggiungere lo zero (?) quando vale $U_A = U_E$ cioè ogni elettrone emesso (anche quelli che non hanno interagito con il neon) viene bloccato. Si posso avere elettroni che dall'anodo vengo accelerati in senso contrario verso il catodo e mantenere la struttura oscillante tipica di Franck-Hertz?. In particolare esiste un valore di $U_E$ per cui i minimi della corrente sono a $I_C = 0$ che significa per ogni valore di $U_A$ per cui si ha la creazione di una nuova banda di fluorescenza $U_E$ è sufficiente a bloccare tutti gli elettroni che hanno nuovamente accelerato dopo l'interazione. (cosa succede se aumento  ancora $U_E$ non posso andare sotto 0, probabilmente la curva si rovina).
 \item Al diminuire del potenziale $U_E$ è più difficile l'individuazione dei minimi e dei massimi, tuttavia la posizione di questi non varia significativamente al 
 variare di $U_E$ 
+\item Se la differenza di potenziale frenante è nulla non c'è possibilità di frenare gli elettroni e anche quelli che hanno interagito subito prima del ricevente accelerano nel piccolo spazio a disposizione e partecipano alla corrente. Pertanto a $U_E = 0$ non si osserva il comportamento oscillante della corrente anche se si vedono le bande luminose.
 \end{itemize}
  
 
@@ -78,13 +79,13 @@ Riporto i grafici di $I_C-U_A$ (massimo numero di oscillazioni) al variare di $U
 
 Eseguo un grafico in cui mostro che i minimi e i massimi sono circa costanti al variare di $U_E$
 
-Calcolo il valore medio del minimo al variare di $U_E$ oppure scelgo il valore di $U_E$ per cui le bande di fluorescenza che osservo è visibilmente più nitida (mi sembra un procedimento più sensato.
+Calcolo il valore medio del minimo al variare di $U_E$ oppure scelgo il valore di $U_A$ corrispondente a $U_E$ per cui le bande di fluorescenza che si osservano sono visibilmente più nitide. (mi sembra un procedimento più sensato).
 
 Calcolo i minimi su ogni grafico eseguendo uno smoothing e prendendo il massimo di un 1D array come mostrato nel link.
 
 Se ho abbastanza punti eseguo fit per calcolare $E_a$ e $\lambda$ e confronto con valore noto, altrimenti concludo dicendo quanto vale l'energia d eccitazione. 
 
-A causa del cammino libero medio $\lambda$ degli elettroni nel gas continuano ad acquisire energia anche quando hanno già raggiunto l'energia di eccitazione. Lo shift di energia rispetto a $E_A$ aumenta all'aumentare del valore di $U_A$ quindi aumenta con il numero del livello che viene eccitato. La differenza tra due massimo consecutivi in funzione del numero quantico principale n è quindi: $E(n) = ( 1 + \frac{\lambda}{L} ( 2 n + 1 ) ) E_A$. 
+A causa del cammino libero medio $\lambda$ degli elettroni nel gas continuano ad acquisire energia anche quando hanno già raggiunto l'energia di eccitazione. Lo shift di energia rispetto a $E_A$ aumenta all'aumentare del valore di $U_A$ quindi aumenta con il numero del livello che viene eccitato. La differenza tra due massimo consecutivi in funzione del numero quantico principale $n$ è quindi: $E(n) = ( 1 + \frac{\lambda}{L} ( 2 n + 1 ) ) E_A$. 
 
 %Lista script python:
 Script che esegue lo smoothing e che calcola minimi e massimi.

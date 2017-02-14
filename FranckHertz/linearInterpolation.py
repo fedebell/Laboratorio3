@@ -66,8 +66,13 @@ for i in range(len(bucket)):
         retta[i] = linear(bucket[i], par[0], par[1])
 pylab.plot(bucket, retta, color = "red")
 
-#FIXME: To finish
-print("Si ricavano dai parametti i seguenti due valori di E_A = ", , "e di lambda =", )
+a = unumpy.ufloat(a, cov[0][0]**0.5)
+b = unumpy.ufloat(b, cov[1][1]**0.5)
+
+#FIXME: To finish E(N) = (1+ l/L (2n+1))Ea
+E_a = L*a/2
+libmedio = 4*b/(L*a)-2
+print("Si ricavano dai parametti i seguenti due valori di E_a = ", E_a, "e di lambda =", libmedio)
 
 pylab.show()
 
