@@ -8,23 +8,13 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \newcommand{\rem}[1]{[\emph{#1}]}
 
-\author{Gruppo AC \\ Federico Belliardo, Marco Costa, Lisa Bedini}
+\author{Gruppo BN \\ Federico Belliardo, Marco Costa, Lisa Bedini}
 \title{Esperienza di Franck-Hertz}
 \begin{document}
 
 \maketitle
-
-%Al link http://scipy-cookbook.readthedocs.io/items/SignalSmooth.html è presente una funzione python per eseguire lo smothing i un array 1d di dati, può essere utile per trovare in seguito i massimi locali da associare agli eventi di eccitazione.
-%Verificare se sono interspaziati
-%Gli elettroni eccitano sempre il primo livello energetico disponibile non arrivano mai ad avere abbastanza energia da eccitare livelli superiori
-%Devo guradre i minimi o i massimi?
-%Spegare procedura per interpolazione e estrazione di E_A per estrapolazione e calcolo di \lambda
-%Acquisizione dati oscilloscopio con il pc
-
-%TODO Ci sono un po' troppe ripetizioni con la scheda dell'esperienza, tutte questi cose preparatorie potrebbero essere saltate e si potrebbe andare direttamente alla descrizione dell'elebaorazione dei dati
-
 \section{Scopo dell'esperienza}
-Obiettivo dell'esperienza è dimostrare la struttura discreta dei livelli energetici dell'atomo di neon e di stimarne l'energia di eccitazione mediante lo studio degli effetti dissipativi negli urti anelastici di elettroni su atomi di neon.
+Obiettivo dell'esperienza è dimostrare la struttura discreta dei livelli energetici dell'atomo di neon e di stimarne l'energia di eccitazione mediante lo studio degli effetti dissipativi negli urti anelastici di elettroni su atomi di neon.\\
 
 \section{Materiale occorrente}
 \begin{itemize}
@@ -38,14 +28,13 @@ L'esperienza prevede lo studio delle collisioni anelastiche elettrone-atomo in u
 Di seguito è riportato un riassunto della nomenclatura riguardante le tensioni utilizzata nell'esperienza:
 
 \begin{itemize}
-%TODO giusto (?)
-\item $U_F$: differenza di potenziale applicata al filamento (catodo) rispetto alla terra (?) che ne regola la temperatura, è posta uguale a circa $U_F = 8.0 \,V$ e tenuta costante.
+\item $U_F$: differenza di potenziale applicata al filamento (catodo) rispetto alla terra che ne regola la temperatura, è posta uguale a circa $U_F = 8.0 \,V$ e tenuta costante.
 \item $U_G$: differenza di potenziale applicata alla griglia di controllo rispetto al catodo, regola l'estrazione degli elettroni dal metallo per effetto fotoelettrico a freddo (effetto tunnel), questa tensione regola l'emissività del catodo cioè il numero di elettroni emessi per unità di tempo e quindi l'intensità della fluorescenza.
 \item $U_A$: differenza di potenziale applicata tra il catodo e la griglia anodo al fine di accelerare gli elettroni, nella configurazione a rampa di potenziale questo valore indica il massimo potenziale raggiunto dall'anodo.
 \item $U_E$: differenza di potenziale tra la griglia anodo e il collettore applicata al fine di stabilire un campo elettrico frenante per gli elettroni che emergono dall'anodo.
 \end{itemize}
 
-Un amplificatore operazionale a transimpedenza fornisce in uscita una tensione proporzionale alla corrente di collettore $I_C$
+Un amplificatore operazionale a transimpedenza fornisce in uscita una tensione proporzionale alla corrente di collettore $I_C$.\\
 
 \begin{figure}[!htb]
   \centering
@@ -55,54 +44,162 @@ Un amplificatore operazionale a transimpedenza fornisce in uscita una tensione p
 \end{figure}
 
 
-\section{Modalità operative}
-
 \section{Osservazioni qualitative}
-\begin{itemize}
-\item Per un valore fisso di $U_G = \, $ (fisso durante l'esperienza) alla tensione $U_A = \, $ si ottiene la prima luminescenza intono alla griglia anodica. Il parametro $U_G$ regola la sola intensità della luminescenza (a causa del diverso numero di elettroni che fanno urto elastico) ma non influenza il fatto che la luminescenza appaia o meno.
-\item Mostrare tre grafici in cui si fa vedere come al variare di $U_E$ varia la risposta.
 
-\item Per un valore fisso di $U_A$ (massimo potenziale sull'anodo) il numero minimi e massimi della curva $I_A-U_A$ non cambia ma cambia la sua ampiezza e viene traslata da un valore massimo (FIXME: too sloppy) (corrispondente a $U_E = 0 \, V$) fino a raggiungere lo zero (?) quando vale $U_A = U_E$ cioè ogni elettrone emesso (anche quelli che non hanno interagito con il neon) viene bloccato. Si posso avere elettroni che dall'anodo vengo accelerati in senso contrario verso il catodo e mantenere la struttura oscillante tipica di Franck-Hertz?. In particolare esiste un valore di $U_E$ per cui i minimi della corrente sono a $I_C = 0$ che significa per ogni valore di $U_A$ per cui si ha la creazione di una nuova banda di fluorescenza $U_E$ è sufficiente a bloccare tutti gli elettroni che hanno nuovamente accelerato dopo l'interazione. (cosa succede se aumento  ancora $U_E$ non posso andare sotto 0, probabilmente la curva si rovina).
-\item Al diminuire del potenziale $U_E$ è più difficile l'individuazione dei minimi e dei massimi, tuttavia la posizione di questi non varia significativamente al 
-variare di $U_E$ 
-\item Se la differenza di potenziale frenante è nulla non c'è possibilità di frenare gli elettroni e anche quelli che hanno interagito subito prima del ricevente accelerano nel piccolo spazio a disposizione e partecipano alla corrente. Pertanto a $U_E = 0$ non si osserva il comportamento oscillante della corrente anche se si vedono le bande luminose.
-\end{itemize}
- 
+Per un valore fisso di $U_G = 3.2 \pm 0.1 \, V $ (fisso durante l'esperienza) alle tensioni $U_A1 = 25 \pm 1 \, V$, $U_A2 = 41 \pm 1 \, V$, $U_A2 = 56 \pm 1 \, V$ si ottengono in sequenza le barre arancioni. Il parametro $U_G$ regola la sola intensità della luminescenza (a causa del diverso numero di elettroni che fanno urto elastico) ma non influenza il fatto che la luminescenza appaia o meno.\\
 
-\section{Raccolta dati ed elaborazione}
+Di seguito sono riportati tre grafici acquisiti con $U_A = 80 \, V$ aumentando la persistenza dell'oscilloscopio in modalità x-y e variando la tensione di frenamento $U_E$.\\
 
-%riporto tabelle grafici e fit, interpolazioni. Fit con parabola intorno ai massimi per trovarli meglio.
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=1.0]{uezero.png}
+\caption{Corrente $I_C$ per una tensione $U_E = 0.0 \, V$}
+\label{grafico1}
+\end{figure}
 
-Riporto i valori di $U_A$ ai quali si osservano nascere i minimi in modalità manuale
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=1.0]{ue9punto680volts.png}
+\caption{Corrente $I_C$ per una tensione $U_E = 9.6 \, V$}
+\label{grafico2}
+\end{figure}
 
-Riporto i grafici di $I_C-U_A$ (massimo numero di oscillazioni) al variare di $U_E$ e relative tabelle che indicano i minimi.
+%in realtà non è acquisito a 70V...
 
-Eseguo un grafico in cui mostro che i minimi e i massimi sono circa costanti al variare di $U_E$
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=1.0]{ue10punto970volts.png}
+\caption{Corrente $I_C$ per una tensione $U_E = 10.9 \, V$}
+\label{grafico3}
+\end{figure}
 
-Calcolo il valore medio del minimo al variare di $U_E$ oppure scelgo il valore di $U_A$ corrispondente a $U_E$ per cui le bande di fluorescenza che si osservano sono visibilmente più nitide. (mi sembra un procedimento più sensato).
+%Appunti durante esperienza:
+A $U_E = 0.0 \, V$ l'andamento di $I_C$ è monotono in funzione di $U_A$. Come si inizia ad aumentare $U_E$ i minimi e i massimi compaiono e all'aumentare del potenziale di frenamento sono sempre più pronunciati. Per un valore fisso di $U_A$ (massimo potenziale sull'anodo) il numero minimi e massimi della curva $I_A-U_A$ non cambia al variare di $U_E$.\\
 
-Calcolo i minimi su ogni grafico eseguendo uno smoothing e prendendo il massimo di un 1D array come mostrato nel link.
+In particolare esiste un valore di $U_E$ per cui i minimi della corrente sono tutti alla stessa altezza, questa situazione come si vede in \ref{grafico2} si ottene per $U_E = 9.6 \, V$.\\
 
-Se ho abbastanza punti eseguo fit per calcolare $E_a$ e $\lambda$ e confronto con valore noto, altrimenti concludo dicendo quanto vale l'energia d eccitazione. 
+\section{Raccolta ed elaborazione dati}
 
-A causa del cammino libero medio $\lambda$ degli elettroni nel gas continuano ad acquisire energia anche quando hanno già raggiunto l'energia di eccitazione. Lo shift di energia rispetto a $E_A$ aumenta all'aumentare del valore di $U_A$ quindi aumenta con il numero del livello che viene eccitato. La differenza tra due massimo consecutivi in funzione del numero quantico principale $n$ è quindi: $E(n) = ( 1 + \frac{\lambda}{L} ( 2 n + 1 ) ) E_A$. 
+Di seguito sono riportate le tabelle e i grafici contenti i valori di $U_A$ a cui si osservano i massimi e i minimi della corrente.\\
 
-%Lista script python:
-Script che esegue lo smoothing e che calcola minimi e massimi.
-Script che plotta i livelli energetici al variare di $U_E$.
-Devo prendere manualmente i valori dei massimi e dei minimi e metterli in tre o quattro file differenti.
-Script che esegue l'interpolazione lineare.
- 
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline 
+$U_E (V)$ & $U_A (V)$ & $U_A (V)$ & $U_A (V)$ \\ 
+\hline 
+$2.9\pm0.1\,V$ & $22\pm2$ & $40\pm2$ & $58\pm2$ \\ 
+\hline 
+$6.0\pm0.1\,V$ & $24\pm2$ & $42\pm2$ & $62\pm2$ \\ 
+\hline 
+$9.5\pm0.1\,V$ & $28\pm2$ & $46\pm2$ & $66$ \\ 
+\hline 
+\end{tabular}
+\caption{Tabella dei minimi di $U_A$ in funzione di $U_E$.}
+\label{tabellaMinimi} 
+\end{table}
+
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline 
+$U_E (V)$ & $U_A (V)$ & $U_A (V)$ & $U_A (V)$ \\ 
+\hline 
+$2.9\pm0.1\,V$ & $20\pm2$ & $38\pm2$ & $58\pm2$ \\ 
+\hline 
+$6.0\pm0.1\,V$ & $18\pm2$ & $35\pm2$ & $55\pm2$ \\ 
+\hline 
+$9.5\pm0.1\,V$ & $18\pm2$ & $36\pm2$ & $54\pm2$ \\ 
+\hline 
+\end{tabular} 
+\caption{Tabella dei massimi di $U_A$ in funzione di $U_E$.}
+\label{tabellaMassimi}
+\end{table}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=.7]{min.png}
+\caption{Tabella dei minimi di $U_A$ in funzione di $U_E$.}
+\label{graficoMin}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=.7]{max.png}
+\caption{Tabella dei massimi di $U_A$ in funzione di $U_E$.}
+\label{graficoMax}
+\end{figure}
+
+Si sono cinque \emph{fit} di costanti utilizzando la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "true"$}. Di seguito si riportano i valori medi ottenuti dai fit con il relativo errore e $\chi^2$.\\
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|c|c|}
+\hline 
+$U_A\,(V)$ & $\chi^2 /2$ \\ 
+\hline 
+$24\pm1$ & $5/2$ \\ 
+\hline 
+$42\pm1$ & $5/2$ \\ 
+\hline 
+$61\pm1$ & $8/2$ \\ 
+\hline 
+\end{tabular}
+\caption{Tabella dei minimi medi di $U_A$.}
+\label{tabellaMinMed}
+\end{figure}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|c|c|}
+\hline 
+$U_A\,(V)$ & $\chi^2 /2$ \\ 
+\hline 
+$18\pm1$ & $0.6/2$ \\ 
+\hline 
+$36\pm1$ & $1/2$ \\ 
+\hline 
+$55\pm1$ & $2/2$ \\ 
+\hline
+\end{tabular}
+\caption{Tabella dei massimi medi di $U_A$.}
+\label{tabellaMaxMed}
+\end{figure}
+
+Di seguito sono riportati i grafici della corrente in unità arbitrarie, i grafici sono stati ottenuti dopo un processo di media operato con uno script Python per "ripulire" il grafico dagli effetti della digitalizzazione operata dall'acquisizione automatica dei dati con l'oscilloscopio.\\
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=.5]{plot29.png}
+\caption{Grafico della corrente $I_C$ in funzione di $U_A$ a $U_E = 2.9 \, V$}
+\label{grafico4}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=.5]{plot60.png}
+\caption{Grafico della corrente $I_C$ in funzione di $U_A$ a $U_E = 6.0 \, V$}
+\label{grafico5}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=.5]{plot95.png}
+\caption{Grafico della corrente $I_C$ in funzione di $U_A$ a $U_E = 9.5 \, V$}
+\label{grafico6}
+\end{figure}
+
+Se la differenza di potenziale frenante è nulla non c'è possibilità di frenare gli elettroni e anche quelli che hanno interagito subito prima del ricevente accelerano nel piccolo spazio a disposizione e partecipano alla corrente. Pertanto a $U_E = 0$ non si osserva il comportamento oscillante della corrente anche se si vedono le bande luminose.\\
+
 
 \section{Conclusioni}
-%Cerco sul manuale quale è la pressione del neon nell'apparecchio e verico che torna con il libero cammino medio fittato, cerco anche la lunghezza L
 
-
-
-
-
-
-
+Le tensioni $U_A$ a cui si osservano i massimi sono sistematicamente più basse di quelle misurate al punto 1, poiché il nostro occhio nudo non riusciva a vedere la luminescenza quando ancora troppo flebile, anche se era già cominciato il processo di eccitazione.\\
+Il valore di $U_A$ a cui si trovano i minimi aumenta all'aumentare della differenza di potenziale frenante, mentre le posizioni dei massimi rimangono circa costanti.\\
+Non si trova un valore di $U_E$ a cui si osservano più nitide le bande di luminescenza.\\
+Con i pochi picchi che si sono ottenuti non è pensabile di provare a fornire una stima del cammino libero medio degli elettroni nel neon.\\
 
 \end{document}
 

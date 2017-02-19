@@ -46,7 +46,7 @@ par, cov = curve_fit(linear, n, e, init, error, "true")
 #trattazione statistica degli errori
 print(par, cov)
 
-#Di nuovo co capisco il chi quadro, non cambia nulla se cambio da true a false
+#Di nuovo non capisco il chi quadro, non cambia nulla se cambio da true a false
 a = par[0]
 b = par[1]
 chisq = (((e-linear(n, a, b))/error)**2)
