@@ -46,9 +46,12 @@ Un amplificatore operazionale a transimpedenza fornisce in uscita una tensione p
 
 \section{Osservazioni qualitative}
 
-Per un valore di $U_G = 3.2 \pm 0.1 \, V $, fisso durante l'esperienza, abbiamo stimato guardando attraverso la finestra di osservazione che alle tensioni $U_A1 = 25 \pm 1 \, V$, $U_A2 = 41 \pm 1 \, V$, $U_A3 = 56 \pm 1 \, V$ compaiono in sequenza le barre arancioni. Il parametro $U_G$ regola la sola intensità della luminescenza (a causa del diverso numero di elettroni che fanno urto elastico) ma non influenza il fatto che la luminescenza appaia o meno.\\
+Per un valore di $U_G = 3.2 \pm 0.1 \, V $, fisso durante l'esperienza, abbiamo stimato guardando attraverso la finestra di osservazione che alle tensioni $U_{A1} = 25 \pm 1 \, V$, $U_{A2} = 41 \pm 1 \, V$, $U_{A3} = 56 \pm 1 \, V$ compaiono in sequenza le barre arancioni. Queste misure sono state ottenute agendo direttamente su $U_A$ in modalità manuale.\\
+Per l'errore sulla misura di $U_G$ si è presa l'incertezza strumentale della suddivisione della ghiera con cui si variava la tensione stessa.\\
+Il parametro $U_G$ regola la sola intensità della luminescenza (a causa del diverso numero di elettroni che fanno urto elastico) ma non influenza il fatto che la luminescenza appaia o meno.\\
+In tutte le operazioni seguenti lavoreremo con il generatore di tensione in modalità rampa e con l'oscilloscopio in modalità XY, dove sull'asse delle ascisse troviamo la tensione $U_A$ e sull'asse delle ordinate la tensione di uscita dell'amplificatore che è proporzionale alla transimpedenza. 
+Di seguito sono riportati tre grafici acquisiti con $U_A = 80.0\pm1.0 \, V$ variando la tensione di frenamento $U_E$. L'oscilloscopio è stato posto in modalità XY e abbiamo aumentato la persistenza dell'immagine per una migliore resa dell'immagine.\\
 
-Di seguito sono riportati tre grafici acquisiti con $U_A = 80.0\pm0.5 \, V$ variando la tensione di frenamento $U_E$. L'oscilloscopio è stato posto in modalità XY e abbiamo aumentato la persistenza dell'immagine per una migliore resa dell'immagine.\\
 
 \begin{figure}[!htb]
   \centering
@@ -74,14 +77,16 @@ Di seguito sono riportati tre grafici acquisiti con $U_A = 80.0\pm0.5 \, V$ vari
 \end{figure}
 
 %Appunti durante esperienza:
-A $U_E = 0.0 \pm0.1\, V$ l'andamento di $I_C$ è monotono in funzione di $U_A$. Variando $U_E$ compaiono i minimi e i massimi e all'aumentare del potenziale di frenamento sono sempre più pronunciati. Per un valore fisso di $U_A$ (massimo potenziale sull'anodo) il numero di minimi e massimi della curva $I_A-U_A$ non cambia al variare di $U_E$.\\
+A $U_E = 0.0 \pm0.1\, V$ l'andamento di $I_C$ è monotono in funzione di $U_A$.
+Se la differenza di potenziale frenante è nulla non c'è possibilità di frenare gli elettroni e anche quelli che hanno interagito subito prima del ricevente accelerano nel piccolo spazio a disposizione e partecipano alla corrente. Pertanto a $U_E = 0.0\pm0.1\,V$ non si osserva il comportamento oscillante della corrente anche se si vedono le bande luminose.\\ 
+Nella fig. \ref{grafico3} si osserva che i minimi della corrente scendono sotto lo zero. Questo significa che per quei valori di tensione la corrente scorre in verso opposto a quello negativo. Non si ritiene che sia un effetto spurio legato all'amplificatore usato ma non si riesce a darne una interpretazione consistente.\\
+Variando $U_E$ compaiono i minimi e i massimi e all'aumentare del potenziale di frenamento sono sempre più pronunciati. Per un valore fisso di $U_A$ (massimo potenziale sull'anodo) il numero di minimi e massimi della curva $I_A-U_A$ non cambia al variare di $U_E$.\\
 
 In particolare esiste un valore di $U_E$ per cui i minimi della corrente sono tutti alla stessa altezza, questa situazione come si vede in figura \ref{grafico2} si ottene per $U_E = 9.6 \pm0.1 \, V$.\\
 
 \section{Raccolta ed elaborazione dati}
 
 Di seguito sono riportate le tabelle e i grafici contenti i valori di $U_A$ a cui si osservano i massimi e i minimi della corrente.\\
-
 
 \begin{table}[!htb]
 \centering
@@ -161,14 +166,16 @@ $18\pm1$ & $0.6/2$ \\
 \hline 
 $36\pm1$ & $1/2$ \\ 
 \hline 
-$55\pm1$ & $2/2$ \\ 
+$55\pm1$ & $2/2$ \\
 \hline
 \end{tabular}
 \caption{Tabella dei massimi medi di $U_A$.}
 \label{tabellaMaxMed}
 \end{figure}
 
-Di seguito sono riportati i grafici della corrente in unità arbitrarie. Tali grafici sono stati ottenuti dopo un processo di media operato con uno script Python per "ripulire" il grafico dagli effetti della digitalizzazione operata dall'acquisizione automatica dei dati con l'oscilloscopio.\\
+I $\chi^2$ associati ai fit delle rete sono migliori nei casi di fit ai massimi che rimangono costanti al variare di $U_E$. Si può vedere che i minimi manifestano in realtà un andamento non banale , si vede infatti che tendono ad aumentare all'aumentare di $U_A$.\\
+Di seguito sono riportati i grafici della corrente in unità arbitrarie. Tali grafici sono stati ottenuti dopo un processo di media operato con uno script Python per "ripulire" il i dati dagli effetti della digitalizzazione operata dall'acquisizione automatica dei dati con l'oscilloscopio.\\
+Per ogni dato di tensione $U_A$ l'acquisizione fornisce più dati della corrente. Questo è dovuto al fatto che la rampa viene in realtà salvata sul computer come insieme di gradini a tensione costante e crescenti, a questo \emph{plateau} di tensione viene associato tutto un intervallo di corrente $I_C$ che ovviamente non presenterà \emph{plateau} di digitalizzazione corrispondenti. Ad ogni valore di $U_A$ è associato il punto medio dell'intervallo sopra descritto.
 
 \begin{figure}[!htb]
   \centering
@@ -191,7 +198,6 @@ Di seguito sono riportati i grafici della corrente in unità arbitrarie. Tali gr
 \label{grafico6}
 \end{figure}
 
-Se la differenza di potenziale frenante è nulla non c'è possibilità di frenare gli elettroni e anche quelli che hanno interagito subito prima del ricevente accelerano nel piccolo spazio a disposizione e partecipano alla corrente. Pertanto a $U_E = 0.0\pm0.1\,V$ non si osserva il comportamento oscillante della corrente anche se si vedono le bande luminose.\\
 
 
 \section{Conclusioni}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  19 FEB 2017 23:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  20 FEB 2017 22:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -633,155 +633,132 @@ File: circuito.png Graphic file (type png)
 Package pdftex.def Info: circuito.png used on input line 41.
 (pdftex.def)             Requested size: 474.2707pt x 219.31883pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
-
- []
-
-<uezero.png, id=3, 301.125pt x 225.84375pt>
-File: uezero.png Graphic file (type png)
- <use uezero.png>
-Package pdftex.def Info: uezero.png used on input line 55.
-(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
-
-<ue9punto680volts.png, id=4, 301.125pt x 225.84375pt>
-File: ue9punto680volts.png Graphic file (type png)
-
-<use ue9punto680volts.png>
-Package pdftex.def Info: ue9punto680volts.png used on input line 62.
-(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
-
-<ue10punto970volts.png, id=5, 301.125pt x 225.84375pt>
-File: ue10punto970volts.png Graphic file (type png)
-
-<use ue10punto970volts.png>
-Package pdftex.def Info: ue10punto970volts.png used on input line 71.
-(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 49--54
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+<uezero.png, id=16, 301.125pt x 225.84375pt>
+File: uezero.png Graphic file (type png)
+ <use uezero.png>
+Package pdftex.def Info: uezero.png used on input line 58.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
- []
+<ue9punto680volts.png, id=17, 301.125pt x 225.84375pt>
+File: ue9punto680volts.png Graphic file (type png)
 
+<use ue9punto680volts.png>
+Package pdftex.def Info: ue9punto680volts.png used on input line 65.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+<ue10punto970volts.png, id=18, 301.125pt x 225.84375pt>
+File: ue10punto970volts.png Graphic file (type png)
 
- []
+<use ue10punto970volts.png>
+Package pdftex.def Info: ue10punto970volts.png used on input line 74.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<min.png, id=18, 578.16pt x 361.35pt>
-File: min.png Graphic file (type png)
- <use min.png>
-Package pdftex.def Info: min.png used on input line 123.
-(pdftex.def)             Requested size: 404.70924pt x 252.94327pt.
-
-<max.png, id=19, 578.16pt x 361.35pt>
-File: max.png Graphic file (type png)
- <use max.png>
-Package pdftex.def Info: max.png used on input line 130.
-(pdftex.def)             Requested size: 404.70924pt x 252.94327pt.
-
-Overfull \hbox (1.94905pt too wide) in paragraph at lines 135--136
-[]\OT1/cmr/m/n/10 Si sono cinque \OT1/cmr/m/it/10 fit \OT1/cmr/m/n/10 di costan
-ti uti-liz-zando la fun-zione \OT1/cmr/m/it/10 curve-fit \OT1/cmr/m/n/10 della 
-li-bre-ria \OT1/cmr/m/it/10 py-lab \OT1/cmr/m/n/10 con l'opzione $\OML/cmm/m/it
-/10 absolute sigma \OT1/cmr/m/n/10 =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+Underfull \hbox (badness 10000) in paragraph at lines 80--84
 
  []
 
 [2 <./circuito.png> <./uezero.png>]
-
-! LaTeX Error: \begin{table} on input line 137 ended by \end{figure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.152 \end{figure}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{table} on input line 154 ended by \end{figure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169 \end{figure}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+<min.png, id=24, 578.16pt x 361.35pt>
+File: min.png Graphic file (type png)
+ <use min.png>
+Package pdftex.def Info: min.png used on input line 128.
+(pdftex.def)             Requested size: 404.70924pt x 252.94327pt.
+
+<max.png, id=25, 578.16pt x 361.35pt>
+File: max.png Graphic file (type png)
+ <use max.png>
+Package pdftex.def Info: max.png used on input line 135.
+(pdftex.def)             Requested size: 404.70924pt x 252.94327pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+! LaTeX Error: \begin{table} on input line 142 ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 \end{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{table} on input line 159 ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 \end{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 [3 <./ue9punto680volts.png> <./ue10punto970volts.png>]
 <plot29.png, id=32, 867.24pt x 433.62pt>
 File: plot29.png Graphic file (type png)
  <use plot29.png>
-Package pdftex.def Info: plot29.png used on input line 175.
+Package pdftex.def Info: plot29.png used on input line 182.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
 <plot60.png, id=33, 867.24pt x 433.62pt>
 File: plot60.png Graphic file (type png)
  <use plot60.png>
-Package pdftex.def Info: plot60.png used on input line 182.
+Package pdftex.def Info: plot60.png used on input line 189.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
 <plot95.png, id=34, 867.24pt x 433.62pt>
 File: plot95.png Graphic file (type png)
  <use plot95.png>
-Package pdftex.def Info: plot95.png used on input line 189.
+Package pdftex.def Info: plot95.png used on input line 196.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 205--209
 
  []
 
-[4 <./min.png> <./max.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 199--203
-
- []
-
-[5 <./plot29.png> <./plot60.png>] [6 <./plot95.png>] (./FranckHertz.aux) ) 
+[4 <./min.png>] [5 <./max.png> <./plot29.png>] [6 <./plot60.png> <./plot95.png>
+] (./FranckHertz.aux) ) 
 Here is how much of TeX's memory you used:
  3337 strings out of 494902
  43219 string characters out of 6179890
- 110824 words of memory out of 5000000
+ 111824 words of memory out of 5000000
  6567 multiletter control sequences out of 15000+600000
  11234 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 40i,8n,25p,495b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti10.pfb>
-Output written on FranckHertz.pdf (6 pages, 412680 bytes).
+ 40i,8n,25p,507b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on FranckHertz.pdf (6 pages, 415246 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
