@@ -98,7 +98,7 @@ $2.9\pm0.1\,V$ & $22\pm2$ & $40\pm2$ & $58\pm2$ \\
 \hline 
 $6.0\pm0.1\,V$ & $24\pm2$ & $42\pm2$ & $62\pm2$ \\ 
 \hline 
-$9.5\pm0.1\,V$ & $28\pm2$ & $46\pm2$ & $66\pm2$ \\ 
+$9.5\pm0.1\,V$ & $28\pm2$ & $46\pm2$ & $66 \pm 2$ \\ 
 \hline 
 \end{tabular}
 \caption{Tabella dei minimi di $U_A$ in funzione di $U_E$.}
@@ -137,7 +137,10 @@ $9.5\pm0.1\,V$ & $18\pm2$ & $36\pm2$ & $54\pm2$ \\
 \label{graficoMax}
 \end{figure}
 
-Si sono eseguiti cinque \emph{fit} di costanti utilizzando la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "true"$}. Di seguito si riportano i valori medi ottenuti dai fit con il relativo errore e $\chi^2$.\\
+Si sono eseguiti sei \emph{fit} di costanti utilizzando la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "true"$}. Di seguito si riportano i valori medi ottenuti dai fit con il relativo errore e $\chi^2$.\\
+Il massimo della corrente è il valore di tensione $U_A$ per cui inizia a verificarsi il trasferimento di energia tra gli elettroni e gli atomi di neon.\\
+Non si è inserito nel grafico dei massimi quello visibile sono per $U_E=9.5\pm0.1\,V$ poiché questo quarto massimo era visibile solamente in questa acquisizione.\\
+
 
 \begin{table}[!htb]
 \centering
@@ -198,12 +201,23 @@ Per ogni dato di tensione $U_A$ l'acquisizione fornisce più dati della corrente
 \label{grafico6}
 \end{figure}
 
+Considerando i massimi dell'acquisizione a $U_E = 9.5 \pm 0.1\,V$ indicati in precedenza e aggiungendo il quarto a $U_A=78\pm2\,V$ i è eseguito un grafico della tensione $U_A$ in funzione del numero del massimo, riportato in figura \ref{ordine}.\\ 
+
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=.5]{ordine.png}
+\caption{Tensione $U_A$ (ordinate) a cui si osserva il massimo numero $n$ (ascisse).}
+\label{ordine}
+\end{figure}
+
+Il fit lineare eseguito testa l'ipotesi che i massimi siano equispaziati. Il $\chi^2 = 2.7/2$ ottenuto conferma l'ipotesi. In particolare la pendenza della retta fornisce l'energia di eccitazione del neon per la transizione effettuata con in questo esperimento cioè: $E_e = 19.8 \pm 0.9 \, eV$ che è compatibile con  la transizione di un elettrone tra lo stato $2p$ e lo stato $3p$.
 
 \section{Conclusioni}
 Le tensioni $U_A$ a cui si osservano i massimi sono sistematicamente più basse di quelle misurate al punto 1. Questo può essere dovuto al fatto che il nostro occhio non riusciva a vedere la luminescenza quando ancora troppo flebile, anche se era già cominciato il processo di eccitazione.\\
 Il valore di $U_A$ a cui si trovano i minimi aumenta all'aumentare della differenza di potenziale frenante, mentre le posizioni dei massimi rimangono circa costanti.\\
 Non si trova un valore di $U_E$ a cui si osservano più nitide le bande di luminescenza.\\
-Con i pochi picchi che si sono ottenuti non è pensabile di provare a fornire una stima del cammino libero medio degli elettroni nel Neon. Infatti questo effetto causa una variazione della differenza degli intervalli di potenziale tra i massimi dell'ordine dell'1\% che è dello stesso ordine di grandezza dell'errore, quindi non osservabile.
+Con i pochi picchi che si sono ottenuti non è pensabile di provare a fornire una stima del cammino libero medio degli elettroni nel Neon. Infatti questo effetto causa una variazione della differenza degli intervalli di potenziale tra i massimi dell'ordine dell'1\% che è dello stesso ordine di grandezza dell'errore sulle misure di $U_A$, quindi non osservabile.
 
 \end{document}
 

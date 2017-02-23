@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  21 FEB 2017 21:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  23 FEB 2017 21:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,65 +686,83 @@ File: max.png Graphic file (type png)
 Package pdftex.def Info: max.png used on input line 135.
 (pdftex.def)             Requested size: 404.70924pt x 252.94327pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
-
+Overfull \hbox (20.11572pt too wide) in paragraph at lines 140--143
+[]\OT1/cmr/m/n/10 Si sono es-e-guiti sei \OT1/cmr/m/it/10 fit \OT1/cmr/m/n/10 d
+i costanti uti-liz-zando la fun-zione \OT1/cmr/m/it/10 curve-fit \OT1/cmr/m/n/1
+0 della li-bre-ria \OT1/cmr/m/it/10 py-lab \OT1/cmr/m/n/10 con l'opzione $\OML/
+cmm/m/it/10 absolute sigma \OT1/cmr/m/n/10 =
  []
 
 
-! LaTeX Error: \begin{table} on input line 142 ended by \end{figure}.
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.157 \end{figure}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{table} on input line 159 ended by \end{figure}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.174 \end{figure}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+ []
 
 [3 <./ue9punto680volts.png> <./ue10punto970volts.png>]
-<plot29.png, id=32, 867.24pt x 433.62pt>
+
+! LaTeX Error: \begin{table} on input line 145 ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 \end{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{table} on input line 162 ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 \end{figure}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[4 <./min.png>] <plot29.png, id=36, 867.24pt x 433.62pt>
 File: plot29.png Graphic file (type png)
  <use plot29.png>
-Package pdftex.def Info: plot29.png used on input line 182.
+Package pdftex.def Info: plot29.png used on input line 185.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
-<plot60.png, id=33, 867.24pt x 433.62pt>
+<plot60.png, id=37, 867.24pt x 433.62pt>
 File: plot60.png Graphic file (type png)
  <use plot60.png>
-Package pdftex.def Info: plot60.png used on input line 189.
+Package pdftex.def Info: plot60.png used on input line 192.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 
-<plot95.png, id=34, 867.24pt x 433.62pt>
+<plot95.png, id=38, 867.24pt x 433.62pt>
 File: plot95.png Graphic file (type png)
  <use plot95.png>
-Package pdftex.def Info: plot95.png used on input line 196.
+Package pdftex.def Info: plot95.png used on input line 199.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
- [4 <./min.png>]
-[5 <./max.png> <./plot29.png>] [6 <./plot60.png> <./plot95.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+ []
+
+<ordine.png, id=39, 867.24pt x 433.62pt>
+File: ordine.png Graphic file (type png)
+ <use ordine.png>
+Package pdftex.def Info: ordine.png used on input line 209.
+(pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
+ [5 <./max.png> <./plot29.png>] [6 <./plot60.png> <./plot95.png>] [7 <./ordine.
+png>]
 (./FranckHertz.aux) ) 
 Here is how much of TeX's memory you used:
- 3337 strings out of 494902
- 43219 string characters out of 6179890
- 112824 words of memory out of 5000000
- 6567 multiletter control sequences out of 15000+600000
+ 3344 strings out of 494902
+ 43304 string characters out of 6179890
+ 110833 words of memory out of 5000000
+ 6573 multiletter control sequences out of 15000+600000
  11234 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 40i,8n,25p,507b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,8n,25p,518b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 mi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
@@ -754,10 +772,10 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on FranckHertz.pdf (6 pages, 415640 bytes).
+Output written on FranckHertz.pdf (7 pages, 499475 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

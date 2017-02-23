@@ -12,7 +12,7 @@ from uncertainties import unumpy
 import numpy as np
 from scipy.signal import argrelextrema
 
-INPUT = "/home/federico/Laboratorio3/FranckHertz/dati29.txt"
+INPUT = "/home/federico/Laboratorio3/FranckHertz/dati95.txt"
 OUTPUT = "/home/federico/Laboratorio3/FranckHertz/datiuezero_cleaned.txt"
 
 outfile = open(OUTPUT, "w")
