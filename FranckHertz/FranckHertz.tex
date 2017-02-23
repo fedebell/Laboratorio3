@@ -28,9 +28,9 @@ L'esperienza prevede lo studio delle collisioni anelastiche elettrone-atomo in u
 Di seguito è riportata la nomenclatura riguardante le tensioni utilizzata nell'esperienza e lo schema circuitale (figura 1):
 
 \begin{itemize}
-\item $U_F$: differenza di potenziale applicata al filamento (catodo) rispetto alla terra che ne regola la temperatura, è posta uguale a $U_F = 8.0\pm0.1 \,V$ e tenuta costante.
+\item $U_F$: differenza di potenziale applicata al filamento (catodo) rispetto alla terra che ne regola la temperatura, è posta uguale a $U_F = 8.0\pm0.1 \,V$ (incertezza strumentale) e tenuta costante.
 \item $U_G$: differenza di potenziale applicata alla griglia di controllo rispetto al catodo, regola l'estrazione degli elettroni dal metallo per effetto fotoelettrico a freddo (effetto tunnel). Questa tensione regola l'emissività del catodo, cioè il numero di elettroni emessi per unità di tempo e quindi l'intensità della fluorescenza.
-\item $U_A$: differenza di potenziale applicata tra il catodo e la griglia anodo al fine di accelerare gli elettroni, nella configurazione a rampa di potenziale; questo valore indica il massimo potenziale raggiunto dall'anodo.
+\item $U_A$: differenza di potenziale applicata tra il catodo e la griglia anodo al fine di accelerare gli elettroni; nella configurazione a rampa di potenziale questo valore indica il massimo potenziale raggiunto dall'anodo.
 \item $U_E$: differenza di potenziale tra la griglia anodo e il collettore applicata al fine di stabilire un campo elettrico frenante per gli elettroni che emergono dall'anodo.
 \end{itemize}
 
@@ -47,24 +47,24 @@ Un amplificatore operazionale a transimpedenza fornisce in uscita una tensione p
 \section{Osservazioni qualitative}
 
 Per un valore di $U_G = 3.2 \pm 0.1 \, V $, fisso durante l'esperienza, abbiamo stimato, guardando attraverso la finestra di osservazione, che alle tensioni $U_{A1} = 25 \pm 1 \, V$, $U_{A2} = 41 \pm 1 \, V$, $U_{A3} = 56 \pm 1 \, V$ compaiono in sequenza le barre arancioni. Queste misure sono state ottenute agendo direttamente su $U_A$ in modalità manuale.\\
-Per l'errore sulla misura di $U_G$ si è presa l'incertezza strumentale della suddivisione della ghiera con cui si variava la tensione stessa.\\
+Per l'errore sulla misura di $U_G$ si è presa l'incertezza strumentale della suddivisione della ghiera con cui si variava la tensione stessa.\\ 
 Il parametro $U_G$ regola la sola intensità della luminescenza (a causa del diverso numero di elettroni che fanno urto elastico) ma non influenza il fatto che la luminescenza appaia o meno.\\
-In tutte le operazioni seguenti lavoreremo con il generatore di tensione in modalità rampa e con l'oscilloscopio in modalità XY, dove sull'asse delle ascisse troviamo la tensione $U_A$ e sull'asse delle ordinate la tensione di uscita dell'amplificatore che è proporzionale alla transimpedenza. 
-Di seguito sono riportati tre grafici acquisiti con $U_A = 80.0\pm1.0 \, V$ variando la tensione di frenamento $U_E$. L'oscilloscopio è stato posto in modalità XY e abbiamo aumentato la persistenza dell'immagine per una migliore resa dell'immagine.\\
+In tutte le operazioni seguenti lavoreremo con il generatore di tensione in modalità rampa e con l'oscilloscopio in modalità XY, dove sull'asse delle ascisse troviamo la tensione $U_A$ e sull'asse delle ordinate la tensione di uscita dell'amplificatore che è proporzionale alla corrente $I_C$. Come errore sulle differenze di potenziale si è presa l'incertezza strumentale del sistema di lettura del tetrodo.
+Nelle figure \ref{fig:grafico1}, \ref{fig:grafico2}, \ref{fig:grafico3} sono riportati tre grafici acquisiti con $U_A = 80.0\pm1.0 \, V$ variando nei 3 casi la tensione di frenamento $U_E$. L'oscilloscopio è stato posto in modalità XY e abbiamo aumentato la persistenza dell'immagine per una migliore resa dell'immagine.\\
 
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=1.0]{uezero.png}
-\caption{Corrente $I_C$ per una tensione $U_E = 0.0\pm0.1 \, V$.}
-\label{grafico1}
+\caption{Corrente $I_C$ per una tensione $U_E = 0.0\pm0.1 \, V$.\label{fig:grafico1}}
+
 \end{figure}
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=1.0]{ue9punto680volts.png}
-\caption{Corrente $I_C$ per una tensione $U_E = 9.6 \pm 0.1\, V$.}
-\label{grafico2}
+\caption{Corrente $I_C$ per una tensione $U_E = 9.6 \pm 0.1\, V$.\label{fig:grafico2}}
+
 \end{figure}
 
 %in realtà non è acquisito a 70V...
@@ -72,21 +72,24 @@ Di seguito sono riportati tre grafici acquisiti con $U_A = 80.0\pm1.0 \, V$ vari
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=1.0]{ue10punto970volts.png}
-\caption{Corrente $I_C$ per una tensione $U_E = 10.9 \pm 0.1\, V$.}
-\label{grafico3}
+\caption{Corrente $I_C$ per una tensione $U_E = 10.9 \pm 0.1\, V$.\label{fig:grafico3}}
+
 \end{figure}
 
 %Appunti durante esperienza:
 A $U_E = 0.0 \pm0.1\, V$ l'andamento di $I_C$ è monotono in funzione di $U_A$.
 Se la differenza di potenziale frenante è nulla non c'è possibilità di frenare gli elettroni e anche quelli che hanno interagito subito prima del ricevente accelerano nel piccolo spazio a disposizione e partecipano alla corrente. Pertanto a $U_E = 0.0\pm0.1\,V$ non si osserva il comportamento oscillante della corrente anche se si vedono le bande luminose.\\ 
-Nella fig. \ref{grafico3} si osserva che i minimi della corrente scendono sotto lo zero. Questo significa che per quei valori di tensione la corrente scorre in verso opposto a quello negativo. Non si ritiene che sia un effetto spurio legato all'amplificatore usato ma non si riesce a darne una interpretazione consistente.\\
-Variando $U_E$ compaiono i minimi e i massimi e all'aumentare del potenziale di frenamento sono sempre più pronunciati. Per un valore fisso di $U_A$ (massimo potenziale sull'anodo) il numero di minimi e massimi della curva $I_A-U_A$ non cambia al variare di $U_E$.\\
+Nella fig. \ref{fig:grafico3} si osserva che i minimi della corrente scendono sotto lo zero. Questo significa che per quei valori di tensione la corrente scorre in verso opposto a quello negativo. Non si ritiene che sia un effetto spurio legato all'amplificatore usato ma non si riesce a darne una interpretazione consistente.\\
+Variando $U_E$ compaiono i minimi e i massimi e all'aumentare del potenziale di frenamento sono sempre più pronunciati. Per un valore fisso di $U_A$ (massimo potenziale sull'anodo) il numero di minimi e massimi della curva $I_C-U_A$ non cambia al variare di $U_E$.\\
 
-In particolare esiste un valore di $U_E$ per cui i minimi della corrente sono tutti alla stessa altezza, questa situazione come si vede in figura \ref{grafico2} si ottene per $U_E = 9.6 \pm0.1 \, V$.\\
+In particolare esiste un valore di $U_E$ per cui i minimi della corrente sono tutti alla stessa altezza, questa situazione come si vede in figura \ref{fig:grafico2} si ottene per $U_E = 9.6 \pm0.1 \, V$.\\
 
 \section{Raccolta ed elaborazione dati}
 
-Di seguito sono riportate le tabelle e i grafici contenti i valori di $U_A$ a cui si osservano i massimi e i minimi della corrente.\\
+Come prima cosa, intendiamo trovare i valori di $U_A$ per cui si osservano i massimi e i minimi (a $U_E$ fissato) della corrente $I_C$, e osservare che questi valori non dipendono dal valore della tensione di frenamento $U_E$.
+A fissato $U_E$ si sono acquisiti i dati con l'oscilloscopio tramite apposta funzione. Tali set di dati presentano effetti della digitalizzazione operata dall'acquisizione automatica con l'oscilloscopio.\\
+Per ogni dato di tensione $U_A$ l'acquisizione fornisce più dati della corrente. Questo è dovuto al fatto che la rampa viene in realtà salvata sul computer come insieme di gradini a tensione costante e crescenti, a questo \emph{plateau} di tensione viene associato tutto un intervallo di corrente $I_C$ che ovviamente non presenterà \emph{plateau} di digitalizzazione corrispondenti. Si sono regolarizzati i dati (tramite script di Python) associando ad ogni valore di $U_A$ il punto medio dell'intervallo sopra descritto. Come errori si sono presi $2$V, ossia la precisione dell'acquisizione sulla rampa.
+Nella tabelle \ref{tabellaMassimi}, \ref{tabellaMinimi} e nei grafici \ref{graficoMax}, \ref{graficoMin} sono riportati i valori di $U_A$ a cui si osservano i massimi e i minimi della corrente in funzione del potenziale di frenamento $U_E$ (ottenuti dai set di dati "ripuliti".\\
 
 \begin{table}[!htb]
 \centering
@@ -101,8 +104,8 @@ $6.0\pm0.1\,V$ & $24\pm2$ & $42\pm2$ & $62\pm2$ \\
 $9.5\pm0.1\,V$ & $28\pm2$ & $46\pm2$ & $66 \pm 2$ \\ 
 \hline 
 \end{tabular}
-\caption{Tabella dei minimi di $U_A$ in funzione di $U_E$.}
-\label{tabellaMinimi} 
+\caption{Tabella dei minimi di $U_A$ in funzione di $U_E$.\label{tabellaMinimi}}
+ 
 \end{table}
 
 
@@ -119,25 +122,25 @@ $6.0\pm0.1\,V$ & $18\pm2$ & $35\pm2$ & $55\pm2$ \\
 $9.5\pm0.1\,V$ & $18\pm2$ & $36\pm2$ & $54\pm2$ \\ 
 \hline 
 \end{tabular} 
-\caption{Tabella dei massimi di $U_A$ in funzione di $U_E$.}
-\label{tabellaMassimi}
+\caption{Tabella dei massimi di $U_A$ in funzione di $U_E$.\label{tabellaMassimi}}
+
 \end{table}
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=.7]{min.png}
-\caption{Tabella dei minimi di $U_A$ in funzione di $U_E$.}
-\label{graficoMin}
+\caption{Tabella dei minimi di $U_A$ in funzione di $U_E$.\label{graficoMin}}
+
 \end{figure}
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=.7]{max.png}
-\caption{Tabella dei massimi di $U_A$ in funzione di $U_E$.}
-\label{graficoMax}
+\caption{Tabella dei massimi di $U_A$ in funzione di $U_E$.\label{graficoMax}}
+
 \end{figure}
 
-Si sono eseguiti sei \emph{fit} di costanti utilizzando la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "true"$}. Di seguito si riportano i valori medi ottenuti dai fit con il relativo errore e $\chi^2$.\\
+Per verificare che i valori di $U_A$ per i quali si osserva un massimo/minimo di $I_C$ non dipendono da $U_E$, si sono eseguiti sei \emph{fit} di costanti utilizzando la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "true"$}. Nelle tabelle \ref{tab:tabellaMaxMed}, \ref{tab:tabellaMinMed} si riportano i valori medi ottenuti dai fit con il relativo errore e $\chi^2$.\\
 Il massimo della corrente è il valore di tensione $U_A$ per cui inizia a verificarsi il trasferimento di energia tra gli elettroni e gli atomi di neon.\\
 Non si è inserito nel grafico dei massimi quello visibile sono per $U_E=9.5\pm0.1\,V$ poiché questo quarto massimo era visibile solamente in questa acquisizione.\\
 
@@ -155,9 +158,9 @@ $42\pm1$ & $5/2$ \\
 $61\pm1$ & $8/2$ \\ 
 \hline 
 \end{tabular}
-\caption{Tabella dei minimi medi di $U_A$.}
-\label{tabellaMinMed}
-\end{figure}
+\caption{Tabella dei minimi medi di $U_A$.\label{tab:tabellaMinMed}}
+
+\end{table}
 
 \begin{table}[!htb]
 \centering
@@ -172,50 +175,49 @@ $36\pm1$ & $1/2$ \\
 $55\pm1$ & $2/2$ \\
 \hline
 \end{tabular}
-\caption{Tabella dei massimi medi di $U_A$.}
-\label{tabellaMaxMed}
-\end{figure}
+\caption{Tabella dei massimi medi di $U_A$.\label{tab:tabellaMaxMed}}
 
-I $\chi^2$ associati ai fit delle rete sono migliori nei casi di fit ai massimi che rimangono costanti al variare di $U_E$. Si può vedere che i minimi manifestano in realtà un andamento non banale , si vede infatti che tendono ad aumentare all'aumentare di $U_A$.\\
-Di seguito sono riportati i grafici della corrente in unità arbitrarie. Tali grafici sono stati ottenuti dopo un processo di media operato con uno script Python per "ripulire" i dati dagli effetti della digitalizzazione operata dall'acquisizione automatica con l'oscilloscopio.\\
-Per ogni dato di tensione $U_A$ l'acquisizione fornisce più dati della corrente. Questo è dovuto al fatto che la rampa viene in realtà salvata sul computer come insieme di gradini a tensione costante e crescenti, a questo \emph{plateau} di tensione viene associato tutto un intervallo di corrente $I_C$ che ovviamente non presenterà \emph{plateau} di digitalizzazione corrispondenti. Ad ogni valore di $U_A$ è associato il punto medio dell'intervallo sopra descritto.
+\end{table}
+
+I $\chi^2$ associati ai fit sono migliori nei casi di fit ai massimi che rimangono costanti al variare di $U_E$. Si può vedere che i valori delle correnti minime manifestano in realtà un andamento non banale , si vede infatti che tendono ad aumentare all'aumentare di $U_A$.\\
+Nelle figure \ref{fig:grafico4}, \ref{fig:grafico5}, \ref{fig:grafico6} sono riportati i grafici della corrente in unità arbitrarie. 
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=.5]{plot29.png}
-\caption{Grafico della corrente $I_C$ in funzione di $U_A$ a $U_E = 2.9\pm0.1 \, V$.}
-\label{grafico4}
+\caption{Grafico della corrente $I_C$ in funzione di $U_A$ a $U_E = 2.9\pm0.1 \, V$.\label{fig:grafico4}}
+
 \end{figure}
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=.5]{plot60.png}
-\caption{Grafico della corrente $I_C$ in funzione di $U_A$ a $U_E = 6.0 \pm 0.1\, V$.}
-\label{grafico5}
+\caption{Grafico della corrente $I_C$ in funzione di $U_A$ a $U_E = 6.0 \pm 0.1\, V$.\label{fig:grafico5}}
+
 \end{figure}
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=.5]{plot95.png}
-\caption{Grafico della corrente $I_C$ in funzione di $U_A$ a $U_E = 9.5 \pm 0.1\, V$.}
-\label{grafico6}
+\caption{Grafico della corrente $I_C$ in funzione di $U_A$ a $U_E = 9.5 \pm 0.1\, V$.\label{fig:grafico6}}
+
 \end{figure}
 
-Considerando i massimi dell'acquisizione a $U_E = 9.5 \pm 0.1\,V$ indicati in precedenza e aggiungendo il quarto a $U_A=78\pm2\,V$ i è eseguito un grafico della tensione $U_A$ in funzione del numero del massimo, riportato in figura \ref{ordine}.\\ 
+Considerando i massimi dell'acquisizione a $U_E = 9.5 \pm 0.1\,V$ indicati in precedenza e aggiungendo il quarto a $U_A=78\pm2\,V$ si è eseguito un grafico della tensione $U_A$ in funzione del numero del massimo, riportato in figura \ref{ordine}.\\ 
 
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=.5]{ordine.png}
-\caption{Tensione $U_A$ (ordinate) a cui si osserva il massimo numero $n$ (ascisse).}
-\label{ordine}
+\caption{Tensione $U_A$ (ordinate) a cui si osserva il massimo numero $n$ (ascisse).\label{ordine}}
+
 \end{figure}
 
-Il fit lineare eseguito testa l'ipotesi che i massimi siano equispaziati. Il $\chi^2 = 2.7/2$ ottenuto conferma l'ipotesi. In particolare la pendenza della retta fornisce l'energia di eccitazione del neon per la transizione effettuata con in questo esperimento cioè: $E_e = 19.8 \pm 0.9 \, eV$ che è compatibile con  la transizione di un elettrone tra lo stato $2p$ e lo stato $3p$.
+Il fit lineare (con funzione modello $y = ax+b$) eseguito testa l'ipotesi che i massimi siano equispaziati. Il $\chi^2 = 2.7/2$ ottenuto conferma l'ipotesi. In particolare la pendenza della retta fornisce l'energia di eccitazione del neon per la transizione effettuata in questo esperimento cioè: $E_e = 19.8 \pm 0.9 \, eV$ che è compatibile con  la transizione di un elettrone tra lo stato $2p$ e lo stato $3p$.
 
 \section{Conclusioni}
 Le tensioni $U_A$ a cui si osservano i massimi sono sistematicamente più basse di quelle misurate al punto 1. Questo può essere dovuto al fatto che il nostro occhio non riusciva a vedere la luminescenza quando ancora troppo flebile, anche se era già cominciato il processo di eccitazione.\\
-Il valore di $U_A$ a cui si trovano i minimi aumenta all'aumentare della differenza di potenziale frenante, mentre le posizioni dei massimi rimangono circa costanti.\\
+Il valore di $U_A$ a cui si trovano i minimi aumenta all'aumentare della differenza di potenziale frenante, mentre le posizioni dei massimi rimangono circa costanti: queste ultime infatti dipendono solo dalla natura dei livelli energetici del neon.\\
 Non si trova un valore di $U_E$ a cui si osservano più nitide le bande di luminescenza.\\
 Con i pochi picchi che si sono ottenuti non è pensabile di provare a fornire una stima del cammino libero medio degli elettroni nel Neon. Infatti questo effetto causa una variazione della differenza degli intervalli di potenziale tra i massimi dell'ordine dell'1\% che è dello stesso ordine di grandezza dell'errore sulle misure di $U_A$, quindi non osservabile.
 
