@@ -24,12 +24,12 @@ Obiettivo dell'esperienza è dimostrare la struttura discreta dei livelli energe
 \end{itemize}
 
 \section{Descrizione esperimento di Franck-Hertz}
-L'esperienza prevede lo studio delle collisioni anelastiche elettrone-atomo in un gas di Neon e della relativa fluorescenza indotta dall'eccitazione dei livelli energetici interni. Gli elettroni prodotti per effetto termoionico da un filamento al calor rosso sono accelerati attraverso due griglie di potenziale (tra le quali interagiscono con il Neon) e successivamente raccolti da un anodo dal quale si misura l'intensità di corrente; questo dispositivo è detto tetrodo a gas.
-Di seguito è riportato un riassunto della nomenclatura riguardante le tensioni utilizzata nell'esperienza e lo schema circuitale (figura 1):
+L'esperienza prevede lo studio delle collisioni anelastiche elettrone-atomo in un gas di Neon e della relativa fluorescenza indotta dall'eccitazione dei livelli energetici interni. Gli elettroni prodotti per effetto termoionico da un filamento al calor rosso sono accelerati attraverso due griglie di potenziale, tra le quali interagiscono con il Neon, e successivamente raccolti da un anodo dal quale si misura l'intensità di corrente. L'insieme di questi elementi si chiama tetrodo a gas.
+Di seguito è riportata la nomenclatura riguardante le tensioni utilizzata nell'esperienza e lo schema circuitale (figura 1):
 
 \begin{itemize}
-\item $U_F$: differenza di potenziale applicata al filamento (catodo) rispetto alla terra che ne regola la temperatura, è posta uguale a circa $U_F = 8.0\pm0.1 \,V$ e tenuta costante.
-\item $U_G$: differenza di potenziale applicata alla griglia di controllo rispetto al catodo, regola l'estrazione degli elettroni dal metallo per effetto fotoelettrico a freddo (effetto tunnel), questa tensione regola l'emissività del catodo, cioè il numero di elettroni emessi per unità di tempo e quindi l'intensità della fluorescenza.
+\item $U_F$: differenza di potenziale applicata al filamento (catodo) rispetto alla terra che ne regola la temperatura, è posta uguale a $U_F = 8.0\pm0.1 \,V$ e tenuta costante.
+\item $U_G$: differenza di potenziale applicata alla griglia di controllo rispetto al catodo, regola l'estrazione degli elettroni dal metallo per effetto fotoelettrico a freddo (effetto tunnel). Questa tensione regola l'emissività del catodo, cioè il numero di elettroni emessi per unità di tempo e quindi l'intensità della fluorescenza.
 \item $U_A$: differenza di potenziale applicata tra il catodo e la griglia anodo al fine di accelerare gli elettroni, nella configurazione a rampa di potenziale; questo valore indica il massimo potenziale raggiunto dall'anodo.
 \item $U_E$: differenza di potenziale tra la griglia anodo e il collettore applicata al fine di stabilire un campo elettrico frenante per gli elettroni che emergono dall'anodo.
 \end{itemize}
@@ -46,7 +46,7 @@ Un amplificatore operazionale a transimpedenza fornisce in uscita una tensione p
 
 \section{Osservazioni qualitative}
 
-Per un valore di $U_G = 3.2 \pm 0.1 \, V $, fisso durante l'esperienza, abbiamo stimato guardando attraverso la finestra di osservazione che alle tensioni $U_{A1} = 25 \pm 1 \, V$, $U_{A2} = 41 \pm 1 \, V$, $U_{A3} = 56 \pm 1 \, V$ compaiono in sequenza le barre arancioni. Queste misure sono state ottenute agendo direttamente su $U_A$ in modalità manuale.\\
+Per un valore di $U_G = 3.2 \pm 0.1 \, V $, fisso durante l'esperienza, abbiamo stimato, guardando attraverso la finestra di osservazione, che alle tensioni $U_{A1} = 25 \pm 1 \, V$, $U_{A2} = 41 \pm 1 \, V$, $U_{A3} = 56 \pm 1 \, V$ compaiono in sequenza le barre arancioni. Queste misure sono state ottenute agendo direttamente su $U_A$ in modalità manuale.\\
 Per l'errore sulla misura di $U_G$ si è presa l'incertezza strumentale della suddivisione della ghiera con cui si variava la tensione stessa.\\
 Il parametro $U_G$ regola la sola intensità della luminescenza (a causa del diverso numero di elettroni che fanno urto elastico) ma non influenza il fatto che la luminescenza appaia o meno.\\
 In tutte le operazioni seguenti lavoreremo con il generatore di tensione in modalità rampa e con l'oscilloscopio in modalità XY, dove sull'asse delle ascisse troviamo la tensione $U_A$ e sull'asse delle ordinate la tensione di uscita dell'amplificatore che è proporzionale alla transimpedenza. 
@@ -98,7 +98,7 @@ $2.9\pm0.1\,V$ & $22\pm2$ & $40\pm2$ & $58\pm2$ \\
 \hline 
 $6.0\pm0.1\,V$ & $24\pm2$ & $42\pm2$ & $62\pm2$ \\ 
 \hline 
-$9.5\pm0.1\,V$ & $28\pm2$ & $46\pm2$ & $66$ \\ 
+$9.5\pm0.1\,V$ & $28\pm2$ & $46\pm2$ & $66\pm2$ \\ 
 \hline 
 \end{tabular}
 \caption{Tabella dei minimi di $U_A$ in funzione di $U_E$.}
@@ -174,7 +174,7 @@ $55\pm1$ & $2/2$ \\
 \end{figure}
 
 I $\chi^2$ associati ai fit delle rete sono migliori nei casi di fit ai massimi che rimangono costanti al variare di $U_E$. Si può vedere che i minimi manifestano in realtà un andamento non banale , si vede infatti che tendono ad aumentare all'aumentare di $U_A$.\\
-Di seguito sono riportati i grafici della corrente in unità arbitrarie. Tali grafici sono stati ottenuti dopo un processo di media operato con uno script Python per "ripulire" il i dati dagli effetti della digitalizzazione operata dall'acquisizione automatica dei dati con l'oscilloscopio.\\
+Di seguito sono riportati i grafici della corrente in unità arbitrarie. Tali grafici sono stati ottenuti dopo un processo di media operato con uno script Python per "ripulire" i dati dagli effetti della digitalizzazione operata dall'acquisizione automatica con l'oscilloscopio.\\
 Per ogni dato di tensione $U_A$ l'acquisizione fornisce più dati della corrente. Questo è dovuto al fatto che la rampa viene in realtà salvata sul computer come insieme di gradini a tensione costante e crescenti, a questo \emph{plateau} di tensione viene associato tutto un intervallo di corrente $I_C$ che ovviamente non presenterà \emph{plateau} di digitalizzazione corrispondenti. Ad ogni valore di $U_A$ è associato il punto medio dell'intervallo sopra descritto.
 
 \begin{figure}[!htb]
