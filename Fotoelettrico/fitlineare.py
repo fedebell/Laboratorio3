@@ -1,6 +1,14 @@
+import uncertainties
+from uncertainties import ufloat
+import math
 import numpy
-import pylab 
+import numpy
+import pylab
 from scipy.optimize import curve_fit
+import math
+import scipy.stats
+import uncertainties 
+from uncertainties import unumpy
 
 #apro il file
 f, V, df, dV = pylab.loadtxt('', unpack = True)
