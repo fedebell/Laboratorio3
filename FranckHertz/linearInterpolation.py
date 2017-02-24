@@ -77,7 +77,7 @@ b = ufloat(b, cov[1][1]**0.5)
 #FIXME: To finish E(N) = (1+ l/L (2n+1))Ea
 E_a = L*a/2
 libmedio = 4*b/(L*a)-2
-print("Si ricavano dai parametti i seguenti due valori di a = ", a, "e di b =", b)
+print("Si ricavano dai parametti i seguenti due valori di a = ", a, "e di b =",  b)
 
 pylab.show()
 
