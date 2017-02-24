@@ -7,7 +7,7 @@ f, V, I, dV, dI = pylab.loadtxt('', unpack = True)
 def ff(x, a, I, V):
     return I*(numpy.exp(a(V-x))-1)
     
-#faccio il fit (parametri in V*s ma verosimil,mente ho le frequenze in 10**13 Hz...)
+#faccio il fit (parametri in mV/nA)
 popt = (, , ) #V è il valore di azzeramento della corrente (circa h/e*f? vedi a occhio cmq), I è la corrente asinotitica(la vedi a occhio), a??
 pars, cov = curve_fit(ff, V, I, popt, dI)
 print ('a', pars[0],'\pm', cov[0][0]**0.5)
@@ -26,7 +26,7 @@ V0=pars[2]+1/pars[0]*numpy.log(pars[1]/cov[1][1]**0.5)
 print('V_0=', v0, '\pm', cov[2][2]*0.5)
 #plot
 pylab.title('Potenziale vs corrente')
-pylab.xlabel('V (V))')
+pylab.xlabel('V (mV))')
 pylab.ylabel('I (nA)')
 pylab.errorbar(V, I, dI, dV, color = 'blue', marker = 'o', linestyle = '')
 pylab.plot(V, ff(V, pars[0], pars[1], pars[2]), linestyle = '-', color = 'black')
