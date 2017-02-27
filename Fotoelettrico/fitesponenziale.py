@@ -1,5 +1,5 @@
-import uncertainties
-from uncertainties import ufloat
+#import uncertainties
+#from uncertainties import ufloat
 import math
 import numpy
 import numpy
@@ -8,9 +8,9 @@ from scipy.optimize import curve_fit
 import math
 import scipy.stats
 import uncertainties 
-from uncertainties import unumpy
+from uncertainties import ufloat, unumpy
 
-f, V, dV, I, dI = pylab.loadtxt("/home/federico/Laboratorio3/Fotoelettrico/datiArancio.txt", unpack = True)
+f, V, dV, I, dI = pylab.loadtxt("C:\\Users\\marco\\Desktop\\Laboratorio3\\Fotoelettrico\\datiAzzurro.txt", unpack = True)
 
 def ff(x, a, I, V):
     return I*(numpy.exp(a*(V-x))-1)
@@ -22,6 +22,13 @@ pars, cov = curve_fit(ff, V, I, popt, dI,  absolute_sigma = "true")
 print ('a', pars[0], '\pm', cov[0][0]**0.5)
 print('Corrente asintotica', pars[1], '\pm', cov[1][1]**0.5)
 print ('V azzeramento', pars[2],'\pm', cov[2][2]**0.5)
+print("covarianza=", cov[0][1])
+print("covarianza=", cov[0][2])
+print("covarianza=", cov[1][2])
+
+ua = ufloat(pars[0], cov[0][0]**0.5)
+uI = ufloat(pars[1], cov[1][1]**0.5)
+uV = ufloat(pars[2], cov[2][2]**0.5)
 
 #Marco
 #chi2(per ora implemento solo errore sulle y)
@@ -33,9 +40,11 @@ print('ndof = ', ndof)
 
 #Marco
 #calcolo Potenziale di frenamento; errore messo a caso in pratica: bella discussione da fare
-print("deltaI = ", cov[1][1]**0.5)
-v0=pars[2]+(1/pars[0])*numpy.log(pars[1]/cov[1][1]**0.5)
-print('V_0=', v0, '\pm', cov[2][2]*0.5)
+#print("deltaI = ", cov[1][1]**0.5)
+deltaI = 0.02
+v0 = uV+(1/ua)*unumpy.log(uI/deltaI)
+
+print('V_0=', v0)
 
 div = 1000
 bucket = numpy.array([0.0 for i in range(div)])
