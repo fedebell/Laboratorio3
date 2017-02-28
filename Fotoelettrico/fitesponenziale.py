@@ -10,7 +10,7 @@ import scipy.stats
 import uncertainties 
 from uncertainties import ufloat, unumpy
 
-f, V, dV, I, dI = pylab.loadtxt("C:\\Users\\marco\\Desktop\\Laboratorio3\\Fotoelettrico\\datiAzzurro.txt", unpack = True)
+f, V, dV, I, dI = pylab.loadtxt("C:\\Users\\marco\\Desktop\\Laboratorio3\\Fotoelettrico\\datiBlu.txt", unpack = True)
 
 def ff(x, a, I, V):
     return I*(numpy.exp(a*(V-x))-1)
@@ -26,9 +26,10 @@ print("covarianza=", cov[0][1])
 print("covarianza=", cov[0][2])
 print("covarianza=", cov[1][2])
 
-ua = ufloat(pars[0], cov[0][0]**0.5)
-uI = ufloat(pars[1], cov[1][1]**0.5)
-uV = ufloat(pars[2], cov[2][2]**0.5)
+#ua = ufloat(pars[0], cov[0][0]**0.5)
+#uI = ufloat(pars[1], cov[1][1]**0.5)
+#uV = ufloat(pars[2], cov[2][2]**0.5)
+(ua, uI, uV) = uncertainties.correlated_values(pars, cov)
 
 #Marco
 #chi2(per ora implemento solo errore sulle y)
