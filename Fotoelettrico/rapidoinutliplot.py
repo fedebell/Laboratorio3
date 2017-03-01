@@ -11,7 +11,8 @@ f = 1/l * 3*10**5
 df = f*dl/l
 #Vmax = numpy.array([801, 876, 1095, 1289])
 V = numpy.array([853, 930, 1095, 1442])
-dV = numpy.array([1, 4, 3, 3])*10
+dV = numpy.array([30, 20, 30, 30])
+#dV = numpy.array([1, 4, 3, 3])*10
 #V = (Vmax + Vmin)/2
 #dV = (Vmax-Vmin)/2
 
@@ -19,7 +20,8 @@ dV = numpy.array([1, 4, 3, 3])*10
 l2 = numpy.array([602, 405])
 dl2 = numpy.array([12, 11])
 V2 = numpy.array([1104, 826])
-dV2 = numpy.array([5, 3])*10
+dV2 = numpy.array([10, 30])
+#dV2 = numpy.array([5, 3])*10
 f2 =1/l2 *3*10**5
 df2  =f2*dl2/l2
 

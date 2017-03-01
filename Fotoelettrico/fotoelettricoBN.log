@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  28 FEB 2017 23:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  1 MAR 2017 23:35
 entering extended mode
 **./fotoelettricoBN.tex
 (fotoelettricoBN.tex
@@ -612,37 +612,6 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-! Package inputenc Error: Unicode char èla (U+D5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 Obiettivo dell'esperienza è la
-                                    verifica dell'effetto fotoelettrico, e d...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èla (U+D5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...grandezza del fattore $h/e$, dove $h$ è la
-                                                   costante di Planck e $e$ ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 17--19
 
  []
@@ -655,736 +624,84 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
 
 
-! Package inputenc Error: Unicode char èmo (U+E4)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 Si è mo
-            ntato il circuito in figura \ref{fig:circuito}. Nella scatola ne...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 LaTeX Warning: Reference `fig:circuito' on page 1 undefined on input line 31.
-
-
-! Package inputenc Error: Unicode char èmi (U+DE)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 Per ogni filtro si è mi
-                            surata la corrente in funzione del potenziale ap...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
 <circuito.png, id=1, 291.489pt x 220.4235pt>
 File: circuito.png Graphic file (type png)
  <use circuito.png>
 Package pdftex.def Info: circuito.png used on input line 36.
 (pdftex.def)             Requested size: 145.74414pt x 110.21147pt.
-
-
-! Package inputenc Error: Unicode char èpa (U+D9)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 Si è pa
-            rtiti da $V\simeq 0$ V e si è variato il potenziale fino a che l...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èva (U+DF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 Si è partiti da $V\simeq 0$ V e si è va
-                                            riato il potenziale fino a che l...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èst (U+EF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 ...significativamente: in questo modo ci è st
-                                                  ato più facile estrarre i ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 ...cativamente: in questo modo ci è stato più
-                                                   facile estrarre i paramet...
-
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char èst (U+EF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.45 La tensione di frenamento è st
-                                   ata misurata tramite multimetro digitale....
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èst (U+EF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.45 .... La corrente circolante nel circuito è st
-                                                  ata misurata tramite picoa...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èus (U+F0)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49 ...za effettiva dei fotoni incidenti, si è us
-                                                  ata la tabella fornita (si...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èst (U+EF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 ...ta ad ogni lunghezza d'onda riportata è st
-                                                  ata presa come la FWHM del...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èas (U+DC)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 ...ltri Newport, mentre per i Balzers si è as
-                                                  sunto un valore del $2\%$ ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1
+ [1
 
 {C:/Users/marco/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./circuito.
 png>]
-Underfull \hbox (badness 10000) in paragraph at lines 74--76
-
+Underfull \hbox (badness 10000) in paragraph at lines 77--188
+[][] []
  []
 
 
-! Package inputenc Error: Unicode char èes (U+E0)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.82 ...resi i dati in regime asintotico e si è es
-                                                  eguito un fit con funzione...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èco (U+DA)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.107 ...dipenda dal potenziale applicato non è co
-                                                  nfermata dal $\chi ^2$.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èco (U+DA)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.108 Ai fini dei fit ci è co
-                             munque sembrato sensato andare a considerare co...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èpr (U+EA)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.109 Come incertezza si è pr
-                             eso la semidispersione dei valori di corrente d...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èes (U+E0)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.110 ...valore della corrente asintotica, si è es
-                                                  eguito un fit con la funzi...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Illegal character in array arg.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.114 f
-       are\\
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<fitparabolico.png, id=17, 578.16pt x 430.0065pt>
-File: fitparabolico.png Graphic file (type png)
- <use fitparabolico.png>
-Package pdftex.def Info: fitparabolico.png used on input line 121.
-(pdftex.def)             Requested size: 578.15858pt x 430.00545pt.
-
-Overfull \hbox (94.46172pt too wide) in paragraph at lines 121--122
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 77--188
+[] []
  []
 
-
-! Package inputenc Error: Unicode char èpe (U+DD)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.124 ...gliaia : si vede che l'andamento non è pe
-                                                  r nulla rispettato. Inoltr...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èco (U+DA)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.124 ...do con quanto predetto dal modello, nè co
-                                                  n quanto ottenuto nel punt...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char ène (U+DB)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.124 ...el punto successivo. Pertanto non si è ne
-                                                  anche eseguito il fit line...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[2]
-
-! Package inputenc Error: Unicode char èst (U+EF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 Per ogni filtro si è st
-                             imato il relativo potenziale di azzeramento $V_...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Missing ) inserted for expression.
-<to be read again> 
-                   (
-l.126 ... incertezza $\delta I$. Per fare ciò si è
-                                                   eseguito un fit per ogni ...
-I was expecting to see `+', `-', `*', `/', or `)'. Didn't.
-
-! Missing ) inserted for expression.
-<to be read again> 
-                   (
-l.126 ... incertezza $\delta I$. Per fare ciò si è
-                                                   eseguito un fit per ogni ...
-I was expecting to see `+', `-', `*', `/', or `)'. Didn't.
-
-! Missing ) inserted for expression.
-<to be read again> 
-                   (
-l.126 ... incertezza $\delta I$. Per fare ciò si è
-                                                   eseguito un fit per ogni ...
-I was expecting to see `+', `-', `*', `/', or `)'. Didn't.
-
-! Missing = inserted for \ifnum.
-<to be read again> 
-                   (
-l.126 ... incertezza $\delta I$. Per fare ciò si è
-                                                   eseguito un fit per ogni ...
-I was expecting to see `<', `=', or `>'. Didn't.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   (
-l.126 ... incertezza $\delta I$. Per fare ciò si è
-                                                   eseguito un fit per ogni ...
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Package inputenc Error: Unicode char òsiè (U+)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 ... incertezza $\delta I$. Per fare ciò si è
-                                                   eseguito un fit per ogni ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Extra }, or forgotten $.
-l.128 I(V)=\bar{I}(e^{a(\bar{V}-V})}
-                                    -1)
+! Extra }, or forgotten \endgroup.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.249 \end{table}
+                 
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-<fitesponenziale.png, id=23, 578.16pt x 430.0065pt>
-File: fitesponenziale.png Graphic file (type png)
- <use fitesponenziale.png>
-Package pdftex.def Info: fitesponenziale.png used on input line 156.
+! You can't use `\vadjust' in vertical mode.
+\end@float ...nalty \@floatpenalty \else \vadjust 
+                                                  {\penalty -\@Miv \vbox {}\...
+l.249 \end{table}
+                 
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+<fitparabolico.png, id=17, 578.16pt x 430.0065pt>
+File: fitparabolico.png Graphic file (type png)
+ <use fitparabolico.png>
+Package pdftex.def Info: fitparabolico.png used on input line 252.
 (pdftex.def)             Requested size: 578.15858pt x 430.00545pt.
 
-Overfull \hbox (94.46172pt too wide) in paragraph at lines 156--157
+Overfull \hbox (94.46172pt too wide) in paragraph at lines 252--253
  [][] 
  []
 
-[3 <./fitparabolico.png>]
+[2] [3]
 
-! Package inputenc Error: Unicode char èda (U+CD)
-(inputenc)                not set up for use with LaTeX.
+LaTeX Warning: Reference `tab:fitexp' on page 4 undefined on input line 263.
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.165 ... intanto che la corrente anodica non è da
-                                                  vvero indipendente dalla d...
+<fitesponenziale.png, id=26, 578.16pt x 430.0065pt>
+File: fitesponenziale.png Graphic file (type png)
+ <use fitesponenziale.png>
+Package pdftex.def Info: fitesponenziale.png used on input line 288.
+(pdftex.def)             Requested size: 578.15858pt x 430.00545pt.
 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Overfull \hbox (94.46172pt too wide) in paragraph at lines 288--289
+ [][] 
+ []
 
 
-! Package inputenc Error: Unicode char èpr (U+EA)
-(inputenc)                not set up for use with LaTeX.
+LaTeX Warning: Reference `tab:V_0' on page 4 undefined on input line 302.
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.166 Pertanto per stimare $\delta I$ si è pr
-                                             eferito prendere la semidispers...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èvo (U+ED)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.167 Ai fini della stima non si è vo
-                                     luto considerare l'errore estratto dal ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èir (U+E3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.167 ...al fit del parametro $\bar{I}$: esso è ir
-                                                  realisticamente piccolo, p...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.167 ... è irrealisticamente piccolo, persino più
-                                                   piccolo delle variazioni ...
-
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char èco (U+DA)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.168 Per lo stesso motivo non si è co
-                                      nsiderato neppure l'errore strumentale...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char àse (U+D8)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169 ...vengono traslati della stessa quantità se
-                                                   si varia $delta I$.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[4 <./fitesponenziale.png>]
-
-! Package inputenc Error: Unicode char èri (U+E3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.195 Il risultati del fit è ri
-                               portato in figura \ref{fig:fitfinale}.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<fitfinale.png, id=33, 578.16pt x 430.0065pt>
+[4 <./fitparabolico.png>] <fitfinale.png, id=32, 578.16pt x 430.0065pt>
 File: fitfinale.png Graphic file (type png)
- <use fitfinale.png>
-Package pdftex.def Info: fitfinale.png used on input line 198.
+
+<use fitfinale.png>
+Package pdftex.def Info: fitfinale.png used on input line 330.
 (pdftex.def)             Requested size: 404.70924pt x 301.00249pt.
-
-
-! Package inputenc Error: Unicode char èot (U+EB)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.202 ... valore del coefficiente angolare si è ot
-                                                  tenuto $a = 3.8\pm 0.2 \mb...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èri (U+E3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.203 ...of=1.8/2, quindi l'andamento lineare è ri
-                                                  spettato entro gli errori ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èco (U+DA)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.204 Per il calcolo del $\chi^2$ si è co
-                                         nsiderato pure l'errore (non trascu...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èin (U+DF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.205 Il $V_0$ per il filtro arancione non è in
-                                                accordo con l'andamento teor...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.205 ...orico. In effetti a questa frequenza (più
-                                                   bassa delle altre), i fot...
-
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
-
-
-! Package inputenc Error: Unicode char èco (U+DA)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.205 ...iale eccitato nel fotomoltiplicatore è co
-                                                  stituito da due tipi di me...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èdi (U+D5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.205 ...nto il comportamento della corrente è  di
-                                                  verso rispetto agli altri ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èin (U+DF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.206 ...di azzeramento per il filtro blu non è in
-                                                   accordo con quanto previs...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èri (U+E3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.206 ...cordo con quanto previsto, ma non si è ri
-                                                  uscito a trovare una spieg...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èpr (U+EA)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.208 Si è pr
-             ovato a studiare il comportamento della corrente anodica in fun...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char àqu (U+E6)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 Come prima cosa si osserva che in realtà qu
-                                                 esta non è costante all'aum...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èco (U+DA)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 ... si osserva che in realtà questa non è co
-                                                  stante all'aumentare della...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èqu (U+EE)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.209 ...ai dati un andamento decrescente. Si è qu
-                                                  indi provato ad eseguire u...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+ [5 <./fitesponenziale.png>]
 ! Undefined control sequence.
-l.209 ... un fit con funzione modello $y = a\cdotx
-                                                   + b$ sui dati "asintotici...
+l.341 ... un fit con funzione modello $y = a\cdotx
+                                                   + b$ sui dati asintotici,...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1392,117 +709,155 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-! Package inputenc Error: Unicode char òoss (U+157)
-(inputenc)                not set up for use with LaTeX.
+LaTeX Warning: Reference `tab:fitasintoticoretta' on page 6 undefined on input 
+line 342.
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.232 Si può oss
-                ervare come tutti i coefficienti angolari siano, per quanto ...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èun (U+EB)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.233 Il valore dell'ordinata della retta non è un
-                                                  a buona stima della corren...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èse (U+E0)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.233 ... valore della corrente asintotica si è se
-                                                  mpre preferito prendere il...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[5 <./fitfinale.png>] <correnteanodica.png, id=38, 578.16pt x 430.0065pt>
+<correnteanodica.png, id=37, 578.16pt x 430.0065pt>
 File: correnteanodica.png Graphic file (type png)
-
-<use correnteanodica.png>
-Package pdftex.def Info: correnteanodica.png used on input line 238.
+ <use correnteanodica.png>
+Package pdftex.def Info: correnteanodica.png used on input line 370.
 (pdftex.def)             Requested size: 404.70924pt x 301.00249pt.
 
-
-! Package inputenc Error: Unicode char òoss (U+157)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+[6 <./fitfinale.png>] [7 <./correnteanodica.png>]
+! Output loop---100 consecutive dead cycles.
+\clearpage ...rite \m@ne {}\vbox {}\penalty -\@Mi 
                                                   
-l.242 Si può oss
-                ervare che per il filtro blu, la corrente anodica ha un valo...
+l.382 \end{document}
+                    
+I've concluded that your \output is awry; it never does a
+\shipout, so I'm shipping \box255 out myself. Next time
+increase \maxdeadcycles if you want me to be more patient!
 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+[8
 
 
-! Package inputenc Error: Keyboard character used is undefined
-(inputenc)                in inputencoding `utf8'.
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.242 ...ente anodica ha un valore decisamente più
-                                                   basso che per gli altri f...
 
-You need to provide a definition with \DeclareInputText 
-or \DeclareInputMath before using this key.
 
-[6 <./correnteanodica.png>] [7] (fotoelettricoBN.aux)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+] (fotoelettricoBN.aux)
 
 LaTeX Warning: There were undefined references.
 
- )
-(\end occurred when \ifnum on line 126 was incomplete)
-(\end occurred when \ifx on line 126 was incomplete)
-(\end occurred when \ifx on line 126 was incomplete) 
+ ) 
 Here is how much of TeX's memory you used:
- 4035 strings out of 493334
- 51451 string characters out of 3139252
- 135954 words of memory out of 3000000
- 7484 multiletter control sequences out of 15000+200000
+ 4015 strings out of 493334
+ 51355 string characters out of 3139252
+ 162954 words of memory out of 3000000
+ 7464 multiletter control sequences out of 15000+200000
  12750 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,11n,25p,802b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmsy7.pfb>
-Output written on fotoelettricoBN.pdf (7 pages, 423833 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on fotoelettricoBN.pdf (8 pages, 430624 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
