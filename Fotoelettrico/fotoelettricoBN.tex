@@ -14,7 +14,7 @@
 
 \maketitle
 \section{Scopo dell'esperienza}
-Obiettivo dell'esperienza è la verifica dell'effetto fotoelettrico, e la stima della grandezza del fattore $h/e$, dove $h$ /'e la costante di Planck e $e$ la carica dell'elettrone.\\
+Obiettivo dell'esperienza è la verifica dell'effetto fotoelettrico, e la stima della grandezza del fattore $h/e$, dove $h$ \'e la costante di Planck e $e$ la carica dell'elettrone.\\
 %forse mettere la fomrletta E = h\nu?
 \section{Materiale occorrente}
 \begin{itemize}
@@ -30,10 +30,14 @@ Obiettivo dell'esperienza è la verifica dell'effetto fotoelettrico, e la stima 
 
 Si è montato il circuito in figura \ref{fig:circuito}. Nella scatola nera erano fissati il fotomoltiplicatore e la lampada a LED che serviva da sorgente luminosa. Durante l'esperienza, abbiamo posizionato i filtri nell'apposito supporto, avendo cura che fossero ortogonali al piano di appoggio della scatola e quindi al fascio luminoso.
 
-Per ogni filtro si è misurata la corrente in funzione del potenziale applicato ai capi del fotomoltiplicatore. Per un certo potenziale $V_0$ la corrente di elettroni (estratti per effetto fotoelettrico) che arriva all'amperometro si annulla. Questo ci consente di stimare la massima energia cinetica degli elettroni come $eV_0$, da confrontare con l'energia dei fotoni incidenti $E_{\gamma}=h\nu$.
+Per ogni filtro si è misurata la corrente in funzione del potenziale applicato ai capi del fotomoltiplicatore. Per un certo potenziale $V_0$ (detto di azzeramento) la corrente di elettroni (estratti per effetto fotoelettrico) che arriva all'amperometro si annulla. Questo ci consente di stimare la massima energia cinetica degli elettroni come $eV_0$, da confrontare con l'energia dei fotoni incidenti $E_{\gamma}=hf$. 
+ Il modello teorico prevede che valga la relazione
+ \begin{equation}\label{eq:fotoelettrico}
+ eV_0 = hf + W
+ \end{equation}, con $f$ frequenza del fotone incidente e $W_0$ lavoro di estrazione del metallo. Una volta noti i potenziali di azzeramento in funzione delle frequenze eseguiamo un fit per verificare la relazione \ref{eq:fotoelettrico}.
 \begin{figure}[!htb]
   \centering
-  \includegraphics[scale=.5]{circuito.png}
+  \includegraphics[scale=1.0]{circuito.png}
 \caption{Schema circuito dell'esperimento e di acquisizione dati.\label{circuito}}
 \end{figure}
 
@@ -45,10 +49,11 @@ Abbiamo iniziato le acquisizioni da $V\simeq 0$ V e variato progressivamente il 
 La tensione di frenamento è stata misurata tramite multimetro digitale. La corrente circolante nel circuito è stata misurata tramite picoamperometro.
 La lettura della corrente veniva fatta dopo un tempo sufficientemente lungo da fare in modo che il valore riportato dallo strumento si fosse stabilizzato. %anche se non è stato sempre facile lo scriviamo nelle conclusioni?
 Come errore sulle differenze di potenziale applicate si sono prese le incertezze riportate sul manuale del multimetro.
-Come errore sulla misura di corrente si  presa l'ultima cifra "stabile" nella lettura ,che si rivelava essere maggiore dell'incertezza strumentale riportata sul manuale del picoamperometro (0.4\% + 1 digit sulle scale usate) %(0.5\% + 1 digit per il voltmetro e 0.4\% + 1 digit e 0.2\% + 1 digit per il picoamperometro, rispettivamente sulle scale dei 20 nA e dei 200 nA
+Come errore sulla misura di corrente si  presa l'ultima cifra "stabile" nella lettura, che si rivelava essere maggiore dell'incertezza strumentale riportata sul manuale del picoamperometro (0.4\% + 1 digit sulle scale usate) %(0.5\% + 1 digit per il voltmetro e 0.4\% + 1 digit e 0.2\% + 1 digit per il picoamperometro, rispettivamente sulle scale dei 20 nA e dei 200 nA
 Per stimare le lunghezze d'onda dei filtri, e quindi della frequenza effettiva dei fotoni incidenti, abbiamo usato la tabella fornita (\ref{tab:filtri}).
 L'incertezza associata ad ogni lunghezza d'onda riportata è stata presa come metà della FWHM della banda passante riportata sul data sheet per i filtri Newport, mentre per i Balzers si è assunto un valore del $2\%$ di incertezza. 
- \begin{table}[!ht]
+
+\begin{table}[!htb]
 \begin{center}
 \begin{tabular}{|c|c|c|}
 \hline 
@@ -62,7 +67,7 @@ Verde & $546\pm 10$ & Balzers\\
 \hline 
 Verde-azzurro & $499 \pm 11$ & Newport\\ 
 \hline 
-Azzurro & $ 449\pm 9$ & Balzers \\ 
+Azzurro & $ 450\pm 10$ & Balzers \\ 
 \hline
 Blu & $405\pm 11 $ & Newport\\ 
 \hline
@@ -73,7 +78,8 @@ Blu & $405\pm 11 $ & Newport\\
 
 Di seguito sono riportate le tabelle dei dati raccolti per ogni filtro. %immagino che vadano messe?
 \\
-\begin{table}[!ht]
+
+\begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|}
 \hline
 $V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
@@ -94,6 +100,11 @@ $V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
 1920 & 10 & -1.78 & 0.01\\
 \hline
 \end{tabular}
+\caption{Dati filtro Arancio.}
+\end{table}
+
+
+\begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|}
 \hline
 $V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
@@ -118,6 +129,35 @@ $V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
 2300 & 20 & -2.32 & 0.01\\
 \hline
 \end{tabular}
+\caption{Dati filtro Giallo.}
+\end{table}
+
+\begin{table}[!htb]\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+$V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
+\hline
+9.9 & 0.1 & 17.42 & 0.01\\
+71.1 & 0.5 & 10.3 & 0.1\\
+141 & 2 & 5.40 & 0.05\\
+220 & 2 & 1.84 & 0.05\\
+300 & 3 & -0.14 & 0.05\\
+404 & 3 & -1.33 & 0.05\\
+452 & 3 & -1.76 & 0.05\\
+503 & 4 & -1.91 & 0.05\\
+551 & 4 & -1.98 & 0.05\\
+802 & 5 & -2.07 & 0.05\\
+1219 & 7 & -2.11 & 0.05\\
+1563 & 9 & -2.13 & 0.05\\
+1800 & 10 & -2.15 & 0.05\\
+2090 & 20 & -2.16 & 0.05\\
+2490 & 20 & -2.17 & 0.05\\
+\hline
+\end{tabular}
+\caption{Dati filtro Verde.}
+\end{table}
+
+\begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|}
 \hline
 $V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
@@ -139,6 +179,11 @@ $V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
 2570 & 20 & -1.52 & 0.01\\
 \hline
 \end{tabular}
+\caption{Dati filtro Verde-Azzurro.}
+\end{table}
+
+
+\begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|}
 \hline
 $V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
@@ -162,6 +207,11 @@ $V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
 2220 & 20 & -2.35 & 0.01\\
 \hline
 \end{tabular}
+\caption{Dati filtro Azzurro.}
+\end{table}
+
+
+\begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|}
 \hline
 $V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
@@ -185,13 +235,14 @@ $V$ (mV) & $\sigma V$ (mV) & $I$ (nA) & $\sigma I$ (nA)\\
 2270 & 20 & -0.273 & 0.002\\
 \hline
 \end{tabular}
+\caption{Dati filtro Blu.}
 \end{table}
 
 \section{Elaborazione dati: stima potenziale di azzeramento $V_0$}
 Per stimare il potenziale di azzeramento relativo ad una data frequenza dei fotoni incidenti abbiamo percorso i seguenti due metodi.
 \subsection{Metodo A}
 Per ogni filtro si stima la corrente di emissione dall'anodo $I_A$. In prima approssimazione, si suppone che questa non dipenda significativamente dal potenziale di frenamento applicato. Pertanto si assume che la fotocorrente catodica $I_{C}$ sia $I-I_A$. 
-Dati gli andamenti della corrente, si esegue un fit con la funzione modello $\sqrt(I_C)=aV +b$.
+Dati gli andamenti della corrente, si esegue un fit con la funzione modello $\sqrt(I_C)=aV +b$. Per il fit si è utilizzata la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "false"$}, perché il modello di fit usato non è realistico.
 Una volta estratti i parametri, si trova il potenziale di azzeramento $V_0$ ponendo 
 \begin{equation}\label{eq:v0parabola}
 I_{C}=0\rightarrow V_0=-b/a
@@ -199,6 +250,7 @@ I_{C}=0\rightarrow V_0=-b/a
 Per stimare la corrente di emissione dell'anodo, si sono considerati i dati in regime asintotico e si è eseguito un fit con funzione modello $y = b$.
 (Dati i cui valori di corrente differiscono dal valore di corrente massimo per meno del $5\%$ vengono considerati asintotici).
 In tabella \ref{tab:asintotico} si sono riportati i parametri di fit.
+
 \begin{table}[!htb]
 \centering
 \begin{tabular}{|c|c|c|}
@@ -220,15 +272,17 @@ Blu & $-0.27\pm0.01$ & 29.9/3\\
 \end{tabular}
 \caption{Risultati fit del regime asintotico.\label{tab:asintotico}}
 \end{table}
+
 Si osserva che i valori della corrente hanno una debole dipendenza dal potenziale: tendono infatti a crescere in valore assoluto all'aumentare di $V$.
 In effetti l'ipotesi che la corrente anodica non dipenda dal potenziale applicato non è confermata dal $\chi ^2$.
 Ai fini dei fit abbiamo ritenuto sensato considerare come corrente asintotica il valor medio sui punti presi.
-Come incertezza abbiamo preso la semidispersione dei valori di corrente dalla media.%spiega perchè non hai preso 
-Una volta ottenuto il valore della corrente asintotica, è stato eseguito un fit con la funzione modello parabolica sui dati, escludendo quelli in regime asintotico (che non possono rispettare un simile andamento).
+Come incertezza abbiamo preso la semidispersione dei valori di corrente dalla media. Una volta ottenuto il valore della corrente asintotica, è stato eseguito un fit con la funzione modello parabolica sui dati, escludendo quelli in regime asintotico (che non possono rispettare un simile andamento).
 I risultati dei fit sono riportati  nel grafico \ref{fig:fitparabolico}.
-Nelle tabelle  \ref{tab:fitparabolico}si sono riportati i $\chi ^2$ e il relativo potenziale di arresto $V_0$.
+Nelle tabelle  \ref{tab:fitparabolico} si sono riportati i $\chi ^2$ e il relativo potenziale di arresto $V_0$ calcolato dai parametri tramite l'equazione \ref{eq:v0parabola}.
+
 \begin{table}[!htb]
-\begin{tabular}{c|c|c|}
+\centering
+\begin{tabular}{|c|c|c|}
 \hline
 Colore & $\chi ^2$/ndof & $V_0$ (mV)\\
 \hline
@@ -244,14 +298,17 @@ Azzurro & 60091/10 & $648\pm 1$\\
 \hline
 Blu & 220/11 & $658\pm 1$\\
 \hline
-\end{tabular}}
-\caption{$\chi^2$ e $V_0$ per il fit parabolico\label{tab:fitparabolico}}
+\end{tabular}
+\caption{$\chi^2$ e $V_0$ per il fit parabolico.\label{tab:fitparabolico}}
 \end{table}
-\begin{figure}[!ht]
+
+
+\begin{figure}[!htb]
 \centering
-\includegraphics[scale=1]{fitparabolico.png}
+\includegraphics[scale=0.9]{fitparabolico.png}
 \caption{Corrente in funzione del potenziale di frenamento per le varie frequenze (fit parabolico).\label{fig:fitparabolico}}
 \end{figure}
+
 L'errore su $V_0$ è stato calcolato propagando gli errori in quadratura dall'equazione \ref{eq:v0parabola}.
 I $\chi ^2$ normalizzati sono dell'ordine delle migliaia : si evince che l'andamento non è affatto rispettato. Inoltre i potenziali di azzeramento estratti non sono in accordo con quanto predetto dal modello, nè con quanto ottenuto nel punto successivo. Pertanto  abbiamo continuato l'analisi senza eseguire il fit lineare con questi potenziali di azzeramento: non ci aspettiamo risultati coerenti con il modello e con il fit del prossimo punto.
 \subsection{Metodo B}
@@ -283,11 +340,12 @@ Blu & $(6\pm 0.09)\cdot 10^{-3} $ & $366\pm4$  &$0.273 \pm0.03$ & 195/14\\
 \end{tabular}
 \caption{Risultati dei fit con modello esponenziale.\label{tab:fitexp}}
 \end{table}
-\begin{figure}[!ht]
+\begin{figure}[!htb]
 \centering
-\includegraphics[scale=1]{fitesponenziale.png}
+\includegraphics[scale=0.9]{fitesponenziale.png}
 \caption{Grafici con le correnti misurate in funzione dei potenziali di frenamento per le varie frequenze (fit esponenziale).\label{fig:fitexp}}
 \end{figure}
+
 I valori dei $\chi^2$ normalizzati vanno dalle decine alle centinaia: in effetti non ci si aspetta che l'andamento della funzione $I(V)$ sia davvero un esponenziale, ma semplicemente un andamento approssimativo con il quale estrarre dei parametri utili per i calcoli successivi.
 Per ricavare $V_0$ è necessario risolvere l'equazione
 \begin{equation}\label{eq:v0exp}
@@ -298,7 +356,7 @@ Si osserva intanto che la corrente anodica non è davvero indipendente dalla dif
 Pertanto per stimare $\delta I$ si è preferito prendere la semidispersione dei valori delle correnti nella zona asintotica rispetto al valor medio.
 Ai fini della stima non abbiamo considerato l'errore estratto dal fit del parametro $\bar{I}$ in quanto risulta persino più piccolo delle variazioni della corrente $I$ nel regime asintotico.
 Per lo stesso motivo non abbiamo considerato neppure l'errore strumentale (dell'ordine dello 0.4\% nelle scale usate).
-Sebbene la scelta di $\delta I$ appaia arbitraria, questa non influisce sul fit lineare finale e sul valore del coefficiente angolare della retta $h/e$, essendo sia il parametro $a$ che il valore dei $\delta I$ circa lo stesso per le varie frequenze utilizzate, i potenziali di azzeramento $V_0$ vengono traslati della stessa quantità se si varia $delta I$.
+Sebbene la scelta di $\delta I$ appaia arbitraria, questa non influisce sul fit lineare finale e sul valore del coefficiente angolare della retta $h/e$. Infatti, essendo sia il parametro $a$ che il valore dei $\delta I$ circa lo stesso per le varie frequenze utilizzate, i potenziali di azzeramento $V_0$ vengono traslati della stessa quantità se si varia $\delta I$ della stessa quantità per le varie frequenze.
 In tabella \ref{tab:V_0} sono riportati i valori dei potenziali ottenuti in funzione del colore. Gli errori su $V_0$ estratti sono stati calcolati propagando in quadratura gli errori dei parametri (stimati dal fit) che compaiono in \ref{eq:v0exp}.
 \begin{table}[!htb]
 \centering
@@ -319,12 +377,12 @@ Azzurro & 0.02 & $1440 \pm 30$\\
 Blu & 0.02 & $830 \pm 30$\\
 \hline
 \end{tabular}
-\caption{Valori del potenziale d azzeramento in funzione del filtro e del $\delta I$ usato.\label{tab:V_0}}
+\caption{Valori del potenziale di azzeramento in funzione del filtro e del $\delta I$ usato.\label{tab:V_0}}
 \end{table}
 \section{Relazione frequenza-$V_0$}
 Una volta ottenuti i potenziali di azzeramento per le varie frequenze, abbiamo eseguito un fit secondo la funzione modello $V_0=a\cdot f + b$.
-Secondo il modello, $a = h/e\simeq 4.1 \mbox{V}\cdot\mbox{s}\cdot10^{-15}$.
-Il risultati del fit è riportato in figura \ref{fig:fitfinale}.
+Secondo il modello teorico $a = h/e\simeq 4.1 \mbox{V}\cdot\mbox{s}\cdot10^{-15}$.
+Il risultato del fit è riportato in figura \ref{fig:fitfinale}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.7]{fitfinale.png}
@@ -333,12 +391,12 @@ Il risultati del fit è riportato in figura \ref{fig:fitfinale}.
 
 Come valore del coefficiente angolare abbiamo ottenuto $a = (4.0\pm 0.3)\cdot10^{-15} \mbox{V}\cdot{s}$, in buon accordo con il valore atteso.
 Inoltre si ha $\chi ^2$/ndof=1.6/2, quindi l'andamento lineare è rispettato entro gli errori presi. 
-Per il calcolo del $\chi^2$ si è considerato anche l'errore, non trascurabile, sulle frequenze, propagandolo con un valore stima di 3.5 per il coefficiente angolare.
-Il $V_0$ per il filtro arancione non è in accordo con l'andamento teorico. In effetti a questa frequenza (più bassa delle altre), i fotoni hanno meno energia rispetto agli altri i casi. Il materiale eccitato nel fotomoltiplicatore è costituito da due tipi di metallo,; solo uno di questi tuttavia riesce ad essere eccitato a queste energie. Pertanto il comportamento della corrente è  diverso rispetto agli altri.
+Per il calcolo del $\chi^2$ si è considerato anche l'errore, non trascurabile, sulle frequenze, propagandolo con un valore stima di $3.5\cdot 10^{-15}\mbox{V}\cdot{s}$ per il coefficiente angolare.
+Il $V_0$ per il filtro arancione non è in accordo con l'andamento teorico. In effetti a questa frequenza (più bassa delle altre), i fotoni hanno meno energia rispetto agli altri i casi. Il materiale eccitato nel fotomoltiplicatore è costituito da due tipi di metallo; solo uno di questi tuttavia riesce ad essere eccitato a queste energie. Pertanto il comportamento della corrente è  diverso rispetto agli altri.
 Anche il potenziale di azzeramento per il filtro blu non è in accordo con quanto previsto, ma non siamo riusciti a trovare una spiegazione di tale fenomeno. Pertanto abbiamo escluso dal fit lineare i dati ricavati da questi filtri.
 \section{Corrente anodica}
 Successivamente abbiamo studiato il comportamento della corrente anodica in funzione delle frequenze.
-Come prima cosa si osserva che in realtà questa non è costante all'aumentare della tensione applicata all'apparato: in effetti si osserva dai dati un andamento decrescente. Abbiamo quindi eseguito un fit con funzione modello $y = a\cdotx + b$ sui dati asintotici, sui quali avevamo in precedenza eseguito un fit con costante (sezione "Metodo A").
+Come prima cosa si osserva che in realtà questa non è costante all'aumentare della tensione applicata all'apparato: in effetti si osserva dai dati un andamento decrescente. Abbiamo quindi eseguito un fit con funzione modello $y = a \cdot x + b$ sui dati asintotici, sui quali avevamo in precedenza eseguito un fit con costante (sezione "Metodo A").
 In tabella \ref{tab:fitasintoticoretta} sono riportati i risultati dei fit.
 \begin{table}[!htb]
 \centering
