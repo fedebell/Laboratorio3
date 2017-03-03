@@ -30,7 +30,7 @@ Obiettivo dell'esperienza è la verifica dell'effetto fotoelettrico, e la stima 
 
 Si è montato il circuito in figura \ref{circuito}. Nella scatola nera erano fissati il fotomoltiplicatore e la lampada a LED che serviva da sorgente luminosa. Durante l'esperienza, abbiamo posizionato i filtri nell'apposito supporto, avendo cura che fossero ortogonali al piano di appoggio della scatola e quindi al fascio luminoso.
 
-Per ogni filtro si è misurata la corrente in funzione del potenziale applicato ai capi del fotomoltiplicatore. Per un certo potenziale $V_0$ (detto di azzeramento) la corrente di elettroni (estratti per effetto fotoelettrico) che arriva all'amperometro si annulla. Questo ci consente di stimare la massima energia cinetica degli elettroni come $eV_0$, da confrontare con l'energia dei fotoni incidenti $E_{\gamma}=hf$. 
+Per ogni filtro si è misurata la corrente in funzione del potenziale applicato ai capi del fotomoltiplicatore. Per un certo potenziale $V_0$ (detto di azzeramento) la corrente di elettroni (estratti per effetto fotoelettrico dal catodo) che arriva all'amperometro si annulla. Questo ci consente di stimare la massima energia cinetica degli elettroni come $eV_0$, da confrontare con l'energia dei fotoni incidenti $E_{\gamma}=hf$. 
  Il modello teorico prevede che valga la relazione
  \begin{equation}\label{eq:fotoelettrico}
  eV_0 = hf + W
@@ -394,7 +394,7 @@ Il risultato del fit è riportato in figura \ref{fig:fitfinale}.
 Come valore del coefficiente angolare abbiamo ottenuto $a = (3.9\pm 0.2)\cdot10^{-15} \mbox{V}\cdot{s}$, in buon accordo con il valore atteso.
 Si ha $\chi ^2$/ndof=0.8/2, il che indica che si siano sovrastimati gli errori.
 Per il calcolo del $\chi^2$ si è considerato anche l'errore, non trascurabile, sulle frequenze, propagandolo con un valore stima di $3.5\cdot 10^{-15}\mbox{V}\cdot{s}$ per il coefficiente angolare.
-Il $V_0$ per il filtro arancione non è in accordo con l'andamento teorico. In effetti a questa frequenza (più bassa delle altre), i fotoni hanno meno energia rispetto agli altri i casi. Il materiale eccitato nel fotomoltiplicatore è costituito da due tipi di metallo; solo uno di questi tuttavia riesce ad essere eccitato a queste energie. Pertanto il comportamento della corrente è  diverso rispetto agli altri.
+Il $V_0$ per il filtro arancione non è in accordo con l'andamento teorico. In effetti a questa frequenza (più bassa delle altre), i fotoni hanno meno energia rispetto agli altri i casi. Il materiale eccitato nel fotomoltiplicatore è costituito da due tipi di metallo; solo uno di questi tuttavia riesce ad essere eccitato a queste energie. Pertanto il comportamento della corrente è  diverso rispetto agli altri casi.
 Anche il potenziale di azzeramento per il filtro blu non è in accordo con quanto previsto, ma non siamo riusciti a trovare una spiegazione di tale fenomeno. Pertanto abbiamo escluso dal fit lineare i dati ricavati da questi filtri.
 \section{Corrente anodica}
 Successivamente abbiamo studiato il comportamento della corrente anodica in funzione delle frequenze.
@@ -422,7 +422,7 @@ Blu & $-(1.0\pm 0.2)\cdot 10 ^ {-5}$ & $-0.251\pm 0.003$ & 0.7/2\\
 \caption{Risultati fit dati asintotici con retta.\label{tab:fitasintoticoretta}}
 \end{table}
 Osserviamo come tutti i coefficienti angolari siano, per quanto piccoli, negativi (e non compatibili con 0, ossia andamento costante).
-Tuttavia i valori generalmente bassi dei $chi ^2$ non ci consentono di garantire che l'andamento asintotico sia davvero lineare (anzi, potrebbe essere una coda di un esponenziale). 
+Tuttavia i valori generalmente bassi dei $\chi ^2$ non ci consentono di garantire che l'andamento asintotico sia davvero lineare (anzi, potrebbe essere una coda di un esponenziale). 
 Ad ogni modo, il valore dell'ordinata $b$ della retta non è una buona stima della corrente anodica effettivamente circolante nel circuito per potenziali elevati: come valore della corrente asintotica abbiamo preferito considerare il valore ottenuto dal fit con costante (ossia la media pesata). 
 Pertanto, per studiare l'andamento della corrente anodica in funzione delle frequenze si sono riportati in figura \ref{fig:correnteanodica} i valori della corrente asintotica estratta con fit costante e non con il fit appena eseguito. Ci aspettiamo che il valore della corrente anodica dipenda principalmente dallo spettro di emissione della lampada utilizzata e dalle varie trasmittanze dei filtri.
 
