@@ -10,14 +10,14 @@ import scipy.stats
 import uncertainties 
 from uncertainties import ufloat, unumpy
 
-f, V, dV, I, dI = pylab.loadtxt("C:\\Users\\marco\\Desktop\\Laboratorio3\\Fotoelettrico\\datiArancio.txt", unpack = True)
+f, V, dV, I, dI = pylab.loadtxt("C:\\Users\\marco\\Desktop\\Laboratorio3\\Fotoelettrico\\datiArancioasintoto.txt", unpack = True)
 
 def ff(x, a, I, V):
     return I*(numpy.exp(a*(V-x))-1)
 
 
 #faccio il fit (parametri in V*s ma verosimil, mente ho le frequenze in 10**13 Hz...)
-popt = (.1, -2.0, 300.0) #V e il valore di azzeramento della corrente (circa h/e*f? vedi a occhio cmq), I e la corrente asinotitica(la vedi a occhio), a??
+popt = (.1, -2.0, 300) #V e il valore di azzeramento della corrente (circa h/e*f? vedi a occhio cmq), I e la corrente asinotitica(la vedi a occhio), a??
 pars, cov = curve_fit(ff, V, I, popt, dI,)
 print ('a', pars[0], '\pm', cov[0][0]**0.5)
 print('Corrente asintotica', pars[1], '\pm', cov[1][1]**0.5)
@@ -42,7 +42,7 @@ print('ndof = ', ndof)
 #Marco
 #calcolo Potenziale di frenamento; errore messo a caso in pratica: bella discussione da fare
 #print("deltaI = ", cov[1][1]**0.5)
-deltaI = 0.02
+deltaI = 0.03
 v0 = uV+(1/ua)*unumpy.log(uI/deltaI)
 
 print('V_0=', v0)

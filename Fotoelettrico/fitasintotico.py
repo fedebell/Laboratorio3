@@ -4,7 +4,7 @@ from scipy.optimize import curve_fit
 import math
 import scipy.stats
 
-f, V, dV, I, dI = pylab.loadtxt("C:\\Users\\marco\\Desktop\\Laboratorio3\\Fotoelettrico\\datiBluasintoto.txt", unpack = True)
+f, V, dV, I, dI = pylab.loadtxt("C:\\Users\\marco\\Desktop\\Laboratorio3\\Fotoelettrico\\datiGialliasintoto.txt", unpack = True)
 
 def ff(x, b):
     return b + 0*x

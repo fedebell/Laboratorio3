@@ -28,13 +28,13 @@ Obiettivo dell'esperienza è la verifica dell'effetto fotoelettrico, e la stima 
 \end{itemize}
 \section{Descrizione esperimento}
 
-Si è montato il circuito in figura \ref{fig:circuito}. Nella scatola nera erano fissati il fotomoltiplicatore e la lampada a LED che serviva da sorgente luminosa. Durante l'esperienza, abbiamo posizionato i filtri nell'apposito supporto, avendo cura che fossero ortogonali al piano di appoggio della scatola e quindi al fascio luminoso.
+Si è montato il circuito in figura \ref{circuito}. Nella scatola nera erano fissati il fotomoltiplicatore e la lampada a LED che serviva da sorgente luminosa. Durante l'esperienza, abbiamo posizionato i filtri nell'apposito supporto, avendo cura che fossero ortogonali al piano di appoggio della scatola e quindi al fascio luminoso.
 
 Per ogni filtro si è misurata la corrente in funzione del potenziale applicato ai capi del fotomoltiplicatore. Per un certo potenziale $V_0$ (detto di azzeramento) la corrente di elettroni (estratti per effetto fotoelettrico) che arriva all'amperometro si annulla. Questo ci consente di stimare la massima energia cinetica degli elettroni come $eV_0$, da confrontare con l'energia dei fotoni incidenti $E_{\gamma}=hf$. 
  Il modello teorico prevede che valga la relazione
  \begin{equation}\label{eq:fotoelettrico}
  eV_0 = hf + W
- \end{equation}, con $f$ frequenza del fotone incidente e $W_0$ lavoro di estrazione del metallo. Una volta noti i potenziali di azzeramento in funzione delle frequenze eseguiamo un fit per verificare la relazione \ref{eq:fotoelettrico}.
+ \end{equation}, con $f$ frequenza del fotone incidente e $W$ lavoro di estrazione del metallo. Una volta noti i potenziali di azzeramento in funzione delle frequenze eseguiamo un fit per verificare la relazione \ref{eq:fotoelettrico}.
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=1.0]{circuito.png}
@@ -324,13 +324,13 @@ I risultati dei fit sono riportati nella tabella \ref{tab:fitexp} e nel grafico 
 \hline
 Colore & $a$ $\mbox{mV}^{-1}$ &$\bar{V}$ (mV) & $\bar{I}$ (nA) & $\chi^2$/ndof\\
 \hline
-Arancio & $(6\pm 3)\cdot 10 ^{-3}$ & $380 \pm 1$ & $1.762\pm 0.006$ & 20/11\\
+Arancio & $(6\pm 3)\cdot 10 ^{-3}$ & $380 \pm 1$ & $1.762\pm 0.07$ & 20/11\\
 \hline
 Giallo & $(7\pm 0.3) \cdot 10^{-3}$ & $248\pm 6$ & $2.23 \pm 0.07$ & 6100/15\\
 \hline 
 Verde & $(7 \pm 0.03)\cdot 10 ^ {-3}$ & $300 \pm 4$ & $2.23 \pm 0.05$ & 104/12 \\
 \hline
-Verde-Azzurro & $(5\pm 0.1)\cdot 10^{-3}$ & $304\pm 6$ & $1.55 \pm 0.03$ & 638 /12\\
+Verde-Azzurro & $(5\pm 0.1)\cdot 10^{-3}$ & $304\pm 6$ & $1.55 \pm 0.04$ & 638 /12\\
 \hline 
 Azzurro & $(4 \pm 0.1)\cdot 10^{-3}$ & $384\pm 5$ & $2.43 \pm0.04$ & 1466/14\\
 \hline
@@ -346,6 +346,7 @@ Blu & $(6\pm 0.09)\cdot 10^{-3} $ & $366\pm4$  &$0.273 \pm0.03$ & 195/14\\
 \caption{Grafici con le correnti misurate in funzione dei potenziali di frenamento per le varie frequenze (fit esponenziale).\label{fig:fitexp}}
 \end{figure}
 
+Anche per questo fit si è utilizzata la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "false"$}.
 I valori dei $\chi^2$ normalizzati vanno dalle decine alle centinaia: in effetti non ci si aspetta che l'andamento della funzione $I(V)$ sia davvero un esponenziale, ma semplicemente un andamento approssimativo con il quale estrarre dei parametri utili per i calcoli successivi.
 Per ricavare $V_0$ è necessario risolvere l'equazione
 \begin{equation}\label{eq:v0exp}
@@ -353,9 +354,9 @@ I(V_0)=-\bar{I}+\delta(I)\Rightarrow V_0=\bar{V}+\frac{1}{a}\ln\frac{\bar{I}}{\d
 \end{equation} 
 Dobbiamo dunque stimare l'incertezza $\delta I$. 
 Si osserva intanto che la corrente anodica non è davvero indipendente dalla differenza di potenziale applicato: guardando i dati si osserva che, anche per grandi $V$ il valore "asintotico" della corrente tende a crescere in valore assoluto.
-Pertanto per stimare $\delta I$ si è preferito prendere la semidispersione dei valori delle correnti nella zona asintotica rispetto al valor medio.
-Ai fini della stima non abbiamo considerato l'errore estratto dal fit del parametro $\bar{I}$ in quanto risulta persino più piccolo delle variazioni della corrente $I$ nel regime asintotico.
-Per lo stesso motivo non abbiamo considerato neppure l'errore strumentale (dell'ordine dello 0.4\% nelle scale usate).
+Ai fini della stima abbiamo considerato l'errore estratto dal fit del parametro $\bar{I}$: anche se l'andamento complessivo della curva non sarà ben descritta da un esponenziale, è ragionevole supporre che la corrente anodica non sia perfettamente una costante ma tenda ad un valore limite esponenzialmente (almeno nella regione asintotica) .
+Non abbiamo considerato l'errore strumentale (dell'ordine dello 0.4\% nelle scale usate) perchè trascurabile rispetto alle altre incertezze.
+
 Sebbene la scelta di $\delta I$ appaia arbitraria, questa non influisce sul fit lineare finale e sul valore del coefficiente angolare della retta $h/e$. Infatti, essendo sia il parametro $a$ che il valore dei $\delta I$ circa lo stesso per le varie frequenze utilizzate, i potenziali di azzeramento $V_0$ vengono traslati della stessa quantità se si varia $\delta I$ della stessa quantità per le varie frequenze.
 In tabella \ref{tab:V_0} sono riportati i valori dei potenziali ottenuti in funzione del colore. Gli errori su $V_0$ estratti sono stati calcolati propagando in quadratura gli errori dei parametri (stimati dal fit) che compaiono in \ref{eq:v0exp}.
 \begin{table}[!htb]
@@ -364,17 +365,17 @@ In tabella \ref{tab:V_0} sono riportati i valori dei potenziali ottenuti in funz
 \hline
 Colore & $\delta I$ (nA) & $V_{0}$(mV)\\
 \hline
-Arancio & 0.02 & $1100\pm 10$\\
+Arancio & 0.07 & $930\pm 10$\\
 \hline
-Giallo & 0.02 & $850 \pm 30$\\
+Giallo & 0.07 & $693 \pm 20$\\
 \hline
-Verde & 0.02 & $930 \pm 20$\\
+Verde & 0.07 & $808 \pm 30$\\
 \hline
-Verde-Azzurro & 0.02 & $1090\pm 30$ \\
+Verde-Azzurro & 0.04 & $962\pm 30$ \\
 \hline
-Azzurro & 0.02 & $1440 \pm 30$\\
+Azzurro & 0.04 & $1290 \pm 30$\\
 \hline
-Blu & 0.02 & $830 \pm 30$\\
+Blu & 0.03 & $790 \pm 10$\\
 \hline
 \end{tabular}
 \caption{Valori del potenziale di azzeramento in funzione del filtro e del $\delta I$ usato.\label{tab:V_0}}
@@ -389,14 +390,14 @@ Il risultato del fit è riportato in figura \ref{fig:fitfinale}.
 \caption{Grafico del potenziale di azzeramento in funzione della frequenza. I punti esclusi hanno colore e marker diversi.\label{fig:fitfinale}}
 \end{figure}
 
-Come valore del coefficiente angolare abbiamo ottenuto $a = (4.0\pm 0.3)\cdot10^{-15} \mbox{V}\cdot{s}$, in buon accordo con il valore atteso.
-Inoltre si ha $\chi ^2$/ndof=1.6/2, quindi l'andamento lineare è rispettato entro gli errori presi. 
+Come valore del coefficiente angolare abbiamo ottenuto $a = (3.9\pm 0.2)\cdot10^{-15} \mbox{V}\cdot{s}$, in buon accordo con il valore atteso.
+Si ha $\chi ^2$/ndof=0.8/2, il che indica che si siano sovrastimati gli errori.
 Per il calcolo del $\chi^2$ si è considerato anche l'errore, non trascurabile, sulle frequenze, propagandolo con un valore stima di $3.5\cdot 10^{-15}\mbox{V}\cdot{s}$ per il coefficiente angolare.
 Il $V_0$ per il filtro arancione non è in accordo con l'andamento teorico. In effetti a questa frequenza (più bassa delle altre), i fotoni hanno meno energia rispetto agli altri i casi. Il materiale eccitato nel fotomoltiplicatore è costituito da due tipi di metallo; solo uno di questi tuttavia riesce ad essere eccitato a queste energie. Pertanto il comportamento della corrente è  diverso rispetto agli altri.
 Anche il potenziale di azzeramento per il filtro blu non è in accordo con quanto previsto, ma non siamo riusciti a trovare una spiegazione di tale fenomeno. Pertanto abbiamo escluso dal fit lineare i dati ricavati da questi filtri.
 \section{Corrente anodica}
 Successivamente abbiamo studiato il comportamento della corrente anodica in funzione delle frequenze.
-Come prima cosa si osserva che in realtà questa non è costante all'aumentare della tensione applicata all'apparato: in effetti si osserva dai dati un andamento decrescente. Abbiamo quindi eseguito un fit con funzione modello $y = a \cdot x + b$ sui dati asintotici, sui quali avevamo in precedenza eseguito un fit con costante (sezione "Metodo A").
+Come prima cosa si osserva che in realtà questa non è costante all'aumentare della tensione applicata all'apparato: in effetti si osserva dai dati un andamento decrescente. Inoltre, come abbiamo osservato in tabella \ref{tab:asintotico}, l'ipotesi di corrente costante non è compatibile con i valori dei $\chi ^2$. Abbiamo quindi eseguito un fit con funzione modello $y = a \cdot x + b$ sui dati asintotici riportati nella stessa tabella \ref{tab:asintotico}.
 In tabella \ref{tab:fitasintoticoretta} sono riportati i risultati dei fit.
 \begin{table}[!htb]
 \centering
@@ -408,7 +409,7 @@ Arancio & $-(8\pm 3)\cdot 10 ^ {-5}$ & $-1.62 \pm 0.04$ & 0.5/2\\
 \hline
 Giallo & $-(100\pm 8)\cdot 10 ^ {-6}$ & $-2.09\pm0.01$ & 5.3/4\\
 \hline
-Verde & $-(4.8\pm 5)cdot 10 ^ {-5}$ & $-2.1\pm 0.1$ & 0.04/3\\
+Verde & $-(4.8\pm 5)\cdot 10 ^ {-5}$ & $-2.1\pm 0.1$ & 0.04/3\\
 \hline
 Verde-Azzurro & $-(4.1\pm0.7)\cdot 10 ^ {-5}$ & $-1.41\pm0.01$ & 0.9/3\\
 \hline
@@ -419,8 +420,9 @@ Blu & $-(1.0\pm 0.2)\cdot 10 ^ {-5}$ & $-0.251\pm 0.003$ & 0.7/2\\
 \end{tabular}
 \caption{Risultati fit dati asintotici con retta.\label{tab:fitasintoticoretta}}
 \end{table}
-Si può osservare come tutti i coefficienti angolari siano, per quanto piccoli, negativi (e non compatibili con 0, ossia andamento costante).
-Il valore dell'ordinata della retta non è una buona stima della corrente anodica effettivamente circolante nel circuito per potenziali elevati: come valore della corrente asintotica abbiamo preferito considerare il valore ottenuto dal fit con costante (ossia la media pesata).
+Osserviamo come tutti i coefficienti angolari siano, per quanto piccoli, negativi (e non compatibili con 0, ossia andamento costante).
+Tuttavia i valori generalmente bassi dei $chi ^2$ non ci consentono di garantire che l'andamento asintotico sia davvero lineare (anzi, potrebbe essere una coda di un esponenziale). 
+Ad ogni modo, il valore dell'ordinata $b$ della retta non è una buona stima della corrente anodica effettivamente circolante nel circuito per potenziali elevati: come valore della corrente asintotica abbiamo preferito considerare il valore ottenuto dal fit con costante (ossia la media pesata). 
 Pertanto, per studiare l'andamento della corrente anodica in funzione delle frequenze si sono riportati in figura \ref{fig:correnteanodica} i valori della corrente asintotica estratta con fit costante e non con il fit appena eseguito. Ci aspettiamo che il valore della corrente anodica dipenda principalmente dallo spettro di emissione della lampada utilizzata e dalle varie trasmittanze dei filtri.
 
 \begin{figure}[!htb]
