@@ -1,0 +1,6 @@
+#lambda		dlambda		alpha	dalpha	     colore
+643.8		0.1			212.33		0.1		rosso
+508.643		0.001		211.15		0.1		verde
+480.0		0.1			210.50		0.1		azzurro
+467.8		0.1			210.39		0.1		blu
+441.6		0.1			210.05		0.1		violetto
