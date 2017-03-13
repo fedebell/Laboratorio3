@@ -1,0 +1,52 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\newcommand{\rem}[1]{[\emph{#1}]}
+
+\author{Gruppo BN \\ Federico Belliardo, Marco Costa, Lisa Bedini}
+\title{Ottica 2}
+\begin{document}
+
+\maketitle
+\section{Scopo dell'esperienza}
+L'esperienza si divide in due parti distinte. Nella prima si stima la lunghezza d'onda della radiazione di un laser a diodo mediante la misura degli ordini di diffrazione provocati dall'incidenza sulla scala graduata di un calibro utilizzata come reticolo. Nella seconda parte mediante un laser He-Ne si calibra un interferometro di Michelson per eseguire la misura della lunghezza d'onda della riga verde del mercurio, e in seguito osservare le frange di interferenza con luce bianca.
+
+\section{Materiale occorrente}
+\begin{itemize}
+\item Calibro
+\item Laser a diodo
+\item Metro a nastro
+\item Interferometro di Michelson
+\item Laser He-Ne
+\item Lampada al mercurio
+\item Filtro verde
+\end{itemize}
+
+\section{Parte A - Misura della lunghezza d'onda del laser a diodo}
+\subsection{Modalità operative}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=.5]{disegno1.png}
+\caption{Disegno schematico dell'esperimento.}
+\label{parteAfigura}
+\end{figure}
+La spaziatura tra le suddivisioni della scala graduata del calibro è troppo grande per poter essere usata come reticolo di diffrazione per la luce visibile senza l'accorgimento di far incidere il fascio in modo radente alla scala, cioè con angolo di incidenza prossimo a $\frac{\pi}{2}$. Il fascio riflesso e i vari ordini di diffrazione sono visibili un un muro (schermo) a circa due metro di distanza.\\
+Sul muro si è posto un foglio di carta su cui si sono segnati il punto in cui il laser sarebbe arrivato se non fosse stato diffratto, il punto in cui il fascio viene riflesso dal calibro e i vari ordini di diffrazione dal calibro. La media delle posizioni del punto di incidenza diretta e del punto di riflessione è il piano del tavolo proiettato sul muro. Da questo punto è necessario misurare la distanza $D$ (distanza tra il calibro e il muro) e tutte le lunghezze $h_0, h_1, h_2,...$. indicate nella figura \ref{parteAfigura}.\\
+Inserire altri eventuali accorgimenti sperimentali su come si misurano d e D e dire come sono stati presi gli errori su queste misure.\\
+La misura della distanza $D$ è stata eseguito con metro a nastro, mentre per $d$ si è preso il valore nominale della separazione delle tacche della scala graduata prendendo come incertezza $frac{1}{20} mm$, cioè la suddivisone del nonio. Non sono sicuro di questa cosa.\\
+\subsection{Raccolta ed elaborazione dati}
+La legge del reticolo per questa configurazione geometrica è: $d(sin(\theta_i)-sin(\theta_d) = m \lambda $, dove $\theta_d = \frac{\pi}{2} - sin(\theta_n)$. Riscrivendo la legge come: $sin(\theta_d) = -m \frac{\lambda}{d} +sin(\theta_i)$. La relazione funzionale tra $sin(\theta_d)$ e $m$ è una retta, si è pertanto eseguito un fit dei dati riportati in tabella \ref{tabella}.
+
+\section{Parte B - Misura della lunghezza d'onda della riga verde del mercurio}
+\subsection{Modalità operative}
+
+\subsection{Raccolta ed elaborazione dati}
+
+\section{Conclusioni}
+
+\end{document}

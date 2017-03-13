@@ -16,7 +16,8 @@ def linear(x, a, b):
     return a*x+b
 
 
-lamb, dlamb, alpha, dalpha = pylab.loadtxt('Users\Lisa\Desktop\Lab3\cadmio.txt', unpack=True)
+lamb, dlamb, alpha, dalpha = pylab.loadtxt('/home/federico/Laboratorio3/Ottica1/cadmio.txt', unpack=True)
+
 
 l=1/lamb
 dl = l*dlamb/lamb
@@ -24,17 +25,16 @@ dl = l*dlamb/lamb
 L = unumpy.uarray(l, dl)
 A = unumpy.uarray(alpha, dalpha)
 
-
 pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.rc('font',size=13)
 
-pylab.xlim([1, 4.5])
-pylab.ylim([10, 90])
+#pylab.xlim([1, 4.5])
+#pylab.ylim([10, 90])
 pylab.title('Lampada al cadmio', fontsize = "16")
 
-pylab.xlabel('$1/\lambda [microm^-1]$', size = "14")
+pylab.xlabel('$1lambda [microm^-1]$', size = "14")
 
-pylab.ylabel('$\alpha [gradi]$', size = "14")
+pylab.ylabel('$alpha [gradi]$', size = "14")
 pylab.grid(color = "gray")
 pylab.errorbar(l, alpha, dalpha, dl, "o", color="black")
 
@@ -73,5 +73,9 @@ a = ufloat(a, cov[0][0]**0.5)
 b = ufloat(b, cov[1][1]**0.5)
 
 print("Si ricavano dai parametti i seguenti due valori di a = ", a, "e di b =",  b)
+
+sodio = 142.5+0.0833
+sodiol = (sodio-b)/a
+print("sodio = " + str(1/sodiol))
 
 pylab.show()
