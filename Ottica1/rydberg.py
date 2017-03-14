@@ -15,7 +15,6 @@ from scipy.signal import argrelextrema
 def linear(x, a, b):
     return a*x+b
 
-
 n1, n2, alpha0, dalpha0, alpha1, dalpha1 = pylab.loadtxt('Users\Lisa\Desktop\Lab3\rydberg.txt', unpack=True)
 
 thetai=(180-alpha0)*0.5

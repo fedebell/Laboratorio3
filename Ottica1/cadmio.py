@@ -32,9 +32,8 @@ pylab.rc('font',size=13)
 #pylab.ylim([10, 90])
 pylab.title('Lampada al cadmio', fontsize = "16")
 
-pylab.xlabel('$1lambda [microm^-1]$', size = "14")
-
-pylab.ylabel('$alpha [gradi]$', size = "14")
+pylab.xlabel("1/lambda (1/nm)", size = "14")
+pylab.ylabel("alpha (gradi)", size = "14")
 pylab.grid(color = "gray")
 pylab.errorbar(l, alpha, dalpha, dl, "o", color="black")
 
@@ -52,6 +51,7 @@ print(par, cov)
 
 a = par[0]
 b = par[1]
+
 chisq = (((alpha-linear(l, a, b))/error)**2)
 somma = sum(chisq)
 ndof = len(l) - 2 #Tolgo due parametri estratti dal fit
