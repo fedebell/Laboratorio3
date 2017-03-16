@@ -32,7 +32,11 @@ Inoltre avremo a disposizione due telescopi, uno di raccolta della luce dotato d
 La risoluzione del goniometro è di $1'$ nella parte A, di $0.5'$ nella parte B.\\
 \section{Parte A - Descrizione esperimento}
 \subparagraph{Lampada al cadmio}
+<<<<<<< HEAD
 Per tarare l'apparato strumentale si è posizionata la lampada al cadmio in modo da allineare le fenditure della lampada stessa e del telescopio di raccolta. Abbiamo regolato l'apertura del diaframma al minimo così da avere l'incertezza minima, quindi abbiamo posizionando l'elemento dispersivo con un angolo di almeno $60\degree$ rispetto alla direzione del telescopio di raccolta e osservato le righe di emissione del cadmio, di colori rosso, verde, azzurro e viola. Come ultima cosa abbiamo ruotato lentamente il prisma per trovare l'angolo di minima dispersione per la riga verde \footnote{Perché ha la lunghezza d'onda più vicina a quella del sodio.}, cioè l'angolo di inversione del moto delle righe dello spettro che si osserva muovendo il prisma. Non abbiamo eseguito una misura dell'angolo $alpha_0$ al quale viene focalizzato il fascio (come sarà invece eseguito nella prossima parte) poiché risulta essere una costante additiva inessenziale nella nostra analisi dati.
+=======
+Per tarare l'apparato strumentale si è posta la lampada al cadmio in modo da allineare le fenditure, della lampada stessa e del telescopio di raccolta. Abbiamo regolato l'apertura del diaframma al minimo così da avere l'incertezza minima, quindi abbiamo posizionando l'elemento dispersivo con un angolo di almeno $60\degree$ rispetto alla direzione del telescopio di raccolta e osservato le righe di emissione del cadmio, di colori rosso, verde, azzurro e viola. Come ultima cosa abbiamo ruotato lentamente il prisma per trovare l'angolo di minima dispersione per la riga verde \footnote{Perché ha la lunghezza d'onda più vicina a quella del sodio.}, cioè l'angolo di inversione del moto delle righe dello spettro che si osserva muovendo il prisma. Non abbiamo eseguito una misura dell'angolo $alpha_0$ al quale viene focalizzato il fascio (come sarà invece eseguito nella prossima parte) poiché risulta essere una costante additiva inessenziale nella nostra analisi dati.
+>>>>>>> 908a2a7d441041dc324a66f9d303a7971d53f5cb
 Si è dunque eseguita la calibrazione spettrale, nota le lunghezze d'onda delle principali righe di emissione del cadmio. Abbiamo misurato l'angolo di osservazione di ciascuna riga (vedi tabella \ref{cadmio}) e eseguito un fit lineare $y=ax+b$ nel grafico $\alpha\, \textit{vs}\, 1/\lambda$ ottenendo come parametri $a = -3250 \pm 40 \frac{\degree}{nm}$ e $ b = 148.1 \pm 0.1 \degree$ e $\chi^2=23/2$. Il $\chi^2$ ottenuto è alto a causa del fatto che la curva di calibrazione lineare in funzione di $\frac{1}{\lambda}$ è solo un'approssimazione, in realtà si ha comportamento molto più complesso per il prisma. I dati raccolti si trovano in tabella \ref{cadmio} mentre in figura \ref{pin} è presente il grafico con il \emph{fit}.
 
 \begin{table}[!htb]
@@ -63,7 +67,11 @@ Viola & $467.8 \pm 0.1$	& $141 \degree 5' \pm 1'$ \\
 Per eseguire i fit di tutta la relazione si è la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "true"$}.\\
 
 \subparagraph{Lampada al sodio}
+<<<<<<< HEAD
 Si è sostituita la lampada al cadmio con la lampada al sodio, precedentemente accesa in modo che si stabilizzasse. Abbiamo individuato la riga\footnote{Un doppietto in realtà ma l'uso del prisma non consente tale risoluzione.} di emissione del sodio e misurata la sua posizione angolare, che risulta $\alpha_{Na}=142 \degree 35'\pm 1'$ \footnote{In tutta la relazione ogni misura angolare è intesa come media delle tre misure eseguite dai tre componenti del gruppo ed è intesa avere come errore quello di lettura sulla scala graduata del nonio.}. Usando le relazioni ricavate precedentemente dal \emph{fit}, si calcola $\lambda_{Na}=590 \pm 10 nm$. Questo valore sarà confrontato con quello ottenuto usando il reticolo, elemento dispersivo con più potere risolutivo del prisma.
+=======
+Si è sostituita la lampada al cadmio con la lampada al sodio precedentemente accesa in modo che si stabilizzasse. Abbiamo individuato la riga\footnote{Un doppietto in realtà ma l'uso del prisma non consente tale risoluzione.} di emissione del sodio e misurata la sua posizione angolare, che risulta $\alpha_{Na}=142 \degree 35'\pm 1'$ \footnote{In tutta la relazione ogni misura angolare è intesa come media delle tre misure eseguite dai tre componenti del gruppo ed è intesa avere come errore quello di lettura sulla scala graduata del nonio.}. Usando le relazioni ricavate precedentemente dal \emph{fit}, si calcola $\lambda_{Na}=590 \pm 10 nm$. Questo valore sarà confrontato con quello ottenuto usando il reticolo, elemento dispersivo con più potere risolutivo del prisma.
+>>>>>>> 908a2a7d441041dc324a66f9d303a7971d53f5cb
 
 \section{Parte B - Descrizione esperimento}
 \subparagraph{Lampada al mercurio}
@@ -90,6 +98,7 @@ Si è sostituita la lampada a mercurio con quella a idrogeno, in modo da avere l
 \hline
 Colore & $\alpha$ ($\degree$) & $\lambda$ (nm)\\
 \hline 
+<<<<<<< HEAD
 Viola & $98 \degree 2' \pm 1'$ & $432 \pm 2$ \\ 
 \hline 
 Azzurro & $101 \degree 53' \pm 1'$ & $486 \pm 2 $ \\ 
@@ -97,6 +106,15 @@ Azzurro & $101 \degree 53' \pm 1'$ & $486 \pm 2 $ \\
 Verde (deb.)& $105 \degree 5' \pm 1'$ & $531 \pm 2 $ \\ 
 \hline 
 Rossa & $113 \degree 30' \pm 1'$ & $653 \pm 1 $ \\ 
+=======
+Viola & $98 \degree 2' \pm 1'$ & $432 \pm 2 nm$ \\ 
+\hline 
+Azzurro & $101 \degree 53' \pm 1'$ & $486 \pm 2 nm$ \\ 
+\hline 
+Verde (deb.)& $105 \degree 5' \pm 1'$ & $531 \pm 2 nm$ \\ 
+\hline 
+Rossa & $113 \degree 30' \pm 1'$ & $653 \pm 1 nm$ \\ 
+>>>>>>> 908a2a7d441041dc324a66f9d303a7971d53f5cb
 \hline 
 %Viola (2° Ord.) & $113 \degree 35' \pm 1'$ & _ \\ 
 %\hline 
@@ -114,7 +132,11 @@ Per la serie di \emph{Balmer}, la più visibile, $n_1=2$; a questa serie apparte
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.6]{ryd.png}
+<<<<<<< HEAD
 \caption{\emph{fit} per determinare la costante di Rydberg.}
+=======
+\caption{INSERIRE DIDASCALIA \emph{fit}.}
+>>>>>>> 908a2a7d441041dc324a66f9d303a7971d53f5cb
 \label{pin}
 \end{figure}
 
