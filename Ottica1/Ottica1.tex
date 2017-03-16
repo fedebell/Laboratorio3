@@ -16,7 +16,7 @@
 \maketitle
 \section{Scopo dell'esperienza}
 Questa esperienza si divide in due parti: A e B.
-La parte A è dedicata al calcolo della lunghezza d'onda del sodio, mentre nella parte B attraverso l'osservazione della luce emessa da tre lampade diverse si è misurato il passo reticolare dello spettroscopio a reticolo e la costante di Rydberg.
+La parte A è dedicata al calcolo della lunghezza d'onda del sodio, mentre nella parte B attraverso l'osservazione della luce emessa da tre lampade diverse si è misurato il passo reticolare dello spettroscopio a reticolo, la costante di Rydberg e la separazione del doppietto del sodio.
 
 \section{Materiale occorrente}
 \begin{itemize}
@@ -30,17 +30,18 @@ La parte A è dedicata al calcolo della lunghezza d'onda del sodio, mentre nella
 \end{itemize}
 \\
 Inoltre avremo a disposizione due telescopi, uno di raccolta della luce dotato di fenditura per regolare l'intensità del fascio, e uno di osservazione solidale a un supporto mobile dotato di goniometro, per misurare la posizione del telescopio rispetto all'elemento dispersivo. Tali telescopi presentano una croce nera sulla lente che indica il centro della stessa, in questo modo è possibile avere un punto di riferimento per effettuare le misure.
+Il goniometro utilizzati nella parte A e B hanno una risoluzione di $1'$ e $0,5 '$ rispettivamente.
 
 \section{Parte A - Descrizione esperimento}
 \subparagraph{Lampada al cadmio}
 Per tarare l'apparato strumentale si è posta la lampada al cadmio in modo da allineare le fenditure, della lampada stessa e del telescopio di raccolta. Abbiamo regolato l'apertura del diaframma al minimo così da avere l'incertezza minima, quindi abbiamo posizionando l'elemento dispersivo con un angolo di almeno $60\degree$ rispetto alla direzione del telescopio di raccolta e osservato le righe di emissione del cadmio, di colori rosso, verde, azzurro e viola. Come ultima cosa abbiamo ruotato lentamente il prisma per trovare l'angolo di minima dispersione per la riga verde\footnote{Perché ha la lunghezza d'onda più vicina a quella del sodio.}, cioè l'angolo di inversione del moto delle righe dello spettro che si osserva muovendo il prisma. Non abbiamo eseguito una misura dell'angolo $\alpha_0$ al quale viene focalizzato il fascio (come sarà invece eseguito nella prossima parte) poiché risulta essere una costante additiva inessenziale nella nostra analisi dati.
-Si è dunque eseguita la calibrazione spettrale, note le lunghezze d'onda delle principali righe di emissione del cadmio. Abbiamo misurato l'angolo di osservazione di ciascuna riga \footnote{In tutta la relazione ogni misura angolare è intesa come media delle tre misure eseguite dai tre componenti del gruppo ed è intesa avere come errore quello di lettura sulla scala graduata del nonio.} (vedi tabella \ref{cadmio}) e eseguito un fit lineare $y=ax+b$ nel grafico $\alpha\, \textit{vs}\, 1/\lambda$ ottenendo come parametri $a = -3250 \pm 40 \frac{\degree}{\,nm}$ e $ b = 148.1 \pm 0.1 \degree$ e $\chi^2=23/2$. Il $\chi^2$ ottenuto è alto a causa del fatto che la curva di calibrazione lineare in funzione di $\frac{1}{\lambda}$ è solo un'approssimazione, in realtà si ha comportamento molto più complesso per il prisma. I dati raccolti si trovano in tabella \ref{cadmio} mentre in figura \ref{pin} è presente il grafico con il \emph{fit}.
+Si è dunque eseguita la calibrazione spettrale, note le lunghezze d'onda delle principali righe di emissione del cadmio. Abbiamo misurato l'angolo di osservazione di ciascuna riga \footnote{In tutta la relazione ogni misura angolare riportata è intesa come media delle tre misure eseguite dai tre componenti del gruppo. Come errore si è preso il massimo fra quello di lettura sulla scala graduata del nonio e la semidispersione dei valori letti.} (vedi tabella \ref{cadmio}) e eseguito un fit lineare $y=ax+b$ nel grafico $\alpha\, \textit{vs}\, 1/\lambda$ ottenendo come parametri $a = -3250 \pm 40 \frac{\degree}{\,\mbox{nm}}$ e $ b = 148.1 \pm 0.1 \degree$ e $\chi^2=23/2$. Il $\chi^2$ ottenuto è alto a causa del fatto che la curva di calibrazione lineare in funzione di $\frac{1}{\lambda}$ è solo un'approssimazione, in realtà si ha comportamento molto più complesso per il prisma. I dati raccolti si trovano in tabella \ref{cadmio} mentre in figura \ref{pin} è presente il grafico con il \emph{fit}.
 
 \begin{table}[!htb]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline 
-Colore & $\lambda (\,nm)$ & $\alpha (\degree)$ \\
+Colore & $\lambda (\,\mbox{nm})$ & $\alpha (\degree)$ \\
 \hline
 Rosso & $643.8\pm0.1$ & $143 \degree 1' \pm 1'$ \\ 
 \hline 
@@ -80,7 +81,7 @@ Quindi è possibile calcolare $d$ sfruttando la relazione del reticolo
 \begin{equation}
 d(sin{\theta_i}-sin{\theta_d})=m\lambda
 \end{equation}
-Si ottiene $d = 840.2 \pm 0.5 \,nm$ considerando nota la lunghezza d'onda del mercurio $\lambda_{Hg}=546.074\pm0.001\,\,nm$. Dal valore di $d$ si calcola il numero di righe per millimetro $N = 1190 \pm 3$, vicino ma non perfettamente in accordo con il valore nominale di 1200 (differisce da esso per $3 \Delta N$).
+Si ottiene $d = 840.2 \pm 0.5 \,\mbox{nm}$ considerando nota la lunghezza d'onda del mercurio $\lambda_{Hg}=546.074\pm0.001\,\,\mbox{nm}$. Dal valore di $d$ si calcola il numero di righe per millimetro $N = 1190 \pm 3$, vicino ma non perfettamente in accordo con il valore nominale di 1200 (differisce da esso per $3 \Delta N$).
 
 \subparagraph{Lampada a idrogeno}
 Si è sostituita la lampada a mercurio con quella a idrogeno, senza modificare l'apertura della fenditura del telescopio. Abbiamo quindi misurato la distanza angolare delle righe di emissione per calcolarne le lunghezze d'onda mediante la formula $d(\sin{\theta_i}-\sin{\theta_d})=m\lambda$. I risultati sono riportati in tabella \ref{idrogeno}. Le righe verde e arancione non fanno parte dello spettro dell'idrogeno ma sono dovute ad impurità nella lampada pertanto i dati relativi a queste non saranno necessari nell'analisi dati, ma sono riportati nella tabella per completezza.\\
@@ -126,10 +127,10 @@ Per la serie di \emph{Balmer}, quella con lunghezze d'onda nel visibile, $n_1=2$
 
 
 \subparagraph{Lampada al sodio}
-Si è sostituita la lampada a idrogeno con quella al sodio per misurare la lunghezza d'onda del doppietto giallo e confrontare tale dato con quello attenuto nella prima parte dell'esperienza. Al primo ordine di diffrazione abbiamo misurato i seguenti valori angolari $\alpha_{Na,1}= 108\degree 42'\pm 1' $ e $\alpha_{Na,2}=108\degree 45' \pm 1'$, quindi, sfruttando l'equazione del reticolo si ottiene la lunghezza d'onda $\lambda_{Na,1}=583.0 \pm 2 \,nm$ e $\lambda_{Na,2}=583.8 \pm 2 \,nm$.
+Si è sostituita la lampada a idrogeno con quella al sodio per misurare la lunghezza d'onda del doppietto giallo e confrontare tale dato con quello attenuto nella prima parte dell'esperienza. Al primo ordine di diffrazione abbiamo misurato i seguenti valori angolari $\alpha_{Na,1}= 108\degree 42'\pm 1' $ e $\alpha_{Na,2}=108\degree 45' \pm 1'$, quindi, sfruttando l'equazione del reticolo si ottiene la lunghezza d'onda $\lambda_{Na,1}=583.0 \pm 2 \,\mbox{nm}$ e $\lambda_{Na,2}=583.8 \pm 2 \,\mbox{nm}$.
 Abbiamo abusato delle regole sulle cifre significative perché in tutta l'analisi dati gli errori sono sempre stati sovrastimati, ma si voleva mostrare la separazione tra le righe spettrali stimata di $0.8 \, \,nm$, contro quella attesa di $0.6 \, \,nm$, i due valori sono molto vicini.\\
 
 \section{Conclusioni}
-Abbiamo ottenuto un'ottima stima della costante di Rydberg, con un errore inferiore all'$1\%$. Anche la stima della lunghezza d'onda della luce gialla del sodio è sostanzialmente corretta rispetto al valore atteso di circa $590 \, \,nm$. Tuttavia l'errore è evidentemente sovrastimato e rende la misura  compatibile con quella eseguita successivamente usando il prisma che è circa $583\,nm$ ma con un errore che la rende incompatibile con il valore noto. Si suppone che ciò sia dovuto ad un errore sistematico su $d$ causato dall'errata determinazione degli angoli a cui si avevano l'ordine 0 e 1 della riga verde del mercurio.\\
+Abbiamo ottenuto un'ottima stima della costante di Rydberg, con un errore inferiore all'$1\%$. Anche la stima della lunghezza d'onda della luce gialla del sodio è sostanzialmente corretta rispetto al valore atteso di circa $590 \, \,\mbox{nm}$. Tuttavia l'errore è evidentemente sovrastimato e rende la misura  compatibile con quella eseguita successivamente usando il prisma che è circa $583\,\mbox{nm}$ ma con un errore che la rende incompatibile con il valore noto. Si suppone che ciò sia dovuto ad un errore sistematico su $d$ causato dall'errata determinazione degli angoli a cui si avevano l'ordine 0 e 1 della riga verde del mercurio. In effetti le lunghezze d'onda per la serie Balmer dell'idrogeno ottenute (tabella \ref{idrogeno}) risultano tutte inferiori di circa 3 nm ai valori attesi\footnote{Si comsulti ad esempio i valori riportati sul sito del NIST}.\\
 
 \end{document}
