@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  16 MAR 2017 22:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  16 MAR 2017 23:19
 entering extended mode
 **./Ottica1.tex
 (Ottica1.tex
@@ -652,11 +652,11 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-<imm.png, id=1, 867.24pt x 433.62pt>
+<imm.png, id=1, 867.24pt x 430.0065pt>
 File: imm.png Graphic file (type png)
  <use imm.png>
 Package pdftex.def Info: imm.png used on input line 60.
-(pdftex.def)             Requested size: 520.34802pt x 260.17401pt.
+(pdftex.def)             Requested size: 520.34802pt x 258.00589pt.
 
 Overfull \hbox (36.65115pt too wide) in paragraph at lines 60--61
  [][] 
@@ -688,11 +688,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
-<ryd.png, id=25, 867.24pt x 433.62pt>
+<ryd.png, id=25, 867.24pt x 430.0065pt>
 File: ryd.png Graphic file (type png)
  <use ryd.png>
 Package pdftex.def Info: ryd.png used on input line 123.
-(pdftex.def)             Requested size: 520.34802pt x 260.17401pt.
+(pdftex.def)             Requested size: 520.34802pt x 258.00589pt.
 
 Overfull \hbox (36.65115pt too wide) in paragraph at lines 123--124
  [][] 
@@ -735,7 +735,7 @@ gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb>
-Output written on Ottica1.pdf (4 pages, 244365 bytes).
+Output written on Ottica1.pdf (4 pages, 241131 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

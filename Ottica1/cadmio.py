@@ -16,7 +16,7 @@ def linear(x, a, b):
     return a*x+b
 
 
-lamb, dlamb, alpha, dalpha = pylab.loadtxt('/home/federico/Laboratorio3/Ottica1/cadmio.txt', unpack=True)
+lamb, dlamb, alpha, dalpha = pylab.loadtxt('C:\\Users\\marco\\Desktop\\Laboratorio3\\Ottica1\\cadmio.txt', unpack=True)
 
 
 l=1/lamb
@@ -32,7 +32,7 @@ pylab.rc('font',size=13)
 #pylab.ylim([10, 90])
 pylab.title('Lampada al cadmio', fontsize = "16")
 
-pylab.xlabel("1/lambda (1/nm)", size = "14")
+pylab.xlabel("$1/\lambda$ (1/nm)", size = "14")
 pylab.ylabel("alpha (gradi)", size = "14")
 pylab.grid(color = "gray")
 pylab.errorbar(l, alpha, dalpha, dl, "o", color="black")
