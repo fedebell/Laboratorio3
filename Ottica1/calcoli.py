@@ -42,16 +42,19 @@ d= ufloat(840.0, 3.0)
 
 viola = ufloat(267.0+47.0/60.0, 1.0/60.0)
 azzurro = ufloat(271.0+38.0/60.0, 1.0/60.0)
+arancio = ufloat(280.0 + 33.0/60.0, 1.0/60.0)
 verde = ufloat(274.0+50.0/60.0, 5.0/60.0)
 rossa = ufloat(283.0+20.0/60.0, 1.0/60.0)
 
 viola = viola - a
 azzurro = azzurro - a
+arancio = arancio -a
 verde = verde - a
 rossa = rossa -a
 
 violaD = 180.0-(t_i/3.1415)*180.0-viola
 azzurroD = 180.0-(t_i/3.1415)*180.0-azzurro
+arancioD = 180.0 -(t_i/3.1415)*180.0-arancio
 verdeD = 180.0-(t_i/3.1415)*180.0-verde
 rossaD = 180.0-(t_i/3.1415)*180.0-rossa
 
@@ -59,7 +62,9 @@ violaD = (violaD/180.0)*3.1415
 azzurroD = (azzurroD/180.0)*3.1415
 verdeD = (verdeD/180.0)*3.1415
 rossaD = (rossaD/180.0)*3.1415
+arancioD = (arancioD/180.0)*3.1415
  
+lambdaArancio = d*(sin(t_i)-sin(arancioD))
 lambdaVioletto = d*(sin(t_i)-sin(violaD))
 lambdaAzzurro = d*(sin(t_i)-sin(azzurroD))
 lambdaVerde = d*(sin(t_i)-sin(verdeD))
@@ -88,6 +93,7 @@ x = (1/n2**2-1/n1**2)
 y = 1000*y
 
 print("Lunghezze d'onda:")
+print("Arancio = ", lambdaArancio)
 print("Violetto = ", lambdaVioletto)
 print("Azzurro = ", lambdaAzzurro)
 print("Verde = ", lambdaVerde)
@@ -100,7 +106,7 @@ pylab.xlim(0.138, 0.211)
 
 pylab.title('Determinazione della costante di Rydberg', fontsize = "16")
 
-pylab.ylabel('1/lambda (1/um)', size = "14")
+pylab.ylabel(r'$ \Lambda $ (1/um)', size = "14")
 
 pylab.xlabel('1/n_1^2-1/n_2^2', size = "14")
 pylab.grid(color = "gray")
