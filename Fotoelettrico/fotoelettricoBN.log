@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  3 MAR 2017 14:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  3 MAR 2017 14:15
 entering extended mode
 **./fotoelettricoBN.tex
 (fotoelettricoBN.tex
@@ -623,29 +623,79 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 21.
 
+<circuito.png, id=1, 291.489pt x 220.4235pt>
+File: circuito.png Graphic file (type png)
+ <use circuito.png>
+Package pdftex.def Info: circuito.png used on input line 40.
+(pdftex.def)             Requested size: 291.48828pt x 220.42294pt.
+ [1
 
-LaTeX Warning: Reference `circuito' on page 1 undefined on input line 31.
+{C:/Users/marco/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
+ []
 
-LaTeX Warning: Reference `eq:fotoelettrico' on page 1 undefined on input line 3
-7.
+[2 <./circuito.png>]
 
-! I can't write on file `fotoelettricoBN.pdf'.
-Please type another file name for output
-! Emergency stop.
-<argument> ...stobj \GPT@objref }}}\fi \pdfximage 
-                                                  \GPT@RuleAttr \ifx \GPT@pa...
-l.40   \includegraphics[scale=1.0]{circuito.png}
-                                                
-*** (job aborted, file error in nonstop mode)
+LaTeX Warning: Text page 3 contains only floats.
 
- 
+[3] [4] <fitparabolico.png, id=28, 578.16pt x 430.0065pt>
+File: fitparabolico.png Graphic file (type png)
+
+<use fitparabolico.png>
+Package pdftex.def Info: fitparabolico.png used on input line 308.
+(pdftex.def)             Requested size: 520.33919pt x 387.00227pt.
+
+Overfull \hbox (36.64232pt too wide) in paragraph at lines 308--309
+ [][] 
+ []
+
+<fitesponenziale.png, id=29, 578.16pt x 430.0065pt>
+File: fitesponenziale.png Graphic file (type png)
+ <use fitesponenziale.png>
+Package pdftex.def Info: fitesponenziale.png used on input line 345.
+(pdftex.def)             Requested size: 520.33919pt x 387.00227pt.
+
+Overfull \hbox (36.64232pt too wide) in paragraph at lines 345--346
+ [][] 
+ []
+
+[5] <fitfinale.png, id=34, 578.16pt x 430.0065pt>
+File: fitfinale.png Graphic file (type png)
+ <use fitfinale.png>
+Package pdftex.def Info: fitfinale.png used on input line 390.
+(pdftex.def)             Requested size: 404.70924pt x 301.00249pt.
+ [6 <./fitparabolico.png>] [7 <./fitesponenziale.png>]
+<correnteanodica.png, id=44, 578.16pt x 430.0065pt>
+File: correnteanodica.png Graphic file (type png)
+ <use correnteanodica.png>
+Package pdftex.def Info: correnteanodica.png used on input line 431.
+(pdftex.def)             Requested size: 404.70924pt x 301.00249pt.
+
+[8 <./fitfinale.png>] [9 <./correnteanodica.png>] (fotoelettricoBN.aux) ) 
 Here is how much of TeX's memory you used:
- 3963 strings out of 493334
- 50482 string characters out of 3139252
- 128866 words of memory out of 3000000
- 7420 multiletter control sequences out of 15000+200000
- 11196 words of font info for 44 fonts, out of 3000000 for 9000
+ 4016 strings out of 493334
+ 51367 string characters out of 3139252
+ 159989 words of memory out of 3000000
+ 7465 multiletter control sequences out of 15000+200000
+ 12788 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,6n,25p,802b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 40i,11n,25p,802b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on fotoelettricoBN.pdf (9 pages, 440851 bytes).
+PDF statistics:
+ 91 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+
