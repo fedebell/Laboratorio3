@@ -1,4 +1,4 @@
-import uncertainties
+from uncertainties import umath
 from uncertainties import ufloat
 import math
 import numpy
@@ -16,27 +16,35 @@ def linear(x, a, b):
 	return a*x+b
 #Con tre punti si fa una interpolazione lineare?
 
-e, de, n = pylab.loadtxt('/home/federico/Laboratorio3/Ottica2/dati1.txt', unpack=True)
+n, l, dl = pylab.loadtxt('/home/federico/Laboratorio3/Ottica2/interferenza.txt', unpack=True)
 dn = numpy.array([0.0 for i in range(len(n))])
 
-E = unumpy.uarray(e, de)
+medio = ufloat(6.5, 0.1)
+L = unumpy.uarray(l, dl) - medio
+print(L)
 N = unumpy.uarray(n, dn)
+d = ufloat(1.00, 0.005)
+
 
 #FIXME: Inserire la lunghezza del tubo
-L = ufloat(10.0, 0.1)
+D = ufloat(201, 1)
+
+ipotenuse = (L*L + D*D)**0.5
+print(ipotenuse)
+seni = D/ipotenuse
+print(seni)
 
 pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.rc('font',size=13)
 #FIXME: Fix the title
-pylab.xlim([1, 4.5])
-pylab.ylim([10, 90])
-pylab.title('$U_A$ vs $n$', fontsize = "16")
+
+pylab.title('Massimi dell\'interefenza su reticolo', fontsize = "16")
 #How to determine the unity of measure
-pylab.xlabel('$n$', size = "14")
+pylab.xlabel('Ordine $m$', size = "14")
 #FIXME Unita' di misura
-pylab.ylabel('$U_A (V)$', size = "14")
+pylab.ylabel('Seno angolo di incidenza', size = "14")
 pylab.grid(color = "gray")
-pylab.errorbar(n, e, de, dn, "o", color="black")
+pylab.errorbar(n, unumpy.nominal_values(seni), unumpy.std_devs(seni), 0, "o", color="black")
 
 
 #Fare attenzione che gli errori devono essere sempre sommati con le stesse unita di misura, 
@@ -44,19 +52,19 @@ pylab.errorbar(n, e, de, dn, "o", color="black")
 a = 1.0
 b = 1.0
 #Contollare unit di misura
-error = pylab.sqrt(de**2+(a*dn)**2)
+error = unumpy.std_devs(seni)
 init = numpy.array([a, b])
 #FIXME: Controllare che l'ordine sia giusto'
-par, cov = curve_fit(linear, n, e, init, error, "true")
+par, cov = curve_fit(linear, n, unumpy.nominal_values(seni), init, error, "true")
 #trattazione statistica degli errori
 print(par, cov)
 
 #Di nuovo non capisco il chi quadro, non cambia nulla se cambio da true a false
 a = par[0]
 b = par[1]
-chisq = (((e-linear(n, a, b))/error)**2)
+chisq = (((unumpy.nominal_values(seni)-linear(n, a, b))/error)**2)
 somma = sum(chisq)
-ndof = len(n) - 2 #Tolgo due parametri estratti dal fit
+ndof = len(N) - 2 #Tolgo due parametri estratti dal fit
 p=1.0-scipy.stats.chi2.cdf(somma, ndof)
 print("Chisquare/ndof = %f/%d" % (somma, ndof))
 print("p = ", p)
@@ -74,10 +82,8 @@ pylab.plot(bucket, retta, color = "red")
 a = ufloat(a, cov[0][0]**0.5)
 b = ufloat(b, cov[1][1]**0.5)
 
-#FIXME: To finish E(N) = (1+ l/L (2n+1))Ea
-E_a = L*a/2
-libmedio = 4*b/(L*a)-2
-print("Si ricavano dai parametti i seguenti due valori di a = ", a, "e di b =",  b)
+lunghezza = -a*d*10**6
 
+print("La lunghezza d'onda risulta essere: " + str(lunghezza))
 pylab.show()
 
