@@ -106,9 +106,9 @@ pylab.xlim(0.138, 0.211)
 
 pylab.title('Determinazione della costante di Rydberg', fontsize = "16")
 
-pylab.ylabel(r'$ \Lambda $ (1/um)', size = "14")
+pylab.ylabel(r'$ \lambda $ (1/$\mu$m)', size = "14")
 
-pylab.xlabel('1/n_1^2-1/n_2^2', size = "14")
+pylab.xlabel('$1/n_1^2-1/n_2^2$', size = "14")
 pylab.grid(color = "gray")
 pylab.errorbar(unumpy.nominal_values(x), unumpy.nominal_values(y), unumpy.std_devs(y), unumpy.std_devs(x), "o", color="black")
 
