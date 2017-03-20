@@ -12,14 +12,14 @@ from uncertainties import unumpy
 import numpy as np
 from scipy.signal import argrelextrema
 
-deltas = ufloat(11.5, 0.5)*10
-N = ufloat(85.0, 2.0)
+deltas = ufloat(20, 0.5)*10
+N = ufloat(125, 5.0)
 hene = ufloat(632.8, 0.1)/1000
 
 eta = 1/(N*hene/(2*deltas))
 
 #Inserire qui la truffa
-#eta = ufloat(5.3, 0.1)
+#eta = ufloat(5.1, 0.1)
 
 print(eta)
 
