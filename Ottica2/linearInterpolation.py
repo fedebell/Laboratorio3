@@ -21,18 +21,21 @@ dn = numpy.array([0.0 for i in range(len(n))])
 
 medio = ufloat(6.5, 0.1)
 L = unumpy.uarray(l, dl) - medio
-print(L)
+
 N = unumpy.uarray(n, dn)
-d = ufloat(1.00, 0.005)
+d = ufloat(1.00, 0.01)
 
 
+#Il chi quadrp e sovrastimato, quindi dovrei diminuire gli errori
 #FIXME: Inserire la lunghezza del tubo
-D = ufloat(201, 1)
+#La lunghezza che credevo fosse giusta era 201, vedi ragionamento sul file latex, ma questo fa tornare il numero
+#cmq e a caso perche non si capisce dove bisogna prendere D ed e sufficiente prendere l'inizio o la fine della macchia luminosa per 
+#cambiare di molto la lambda chiaramente non ha alcun senso.
+D = ufloat(204.4, 1.0)
 
 ipotenuse = (L*L + D*D)**0.5
-print(ipotenuse)
+
 seni = D/ipotenuse
-print(seni)
 
 pylab.figure(num=None, figsize=(12, 6), dpi=80, facecolor='w', edgecolor='k')
 pylab.rc('font',size=13)

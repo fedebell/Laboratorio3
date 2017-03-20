@@ -41,14 +41,13 @@ La spaziatura tra le suddivisioni della scala graduata del calibro è troppo gra
 Sul muro si è posto un foglio di carta su cui si sono segnati il punto in cui il laser sarebbe arrivato se non fosse stato diffratto, il punto in cui il fascio viene riflesso dal calibro e i vari ordini di diffrazione dal calibro. La media delle posizioni del punto di incidenza diretta e del punto di riflessione è la proiezione del piano del tavolo proiettato sul muro. Da questo punto è necessario misurare la distanza $D$ (distanza tra il calibro e il muro) e tutte le lunghezze $h_0, h_1, h_2,...$. indicate nella figura \ref{parteAfigura}.\\
 Per praticità si è fatto incidere il fascio laser su uno specchio fisso sul tavolo prima di farlo giungere al reticolo di diffrazione.\\ 
 %Inserire altri eventuali accorgimenti sperimentali su come si misurano d e D e %dire come sono stati presi gli errori su queste misure.\\
-Il fascio laser incide su una vasta parte della scala graduata generando una macchia luminosa oblunga sul calibro. Come punto da cui misurare $D$ si è preso circa il punti medio della macchia luminosa.\\
+Il fascio laser incide su una vasta parte della scala graduata generando una macchia luminosa oblunga sul calibro. Come punto da cui misurare $D$ si è preso dal muro alla fine del calibro.\\
 
+%FIXME - MARCO COSTA: Spiegare perchè la componente principale del fascio è data dalla rifrazione sulla fine del calibro.
 
 \subsection{Raccolta ed elaborazione dati}
-%Non è vero che abbiamo eseguito tre misure ma sarebbe stata una cosa sensata da fare. Valutare eventualmente se mettere la mezza tacca del nastro.
-%Noi abbiamo misurato le'estremità a 12/13 cm sulla scala graduata ma avremmo dovuto misurare la metà. La macchia finiva a 18.50 cm così ho riscalato
-%Il fatto delle tre misure è inventato di sana pianta ma era per dare un errore accettabile.  
-L'incertezza sulla misura delle posizioni dei minimi di diffrazione è stata presa come il massimo tra l'ampiezza della riga luminosa diffratta e la tacca del metro a nastro ($0.5 \,mm$). L'incertezza su $D = 201 \pm 1 \, cm$ è la semidispersione delle tre misure eseguite da ogni componente del gruppo, mentre per $d$ si è preso il valore nominale della separazione delle tacche della scala graduata del nonio dunque $d = 1.00 \pm 0.05 \, mm$.\\
+
+L'incertezza sulla misura delle posizioni dei minimi di diffrazione è stata presa come il massimo tra l'ampiezza della riga luminosa diffratta e la tacca del metro a nastro ($0.5 \,mm$). L'incertezza su $D = 204.4 \pm 0.5 \, cm$ è una stima che tiene in considerazione l'incertezza nel posizionamento delle estremità del metro e la sua curvatura lungo il percorso, mentre per $d$ si è preso il valore nominale della separazione delle tacche della scala graduata del nonio dunque $d = 1.00 \pm 0.01 \, mm$. L'incertezza su quest'ultima misura è una stima sulla precisione meccanica di realizzazione delle tacche.\\
 %Ho paura che questo errore sia troppo garnde Podo lo scrive molto più piccolo.
 La legge del reticolo per questa configurazione geometrica è: $d(\sin  \theta_i - \sin \theta_d)  = m \lambda $, dove $\theta_d = \frac{\pi}{2} - \sin \theta_n $. Riscrivendo la legge come: $\sin \theta_d = -m \frac{\lambda}{d} + \sin \theta_i$. La relazione funzionale tra $\sin  \theta_d$ e $m$ è una retta, si è pertanto eseguito un fit dei dati riportati in tabella \ref{tabella}. Per eseguire il fit si è usata la funzione \emph{curvefit} della libreria \emph{pylab} con l'opzione \emph{$absolute\,sigma = "true"$}. Il fit della funzione lineare $y = ax+b$ ha riportato i seguenti valori: \\
 
@@ -95,17 +94,12 @@ Ordine & $h (cm)$ & $ \Delta h$ \\
 
 Le distanze riportate della tabella \ref{Ordini} indicata sopra sono riferite al punto in cui il fascio indisturbato colpisce al muro. Esse vanno riscalate per il punto zero che è il punto medio tra quello detto e il punto di riflessione (cioè l'ordine 0).\\
 
-Nella figura \ref{interferenza} sono riportati i dati e il fit lineare con retta $y = ax+b$, l'algoritmo di minimizzazione del $\chi^2$ fornisce: 
-
-%(array([ -6.58816213e-04,   9.99473806e-01]), array([[  6.00347346e-12,  %-3.15713980e-11],
-%       [ -3.15713980e-11,   4.13644078e-10]]))
-%       Chisquare/ndof = 2.153288/27
-
-
-%Scrivere anche matrice di correlazione. 
-
-
-Il $\chi^2 = 2/27 (dof)$ ottenuto è molto piccolo ciò significa che nella differenza eseguita tra i dati riportati in tabella e il punto di riferimento citato più volte la propagazione corretta degli errori ha sovrastimato le incertezze.\\
+Nella figura \ref{interferenza} sono riportati i dati e il fit lineare con retta $y = ax+b$, l'algoritmo di minimizzazione del $\chi^2$ fornisce: $a = ( -6.37 \pm 0.02 ) \cdot 10^{-4}$, $b = 0.994 \pm 0.002$; la matrice di covarianza è:\\ $ \Sigma_{ij} = \left( \begin{array}{cc}
+5.54 \cdot 10^{-12} & -2.93 \cdot 10^{-11} \\ 
+-2.93 \cdot 10^{-11} & 3.85 \cdot 10^{-10}\\
+\end{array} \right)$. Con un $\chi^2/ndof = 2/27 \, (dof)$.\\
+Il $\chi^2$ ottenuto è molto piccolo ciò significa che nella differenza eseguita tra i dati riportati in tabella e il punto di riferimento citato più volte la propagazione corretta degli errori ha sovrastimato le incertezze.\\
+Una della principali difficoltà di misura è stato il leggero ritorno della vite micrometrica.\\
 
 %Dire se consideriamo più spesso errori statistici o errori massimi e come si sono propagati anche in relazione a absolute sigma.
 
@@ -117,7 +111,7 @@ Il $\chi^2 = 2/27 (dof)$ ottenuto è molto piccolo ciò significa che nella diff
 \end{figure}
 
 %Errore troppo grande dovuto a scelta di errore su d
-Dal parametro $a$ si ricava il valore di $\lambda = 660 \pm 30 \, nm$ da confrontare con quello teorico del laser $\lambda = 636.3 \, nm$, i due valori non sono compatibili.
+Dal parametro $a$ si ricava il valore di $\lambda = 638 \pm 7 \, nm$ da confrontare con quello teorico del laser $\lambda = 636.3 \, nm$, i due valori sono perfettamente compatibili. L'errore della misura è dovuto alla sovrastima dell'incertezza sull'errore si costruzione della scala graduata del calibro. E' anche possibile le le differenze statistiche sulla lunghezza delle tacche si si medino a zero nell'interferenza per dare un contributo effettivo all'incertezza drasticamente ridotto.\\
 
 \section{Parte B - Misura della lunghezza d'onda della riga verde del mercurio}
 \subsection{Calibrazione interferometro}
@@ -129,15 +123,39 @@ Dal parametro $a$ si ricava il valore di $\lambda = 660 \pm 30 \, nm$ da confron
 \label{int}
 \end{figure}
 
-L'interferometro di Michelson in dotazione è dotato di una vita micrometrica che permette di spostare lo specchio $M1$ (vedi figura \ref{int}), è necessario prima misurare quale sia il rapporto tra il passo della vite e lo spostamento effettivo dello specchio, cioè misurare il fattore di demoltiplica della leva. \\
-Per fare ciò si utilizza una sorgente laser He-Ne di lunghezza d'onda nota e si misura lo spostamento della vite necessario perché 30 frange passino per un certo punto dello schermo. Si sono eseguite tre misure riportate nella tabella \ref{calibrazione}, una per ognuno dei componenti del gruppo.\\
+L'interferometro di Michelson in dotazione è dotato di una vite che permette di spostare l'orientazione dello specchio $M2$ (vedi figura \ref{int}) e di una vte micrometrica dal passo di $10 \, \mu m$ e fattore di demoltiplica ignoti che permette di spostare lo specchio $M1$. E' necessario prima misurare quale sia il rapporto tra il passo della vite e lo spostamento effettivo dello specchio, cioè misurare il fattore di demoltiplica della leva. \\
+Per fare ciò si utilizza una sorgente laser He-Ne di lunghezza d'onda nota e si misura lo spostamento della vite necessario perché $N$ frange passino per un certo punto dello schermo. \\
+Dalla formula $2 \Delta X = m \lambda$ si è ricavato $\Delta X$ e quindi il fattore di demoltiplica $\eta = \frac{\Delta X}{\Delta s}$, dove $\Delta s$ è lo spostamento letto sulla vite micrometrica.\\
+Per contare più agilmente le frange si sono ripresi alcuni video della figura di interferenza per vari $\Delta s$ della vite. Si è scelto il video migliore, corrispondente a $\Delta s = 115 \pm 5 \, \mu $ \footnote{L'incertezza su $\Delta s$ è stata assunta essere mezza tacca della vite cioè $5 \, \mu$, così facendo la si è probabilmente molto sovrastimata.} e si sono effettuati conteggi indipendenti che hanno dato come risultato la media: $N = 85 \pm 2$, dove la media è la semidispersione massima. Dalle precedenti formule $\eta = 4.3 \pm 0.2$. L'errore sulla misura di $N$ è da intendersi di natura statistica nonostante il modo con cui sia stato stimato causa le poche misure.\\
 
-Dalla formula $2 \Delta X = m \lambda$ si è ricavato $\Delta X$ e quindi il fattore di demoltiplica $\eta = \frac{\Delta X}{\Delta s}$, dove $\Delta s$ è lo spostamento letto sulla vite micrometrica.
 
 \subsection{Misura di lunghezza d'onda}
-Si è cambiata la sorgente luminosa, si è inserita la lampada al mercurio al posto del laser He-Ne, si è aspettato il tempo sufficiente perché ci fosse termalizzazione e si è inserito il filtro verde per selezionare la riga (essere più specifici).\\
-Si sono poi eseguite tre misure (una per ogni componente del gruppo) del numero di giri della vita micrometrica necessari perché 50 frange di interferenza passassero per un determinato punto dello schermo. Da queste sempre grazie alla formula precedente si è trovata la lunghezza d'onda cercata.
+Si è cambiata la sorgente luminosa, si è inserita la lampada al mercurio al posto del laser He-Ne, si è aspettato il tempo sufficiente perché ci fosse termalizzazione e si è inserito il filtro verde per selezionare la riga del colore voluto. Si è riallineato il fascio in modo che la figura di interferenza fosse centrale e si è inserita davanti alla sorgente una punta metallica indicatrice per eseguire più facilmente i conteggi. A causa della debolezza del fascio i conteggi sono stati eseguiti a occhio (era impossibile proiettare su uno schermo).\\
+Nella tabella \ref{misure} sono riportate le lunghezze $\Delta s$ e $N$.\\
 
-\section{Conclusioni}
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline 
+$\Delta s \, (\mu m)$ & $m$ & $\lambda_Hg \, (nm) $\\ 
+\hline 
+$80 \pm 5$  & 50 & $750 \pm 40$\\ 
+\hline 
+$80 \pm 5$  & 50 & $750 \pm 40$\\ 
+\hline 
+$170 \pm 5$  & 100 & $800 \pm 40$\\ 
+\hline 
+$230 \pm 5$  & 150 & $720 \pm 40$\\ 
+\hline 
+$200 \pm 5$  & 150 & $620 \pm 30$\\ 
+\hline 
+\end{tabular} 
+\end{table}
+
+
+Le misure riportate sono state eseguite da diversi componenti del gruppo, a fianco sono riportati i valori di $\lambda$ calcolati. La media è $\lambda_Hg = $
+
+%Attenzione: non c'è alcuna speranaza di far tornare giuste le lunghezze d'onda -- vedi quello che stampa il file calibrazione.py
+
 
 \end{document}

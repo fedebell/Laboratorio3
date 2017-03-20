@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  17 MAR 2017 23:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  20 MAR 2017 14:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -637,45 +637,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--45
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./disegno1.png>]
 
-LaTeX Warning: Reference `tabella' on page 2 undefined on input line 53.
+LaTeX Warning: Reference `tabella' on page 2 undefined on input line 52.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--103
 
  []
 
 [2] <plot.png, id=20, 867.24pt x 433.62pt>
 File: plot.png Graphic file (type png)
  <use plot.png>
-Package pdftex.def Info: plot.png used on input line 114.
+Package pdftex.def Info: plot.png used on input line 108.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
 
 <interferometro.png, id=22, 994.71625pt x 605.26125pt>
 File: interferometro.png Graphic file (type png)
 
 <use interferometro.png>
-Package pdftex.def Info: interferometro.png used on input line 127.
+Package pdftex.def Info: interferometro.png used on input line 121.
 (pdftex.def)             Requested size: 497.3569pt x 302.62987pt.
 
-Overfull \hbox (13.66003pt too wide) in paragraph at lines 127--128
+Overfull \hbox (13.66003pt too wide) in paragraph at lines 121--122
  [][] 
  []
 
 
-LaTeX Warning: Reference `calibrazione' on page 3 undefined on input line 133.
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
+
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--134
+LaTeX Warning: Reference `misure' on page 3 undefined on input line 134.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 
  []
 
@@ -685,27 +694,31 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3306 strings out of 494902
- 42683 string characters out of 6179890
- 113734 words of memory out of 5000000
- 6539 multiletter control sequences out of 15000+600000
+ 3307 strings out of 494902
+ 42686 string characters out of 6179890
+ 114734 words of memory out of 5000000
+ 6540 multiletter control sequences out of 15000+600000
  11849 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 40i,8n,25p,630b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,8n,25p,724b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti10.pfb>
-Output written on Ottica2.pdf (4 pages, 226544 bytes).
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Ottica2.pdf (4 pages, 271159 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
