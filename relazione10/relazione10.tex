@@ -1,0 +1,71 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\newcommand{\rem}[1]{[\emph{#1}]}
+
+\author{Gruppo BN \\ Federico Belliardo, Marco Costa, Lisa Bedini}
+\title{Esperienza 10: caratteristiche fisiche porte logiche}
+\begin{document}
+
+\maketitle
+\section{Scopo dell'esperienza}
+Lo scopo dell'esperienza è misurare le caratteristiche statiche e dinamiche delle porte NOT dell'integrato SN74LS04.
+
+\section{Materiale occorrente}
+\begin{itemize}
+\item Lampada al cadmio;
+\item Lampada al sodio;
+\item Lampada al mercurio;
+\item Lampada a idrogeno;
+\item Elemento dispersivo A: prisma;
+\item Elemento dispersivo B: reticolo;
+\item Supporto con goniometro integrato;
+\end{itemize}
+\\
+
+\section{Caratteristiche statiche}
+Abbiamo montato il circuito come in figura \ref{fig:circuito}.
+I valori delle componenti sono state misurate tramite multimetro digitale. Come incertezze abbiamo preso quelle riportate sul manuale dello strumento.
+Abbiamo misurato la tensione di alimentazione $V_{CC}=$ tramite multimetro digitale (incertezza riportata da manuale)
+\subsection{Misura delle tensioni di operazione}
+Per ottenere diversi valori di $V_{in}$ abbiamo variato opportunamente il trimmer (che ha la funzione di partitore di tensione). Una volta fissata la sua posizione, abbiamo misurato tramite multimetro digitale\footnote{E' lo strumento di misure di tensione in continua con maggiore resistenza interna credo} $V_{in}$ e $V_{out}$.
+In tabella e in figura abbiamo riportato le misure ottenute.
+Con i dati abbiamo dato una stima dei valori dei potenziali di input/output a livello alto e basso.
+Per la stima abbiamo considerato solo i dati visibilmente al di fuori della zona di transizione, e si è eseguito una media (pesata)
+%manca spiegazione teorica dei valori dei VIO,LH, anche se non penso la chieda...
+%devo dire anche quali ho preso...
+\subsection{Misura delle correnti in ingresso}
+Abbiamo inserito in serie all'ingresso del circuito di figura \ref{fig:circuito} e abbiamo misurato $I_{in}$ al variare di $V_{in}$\footnote{La procedura per variare $V_{in}$ è la stessa del punto precedente}.
+%Qua ci va una breve discussio teorica sul verso della corrente e l'andamento)
+I dati sono riportati in tabella e in figura.
+Dai dati abbiamo stimato i valori di I_{IH} e I_{IL}.%Confronto coi valori del datasheet
+\subsection{Misura delle correnti in uscita}
+Per misurare la massima e minima corrente in uscita dalla porta, abbiamo montato il circuito come in figura \ref{fig:circuito2}\footnote{Il circuito collegato all'ingresso della porta è lo stesso di prima}.
+Per la misura di $I_{OL}$ si collega l'uscita a $V_CC$  e si varia il potenziometro $R_1$ in figura \ref{fig:circuito2} in modo che l'uscita sia in stato basso.
+Per la misura di $I_{OH}$ si collega l'uscita al ground facendo in modo che essa sia in stato alto.
+In entrambi i casi abbiamo dovuto variare il carico per metterci nelle condizioni ideali per misurare le massime e minime correnti erogabili dall'integrato. Si è osservato INSERIRE OSSERVAZIONI SU ANDAMENTO...
+Con questi valori si è dato una stima del \emph{fanout}. 
+\section{Montaggio di Arduino}
+Abbiamo montato il circuito in figura \ref{fig:arduino}. Successivamente abbiamo verificato il suo comportamento da generatore di onde quadre. La frequenza del segnale dipende dalla posizione del trimmer. Abbiamo osservato frequenza da , a,. L'ampiezza dell'onda picco-picco è pari a $v_{pp}=$.
+In figura \ref{fig:ondaardu} si possono osservare i segnali (misurati tramite oscilloscopio) ai piedini $Y_1$ e $Y_2$.
+\section{Caratteristiche dinamiche}
+\subsection{Onda in ingresso}
+Si è generato tramite Arduino un segnale ad onda quadra di frequenza di circa 1 kHZ e ampiezza XX.
+Si è effettuata la misura tramite oscilloscopio\footnote{Le incertezze sono la sensibilità del cursore più il $3\%$ di calibrazione}.
+
+\subsection{Misura dei tempi di propagazione}
+Abbiamo eseguito una misura dei due tempi di propagazione, misurando il tempo fra i segnali in ingresso e in uscita fra i due punti a metà della $v_{pp}$ della rampa in salita e discesa rispettivamente\footnote{La misura di tempo è stata eseguita tramite oscilloscopio. Come incertezza si è preso la sensibilità dei cursori(o la semidispersione se più grande in caso di segnale particolarmente rumoroso)}.
+I valori riportati nel datasheet sono
+$tPHL=8 \mbox{ns}$ e $tPLH= 12 \mbox{ns}$\footnote{valori tipici con resistenza di carico $R_L = 400\Omega$}
+\subsection{Misura del tempo di salita}
+Con una procedura analoga a sopra, abbiamo misurato il tempo di salita e discesa del segnale in uscita, ossia il tempo necessario per passare dal 10\% della $v_{pp}$ massima al 90\% (Il contrario per il tempo di discesa).
+\section{Conclusioni}
+
+
+\end{document}
