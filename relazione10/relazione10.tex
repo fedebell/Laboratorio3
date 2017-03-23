@@ -11,9 +11,10 @@
 
 \author{Gruppo BN \\ Federico Belliardo, Lisa Bedini, Marco Costa}
 \title{Esperienza 10: caratteristiche fisiche porte logiche}
-\begin{document}
 
+\begin{document}
 \maketitle
+
 \section{Scopo dell'esperienza}
 Lo scopo dell'esperienza è misurare le caratteristiche statiche e dinamiche delle porte NOT dell'integrato SN74LS04.
 
@@ -25,7 +26,6 @@ Lo scopo dell'esperienza è misurare le caratteristiche statiche e dinamiche dell
 \item IC SN74LS244
 \item trimmer da 10 k$\Omega$
 \end{itemize}
-\\
 
 \section{Caratteristiche statiche}
 Abbiamo montato il circuito come in figura \ref{fig:circuito}.
@@ -35,22 +35,23 @@ Abbiamo montato il circuito come in figura \ref{fig:circuito}.
 \caption{Circuito utilizzato\label{fig:circuito}}
 \end{figure}
 I valori delle componenti sono state misurate tramite multimetro digitale. Come incertezze abbiamo preso quelle riportate sul manuale dello strumento.
-Abbiamo misurato la tensione di alimentazione $V_{CC}=4.85\pm 0.03 V$ tramite multimetro digitale (incertezza riportata nel manuale), nei limiti di funzionamento riportati nel datasheet..
+Abbiamo misurato la tensione di alimentazione $V_{CC}=4.85\pm 0.03 V$ tramite multimetro digitale (incertezza riportata nel manuale), nei limiti di funzionamento riportati nel datasheet.
 %R_trimmer totale = 1950.
 %R_1=99.6 ohm
 \subsection{Misura delle tensioni di operazione}
 Per ottenere diversi valori di $V_{in}$ abbiamo variato opportunamente il trimmer (che ha la funzione di partitore di tensione). Una volta fissata la sua posizione, abbiamo misurato tramite multimetro digitale\footnote{E' lo strumento di misure di tensione in continua con maggiore resistenza interna credo} $V_{in}$ e $V_{out}$.
-In tabella \ref{tab:vinvout}e in figura \ref{fig:vinvout}abbiamo riportato le misure ottenute.
+In tabella \ref{tab:vinvout} e in figura \ref{fig:vinvout}abbiamo riportato le misure ottenute.
 \begin{figure}
 \centering
-\includegraphics[scale=0.9]{vinvout}
+\includegraphics[scale=0.9]{vinvout.png}
 \caption{$V_{out}$ in funzione di $V_{in}$\label{fig:vinvout}}
 \end{figure}
+
 \begin{table}
 \centering
 \begin{tabular}{|c|c|}
 \hline
-
+0 & 0\\
 \hline
 \end{tabular}
 \caption{Misure dei potenziali $V_{in}$, $V_{out}$\label{tab:vinvout}}
@@ -59,7 +60,7 @@ In tabella \ref{tab:vinvout}e in figura \ref{fig:vinvout}abbiamo riportato le mi
 Si osserva che $V_{out}$ va da un massimo di $V_{OH,max}=4.30$V fino a 
 %sicuro di questa definizione? 
 $V_{OH,min}=3.7\pm 0.1$V, valore subito dopo il quale si osserva una rapida variazione di $V_{out}$%\footnote{In effetti se immaginiamo di tracciare due rette per i due regimi, l'intersezione fra queste due dà un valore vicino a 3.7}. Come incertezza si è preso il range in cui si distinguono i due regimi.
-Si può considerare quindi che l'uscita della porta sia al livello alto nella fascia trovata. Pertanto abbiamo stimato $V_{OH}=3.7\pm0.2$V^\footnote{in accordo con la definizione data di V_{OH}}. Abbiamo stimato l'incertezza su questo valore come la differenza fra il primo punto per cui si è osservata la variazione e quello immediatamente precedente.
+Si può considerare quindi che l'uscita della porta sia al livello alto nella fascia trovata. Pertanto abbiamo stimato $V_{OH}=3.7\pm0.2$V\footnote{in accordo con la definizione data di $V_{OH}$}. Abbiamo stimato l'incertezza su questo valore come la differenza fra il primo punto per cui si è osservata la variazione e quello immediatamente precedente.
 
 Come stima di $V_{OL}$ abbiamo preso $0.144$V, ossia il valore asintotico. Abbiamo tuttavia una grande incertezza su questa stima: in effetti abbiamo riscontrato difficoltà a prendere misure per valori di $V_{out}$ poco superiori a 0.144 V; in particolare, era sufficiente una leggera variazione della posizione del trimmer per portare $V_{out}$ dal valore di 2.15 V a 0.144V.
 Per quanto riguarda le tensioni in ingresso, si osserva che esse vengono considerate dalla porta come valore basso in un range che va da 0 a 0.8 V circa, mentre alto da 1.3 V in poi.
@@ -69,33 +70,37 @@ I valori stimati risultano tutti in buon accordo con quanto riportato sul datash
 Il comportamento che si osserva per valori di $V_{in}$ compresi fra $V_{IL}$ e $V_{IH}$ 
 %manca spiegazione teorica dell'andamento di transizione
 \subsection{Misura delle correnti in ingresso}
-Abbiamo inserito in serie all'ingresso del circuito di figura \ref{fig:circuito} e abbiamo misurato $I_{in}$ al variare di $V_{in}$\footnote{La procedura per variare $V_{in}$ è la stessa del punto precedente}. Per avere più sensibilità sulla misura di corrente si è usato il multimetro analogico (l'incertezza usata è quella riportata nel manuale)
+Abbiamo inserito l'amperometro in serie all'ingresso del circuito di figura \ref{fig:circuito} e abbiamo misurato $I_{in}$ al variare di $V_{in}$\footnote{La procedura per variare $V_{in}$ è la stessa del punto precedente}. Per avere più sensibilità sulla misura di corrente si è usato il multimetro analogico (l'incertezza usata è quella riportata nel manuale)
 %Qua ci va una breve discussio teorica sul verso della corrente e l'andamento)
 I dati sono riportati in tabella\ref{tab:viniin} e in figura\ref{fig:viniin}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.9]{viniin.png}
-\caption{Corrente in ingresso alla porta Not in funzione di $V_{in}$\label{fig:viniout}}
+\caption{Corrente in ingresso alla porta Not in funzione di $V_{in}$\label{fig:viniin}}
 \end{figure} 
 Si osserva che per $V_{in}$ corrispondenti al valore logico basso, si ha una corrente $I_{in}$ negativa e dell'ordine delle centinaia di $\mu A$ (massimo sui $260\mu \mbox{A}$), mentre per $V_{in}$ su stato alto, si ha una corrente nulla entro l'errore.
-Abbiamo stimato i valori delle correnti di soglia in corrispondenza dei punti in cui si hanno variazioni brusche dell'andamento di $I_{in}$^\footnote{questi sono anche punti in cui $V_{in}$ è prossimo a $V_{IL}$, $V_{IH}$}.
+Abbiamo stimato i valori delle correnti di soglia in corrispondenza dei punti in cui si hanno variazioni brusche dell'andamento di $I_{in}$\footnote{questi sono anche punti in cui $V_{in}$ è prossimo a $V_{IL}$, $V_{IH}$}.
 Si ha quindi $I_{IH}=0\pm0.1\mu \mbox{A}$ e $I_{IL}=-180\pm20\mu\mbox{A}$
 I rispettivi valori massimi riportati sul datasheet sono $I_{IL,att}=-0.4\mbox{mA}$, $I_{IH}=20\mu\mbox{A}$. 
 I valori stimati quindi rientrano nei limiti riportati dal costruttore. 
 %sei sicuro di questa definizione delle correnti??
 %Confronto coi valori del datasheet
 \subsection{Misura delle correnti in uscita}
-Per misurare la massima e minima corrente in uscita dalla porta, abbiamo montato il circuito come in figura \ref{fig:circuito2}\footnote{Il circuito collegato all'ingresso della porta è lo stesso di prima}.
+Per misurare la massima e minima corrente in uscita dalla porta, abbiamo montato il circuito \footnote{Il circuito collegato all'ingresso della porta è lo stesso di prima} come in figura \ref{fig:circuito2}.
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{circuito2.png}
+\caption{Schema del circuito utilizzato per la misura delle correnti di uscita\label{fig:circuito2}}
+\end{figure}
 Per la misura di $I_{OL}$ si collega l'uscita a $V_CC$  e si varia il potenziometro $R_1$ in figura \ref{fig:circuito2} in modo che l'uscita sia in stato basso.
 Per misurare la corrente abbiamo misurato la caduta di potenziale $V_{ab}$ ai capi della resistenza $R_2$ tramite multimetro digitale. Per verificare che l'uscita fosse effettivamente nello stato basso, si è controllato $V_{out}$ tramite oscilloscopio. Abbiamo deciso di prendere la misura di corrente in corrispondenza del valore di $V_{OL}$ in precedenza. Tuttavia, in questo modo si ottiene $I_{OL}=$, che risulta più basso del valore riportato sul datasheet. Abbiamo quindi deciso di prendere una ulteriore misura, in corrispondenza del punto in cui si osservava una brusca variazione di $V_{out}$ e $V_{ab}$. Ciò avviene per $V_{out}=$ e $V_{ab}=$.
-Così si ottiene una stima più vicina ai valori riportati nel datasheet. Un motivo per cui fallisce il metodo effettuare la misura a V_{OH} stimato è che nelle misure riportate nel grafico \ref{fig:vinvout} non si è riusciti a ottenere misure di V_{out} che non fossero del valore limite 0.144 V.
+Così si ottiene una stima più vicina ai valori riportati nel datasheet. Un motivo per cui fallisce il metodo effettuare la misura a $V_{OH}$ stimato è che nelle misure riportate nel grafico \ref{fig:vinvout} non si è riusciti a ottenere misure di $V_{out}$ che non fossero del valore limite 0.144 V.
 Per la misura di $I_{OH}$ si collega l'uscita al ground facendo in modo che essa sia in stato alto.
-Abbiamo preso la misura in corrispondenza di $V_{OUT}=3.7$V, ossia il valore stimato di V_{OH}.
-Così si ottiene I_{OH}=, valore in accordo con quanto riportato nel datasheet. La strategia di mettere V_{out} pari alla stima del valore di soglia ottenuto in questo caso funziona meglio perchè i dati del grafico \ref{fig:vinvout} coprono un intorno sufficientemente grande del punto in cui avviene la variazione brusca.
+Abbiamo preso la misura in corrispondenza di $V_{OUT}=3.7$V, ossia il valore stimato di $V_{OH}$.
+Così si ottiene $I_{OH}=$, valore in accordo con quanto riportato nel datasheet. La strategia di mettere $V_{out}$ pari alla stima del valore di soglia ottenuto in questo caso funziona meglio perchè i dati del grafico \ref{fig:vinvout} coprono un intorno sufficientemente grande del punto in cui avviene la variazione brusca.
 %discussione teorica andamento
 Con questi valori si è dato una stima del \emph{fanout}.
-Le correnti che determinano tale valore sono I_{OL}
-e I_{IL}.
+Le correnti che determinano tale valore sono $I_{OL}$ e $I_{IL}$.
 \section{Montaggio di Arduino}
 %R_1=0.98k
 %R_2 = 1.003 k 
@@ -109,11 +114,12 @@ Abbiamo montato il circuito pulsatore in figura \ref{fig:arduino}.
 \centering
 \includegraphics[scale=0.7]{arduino.png}
 \caption{Schema del pulsatore utilizzato\label{fig:arduino}}
-\end{figure} Successivamente abbiamo verificato il suo comportamento da generatore di onde quadre. La frequenza del segnale dipende dalla posizione del trimmer, e va dagli Hz ai 50 kHz a,. L'ampiezza dell'onda picco-picco è pari a $v_{pp}=3.16\pm 0.04$V.
+\end{figure}
+Successivamente abbiamo verificato il suo comportamento da generatore di onde quadre. La frequenza del segnale dipende dalla posizione del trimmer, e va dagli Hz ai 50 kHz a,. L'ampiezza dell'onda picco-picco è pari a $v_{pp}=3.16\pm 0.04$V.
 \begin{figure}
 \centering
 \includegraphics[scale=0.7]{ondaardu.png}
-\caption{Onde sfasate di $\pi/2$ in uscita a $Y_1$, $Y_2$. L'ampiezza dei segnali è la stessa, si sono solo usate scale diverse per comodità grafica (\label{fig:ondaardu}}
+\caption{Onde sfasate di $\pi/2$ in uscita a $Y_1$, $Y_2$. L'ampiezza dei segnali è la stessa, si sono solo usate scale diverse per comodità grafica)\label{fig:ondaardu}}
 \end{figure}
 In figura \ref{fig:ondaardu} si possono osservare i segnali (misurati tramite oscilloscopio) ai piedini $Y_1$ e $Y_2$.
 \section{Caratteristiche dinamiche}
@@ -132,14 +138,14 @@ Abbiamo eseguito una misura dei due tempi di propagazione, misurando il tempo fr
 In figura \ref{fig:tphl} e \ref{fig:tlph} si possono osservare il tempo di propagazione $tPHL$ e $tPLH$ rispettivamente.
 \begin{figure}
 \centering
-\includegraphics[scale=0.6]{tphl.png}
+\includegraphics[scale=0.6]{tphl(meglio).png}
 \caption{Tempo di propagazione $tPHL$\label{fig:tphl}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.6]{tplh.png}
-\caption{Tempo di propagazione $tPLH$\label{fig:{tplh}}
+\caption{Tempo di propagazione $tPLH$\label{fig:tplh}}
 \end{figure}
 La misura di tempo è stata eseguita tramite oscilloscopio. L'incertezza sui tempi è dovuta sia alla sensibilità dei cursori, sia all'incertezza sul trovare i punti con il giusto pontenziale. Per stimarla si è presa la semidispersione sui valori misurati nei punti con potenziale compatibile con la metà entro la sensibilità del cursore dei potenziali\footnote{L'oscilloscopio utilizzato consentiva di visualizzare contemporaneamente entrambe le coordinate del punto in cui si prendeva la misura}.
 I valori riportati nel datasheet sono
@@ -150,7 +156,7 @@ I valori misurati sono $\mbox{tPHL} = 10.2\pm0.2$ns  e $\mbox{tPLH} = 12.8\pm0.4
 %tPLH = 12.8 pm 0.4ns
 %riesci a dare motivazioni teoriche??
 \subsection{Misura del tempo di salita}
-Abbiamo misurato i tempi di salita $t_{s}$ e discesa $t_{d}$ del segnale in uscita e in ingresso, ossia il tempo necessario per passare dal 10\% della $v_{pp}$ massima\footnote{ai fini dei calcoli si considera $v_{pp}$ senza overshoot} al 90\% (Il contrario per il tempo di discesa).
+Abbiamo misurato i tempi di salita $t_{s}$ e discesa $t_{d}$ del segnale in uscita e in ingresso, ossia il tempo necessario per passare dal $10\%$ della $v_{pp}$ massima\footnote{ai fini dei calcoli si considera $v_{pp}$ senza overshoot} al $90\%$ (Il contrario per il tempo di discesa).
 In figura \ref{fig:tsalitain} abbiamo riportato il tempo di salita del segnale in ingresso per mostrare la procedura di misura utilizzata.
 \begin{figure}
 \centering
@@ -160,6 +166,7 @@ In figura \ref{fig:tsalitain} abbiamo riportato il tempo di salita del segnale i
 
 In tabella \ref{tab:tempisalita} sono riportati le misure:
 \begin{table}
+\centering
 \begin{tabular}{|c|c|c|}
 \hline
 Segnale & $t_{s}$ (ns) & $t_{d}$ (ns) \\
