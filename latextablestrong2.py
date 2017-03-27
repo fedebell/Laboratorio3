@@ -3,13 +3,13 @@ Lettura di dati dal file "INPUT", scrittura in "OUTPUT"
 Legge i dati e li inserisce in una tabella Latex formattata
 '''
 
-INPUT = "/home/federico/Laboratorio3/Ottica2/interferenza.txt"
-OUTPUT = "/home/federico/Laboratorio3/Ottica2/interferenzaFormattato.txt"
+INPUT = 'C:\\Users\\marco\\Desktop\\Laboratorio3\\relazione10\\VinIin.txt'
+OUTPUT = 'C:\\Users\\marco\\Desktop\\Laboratorio3\\relazione10\\VinIintabella.txt'
 
 
 import pylab
 import numpy
-import fpformat
+#import fpformat
 
 #La matrice dati contiene i valori
 dati = pylab.loadtxt(INPUT,unpack=True)
@@ -27,7 +27,7 @@ for i in range(row):
         dati_s[i].append("")
 
 
-for i in range (0, col/2):
+for i in range (0, int(col/2)):
 	for j in range(row):
 		tmp = dati[j][2*i+1]
 		if(tmp <= 1.0):

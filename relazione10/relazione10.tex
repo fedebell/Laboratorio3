@@ -28,7 +28,7 @@ Lo scopo dell'esperienza è misurare le caratteristiche statiche e dinamiche del
 
 \section{Caratteristiche statiche}
 Abbiamo montato il circuito come in figura \ref{fig:circuito}.
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.7]{circuito.png}
 \caption{Circuito utilizzato.\label{fig:circuito}}
@@ -50,7 +50,28 @@ In tabella \ref{tab:vinvout} e in figura \ref{fig:vinvout} abbiamo riportato le 
 \centering
 \begin{tabular}{|c|c|}
 \hline
-0 & 0\\
+$V_{in}$ (V) & $V_{out}$ (V)\\
+\hline
+0.020 $\pm$ 0.001 & 4.30$\pm$ 0.05\\
+0.095$\pm$ 0.001 & 4.27$\pm$ 0.05\\
+0.314$\pm$ 0.002 & 4.11 $\pm$ 0.005\\
+0.457 $\pm$ 0.003 & 4.03 $\pm$ 0.05\\
+0.515 $\pm$ 0.003 & 3.99 $\pm$ 0.05\\
+0.653 $\pm$ 0.004 & 3.90$\pm$ 0.04\\
+0.748$\pm$ 0.005 & 3.84 $\pm$ 0.05\\
+0.838 $\pm$ 0.005 & 3.75 $\pm$ 0.05\\
+0.913 $\pm$ 0.06 & 3.42 $\pm$ 0.05\\
+1.026$\pm$ 0.006 & 2.26 $\pm$ 0.02\\
+1.032 $\pm$ 0.006 & 2.15 $\pm$ 0.02\\
+1.304 $\pm$ 0.007 & 0.144 $\pm$ 0.001\\
+1.347 $\pm$ 0.007 & 0.144 $\pm$ 0.001\\
+1.448 $\pm$ 0.008 & 0.144 $\pm$ 0.001\\
+2.03 $\pm$ 0.02 & 0.144 $\pm$ 0.001\\
+2.62 $\pm$ 0.02& 0.144 $\pm$ 0.001\\
+3.04 $\pm$ 0.02 & 0.144 $\pm$ 0.001\\
+3.55 $\pm$ 0.02 & 0.144 $\pm$ 0.001\\
+4.07 $\pm$ 0.03 & 0.144 $\pm$ 0.001\\
+4.61 $\pm$ 0.03 & 0.144 $\pm$ 0.001\\
 \hline
 \end{tabular}
 \caption{Misure dei potenziali $V_{in}$, $V_{out}$.\label{tab:vinvout}}
@@ -83,6 +104,30 @@ Quando si supera $V_{IL}$ (ossia si passa da stato basso a alto), il transistor 
 Abbiamo inserito l'amperometro in serie all'ingresso del circuito di figura \ref{fig:circuito} e abbiamo misurato $I_{in}$ al variare di $V_{in}$\footnote{La procedura per variare $V_{in}$ è la stessa del punto precedente.}. Per avere più sensibilità sulla misura di corrente si è usato il multimetro analogico e l'incertezza usata è quella riportata nel manuale. Il segno di $I_{in}$ è positivo se entrante nella porta.
 %Qua ci va una breve discussio teorica sul verso della corrente e l'andamento)
 I dati sono riportati in tabella\ref{tab:viniin} e in figura \ref{fig:viniin}.
+\begin{table}[!htb]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+$V_{in}$ (V) & $I_{in}$ ($\mu$ A)\\
+\hline
+0.0420 $\pm$ 0.007 & -270 $\pm$ 3\\
+0.127 $\pm$ 0.002 & -263 $\pm$ 3\\
+0.396 $\pm$ 0.005 & -231 $\pm$ 3\\
+0.720 $\pm$ 0.005 & -185 $\pm$ 2\\
+1.000 $\pm$ 0.006 & -148 $\pm$ 2\\
+1.066 $\pm$ 0.006 & -65 $\pm$ 1\\
+1.100 $\pm$ 0.006 & 20.0$\pm$ 0.5 \\
+1.143 $\pm$ 0.006 & -2.0$\pm$ 0.5\\
+1.220 $\pm$0.007 & 0.0$\pm$ 0.5\\
+1.270 $\pm$ 0.007 & 0.0$\pm$ 0.5\\
+2.12 $\pm$ 0.02 & 2.0$\pm$ 0.5\\
+3.16 $\pm$ 0.02 & 3.0$\pm$ 0.5\\
+4.00 $\pm$ 0.03 & 4.0$\pm$ 0.5\\
+4.64 $\pm$ 0.03 6 4.0$\pm$ 0.5\\
+\hline
+\end{tabular}
+\caption{Corrente in ingresso in funzione di $V_{in}$\label{tab:viniin}}
+\end{table}
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.9]{viniin.png}
@@ -99,7 +144,7 @@ I valori stimati quindi rientrano nei limiti riportati dal costruttore.
 %Confronto coi valori del datasheet
 \subsection{Misura delle correnti in uscita}
 Per misurare la massima e minima corrente in uscita dalla porta, abbiamo montato il circuito \footnote{Il circuito collegato all'ingresso della porta è lo stesso di prima.} come in figura \ref{fig:circuito2}. Per ricavare $I_{out}$ abbiamo misurato la caduta di potenziale $V_{AB}=V_A-V_B$ ai capi della resistenza $R_2$ tramite multimetro digitale e poi si è diviso per $R_2=98\pm 1 \Omega$. Si è preso il segno della corrente positivo se entrante nella porta.
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.7]{circuito2.png}
 \caption{Schema del circuito utilizzato per la misura delle correnti di uscita.\label{fig:circuito2}}
@@ -124,13 +169,13 @@ Si ha $\emph{fanout}= I_{IL}/I_{OL}=39\pm 2$, mentre utilizzando le correnti di 
 %C_2 = 106.5 nF
 %C_1 = 106.6 nF
 Abbiamo montato il circuito pulsatore in figura \ref{fig:arduino}.
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.7]{arduino.png}
 \caption{Schema del pulsatore utilizzato.\label{fig:arduino}}
 \end{figure}
 Successivamente abbiamo verificato il suo comportamento da generatore di onde quadre. La frequenza del segnale dipende dalla posizione del trimmer, e va da qualche Hz ai 50 kHz. L'ampiezza dell'onda picco-picco è pari a $v_{pp}=3.16\pm 0.04$V.
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.7]{ondaardu.png}
 \caption{Onde sfasate di $\pi/2$ in uscita a $Y_1$, $Y_2$. L'ampiezza dei segnali è la stessa, si sono solo usate scale diverse per comodità grafica.\label{fig:ondaardu}}
@@ -140,7 +185,7 @@ In figura \ref{fig:ondaardu} si possono osservare i segnali (misurati tramite os
 \subsection{Onda in ingresso}
 Si è generato tramite Arduino un segnale ad onda quadra di frequenza di circa $1.01\pm0.01$kHZ di ampiezza da 0 a $3.16\pm 0.04$V.
 In figura \ref{fig:ondanot} si può osservare il corretto funzionamento della porta NOT.
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.7]{ondanot.png}
 \caption{\label{fig:ondanot}}
@@ -149,14 +194,14 @@ Si è effettuata la misura tramite oscilloscopio. Le incertezze sui potenziali s
 
 \subsection{Misura dei tempi di propagazione}
 Abbiamo eseguito una misura dei due tempi di propagazione, misurando il tempo fra i segnali in ingresso e in uscita in corrispondenza dei i due punti a metà altezza della rampa in salita (tPLH) e discesa (tPHL) rispettivamente.
-In figura \ref{fig:tphl} e \ref{fig:tlph} si possono osservare il tempo di propagazione $tPHL$ e $tPLH$ rispettivamente.
-\begin{figure}
+In figura \ref{fig:tphl} e \ref{fig:tplh} si possono osservare il tempo di propagazione $tPHL$ e $tPLH$ rispettivamente.
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.6]{tphl(meglio).png}
 \caption{Tempo di propagazione $tPHL$.\label{fig:tphl}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.6]{tplh.png}
 \caption{Tempo di propagazione $tPLH$.\label{fig:tplh}}
@@ -172,14 +217,14 @@ I valori misurati sono $\mbox{tPHL} = 10.2\pm0.2$ns  e $\mbox{tPLH} = 12.8\pm0.4
 \subsection{Misura del tempo di salita}
 Abbiamo misurato i tempi di salita $t_{s}$ e discesa $t_{d}$ del segnale in uscita e in ingresso, ossia il tempo necessario per passare dal $10\%$ della $v_{pp}$ massima\footnote{Ai fini dei calcoli si considera $v_{pp}$ senza overshoot.} al $90\%$ (il contrario per il tempo di discesa).
 In figura \ref{fig:tsalitain} abbiamo riportato il tempo di salita del segnale in ingresso per mostrare la procedura di misura utilizzata.
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.6]{tsalitain.png}
 \caption{Tempo di salita del segnale in ingresso.\label{fig:tsalitain}}
 \end{figure}
 
 In tabella \ref{tab:tempisalita} sono riportati le misure:
-\begin{table}
+\begin{table}[!htb]
 \centering
 \begin{tabular}{|c|c|c|}
 \hline
