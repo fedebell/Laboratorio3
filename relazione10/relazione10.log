@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  27 MAR 2017 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  28 MAR 2017 00:39
 entering extended mode
 **./relazione10.tex
 (relazione10.tex
@@ -639,7 +639,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 File: circuito.png Graphic file (type png)
  <use circuito.png>
 Package pdftex.def Info: circuito.png used on input line 33.
-(pdftex.def)             Requested size: 121.83432pt x 79.67712pt.
+(pdftex.def)             Requested size: 174.0498pt x 113.82497pt.
 
 <vinvout.png, id=3, 578.16pt x 430.0065pt>
 File: vinvout.png Graphic file (type png)
@@ -670,71 +670,71 @@ Overfull \hbox (36.64232pt too wide) in paragraph at lines 133--134
  [][] 
  []
 
-[3 <./ttl.png>] <circuito2.png, id=31, 169.23225pt x 78.89474pt>
+<circuito2.png, id=27, 169.23225pt x 78.89474pt>
 File: circuito2.png Graphic file (type png)
-
-<use circuito2.png>
+ <use circuito2.png>
 Package pdftex.def Info: circuito2.png used on input line 149.
-(pdftex.def)             Requested size: 118.46176pt x 55.22592pt.
- [4 <./viniin.png> <./circuito2.png>]
-<arduino.png, id=37, 449.2785pt x 218.61674pt>
+(pdftex.def)             Requested size: 169.23184pt x 78.89453pt.
+ [3 <./ttl.png>] [4 <./viniin.png>] <arduino.png, id=36, 449.2785pt x 218.61674
+pt>
 File: arduino.png Graphic file (type png)
- <use arduino.png>
+
+<use arduino.png>
 Package pdftex.def Info: arduino.png used on input line 174.
 (pdftex.def)             Requested size: 314.4928pt x 153.03065pt.
-
-<ondaardu.png, id=38, 301.125pt x 225.84375pt>
+ <ondaardu.png, id=37, 301.125pt x 225.84375pt>
 File: ondaardu.png Graphic file (type png)
- <use ondaardu.png>
-Package pdftex.def Info: ondaardu.png used on input line 180.
-(pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
 
-<ondanot.png, id=39, 301.125pt x 225.84375pt>
+<use ondaardu.png>
+Package pdftex.def Info: ondaardu.png used on input line 181.
+(pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
+ <ondanot.png, id=38, 301.125pt x 225.84375pt>
 File: ondanot.png Graphic file (type png)
- <use ondanot.png>
-Package pdftex.def Info: ondanot.png used on input line 190.
-(pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
 
-<tphl(meglio).png, id=40, 301.125pt x 225.84375pt>
+<use ondanot.png>
+Package pdftex.def Info: ondanot.png used on input line 191.
+(pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
+ [5 <./circuito2.png> <./arduino.png>]
+<tphl(meglio).png, id=45, 301.125pt x 225.84375pt>
 File: tphl(meglio).png Graphic file (type png)
  <use tphl(meglio).png>
-Package pdftex.def Info: tphl(meglio).png used on input line 200.
+Package pdftex.def Info: tphl(meglio).png used on input line 201.
 (pdftex.def)             Requested size: 180.67638pt x 135.50728pt.
 
-[5 <./arduino.png>] <tplh.png, id=46, 301.125pt x 225.84375pt>
+<tplh.png, id=46, 301.125pt x 225.84375pt>
 File: tplh.png Graphic file (type png)
  <use tplh.png>
-Package pdftex.def Info: tplh.png used on input line 206.
+Package pdftex.def Info: tplh.png used on input line 207.
 (pdftex.def)             Requested size: 180.67638pt x 135.50728pt.
-
-<tsalitain.png, id=47, 301.125pt x 225.84375pt>
+ [6 <./ondaardu.png> <./ondanot.png> <./tphl(meglio).png>]
+<tsalitain.png, id=53, 301.125pt x 225.84375pt>
 File: tsalitain.png Graphic file (type png)
  <use tsalitain.png>
-Package pdftex.def Info: tsalitain.png used on input line 222.
+Package pdftex.def Info: tsalitain.png used on input line 223.
 (pdftex.def)             Requested size: 180.67638pt x 135.50728pt.
- [6 <./ondaardu.png> <./ondanot.png> <./tphl(meglio).png>] [7 <./tplh.png> <./t
-salitain.png>] (relazione10.aux) ) 
+ [7 <./tplh.png> <./tsalitain.png>] (relazione10.aux) ) 
 Here is how much of TeX's memory you used:
  4091 strings out of 493334
  52236 string characters out of 3139252
- 137190 words of memory out of 3000000
+ 142190 words of memory out of 3000000
  7529 multiletter control sequences out of 15000+200000
  12239 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,10n,25p,798b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on relazione10.pdf (7 pages, 596996 bytes).
+<C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmti10.pfb>
+Output written on relazione10.pdf (7 pages, 596743 bytes).
 PDF statistics:
  101 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,0 +1,28 @@
+\begin{table}[!htb]\centering
+\begin{tabular}{|c|c|}
+\hline
+0 & 4\\
+0 & 4\\
+0 & 4\\
+0 & 4\\
+1 & 4\\
+1 & 4\\
+1 & 4\\
+1 & 4\\
+1 & 3\\
+1 & 2\\
+1 & 2\\
+1.3 & 0.1\\
+1.3 & 0.1\\
+1.4 & 0.1\\
+2.0 & 0.1\\
+2.6 & 0.1\\
+3.0 & 0.1\\
+3.5 & 0.1\\
+4.1 & 0.1\\
+4.6 & 0.1\\
+\hline
+\end{tabular}
+\caption{Inserire la caption}
+\label{Inserire la label}
+\end{table}

@@ -9,7 +9,7 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \newcommand{\rem}[1]{[\emph{#1}]}
 
-\author{Gruppo BN \\ Federico Belliardo, Marco Costa, Lisa Bedini}
+\author{Gruppo BN \\ Federico Belliardo, Lisa Bedini, Marco Costa}
 \title{Esperienza 10: caratteristiche fisiche porte logiche}
 
 \begin{document}
@@ -20,23 +20,23 @@ Lo scopo dell'esperienza è misurare le caratteristiche statiche e dinamiche del
 
 \section{Materiale occorrente}
 \begin{itemize}
-\item IC SN74LS04;
-\item trimmer da 2 k$\Omega$ 10 k$\Omega$ e 100 k$\Omega$;
+\item Integrato IC SN74LS04;
+\item trimmer da 2 k$\Omega$, 10 k$\Omega$ e 100 k$\Omega$;
 \item Arduino Nano;
-\item IC SN74LS244;
+\item Integrato IC SN74LS244;
 \end{itemize}
 
 \section{Caratteristiche statiche}
 Abbiamo montato il circuito come in figura \ref{fig:circuito}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.7]{circuito.png}
+\includegraphics[scale=1.0]{circuito.png}
 \caption{Circuito utilizzato.\label{fig:circuito}}
 \end{figure}
-I valori delle componenti sono state misurate tramite multimetro digitale. Come incertezze abbiamo preso quelle riportate sul manuale dello strumento.
+I valori delle componenti sono $R_1 = 1950\pm 20\mbox{k}\Omega$,
+$R_1=100\pm 1 \Omega$. Abbiamo eseguito le misure tramite multimetro digitale. Come incertezze abbiamo preso quelle riportate sul manuale dello strumento.
 Abbiamo misurato la tensione di alimentazione $V_{CC}=4.85\pm 0.03$V tramite multimetro digitale (incertezza riportata nel manuale), nei limiti di funzionamento riportati nel datasheet.
-%R_trimmer totale = 1950.
-%R_1=99.6 ohm
+
 \subsection{Misura delle tensioni di operazione}
 Per ottenere diversi valori di $V_{in}$ abbiamo variato opportunamente il trimmer (che ha la funzione di partitore di tensione). Una volta fissata la sua posizione, abbiamo misurato tramite multimetro digitale\footnote{E' lo strumento di misure di tensione in continua con maggiore resistenza interna.} $V_{in}$ e $V_{out}$.
 In tabella \ref{tab:vinvout} e in figura \ref{fig:vinvout} abbiamo riportato le misure ottenute.
@@ -83,12 +83,12 @@ $V_{OH,min}=3.7\pm 0.1$V, valore subito dopo il quale si osserva una rapida vari
 Come incertezza si è preso il range in cui si distinguono i due regimi.
 Si può considerare quindi che l'uscita della porta sia al livello alto nella fascia trovata. Pertanto abbiamo stimato $V_{OH}=3.7\pm0.2$V\footnote{In accordo con la definizione data di $V_{OH}$.}. Abbiamo stimato l'incertezza su questo valore come la differenza fra il primo punto per cui si è osservata la variazione e quello immediatamente precedente.
 
-Come stima di $V_{OL}$ abbiamo preso $0.15 \pm 0.05$V, ossia il valore asintotico. Abbiamo tuttavia una grande incertezza su questa stima: in effetti abbiamo riscontrato difficoltà a prendere misure per valori di $V_{out}$ poco superiori a $0.144$V; in particolare, era sufficiente una leggera variazione della posizione del trimmer per portare $V_{out}$ dal valore di $2.15$V a $0.144$V.
+Come stima di $V_{OL}$ abbiamo preso $0.14 \pm 0.05$V, ossia il valore asintotico. Abbiamo tuttavia una grande incertezza su questa stima: in effetti abbiamo riscontrato difficoltà a prendere misure per valori di $V_{out}$ poco superiori a $0.144$V; in particolare, era sufficiente una leggera variazione della posizione del trimmer per portare $V_{out}$ dal valore di $2.15$V a $0.144$V.\\
 Per quanto riguarda le tensioni in ingresso, si osserva che esse vengono considerate dalla porta come valore basso in un range che va da $0$ a $0.8$V circa, mentre alto da $1.3$V in poi.
 Per stimare i valori di soglia $V_{IL}$, $V_{IH}$, abbiamo preso i valori di $V_{in}$ per i quali si osserva l'inizio della transizione di $V_{out}$ da un livello logico all'altro. Con i dati presi si è stimato $V_{IL} = 0.8\pm 0.1$V, dove come incertezza abbiamo preso la differenza di $V_{IL}$ dal primo valore di $V_{in}$ per il quale $V_{out}$ inizia a scendere bruscamente.
-In modo del tutto analogo si ha $V_{IH} = 1.3\ pm 0.2$V. 
+In modo del tutto analogo si ha $V_{IH} = 1.3\pm 0.2$V. 
 I valori stimati risultano tutti in buon accordo con quanto riportato sul datasheet:
-$V_{IL,att}= 0.8$V, $V_{IH, att}=2$V, $V_{OL, att}=0.25$V, $V_{OH, att}=3.4$V.
+$V_{IL,att}= 0.8$V, $V_{IH, att}=2$V, $V_{OL, att}=0.25$V, $V_{OH, att}=3.4$V.\\
 Il comportamento che si osserva per valori di $V_{in}$ compresi fra $V_{IL}$ e $V_{IH}$ può essere spiegato in termini del circuito in figura \ref{fig:ttl}.
 
 \begin{figure}
@@ -108,22 +108,22 @@ I dati sono riportati in tabella\ref{tab:viniin} e in figura \ref{fig:viniin}.
 \centering
 \begin{tabular}{|c|c|}
 \hline
-$V_{in}$ (V) & $I_{in}$ ($\mu$ A)\\
+$V_{in}$ (V) & $I_{in}$ ($\mu$A)\\
 \hline
-0.0420 $\pm$ 0.007 & -270 $\pm$ 3\\
+0.042 $\pm$ 0.001 & -270 $\pm$ 3\\
 0.127 $\pm$ 0.002 & -263 $\pm$ 3\\
 0.396 $\pm$ 0.005 & -231 $\pm$ 3\\
 0.720 $\pm$ 0.005 & -185 $\pm$ 2\\
 1.000 $\pm$ 0.006 & -148 $\pm$ 2\\
 1.066 $\pm$ 0.006 & -65 $\pm$ 1\\
-1.100 $\pm$ 0.006 & 20.0$\pm$ 0.5 \\
+1.100 $\pm$ 0.006 & -20.0$\pm$ 0.5 \\
 1.143 $\pm$ 0.006 & -2.0$\pm$ 0.5\\
 1.220 $\pm$0.007 & 0.0$\pm$ 0.5\\
 1.270 $\pm$ 0.007 & 0.0$\pm$ 0.5\\
 2.12 $\pm$ 0.02 & 2.0$\pm$ 0.5\\
 3.16 $\pm$ 0.02 & 3.0$\pm$ 0.5\\
 4.00 $\pm$ 0.03 & 4.0$\pm$ 0.5\\
-4.64 $\pm$ 0.03 6 4.0$\pm$ 0.5\\
+4.64 $\pm$ 0.03 & 4.0$\pm$ 0.5\\
 \hline
 \end{tabular}
 \caption{Corrente in ingresso in funzione di $V_{in}$\label{tab:viniin}}
@@ -146,7 +146,7 @@ I valori stimati quindi rientrano nei limiti riportati dal costruttore.
 Per misurare la massima e minima corrente in uscita dalla porta, abbiamo montato il circuito \footnote{Il circuito collegato all'ingresso della porta è lo stesso di prima.} come in figura \ref{fig:circuito2}. Per ricavare $I_{out}$ abbiamo misurato la caduta di potenziale $V_{AB}=V_A-V_B$ ai capi della resistenza $R_2$ tramite multimetro digitale e poi si è diviso per $R_2=98\pm 1 \Omega$. Si è preso il segno della corrente positivo se entrante nella porta.
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.7]{circuito2.png}
+\includegraphics[scale=1.0]{circuito2.png}
 \caption{Schema del circuito utilizzato per la misura delle correnti di uscita.\label{fig:circuito2}}
 \end{figure}
 Per la misura di $I_{OL}$ si collega l'uscita a $V_{CC}$  e si varia il potenziometro $R_1$ in figura \ref{fig:circuito2} in modo che l'uscita sia in stato basso.
@@ -154,7 +154,7 @@ Per verificare che l'uscita fosse effettivamente nello stato basso, si è contro
 Così si ottiene una stima più vicina al valore nominale. Abbiamo quindi scelto questo valore come $I_{OL}$. Un motivo per cui fallisce il metodo di stimare $I_{OL}$ come la $I_{out}$ a $V_{OL}$ è che nelle misure riportate nel grafico \ref{fig:vinvout} non si è riusciti a ottenere misure di $V_{out}$ che non fossero del valore limite $0.144$V. In effetti, sempre facendo riferimento allo stesso grafico, si osserva che il $V_{out}$ a cui è stata presa $I_{OL}$ non è così lontano dalla zona in cui l'output è considerato basso.
 Per la misura di $I_{OH}$ si collega l'uscita al ground facendo in modo che essa sia in stato alto.
 Abbiamo preso la misura in corrispondenza di $V_{OUT}=3.7\pm0.1 $V, ossia il valore stimato di $V_{OH}$ (in corrispondenza di tale valore si aveva anche una brusca variazione della corrente e di $V_{OUT}$).
-Così si ottiene $V_{AB}=-13.8$mV e quindi $I_{OH}=-0.141\pm0.001$mA, valore in accordo con quanto riportato nel datasheet $I_{OH,att}=-0.4$mA. La strategia di mettere $V_{out}$ pari alla stima del valore di soglia ottenuto in questo caso funziona meglio perchè i dati del grafico \ref{fig:vinvout} coprono un intorno sufficientemente grande del punto in cui avviene la variazione brusca di corrente.
+Così si ottiene $V_{AB}=-13.8\pm0.2$mV e quindi $I_{OH}=-0.141\pm0.001$mA, valore in accordo con quanto riportato nel datasheet $I_{OH,att}=-0.4$mA. La strategia di mettere $V_{out}$ pari alla stima del valore di soglia ottenuto in questo caso funziona meglio perchè i dati del grafico \ref{fig:vinvout} coprono un intorno sufficientemente grande del punto in cui avviene la variazione brusca di corrente.
 Una spiegazione della rapida variazione di $I_{in}$ è che se diminuiamo troppo la resistenza di carico all'uscita della porta NOT, l'integrato deve erogare più corrente affinchè ci sia la giusta differenza di potenziale fra $V_{out}$ e $V_{A}$ (il quale è tenuto a potenziale costante tramite opportuno collegamento). Se la corrente necessaria supera la corrente massima erogabile, il circuito non funziona più come NOT e quindi si ha una variazione della corrente.  
 %discussione teorica andamento
 Con questi valori si è dato una stima del \emph{fanout}.
@@ -174,6 +174,7 @@ Abbiamo montato il circuito pulsatore in figura \ref{fig:arduino}.
 \includegraphics[scale=0.7]{arduino.png}
 \caption{Schema del pulsatore utilizzato.\label{fig:arduino}}
 \end{figure}
+I valori delle componenti, misurate con multimetro, sono $R_1 = 0.98\pm 0.01\mbox{k}\Omega$, $R_2 = 1.00\mbox{k}\Omega$, $R_3 = 0.98 \pm 0.01\mbox{k}\Omega$, $R_4 = 0.99\mbox{k}\Omega$, $R_5 = 9.9\pm 0.1\mbox{k}\Omega$, $C_1 = 100 \pm 20 \mbox{nF}$, $C_2 = 100\pm 20\mbox{nF}$.
 Successivamente abbiamo verificato il suo comportamento da generatore di onde quadre. La frequenza del segnale dipende dalla posizione del trimmer, e va da qualche Hz ai 50 kHz. L'ampiezza dell'onda picco-picco è pari a $v_{pp}=3.16\pm 0.04$V.
 \begin{figure}[!htb]
 \centering
@@ -188,7 +189,7 @@ In figura \ref{fig:ondanot} si può osservare il corretto funzionamento della po
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.7]{ondanot.png}
-\caption{\label{fig:ondanot}}
+\caption{Segnale in ingresso(CH1) e segnale in uscita alla porta NOT (CH2)\label{fig:ondanot}}
 \end{figure}
 Si è effettuata la misura tramite oscilloscopio. Le incertezze sui potenziali sono la sensibilità del cursore più il $3\%$ di calibrazione, mentre sui tempi il massimo fra la sensibilità del cursore e la semidispersione dei valori plausibili.
 
