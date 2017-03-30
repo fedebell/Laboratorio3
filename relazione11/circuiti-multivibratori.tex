@@ -24,7 +24,9 @@ Nella prima parte dell'esperienza ci si propone di montare e verificare il funzi
 \item 2 diodi LED;
 \end{itemize}
 Disponiamo inoltre del circuito pulsatore montato nella precedente esperienza, costituito da un Arduino Nano e da un octal buffer/driver SN74LS244.
-Tutte le resistenze, i condensatori e la tensione di alimentazione sono stati misurati con il multimetro digitale, quindi l'errore è stato propagato secondo le specifiche nel manuale. I tempi e le restanti tensioni sono state misurate con i cursori dell'oscilloscopio: l'errore sui tempi è dato dalla risoluzione dei cursori stessi mentre quello sulle tensioni è stato propagato considerando sia l'errore sul posizionamento dei cursori sia l'errore sistematico del $3%$.\\
+
+Tutte le resistenze, i condensatori e la tensione di alimentazione sono stati misurati con il multimetro digitale, quindi l'errore è stato propagato secondo le specifiche nel manuale. I tempi e le restanti tensioni sono state misurate con i cursori dell'oscilloscopio: l'errore sui tempi è dato dalla risoluzione dei cursori stessi mentre quello sulle tensioni è stato propagato considerando sia l'errore sul posizionamento dei cursori sia l'errore sistematico del $3\%$.
+
 
 \section{Semplici circuiti logici}
 \subparagraph{Verifica porta NAND}
@@ -57,7 +59,7 @@ $I_1$ & $I_2$ & $O$ \\
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[scale=1]{nand1.png}\includegraphics[scale=1]{nand2.png}
+  \includegraphics[scale=0.75]{nand1.png}\includegraphics[scale=0.75]{nand2.png}
 \caption{Schermate dell'oscilloscopio, in canale 1 c'è l'output e in canale 2 l'input.\label{osc:NAND}}
 \end{figure}
 
@@ -98,29 +100,6 @@ $I_1$ & $I_2$ & $O$ \\
 \subparagraph{Circuito OR}
 
 E' stato montato il circuito in figura \ref{fig:OR}. In tabella \ref{tab:OR} è stata rappresentata la tabella di verità e in figura \ref{osc:OR} si può osservare l'andamento dell'output. Si nota che l'uscita è a livello basso quando entrambi gli ingressi sono a 0. Anche in questo caso abbiamo triggerato sull'output e i risultati sono in accordo con la tabella di verità di un OR.
-
-
-\begin{center}
-\begin{minipage}{0.3\textwidth}
-\begin{table}[!htb]
-\begin{tabular}{|c|c|c|}
-\hline 
-$I_1$ & $I_2$ & $O$ \\
-\hline
- 1 &  0 & 1\\ 
-
- 1 &  1 & 1\\ 
- 
- 0 &  1 & 1\\ 
- 
- 0 &  0 & 0\\ 
-\hline 
-\end{tabular} 
-\caption{Tabella di verità del circuito OR.\label{tab:OR}}
-\end{table}
-\end{minipage}\qquad
-\includegraphics[width=.4\textwidth]{OR.png}
-\end{center}
 
 \begin{figure}[!htb]
   \centering
@@ -225,9 +204,8 @@ $I_1$ & $I_2$ & $S$ & $R$\\
 \end{figure}
 
 \section{Multivibratore monostabile}
-Abbiamo montato il circuito in figura \ref{fig:monostabile}. I componenti usati sono: $R_1= 470\pm4\,\text{\Omega}$ e $C_1= 110\pm4 \,\text{nF} $. Si è scelta come corrente di alimentazione $V_{CC}= 4.85\pm0.03\,\text{V}$ e come frequenza dell'onda quadra inviata dal generatore di funzioni $f = 5.16\pm0.05\,\text{kHz}$. Il periodo risulta quindi pari a $T=194\pm2\,\text{\mu s}$ e la durata dell'impulso in uscita $t=12.8\pm0.2\,\text{\mu s}$, ottenendo così un \emph{duty cycle} pari a $6.6\pm0.1% $.\\
-Si è misurata una tensione massima di $4.3\pm0.1\,\text{V}$. Abbiamo osservato all'oscilloscopio l'andamento delle tensioni $V_{IN}$, $V_{OUT}$ e $V_{C}$, notando che quando in ingresso si ha l'impulso, NAND1 lo interpreta come un 1 quindi all'ingresso di NAND2 si ha uno 0, l'uscita è alta e il condensatore si carica tramite la resistenza. A causa della carica di $C_1$, $V_C$ diminuisce esponenzialmente fino al valore di commutazione $V_C=1.44\pm0.04\,\text{V}$ che corrisponde a $V_{IH}$ per NAND3. Raggiunto questo valore l'ingresso di NAND3 è interpretato come uno 0 quindi all'ingresso di NAND2 si hanno due 1, pertanto la sua uscita diventa bassa e la tensione $V_C$ diventa negativa. Il diodo entra quindi in interdizione e limita il valore di $V_C$ a $0.80\pm0.02\,\text{V}$. A questo punto il condensatore si carica finchè non arriva un altro impulso. In questo ciclo la carica del condensatore si conserva al variare dei valori logici perchè i tempi di commutazione dei NAND sono molto minori dei tempi di carica e scarica di $C_1$. Il tempo atteso caratteristico del circuito RC è $\tau_{att}=52\pm2\,\text{\mu s}$.
-Abbiamo verificato che variando la frequenza in ingresso da circa $33 kHz$ a circa $10 kHz$ la durata dell'impulso t in uscita non cambia, mentre si ha una dipendenza di t dalla resistenza. Infatti abbiamo variato il valore della resistenza $R_1$ e misurato la durata dell'impulso, i dati sono presenti in tabella \ref{tab:monostabile}. Per convalidare l'ipotesi di linearità è stato eseguito un \emph{fit} lineare del tipo $t=aR_1+b$ ottenendo i seguenti valori: a= b= chi^2_{rid}= . Dal grafico in figura \ref{grafico:monostabile} è evidente l'andamento lineare eccetto che per gli ultimi punti con un valore della resistenza alto, per cui si ha un aumento del chi^2. Questo è probabilmente dovuto al fatto che l'andamento lineare è apprezzabile se i valori delle resistenze non si discostano troppo da quello di $R_1$, mentre per valori molto maggiori non si può più assumere la linearità a priori.
+Abbiamo montato il circuito in figura \ref{fig:monostabile}. I componenti sono stati misurati con il multimetro digitale e risultano essere $R_1= 470\pm4\,\Omega$ e $C_1= 110\pm4 \,\text{nF} $. Si è scelta come corrente di alimentazione $V_{CC}= 4.85\pm0.03\,\text{V}$ e come frequenza dell'onda quadra inviata dal generatore di funzioni $f = 5.16\pm0.05\,\text{kHz}$. Il periodo risulta quindi pari a $T=194\pm2\,\mu s$ e la durata dell'impulso in uscita $t=12.8\pm0.2\,\mu s$, ottenendo così un \emph{duty cycle} pari a $6.6\pm0.1\% $. Si è misurata una tensione massima di $4.3\pm0.1\,\text{V}$. Abbiamo osservato all'oscilloscopio l'andamento delle tensioni $V_{IN}$, $V_{OUT}$ e $V_{C}$, notando che quando in ingresso si ha l'impulso, NAND1 lo interpreta come un 1 quindi all'ingresso di NAND2 si ha uno 0, l'uscita è alta e il condensatore si carica tramite la resistenza. A causa della carica di $C_1$, $V_C$ diminuisce esponenzialmente fino al valore di commutazione $V_C=1.44\pm0.04\,\text{V}$ che corrisponde a $V_{IH}$ per NAND3. Raggiunto questo valore l'ingresso di NAND3 è interpretato come uno 0 quindi all'ingresso di NAND2 si hanno due 1, pertanto la sua uscita diventa bassa e la tensione $V_C$ diventa negativa. Il diodo entra quindi in interdizione e limita il valore di $V_C$ a $0.80\pm0.02\,\text{V}$. A questo punto il condensatore si carica finchè non arriva un altro impulso. In questo ciclo la carica del condensatore si conserva al variare dei valori logici perchè i tempi di commutazione dei NAND sono molto minori dei tempi di carica e scarica di $C_1$. Il tempo atteso caratteristico del circuito RC è $\tau_{att}=52\pm2\,\mu s$.
+Abbiamo verificato che variando la frequenza in ingresso da circa $33\,kHz$ a circa $10\,kHz$ la durata dell'impulso t in uscita non cambia, mentre si ha una dipendenza di t dalla resistenza. Infatti abbiamo variato il valore della resistenza $R_1$ e misurato la durata dell'impulso, i dati sono presenti in tabella \ref{tab:monostabile}. Per convalidare l'ipotesi di linearità è stato eseguito un \emph{fit} lineare del tipo $t=aR_1+b$ ottenendo i seguenti valori: $a=0.111\pm0.001\,\mu s/\Omega$, $b= -11\pm1\,\mu s$ $\chi^2/ndof=11.57/3$ . Dal grafico in figura \ref{fit:monostabile} è evidente l'andamento lineare eccetto che per gli ultimi punti con un valore della resistenza alto, per cui si ha un aumento del $\chi^2$. Questo è probabilmente dovuto al fatto che l'andamento lineare è apprezzabile se i valori delle resistenze non si discostano troppo da quello di $R_1$, mentre per valori molto maggiori non si può più assumere la linearità a priori.
 
 % periodo T=194\pm2 us
 % t up 12.8\pm 0.2 us
@@ -262,7 +240,7 @@ Abbiamo verificato che variando la frequenza in ingresso da circa $33 kHz$ a cir
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline 
-$R_i [\Omega]$ & $\DeltaR_i [\Omega]$ & $t [\mu s]$ & $\Deltat [\mus]$\\
+$R_i [\Omega ]$ & $\Delta R_i [\Omega ]$ & $t [\mu s]$ & $\Delta t [\mu s]$\\
 \hline
  327 &  3 & 25.8 & 0.2\\ 
 \hline 
@@ -282,11 +260,15 @@ $R_i [\Omega]$ & $\DeltaR_i [\Omega]$ & $t [\mu s]$ & $\Deltat [\mus]$\\
 \caption{Presa dati per verificare la linearità fra $R$ e $t$.\label{tab:monostabile}}
 \end{table}
 
-%i punti che non tornano sono gli ultimi probabilmente perchè i valori delle resistenze si discostano molto da quello iniziale
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.5]{fitmonostabile.png}
+\caption{Grafico di t in funzione di $R_1$ e \emph{fit} lineare.\label{fit:monostabile}}
+\end{figure}
 
 
 \section{Multivibratore astabile}
-Abbiamo montato il circuito in figura \ref{astabile}, misurando con il multimetro digitale $R_2= 989\pm8\,\text{\Omega}$, $C_2= 107\pm4 \,\text{nF} $ e $V_{CC}= 4.85\pm0.03\,\text{V}$. Si sono osservati all'oscilloscopio $V_{C,2}$ e $V_{OUT}$, quindi abbiamo misurato il periodo in uscita $T= 202\pm1\,\text{\mu s} $ e $t= 128\pm1,\text{\mu s} $ \emph{duty cycle} pari a $63.4\pm0.6%$. In questo circuito tutte le porte NAND sono usate in configurazione NOT, quindi se l'ingresso di NAND5 è alto, l'uscita di NAND6 è alta, quindi il condensatore si carica attraverso la resistenza provocando una diminuzione esponenziale della tensione $V_{C,2}$ fino al valore di commutazione $V_{IH}=1.48\pm0.04\,\text{V}$. A questo valore $V_{C,2}$ ha un brusco cambiamento fino a -1.16 V e l'uscita del NAND7 diventa alta, quindi il condensatore si scarica e $V_{C,2}$ aumenta fino al valore $1.44\pm0.04\,\text{V}$ quando si ha un altro brusco cambiamento di $V_{C,2}$. L'elemento NAND8 serve a invertire il segnale.
+Abbiamo montato il circuito in figura \ref{fig:astabile}, misurando con il multimetro digitale $R_2= 989\pm8\,\Omega$, $C_2= 107\pm4 \,\text{nF} $ e $V_{CC}= 4.85\pm0.03\,\text{V}$. Si sono osservati all'oscilloscopio $V_{C,2}$ e $V_{OUT}$, quindi abbiamo misurato il periodo in uscita $T= 202\pm1\,\mu s $ e $t= 128\pm1,\mu s $ \emph{duty cycle} pari a $63.4\pm0.6\%$. In questo circuito tutte le porte NAND sono usate in configurazione NOT, quindi se l'ingresso di NAND5 è alto, l'uscita di NAND6 è alta, quindi il condensatore si carica attraverso la resistenza provocando una diminuzione esponenziale della tensione $V_{C,2}$ fino al valore di commutazione $V_{IH}=1.48\pm0.04\,\text{V}$. A questo valore $V_{C,2}$ ha un brusco cambiamento fino a -1.16 V e l'uscita del NAND7 diventa alta, quindi il condensatore si scarica e $V_{C,2}$ aumenta fino al valore $1.44\pm0.04\,\text{V}$ quando si ha un altro brusco cambiamento di $V_{C,2}$. L'elemento NAND8 serve a invertire il segnale.
 
 %t=128 \pm1 mus
 %T=202\pm1 mus
@@ -298,19 +280,17 @@ Abbiamo montato il circuito in figura \ref{astabile}, misurando con il multimetr
 
 %spiegazione circuito e immagini oscilloscopio
 %misurare componenti
-Come per il circuito multivibratore monostabile abbiamo variato il valore della resistenza per verificare la dipendenza lineare tra $R_2$ e il periodo in uscita T, quindi abbiamo eseguito un \emph{fit} lineare e ottenuto TOT.
+Come per il circuito multivibratore monostabile abbiamo variato il valore della resistenza per verificare la dipendenza lineare tra $R_2$ e il periodo in uscita T, quindi abbiamo eseguito un \emph{fit} lineare propagando l'errore sia sulle ascisse che sulle ordinate, figura \ref{fit:astabile} e ottenuto $a=0.195\pm0.003\,\mu s/\Omega$, $b=10\pm3\,\mu s$ e $\chi^2/ndof=5.73/4$.
 %tabella e fit
 
 %R 1.788 kohm
 %R 2.13 kohm
 
-%propagato errore sia su x che su y a=0.2
-
 \begin{table}[!htb]
 \centering
 \begin{tabular}{|c|c|c|c|}
 \hline 
-$R_i [\Omega]$ & $\DeltaR_i [\Omega]$ & $t [\mus]$ & $\Deltat [\mus]$\\
+$R_i [\Omega]$ & $\Delta R_i [\Omega]$ & $T [\mu s]$ & $\Delta T [\mu s]$\\
 \hline
  669 & 5 & 141  & 1\\ 
 \hline
@@ -335,9 +315,15 @@ $R_i [\Omega]$ & $\DeltaR_i [\Omega]$ & $t [\mus]$ & $\Deltat [\mus]$\\
 \caption{Schema del circuito multivibratore astabile.\label{fig:astabile}}
 \end{figure}
 
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.5]{fitastabile.png}
+\caption{Grafico di T in funzione di $R_2$ e \emph{fit} lineare.\label{fit:astabile}}
+\end{figure}
+
 \section{Generatore di onda quadra}
-Il multivibratore astabile è stato collegato al monostabile tramite un derivatore, in modo da ottenere il generatore di onda quadra in figura \ref{fig:generatorequadra}. Si sono usati gli stessi componenti dei circuiti precedenti come $R_1$, $R_2$, $C_1$ e $C_2$ e si sono misurate $R_3=989\pm8\,\text{\Omega}$ e $C_3= 10.2\pm0.4 \,\text{nF}$. Da un'analisi qualitativa del circuito si suppone che il periodo dell'onda all'uscita del monostabile dipenda solo dalla costante tempo $\tau_2=C_2R_2$ e che la durata dell'impulso t dipenda solo dalla costante $\tau_1=C_1R_1$. Per verificare questa ipotesi abbiamo cambiato $R_1$ e $R_2$ in modo alternato, i dati sono visibili in tabella \ref{tab:generatore}. Come atteso, cambiando il valore della sola $R_1$ non si hanno variazioni significative del periodo; viceversa, modificando solo il valore di $R_2$ la durata dell'impulso non cambia.
-Infine abbiamo stimato i valori delle resistenze per ottenere $T=100\,\text{\mu s}$ e \emph{duty cycle} pari al $30%$, sfruttando le relazioni lineari ottenute dai \emph{fit}: $R_1\simeq $ e $R_2 \simeq $. L'ultima misura presente in tabella \ref{tab:generatore} si riferisce a questa parte e il \emph{duty cycle} relativo risulta pari al TOT
+Il multivibratore astabile è stato collegato al monostabile tramite un derivatore, in modo da ottenere il generatore di onda quadra in figura \ref{fig:generatorequadra}. Si sono usati gli stessi componenti dei circuiti precedenti come $R_1$, $R_2$, $C_1$ e $C_2$ e si sono misurate $R_3=989\pm8\,\Omega$ e $C_3= 10.2\pm0.4 \,\text{nF}$. Da un'analisi qualitativa del circuito si suppone che il periodo dell'onda all'uscita del monostabile dipenda solo dalla costante tempo $\tau_2=C_2R_2$ e che la durata dell'impulso t dipenda solo dalla costante $\tau_1=C_1R_1$. Per verificare questa ipotesi abbiamo cambiato $R_1$ e $R_2$ in modo alternato, i dati sono visibili in tabella \ref{tab:generatore}. Come atteso, cambiando il valore della sola $R_1$ non si hanno variazioni significative del periodo; viceversa, modificando solo il valore di $R_2$ la durata dell'impulso non cambia.
+Infine abbiamo stimato i valori delle resistenze per ottenere $T=100\,\mu s$ e \emph{duty cycle} pari al $30\%$, sfruttando le relazioni lineari ottenute dai \emph{fit}: $R_1\simeq $ e $R_2 \simeq $. L'ultima misura presente in tabella \ref{tab:generatore} si riferisce a questa parte e il \emph{duty cycle} relativo risulta pari al TOT
 
 %R2 989
 %R3 985 ohm
@@ -384,7 +370,7 @@ inM
 \centering
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline 
-$R_{1i} [\Omega]$ & $\DeltaR_{1i} [\Omega]$ & R_{2i} & dR_{2i} &$T [\mus]$ & $\Delta T [\mus]$&$t [\mus]$ & $\Delta t [\mus]$\\
+$R_{1i} [\Omega]$ & $\Delta R_{1i} [\Omega]$ & $R_{2i} [\Omega]$  & $\Delta R_{2i} [\Omega]$ & $T [\mu s]$ & $\Delta T [\mu s]$&$t [\mu s ]$ & $\Delta t [\mu s]$\\
 \hline
  470 & 3 & 1454	& 11 & 290 & 2& 46.6& 0.2\\ 
 \hline
