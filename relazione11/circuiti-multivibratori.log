@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  2 APR 2017 00:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  2 APR 2017 00:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -494,7 +494,45 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks22
 )
-(./circuiti-multivibratori.aux)
+(./circuiti-multivibratori.aux
+
+! Package babel Error: You haven't defined the language italian yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \select@language{italian}
+                             
+Your command will be ignored, type <return> to proceed
+
+
+! Package babel Error: You haven't defined the language italian yet.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \select@language{italian}
+                             
+Your command will be ignored, type <return> to proceed
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 <
+      <<<<<< HEAD
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Label `fit:astabile' multiply defined.
+
+)
 \openout1 = `circuiti-multivibratori.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -509,8 +547,12 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+Overfull \hbox (9.07642pt too wide) in paragraph at lines 51--13
+[]\OT1/cmr/m/n/10 <<<<<<< HEAD  ======= >>>>>>> 07a98f814d64e882733c5eb5357c17b
+1502d20dc         <<<<<<< HEAD   =======
+ []
 
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
 \scratchdimen=\dimen122
@@ -603,7 +645,11 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -627,7 +673,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-<nand.png, id=1, 228.855pt x 182.93344pt>
+<nand.png, id=7, 228.855pt x 182.93344pt>
 File: nand.png Graphic file (type png)
  <use nand.png>
 Package pdftex.def Info: nand.png used on input line 38.
@@ -671,7 +717,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-<and.png, id=3, 166.37157pt x 45.16875pt>
+<and.png, id=9, 166.37157pt x 45.16875pt>
 File: and.png Graphic file (type png)
  <use and.png>
 Package pdftex.def Info: and.png used on input line 72.
@@ -710,10 +756,7 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<or.png, id=21, 160.34906pt x 121.95563pt>
+[2] <or.png, id=24, 160.34906pt x 121.95563pt>
 File: or.png Graphic file (type png)
  <use or.png>
 Package pdftex.def Info: or.png used on input line 106.
@@ -752,12 +795,12 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<xor.png, id=22, 233.37187pt x 124.96687pt>
+<xor.png, id=25, 233.37187pt x 124.96687pt>
 File: xor.png Graphic file (type png)
  <use xor.png>
 Package pdftex.def Info: xor.png used on input line 139.
 (pdftex.def)             Requested size: 116.68564pt x 62.48328pt.
- [2 <./nand.png> <./and.png> <./or.png>]
+ [3 <./nand.png> <./and.png> <./or.png>]
 
 LaTeX Warning: File `xor1.png' not found on input line 164.
 
@@ -791,7 +834,7 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<sommatore.png, id=30, 255.20343pt x 195.73125pt>
+<sommatore.png, id=33, 255.20343pt x 195.73125pt>
 File: sommatore.png Graphic file (type png)
  <use sommatore.png>
 Package pdftex.def Info: sommatore.png used on input line 178.
@@ -813,8 +856,8 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[3 <./xor.png> <./sommatore.png>]
-<monostabile.png, id=36, 564.60938pt x 124.96687pt>
+[4 <./xor.png> <./sommatore.png>]
+<monostabile.png, id=39, 564.60938pt x 124.96687pt>
 File: monostabile.png Graphic file (type png)
  <use monostabile.png>
 Package pdftex.def Info: monostabile.png used on input line 239.
@@ -836,7 +879,7 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[4 <./monostabile.png>] <astabile.png, id=41, 306.39468pt x 119.69719pt>
+[5 <./monostabile.png>] <astabile.png, id=44, 306.39468pt x 119.69719pt>
 File: astabile.png Graphic file (type png)
 
 <use astabile.png>
@@ -859,23 +902,23 @@ Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[5 <./astabile.png>] <generatorequadra.png, id=46, 305.64188pt x 171.64125pt>
+[6 <./astabile.png>] <generatorequadra.png, id=49, 305.64188pt x 171.64125pt>
 File: generatorequadra.png Graphic file (type png)
 
 <use generatorequadra.png>
 Package pdftex.def Info: generatorequadra.png used on input line 358.
 (pdftex.def)             Requested size: 152.82056pt x 85.8204pt.
- [6 <./generatorequadra.png>]
+ [7 <./generatorequadra.png>]
 (./circuiti-multivibratori.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3359 strings out of 494902
- 43470 string characters out of 6179890
- 115925 words of memory out of 5000000
- 6577 multiletter control sequences out of 15000+600000
+ 3361 strings out of 494902
+ 43488 string characters out of 6179890
+ 116094 words of memory out of 5000000
+ 6579 multiletter control sequences out of 15000+600000
  11710 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  40i,9n,25p,1618b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -891,10 +934,10 @@ sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on circuiti-multivibratori.pdf (6 pages, 284462 bytes).
+Output written on circuiti-multivibratori.pdf (7 pages, 285105 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
