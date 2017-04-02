@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  31 MAR 2017 12:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  2 APR 2017 23:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -497,11 +497,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks22
 )
-(./relazione12.aux
-
-LaTeX Warning: Label `stati2' multiply defined.
-
-)
+(./relazione12.aux)
 \openout1 = `relazione12.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -516,7 +512,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
 \scratchdimen=\dimen122
@@ -630,10 +627,6 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-LaTeX Warning: Reference `D-Latch' on page 1 undefined on input line 19.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
@@ -675,36 +668,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--61
  []
 
 
-LaTeX Warning: Reference `ritardo' on page 1 undefined on input line 62.
+Underfull \hbox (badness 10000) in paragraph at lines 79--85
+
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./latchNand.png>]
+<divisore.png, id=15, 978.65625pt x 444.66125pt>
+File: divisore.png Graphic file (type png)
+ <use divisore.png>
+Package pdftex.def Info: divisore.png used on input line 88.
+(pdftex.def)             Requested size: 489.32693pt x 222.33008pt.
+
+Overfull \hbox (5.63007pt too wide) in paragraph at lines 88--89
+ [][] 
+ []
 
 
-LaTeX Warning: Reference `contatore' on page 1 undefined on input line 79.
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 98.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Runaway argument?
-{4, \frac {1}{8}, \frac {1}{16}$ in quanto l'uscita $Q_i$ di un FF è\ETC.
-! File ended while scanning use of \frac .
-<inserted text> 
-                \par 
-<*> relazione12.tex
-                   
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
 
-! Emergency stop.
-<*> relazione12.tex
-                   
-*** (job aborted, no legal \end found)
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
 
- 
+ []
+
+[2 <./flipflopDlatch.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 118--124
+
+ []
+
+<shift.png, id=22, 534.99875pt x 622.325pt>
+File: shift.png Graphic file (type png)
+ <use shift.png>
+Package pdftex.def Info: shift.png used on input line 133.
+(pdftex.def)             Requested size: 267.49872pt x 311.16173pt.
+
+<pseudi.png, id=23, 593.21625pt x 655.44875pt>
+File: pseudi.png Graphic file (type png)
+ <use pseudi.png>
+Package pdftex.def Info: pseudi.png used on input line 144.
+(pdftex.def)             Requested size: 296.60739pt x 327.72357pt.
+ [3 <./divisore.png>] [4 <./shift.png> <./pseudi.png>] (./relazione12.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3326 strings out of 494902
- 42930 string characters out of 6179890
- 110984 words of memory out of 5000000
- 6563 multiletter control sequences out of 15000+600000
- 11196 words of font info for 44 fonts, out of 8000000 for 9000
+ 3369 strings out of 494902
+ 43531 string characters out of 6179890
+ 111977 words of memory out of 5000000
+ 6596 multiletter control sequences out of 15000+600000
+ 11542 words of font info for 45 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 40i,9n,25p,581b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 40i,9n,25p,577b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmti10.pfb>
+Output written on relazione12.pdf (4 pages, 245643 bytes).
+PDF statistics:
+ 62 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -16,20 +16,20 @@
 \maketitle
 
 \section{Flip-Flop D-Latch}
-Si è realizzato un circuito flip-flop di tipo D-Latch, come mostrato in figura \ref{D-Latch} utilizzando le porte NAND di due integrati. L'ingresso D che corrisponde al dato da memorizzare è stato collegato all'impulsatore realizzato con Arduino Nano (in particolare a Y1 o a Y2?), e l'Enable è collegato alla tensione positiva attraverso uno switch manuale (inserire resistenza di pull-up?). La tensione di lavoro durante tutta l'esperienza è stata fissata a: $V_{CC} = $.\\
+Si è realizzato un circuito flip-flop di tipo D-Latch, come mostrato in figura \ref{latch} utilizzando le porte NAND di due integrati. L'ingresso D che corrisponde al dato da memorizzare è stato collegato all'impulsatore realizzato con Arduino Nano (in particolare a Y1 o a Y2?), e l'Enable è collegato alla tensione positiva attraverso uno switch manuale (inserire resistenza di pull-up?). La tensione di lavoro durante tutta l'esperienza è stata fissata a: $V_{CC} = $.\\
 
 %Riportiamo in tabella \ref{stati} le configurazioni del R-S NAND Latch per maggior chiarezza %delle spiegazioni successive:
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{latchNand.png}
-\caption{R-S NAND Latch.\label{fig:latch}}
+\caption{R-S NAND Latch.\label{latch}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.7]{flipflopDlatch.png}
-\caption{Circuito  D-Latch NAND.\label{fig:circuito}}
+\caption{Circuito  D-Latch NAND.\label{circuito}}
 \end{figure}
 
 In figura \ref{segue} si vede come il segnale $Q(t)$ in uscita dal flip-flop segua l'ingresso quando enable è alto riproducendo la tabella \ref{stati2}.\\
@@ -70,23 +70,23 @@ $t_{LH}$ (ns) & $t_{HL}$ (ns)\\
 tempo 1 & tempo 2\\
 \hline
 \end{tabular}
-\caption{Misure dei tempi di ritardo in salita e discesa per il Flip-Flop. \label{stati2}}
+\caption{Misure dei tempi di ritardo in salita e discesa per il Flip-Flop.\label{ritardo}}
 \end{table}
 
-%TODO -> dire se sono in attesa con quanto atteso e spiegare perchè sono asimmetrici.
+%TODO -> dire se sono in attesa con quanto atteso per propagazione attraverso il livello o due livelli di nand e spiegare perchè sono asimmetrici.
 
 \section{Divisori di frequenza}
 Si è realizzato un contatore a 4 bit come in figura \ref{contatore} connettendo l'uscita Q del primo JK (FF1) al clock del secondo JK (FF2),i restanti JK sono già interconnessi all'interno del package. Si vogliono utilizzare tutti i JK in modalità Toggle, cioè in modo che oscillino tra lo stato 0 e 1 alla transizione basso-alto del clock (per costruzione). Per fare cioò è necessario che l'ingresso J di ognuno dei flip-flop sia impostato a 1, questa configurazione è realizzata ponendo $R_0$ a terra e $R_1$ flottante (per il momento).\\
 %perchè cose flottanti sono uguali a 1 di default??
 Infatti la configurazione toggle del JK si ottiene se $J = 1$ e $K = 1$ dunque con K flottante questo è sempre uguale a 1, se uno egli ingressi del NAND è forzato a 0 la sua uscita sarà sempre 1 e sono quindi nella richiesta per i JK.\\  
-Poiché la transizione del valore di uscita Q di ognuno degli FF avviene con una frequenza dimezzata rispetto a quella del clock, le varie uscite $Q_i(t)$ oscillano con frequenze $\frac{1}{2}, \frac{1}{4, \frac{1}{8}, \frac{1}{16}$ in quanto l'uscita $Q_i$ di un FF è il clock del successivo.\\
+Poiché la transizione del valore di uscita Q di ognuno degli FF avviene con una frequenza dimezzata rispetto a quella del clock, le varie uscite $Q_i(t)$ oscillano con frequenze $\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}$ in quanto l'uscita $Q_i$ di un FF è il clock del successivo.\\
 Ogni uscita $Q_i$ è stata collegata a terra attraverso un LED e una resistenza (per limitare la corrente sul led). Questo e l'accorgimento di impostare un clock per il FF1 di 1 Hz (generato con Arduino) rende osservabili ad occhio nudo le transizioni.\\
 Interpretando il bit più a sinistra come bit meno significativo (1 per LED acceso e 0 per LED spento) si ottiene la rappresentazione fisica dei numeri da 0 a 15 in binario.\\
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{divisore.png}
-\caption{Contatore a 4 bit.\label{fig:contatore}}
+\caption{Contatore a 4 bit.\label{contatore}}
 \end{figure}
 
 Si è inviato in ingresso (sempre con Arduino) un segnale di frequenza $f = kHz$, si sono misurate le frequenze dei segnali $Q_i$ e i tempi di ritardo per la salita e la discesa rispetto al clock, definiti come differenza temporale i punti in cui i due segnali raggiungono la metà del rispettivo valore massimo.\\
@@ -109,6 +109,8 @@ $Q_4$ & • & • & • & • \\
 \caption{Misure di frequenza e tempi di propagazione per il divisore. \label{misureDivisore}}
 \end{table}
 
+%TODO Inserire immagini e "tabella di verità" del contatore che arriva fino a 10.
+
 I tempi di ritardo misurati sono tempi di propagazione attraverso la rete dei flip-flop e dalle misure eseguite aumentano linearmente con il numero di porte del circuito. Il tempo di propagazione da \emph{low} a \emph{high} è sistematicamente più alto di circa $\Delta t = ... ns$, come si può vedere nella tabella \ref{misureDivisore}.\\ 
 %I tempi di propagazione sono compatibili con il numero di porte che ci sia aspetta essere in ogni latch?
 %TODO - Eseguire un fit per la linearità
@@ -117,16 +119,31 @@ Si vuole realizzare un contatore decadico sincrono, cioè attivare il reset quan
 Il reset dei JK si ottiene per $J = 0$ e $K = 1$, dunque K viene sempre lasciato flottante
 A questo punto sarebbe possibile fornire questo valore agli ingressi di reset del circuito, tuttavia per costruire un reset sincrono con il clock si utilizza un D-Latch.\\
 Il bit di reset $R_1$ viene collagato ora a 1 attraverso una resistenza, il bit $R_2$ è collegato all'uscita negata del latch in modalità enabled. In questo modo l'uscita $\bar{Q}$ diventa 1 non appena si raggiunge 10 e sincronamente con il clock. Infine $\bar{Q}$ viene collegata al bit $R_2$ di reset e così si è realizzato il contatore decimale.\\
-Se non è ancora stato raggiunto il 10 $Q = 1$, $\bar{Q} = 0$ e dunque tutti i FF sono in modalità toggle (J = 0 NAND 1 = 1, K =1 ) e il conteggio continua. Non appena $\bar{Q} = 1$ , cioè ho raggiunto il 10 l'uscita degli FF viene impostata a 0, infatti J = 1 NAND 1 = 0, K = 1 che sappiamo corrispondere al settaggio di $Q = 0$.
-
- 
+Se non è ancora stato raggiunto il 10 $Q = 1$, $\bar{Q} = 0$ e dunque tutti i FF sono in modalità toggle (J = 0 NAND 1 = 1, K =1) e il conteggio continua. Non appena $\bar{Q} = 1$ , cioè ho raggiunto il 10 l'uscita degli FF viene impostata a 0, infatti J = 1 NAND 1 = 0, K = 1 che sappiamo corrispondere al settaggio di $Q = 0$.\\
+Il contatore è edge-triggered sul fronte di discesa del clock, mentre il D-Latch è attivo se il clock è alto, dunque perchè il reset sia sincrono è necessario usare come clock del D-Latch il clock negato.\\
 
 %TODO - Vedere se invertir il clock.
 %Discutere il clock e discutere le caratteristiche - riportare le misure. 
 
 \section{Shift register con D-Latch}
+Abbiamo montato lo shift register come indicato in figura \ref{shift}, Si possono osservare gli stati dei vari flip-flop attraverso il diodo led. Si è verificato che il pulsante di preset imposta tutte le uscite di Q al valore alto. $Q_0$ ha valore alto o basso a seconda dello stato del DIP switch (specificare), commutare lo switch fa traslare il vecchio valore di $Q_0$ nei registri successivi, come atteso.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{shift.png}
+\caption{Shift register.\label{shift}}
+\end{figure}
 
 \section{Generatore di numeri casuali}
+Si è realizzato il circuito in figura \ref{pseudo} e inviando un clock a bassa frequenza si osservata (e riportata in seguito) la sequenza generata (che come si vede è completa). Si sono provate tutte le possibili combinazioni di "tap" (ingressi $Q_i$ dello XOR) è si è visto che sono due danno sequenze complete: $Q_2$, $Q_3$ e $Q_0$, $Q_3$.
+
+%Riportare la sequenza di XOR
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{pseudi.png}
+\caption{Generatore di numeri pseudo-casuali.\label{pseudo}}
+\end{figure}
 
 \end{document}
 
