@@ -1,14 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  3 APR 2017 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  4 APR 2017 00:18
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**circuiti-multivibratori.tex
-(./circuiti-multivibratori.tex
+**./circuiti-multivibratori.tex
+(circuiti-multivibratori.tex
 LaTeX2e <2016/03/31> patch level 3
-Babel <3.9r> and hyphenation patterns for 5 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,19 +21,19 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -272,7 +270,7 @@ File: t1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -313,7 +311,7 @@ File: ot1enc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2016/02/28 v1.1s UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -337,88 +335,83 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2016/04/23 3.9r The Babel package
 
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\marco\AppData\Roaming\MiKTeX\2.9\tex\latex\arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\marco\AppData\Roaming\MiKTeX\2.9\tex\latex\babel-italian\italian.ldf
+Language: italian 2015/03/26 v1.3n Italian support from the babel system
 
-! Package babel Error: Unknown option `italian'. Either you misspelled it
-(babel)                or the language definition file italian.ldf was not foun
-d.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.310 \ProcessOptions*
-                      
-Valid options are: shorthands=, KeepShorthandsActive,
-activeacute, activegrave, noconfigs, safe=, main=, math=
-headfoot=, strings=, config=, hyphenmap=, or a language name.
-
-
-! Package babel Error: You haven't specified a language option.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.343 ...ry to proceed from here, type x to quit.}
-                                                  
-You need to specify a language, either as a global option
-or as an optional argument to the \usepackage command;
-You shouldn't try to proceed from here, type x to quit.
-
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/04/23 3.9r Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\it@lettering=\count88
+\it@doublequoteactive=\count89
+\it@ISOcompliance=\count90
+))
+(C:\Users\marco\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count91
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2016/06/28 v2.15d AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
-\ex@=\dimen103
+\ex@=\dimen104
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen104
+\pmbraise@=\dimen105
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count87
+\inf@bad=\count92
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count88
-\leftroot@=\count89
+\uproot@=\count93
+\leftroot@=\count94
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count90
-\DOTSCASE@=\count91
+\classnum@=\count95
+\DOTSCASE@=\count96
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen105
+\big@size=\dimen106
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count92
-\c@MaxMatrixCols=\count93
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
 \dotsspace@=\muskip10
-\c@parentequation=\count94
-\dspbrk@lvl=\count95
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
 \tag@help=\toks17
-\row@=\count96
-\column@=\count97
-\maxfields@=\count98
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
 \andhelp@=\toks18
-\eqnshift@=\dimen106
-\alignsep@=\dimen107
-\tagshift@=\dimen108
-\tagwidth@=\dimen109
-\totwidth@=\dimen110
-\lineht@=\dimen111
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
 \@envbody=\toks19
 \multlinegap=\skip44
 \multlinetaggap=\skip45
@@ -426,75 +419,76 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
 File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count99
+\Gread@gobject=\count104
 ))
-\Gin@req@height=\dimen112
-\Gin@req@width=\dimen113
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
 )
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count100
-\Gm@cntv=\count101
-\c@Gm@tempcnt=\count102
-\Gm@bindingoffset=\dimen114
-\Gm@wd@mp=\dimen115
-\Gm@odd@mp=\dimen116
-\Gm@even@mp=\dimen117
-\Gm@layoutwidth=\dimen118
-\Gm@layoutheight=\dimen119
-\Gm@layouthoffset=\dimen120
-\Gm@layoutvoffset=\dimen121
+\Gm@cnth=\count105
+\Gm@cntv=\count106
+\c@Gm@tempcnt=\count107
+\Gm@bindingoffset=\dimen115
+\Gm@wd@mp=\dimen116
+\Gm@odd@mp=\dimen117
+\Gm@even@mp=\dimen118
+\Gm@layoutwidth=\dimen119
+\Gm@layoutheight=\dimen120
+\Gm@layouthoffset=\dimen121
+\Gm@layoutvoffset=\dimen122
 \Gm@dimlist=\toks22
-)
-(./circuiti-multivibratori.aux)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+(circuiti-multivibratori.aux)
 \openout1 = `circuiti-multivibratori.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -509,25 +503,35 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
+LaTeX Info: Redefining \it@ocap on input line 13.
+LaTeX Info: Redefining \it@ccap on input line 13.
 
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+File italian.ldf warning: 
+italian.ldf    With OT1 encoding guillemets are poorly faked
+italian.ldf    Use T1 encoding
+italian.ldf    or specify a font with command \CaporaliFrom
+italian.ldf    See the documentation concerning the babel-italian typesetting 
+italian.ldf    on input line 13.
+
+(C:\Users\marco\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count103
-\scratchdimen=\dimen122
+\scratchcounter=\count108
+\scratchdimen=\dimen123
 \scratchbox=\box28
-\nofMPsegments=\count104
-\nofMParguments=\count105
+\nofMPsegments=\count109
+\nofMParguments=\count110
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count106
-\MPscratchDim=\dimen123
-\MPnumerator=\count107
-\makeMPintoPDFobject=\count108
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen124
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
 \everyMPtoPDFconversion=\toks24
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -536,22 +540,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -564,11 +568,7 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -604,12 +604,12 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 15.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Underfull \hbox (badness 10000) in paragraph at lines 17--18
@@ -617,7 +617,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 21.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -627,429 +627,223 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-<nand.png, id=1, 228.855pt x 182.93344pt>
+<nand.png, id=1, 183.084pt x 146.34676pt>
 File: nand.png Graphic file (type png)
  <use nand.png>
 Package pdftex.def Info: nand.png used on input line 38.
-(pdftex.def)             Requested size: 183.08423pt x 146.34694pt.
+(pdftex.def)             Requested size: 146.46739pt x 117.07755pt.
 
+<tabNAND.png, id=3, 89.58469pt x 88.07906pt>
+File: tabNAND.png Graphic file (type png)
+ <use tabNAND.png>
+Package pdftex.def Info: tabNAND.png used on input line 38.
+(pdftex.def)             Requested size: 80.62546pt x 79.2704pt.
 
-LaTeX Warning: File `tabNAND.png' not found on input line 38.
+<nand1.png, id=4, 301.125pt x 225.84375pt>
+File: nand1.png Graphic file (type png)
+ <use nand1.png>
+Package pdftex.def Info: nand1.png used on input line 44.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-
-! Package pdftex.def Error: File `tabNAND.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...g}\includegraphics[scale=0.9]{tabNAND.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `nand1.png' not found on input line 44.
-
-
-! Package pdftex.def Error: File `nand1.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44   \includegraphics[scale=0.75]{nand1.png}
-                                              \includegraphics[scale=0.75]{n...
-
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `nand2.png' not found on input line 44.
-
-
-! Package pdftex.def Error: File `nand2.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 ...ng}\includegraphics[scale=0.75]{nand2.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<nand2.png, id=5, 301.125pt x 225.84375pt>
+File: nand2.png Graphic file (type png)
+ <use nand2.png>
+Package pdftex.def Info: nand2.png used on input line 44.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-<and.png, id=3, 166.37157pt x 45.16875pt>
+<and.png, id=6, 166.37157pt x 45.16875pt>
 File: and.png Graphic file (type png)
  <use and.png>
 Package pdftex.def Info: and.png used on input line 54.
 (pdftex.def)             Requested size: 166.37114pt x 45.16862pt.
 
+<tabAND.png, id=7, 87.32625pt x 84.315pt>
+File: tabAND.png Graphic file (type png)
+ <use tabAND.png>
+Package pdftex.def Info: tabAND.png used on input line 54.
+(pdftex.def)             Requested size: 78.5929pt x 75.88277pt.
 
-LaTeX Warning: File `tabAND.png' not found on input line 54.
+<and1.png, id=8, 301.125pt x 225.84375pt>
+File: and1.png Graphic file (type png)
+ <use and1.png>
+Package pdftex.def Info: and1.png used on input line 60.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
+<and2.png, id=9, 301.125pt x 225.84375pt>
+File: and2.png Graphic file (type png)
+ <use and2.png>
+Package pdftex.def Info: and2.png used on input line 60.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+ [1
 
-! Package pdftex.def Error: File `tabAND.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.54 ...ng}\includegraphics[scale=0.9]{tabAND.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `and1.png' not found on input line 60.
-
-
-! Package pdftex.def Error: File `and1.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60   \includegraphics[scale=0.75]{and1.png}
-                                             \includegraphics[scale=0.75]{an...
-
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `and2.png' not found on input line 60.
-
-
-! Package pdftex.def Error: File `and2.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60 ...png}\includegraphics[scale=0.75]{and2.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<or.png, id=21, 160.34906pt x 121.95563pt>
+{C:/Users/marco/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<or.png, id=26, 160.34906pt x 121.95563pt>
 File: or.png Graphic file (type png)
  <use or.png>
 Package pdftex.def Info: or.png used on input line 70.
 (pdftex.def)             Requested size: 144.3128pt x 109.75902pt.
 
+<tabOR.png, id=27, 86.57344pt x 83.5622pt>
+File: tabOR.png Graphic file (type png)
+ <use tabOR.png>
+Package pdftex.def Info: tabOR.png used on input line 70.
+(pdftex.def)             Requested size: 77.91536pt x 75.20526pt.
 
-LaTeX Warning: File `tabOR.png' not found on input line 70.
+<or1.png, id=28, 301.125pt x 225.84375pt>
+File: or1.png Graphic file (type png)
+ <use or1.png>
+Package pdftex.def Info: or1.png used on input line 76.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-
-! Package pdftex.def Error: File `tabOR.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.70 ...png}\includegraphics[scale=0.9]{tabOR.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `or1.png' not found on input line 76.
-
-
-! Package pdftex.def Error: File `or1.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76   \includegraphics[scale=0.75]{or1.png}
-                                            \includegraphics[scale=0.75]{or2...
-
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `or2.png' not found on input line 76.
-
-
-! Package pdftex.def Error: File `or2.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76 ....png}\includegraphics[scale=0.75]{or2.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-<xor.png, id=22, 233.37187pt x 124.96687pt>
+<or2.png, id=29, 301.125pt x 225.84375pt>
+File: or2.png Graphic file (type png)
+ <use or2.png>
+Package pdftex.def Info: or2.png used on input line 76.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+ [2 <./nand.png> <./tabNAND.png> <./nand1.png> <./nand2.png> <./and.png> <./tab
+AND.png> <./and1.png> <./and2.png>] <xor.png, id=41, 233.37187pt x 124.96687pt>
 File: xor.png Graphic file (type png)
  <use xor.png>
 Package pdftex.def Info: xor.png used on input line 86.
 (pdftex.def)             Requested size: 163.35919pt x 87.47621pt.
 
+<tabXOR.png, id=42, 89.58469pt x 88.83188pt>
+File: tabXOR.png Graphic file (type png)
+ <use tabXOR.png>
+Package pdftex.def Info: tabXOR.png used on input line 86.
+(pdftex.def)             Requested size: 80.62546pt x 79.94794pt.
 
-LaTeX Warning: File `tabXOR.png' not found on input line 86.
+<xor1.png, id=43, 301.125pt x 225.84375pt>
+File: xor1.png Graphic file (type png)
+ <use xor1.png>
+Package pdftex.def Info: xor1.png used on input line 92.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
+<xor2.png, id=44, 301.125pt x 225.84375pt>
+File: xor2.png Graphic file (type png)
+ <use xor2.png>
+Package pdftex.def Info: xor2.png used on input line 92.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-! Package pdftex.def Error: File `tabXOR.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.86 ...ng}\includegraphics[scale=0.9]{tabXOR.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `xor1.png' not found on input line 92.
-
-
-! Package pdftex.def Error: File `xor1.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.92   \includegraphics[scale=0.75]{xor1.png}
-                                             \includegraphics[scale=0.75]{xo...
-
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `xor2.png' not found on input line 92.
-
-
-! Package pdftex.def Error: File `xor2.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.92 ...png}\includegraphics[scale=0.75]{xor2.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[2 <./nand.png> <./and.png> <./or.png>]
-<sommatore.png, id=30, 255.20343pt x 195.73125pt>
+<sommatore.png, id=45, 255.20343pt x 195.73125pt>
 File: sommatore.png Graphic file (type png)
  <use sommatore.png>
 Package pdftex.def Info: sommatore.png used on input line 106.
 (pdftex.def)             Requested size: 178.64117pt x 137.01093pt.
 
+<tabSOMMATORE.png, id=46, 109.1578pt x 83.5622pt>
+File: tabSOMMATORE.png Graphic file (type png)
+ <use tabSOMMATORE.png>
+Package pdftex.def Info: tabSOMMATORE.png used on input line 106.
+(pdftex.def)             Requested size: 87.32635pt x 66.84984pt.
 
-LaTeX Warning: File `tabSOMMATORE.png' not found on input line 106.
+<sommatoreRS.png, id=47, 301.125pt x 225.84375pt>
+File: sommatoreRS.png Graphic file (type png)
+ <use sommatoreRS.png>
+Package pdftex.def Info: sommatoreRS.png used on input line 112.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-
-! Package pdftex.def Error: File `tabSOMMATORE.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.106 ...ludegraphics[scale=0.8]{tabSOMMATORE.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `sommatoreRS.png' not found on input line 112.
-
-
-! Package pdftex.def Error: File `sommatoreRS.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.112 ...ludegraphics[scale=0.75]{sommatoreRS.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[3 <./xor.png> <./sommatore.png>]
-<monostabile.png, id=36, 564.60938pt x 124.96687pt>
+<monostabile.png, id=48, 564.60938pt x 124.96687pt>
 File: monostabile.png Graphic file (type png)
  <use monostabile.png>
-Package pdftex.def Info: monostabile.png used on input line 149.
+Package pdftex.def Info: monostabile.png used on input line 122.
 (pdftex.def)             Requested size: 423.45598pt x 93.72491pt.
 
+[3 <./or.png> <./tabOR.png> <./or1.png> <./or2.png> <./xor.png> <./tabXOR.png>]
+[4 <./xor1.png> <./xor2.png> <./sommatore.png> <./tabSOMMATORE.png> <./sommator
+eRS.png>] <1in2c.png, id=66, 301.125pt x 225.84375pt>
+File: 1in2c.png Graphic file (type png)
+ <use 1in2c.png>
+Package pdftex.def Info: 1in2c.png used on input line 158.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-LaTeX Warning: File `1in2c.png' not found on input line 155.
+<1out2c.png, id=67, 301.125pt x 225.84375pt>
+File: 1out2c.png Graphic file (type png)
+ <use 1out2c.png>
+Package pdftex.def Info: 1out2c.png used on input line 158.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
+<fitmonostabile.png, id=68, 578.16pt x 431.4519pt>
+File: fitmonostabile.png Graphic file (type png)
+ <use fitmonostabile.png>
+Package pdftex.def Info: fitmonostabile.png used on input line 186.
+(pdftex.def)             Requested size: 404.70924pt x 302.01427pt.
 
-! Package pdftex.def Error: File `1in2c.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.155   \includegraphics[scale=0.75]{1in2c.png}
-                                               \includegraphics[scale=0.75]{...
-
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `1out2c' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.155 ....png}\includegraphics[scale=0.75]{1out2c}
-                                                  
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fitmonostabile.png' not found on input line 185.
-
-
-! Package pdftex.def Error: File `fitmonostabile.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.185 ...degraphics[scale=0.5]{fitmonostabile.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `osc:astabile' on page 4 undefined on input line 191.
-
-[4 <./monostabile.png>] <astabile.png, id=41, 306.39468pt x 119.69719pt>
+<astabile.png, id=69, 306.39468pt x 119.69719pt>
 File: astabile.png Graphic file (type png)
-
-<use astabile.png>
-Package pdftex.def Info: astabile.png used on input line 210.
+ <use astabile.png>
+Package pdftex.def Info: astabile.png used on input line 194.
 (pdftex.def)             Requested size: 245.11607pt x 95.75786pt.
+ [5 <./monostabile.png> <./1in2c.png> <./1out2c.png>]
+<astabile1vc2out.png, id=77, 301.125pt x 225.84375pt>
+File: astabile1vc2out.png Graphic file (type png)
+
+<use astabile1vc2out.png>
+Package pdftex.def Info: astabile1vc2out.png used on input line 218.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+ <fitastabile.png, id=78, 578.16pt x 431.4519pt>
+File: fitastabile.png Graphic file (type png)
+
+<use fitastabile.png>
+Package pdftex.def Info: fitastabile.png used on input line 252.
+(pdftex.def)             Requested size: 404.70924pt x 302.01427pt.
 
 
-LaTeX Warning: File `astabile1vc2out.png' not found on input line 217.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-! Package pdftex.def Error: File `astabile1vc2out.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.217 ...graphics[scale=0.75]{astabile1vc2out.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `fitastabile.png' not found on input line 249.
-
-
-! Package pdftex.def Error: File `fitastabile.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.249 ...cludegraphics[scale=0.5]{fitastabile.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[5 <./astabile.png>] <generatorequadra.png, id=46, 305.64188pt x 171.64125pt>
+[6 <./fitmonostabile.png> <./astabile.png>] [7 <./astabile1vc2out.png> <./fitas
+tabile.png>] <generatorequadra.png, id=90, 305.64188pt x 171.64125pt>
 File: generatorequadra.png Graphic file (type png)
 
 <use generatorequadra.png>
-Package pdftex.def Info: generatorequadra.png used on input line 283.
+Package pdftex.def Info: generatorequadra.png used on input line 286.
 (pdftex.def)             Requested size: 275.07513pt x 154.47568pt.
 
+<generatore1inm2outm.png, id=91, 301.125pt x 225.84375pt>
+File: generatore1inm2outm.png Graphic file (type png)
 
-LaTeX Warning: File `generatore1inm2outm.png' not found on input line 289.
+<use generatore1inm2outm.png>
+Package pdftex.def Info: generatore1inm2outm.png used on input line 292.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-
-! Package pdftex.def Error: File `generatore1inm2outm.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.289 ...hics[scale=0.75]{generatore1inm2outm.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
-[6 <./generatorequadra.png>] [7] (./circuiti-multivibratori.aux)
-
-LaTeX Warning: There were undefined references.
-
+[8 <./generatorequadra.png> <./generatore1inm2outm.png>] [9]
+(circuiti-multivibratori.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3383 strings out of 494902
- 43658 string characters out of 6179890
- 112925 words of memory out of 5000000
- 6580 multiletter control sequences out of 15000+600000
- 11710 words of font info for 46 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 40i,9n,25p,1691b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on circuiti-multivibratori.pdf (7 pages, 285521 bytes).
+ 4132 strings out of 493334
+ 53063 string characters out of 3139252
+ 135046 words of memory out of 3000000
+ 7559 multiletter control sequences out of 15000+200000
+ 11542 words of font info for 45 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,9n,25p,1542b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmti10.pfb>
+Output written on circuiti-multivibratori.pdf (9 pages, 696807 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 145 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
