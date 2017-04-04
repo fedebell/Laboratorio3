@@ -1,0 +1,48 @@
+dati relazione 12 Flip Flop
+V_in= 4.85
+
+l'interruttore switch va collegato al meno
+cambiando l'interruttore si passa da follow a hold
+canale 1 pulsatore
+canale 2 Q
+ch1 ampiezza pp 3.12V
+ch2 ampiezza pp 3.56V
+tplh Q 36 +- 2 ns incertezza anche nella localizzazione del punto
+tphl Q 34 +- 4 ns  molta incertezza perchè ripido
+i tempi di ritardo sono da intendersi all'input
+
+
+canale 2 Qbarra
+tphl Qbarra 36 +- 2 ns
+tplh Qbarra 36+- 2 ns
+
+contatore 4 bit
+periodo 16.40 0.02 mus
+frequenza 60.975 kHz
+ampiezza input 4.16 V (4,40-0.240) metà=2.3V
+
+ampiezza QA  2.72V (0.320-3.04) metà=1.63V
+periodo QA 32.4 +- 0.03 mus
+frequenza QA 30.864 kHz
+tplhQA  44 +- 2ns		in questo caso i tempi di ritardo sono relativi a QA (non all'input)
+tphlQA 43 +- 2 ns
+
+ampiezza QB 2.70 V (0.280-2.98) metà=1.63V
+periodo QB 65.2 mus
+frequenza 15.337 kHz
+tphlQB 55 +- 2 ns
+tplhQB 54+-2 ns
+
+ampiezza QC 2.70 (0.28-2.98) metà=1.63V
+periodo QC 129 +-1 mus
+frequenza QC 7.752 kHz
+tplhQC 69+-2 ns
+tphlQC 66+-2ns
+
+ampiezza QD 2.70 (0.28-2.98) metà=1.63V
+periodo QD 258 mus
+frequenza QD 3.876 kHz
+tplhQD 83 +-2ns
+tphlQD 79 +-2 ns
+
+
