@@ -16,7 +16,7 @@
 \maketitle
 
 \section{Flip-Flop D-Latch}
-Si è realizzato un circuito flip-flop di tipo D-Latch, come mostrato in figura \ref{latch} utilizzando le porte NAND di due integrati. L'ingresso D che corrisponde al dato da memorizzare è stato collegato all'impulsatore realizzato con Arduino Nano (in particolare a Y1 o a Y2?), e l'Enable è collegato alla tensione positiva attraverso uno switch manuale (inserire resistenza di pull-up?). La tensione di lavoro durante tutta l'esperienza è stata fissata a: $V_{CC} = $.\\
+Si è realizzato un circuito flip-flop di tipo D-Latch, come mostrato in figura \ref{latch} utilizzando le porte NAND di due integrati. L'ingresso D che corrisponde al dato da memorizzare è stato collegato all'impulsatore realizzato con Arduino Nano (in particolare a Y1 o a Y2?), e l'Enable è collegato alla terra attraverso uno switch manuale. La tensione di lavoro durante tutta l'esperienza è stata fissata a: $V_{CC} = 4.85 \pm 0.03$V.\\
 
 %Riportiamo in tabella \ref{stati} le configurazioni del R-S NAND Latch per maggior chiarezza %delle spiegazioni successive:
 
@@ -58,6 +58,7 @@ Perché il valore che il flip-flop memorizza sia deterministico è necessario ch
 
 Essendo il latch costruito con delle porte NAND ho una situazione di instabilità quando gli ingressi delle porte sul secondo livello sono entrambe a 0. Questo può succedere solo se gli ingressi di tutte le porte sul primo livello sono 1. IL NOT evita questa situazione.\\
 L'enable è attivo alto. Cioè quando $enable = 0$ ho permanenza dello stato, infatti gli ingressi al secondo livello dei NAND sono sicuramente a 1. mentre posso avere evoluzione dello stato se il bit $enable = 1$.\\
+Quando l'ingresso enable è lasciato flottante il NAND forza la tensione a $5$V quindi il valore logico è   $enable = 1$ e l'uscita insegue l'ingresso, lo switch collega l'enable alla tensione di terra, dunque se chiudo l'interruttore l'enable viene forzato al valore logico basso, quindi viene eseguita la funzione \emph{hold}.\\
 
 Si sono misurati i tempi di ritardo sulla salita e discesa del flip-flop (quando è abilitato) essi sono risultati asimmetrici. Le misure sono riportate nella tabella \ref{ritardo}.
 
@@ -109,24 +110,23 @@ $Q_4$ & • & • & • & • \\
 \caption{Misure di frequenza e tempi di propagazione per il divisore. \label{misureDivisore}}
 \end{table}
 
-%TODO Inserire immagini e "tabella di verità" del contatore che arriva fino a 10.
-
 I tempi di ritardo misurati sono tempi di propagazione attraverso la rete dei flip-flop e dalle misure eseguite aumentano linearmente con il numero di porte del circuito. Il tempo di propagazione da \emph{low} a \emph{high} è sistematicamente più alto di circa $\Delta t = ... ns$, come si può vedere nella tabella \ref{misureDivisore}.\\ 
+
 %I tempi di propagazione sono compatibili con il numero di porte che ci sia aspetta essere in ogni latch?
-%TODO - Eseguire un fit per la linearità
 
 Si vuole realizzare un contatore decadico sincrono, cioè attivare il reset quando il contatore raggiunge il valore 10. Per identificare il valore 10 sulle uscite $Q_i$ si esegue un NAND tra le uscite $Q_2$ e $Q_4$, che da un segnale basso non appena i due bit sono attivati per la prima volta (cioè si raggiunge il 10). \\
 Il reset dei JK si ottiene per $J = 0$ e $K = 1$, dunque K viene sempre lasciato flottante
 A questo punto sarebbe possibile fornire questo valore agli ingressi di reset del circuito, tuttavia per costruire un reset sincrono con il clock si utilizza un D-Latch.\\
-Il bit di reset $R_1$ viene collagato ora a 1 attraverso una resistenza, il bit $R_2$ è collegato all'uscita negata del latch in modalità enabled. In questo modo l'uscita $\bar{Q}$ diventa 1 non appena si raggiunge 10 e sincronamente con il clock. Infine $\bar{Q}$ viene collegata al bit $R_2$ di reset e così si è realizzato il contatore decimale.\\
-Se non è ancora stato raggiunto il 10 $Q = 1$, $\bar{Q} = 0$ e dunque tutti i FF sono in modalità toggle (J = 0 NAND 1 = 1, K =1) e il conteggio continua. Non appena $\bar{Q} = 1$ , cioè ho raggiunto il 10 l'uscita degli FF viene impostata a 0, infatti J = 1 NAND 1 = 0, K = 1 che sappiamo corrispondere al settaggio di $Q = 0$.\\
-Il contatore è edge-triggered sul fronte di discesa del clock, mentre il D-Latch è attivo se il clock è alto, dunque perchè il reset sia sincrono è necessario usare come clock del D-Latch il clock negato.\\
+Il bit di reset $R_0$ viene collagato ora a 1 attraverso una resistenza, il bit $R_1$ è collegato all'uscita negata del latch in modalità enabled. In questo modo l'uscita $\bar{Q}$ diventa 1 non appena si raggiunge 10 e sincronamente con il clock. Infine $\bar{Q}$ viene collegata al bit $R_2$ di reset e così si è realizzato il contatore decimale.\\
+Se non è ancora stato raggiunto il 10 vale $Q = 1$, $\bar{Q} = 0$ e dunque tutti i FF sono in modalità toggle (J = 0 NAND 1 = 1, K =1) e il conteggio continua. Non appena $\bar{Q} = 1$ , cioè ho raggiunto il 10 l'uscita degli FF viene impostata a 0, infatti J = 1 NAND 1 = 0, K = 1 che sappiamo corrispondere al settaggio di $Q = 0$.\\
 
+Si verifica che collegando il D-Latch allo stesso clock del contatore alla fine del ciclo i quattro LED visualizzano per mezo ciclo di clock il valore 10 e poi passano a visualizzare lo 0. Questo problema si può risolvere collegando il D-Latch al clock negato. Con questo accorgimento il numero 9 permane per il tempo corretto (come si può verificare all'oscilloscopio) per poi passare allo zero.\\
+ 
 %TODO - Vedere se invertir il clock.
 %Discutere il clock e discutere le caratteristiche - riportare le misure. 
 
 \section{Shift register con D-Latch}
-Abbiamo montato lo shift register come indicato in figura \ref{shift}, Si possono osservare gli stati dei vari flip-flop attraverso il diodo led. Si è verificato che il pulsante di preset imposta tutte le uscite di Q al valore alto. $Q_0$ ha valore alto o basso a seconda dello stato del DIP switch (specificare), commutare lo switch fa traslare il vecchio valore di $Q_0$ nei registri successivi, come atteso.
+Abbiamo montato lo shift register come indicato in figura \ref{shift}, Si possono osservare gli stati dei vari flip-flop attraverso il diodo led. Si è verificato che il pulsante di preset imposta tutte le uscite di Q al valore alto. $Q_0$ ha valore alto o basso a seconda dello stato del DIP switch (specificare), commutare lo switch fa traslare il vecchio valore di $Q_0$ nei registri successivi, come atteso. Si è visto che per fare funzionare correttamente il circuito abbiamo avuto bisogno di inserire resistenze di pull-up ovunque necessario.
 
 \begin{figure}
 \centering
@@ -135,9 +135,9 @@ Abbiamo montato lo shift register come indicato in figura \ref{shift}, Si posson
 \end{figure}
 
 \section{Generatore di numeri casuali}
-Si è realizzato il circuito in figura \ref{pseudo} e inviando un clock a bassa frequenza si osservata (e riportata in seguito) la sequenza generata (che come si vede è completa). Si sono provate tutte le possibili combinazioni di "tap" (ingressi $Q_i$ dello XOR) è si è visto che sono due danno sequenze complete: $Q_2$, $Q_3$ e $Q_0$, $Q_3$.
+Si è realizzato il circuito in figura \ref{pseudo} e inviando un clock a bassa frequenza si osservata (e riportata in seguito) la sequenza generata (che come si vede è completa). 
 
-%Riportare la sequenza di XOR
+%TODO Riportare la sequenza di XOR
 
 \begin{figure}
 \centering
