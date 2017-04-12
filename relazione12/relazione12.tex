@@ -16,9 +16,24 @@
 \maketitle
 
 %TODO - Secondo me in tutta la relazione le immagini non sono il massimo avrei voluto mettere le immagini del flip-flop congelato, ma non le abbiamo prese. Le immagini che mostrano le misure dei tempi non sono il massimo. Io le toglierei.
+\section{Scopo dell'esperienza}
+Lo scopo dell'esperienza è di montare e verificare il corretto funzionamento di  Flip-Flop D-Latch , divisore di frequenza, shift register e generatore di sequenze pseudo-casuali. %spiegare meglio 
 
+\section{Materiale a disposizione}
+\begin{itemize}
+\item SN74LS00 Quad NAND gate
+\item SN74LS94 4-bit binary counter
+\item SN74LS74 Dual D-Latch
+\item SN74LS86 Quad XOR gate
+\item DIP switch
+\item 4 LED
+\end{itemize}
+I valori delle resistenze sono state misurate con multimetro digitale (incertezza riportata sul manuale).
+Le differenze di potenziale sono state misurate tramite oscilloscopio se non indicato diversamente. Come incertezza si è preso la sensibilità dei cursori più il 3\% di calibrazione.
+Per misurare i tempi si è usato l'oscilloscopio e come relativa incertezza si è preso il massimo fra la sensibilità dei cursori e la semidispersione dei valori plausibili.
 \section{Flip-Flop D-Latch}
-Si è realizzato un circuito flip-flop di tipo D-Latch, come mostrato in figura \ref{latch} utilizzando le porte NAND di due integrati. L'ingresso D che corrisponde al dato da memorizzare è stato collegato all'impulsatore realizzato con Arduino Nano e l'Enable è collegato alla terra attraverso uno switch manuale. La tensione di lavoro durante tutta l'esperienza è stata fissata a: $V_{CC} = 4.85 \pm 0.03$V.\\
+%Sono perplesso dalle prime tre figure... In particoalre dalla prima
+Si è realizzato un circuito flip-flop di tipo D-Latch, come mostrato in figura \ref{latch}, utilizzando le porte NAND di due integrati. L'ingresso D, che corrisponde al dato da memorizzare, è stato collegato all'impulsatore realizzato con Arduino Nano. L'Enable è collegato alla terra attraverso uno switch manuale. La tensione di lavoro durante tutta l'esperienza è stata fissata a: $V_{CC} = 4.85 \pm 0.03$V (misurata tramite multimetro digitale, con incertezza presa dal manuale.\\ 
 
 
 \begin{figure}
@@ -61,13 +76,13 @@ EN & D & S & R & Q\\
 
 
 Commutando manualmente lo switch e impostando dunque $EN = 0$ il flip flop rimane congelato nello stato in cui si trovava prima della commutazione.
-Perché il valore che il flip-flop memorizza sia deterministico è necessario che la commutazione dello switch non avvenga durante gli hold-time e setup-time del latch. Quando il bit di enable è disattivato entrambe le uscite dei NAND del primo livello sono a 1 pertanto il latch è nello stato di hold.\\
+Affinchè il valore che il flip-flop memorizza sia deterministico è necessario che la commutazione dello switch non avvenga durante gli hold-time e setup-time del latch. Quando il bit di enable è disattivato entrambe le uscite dei NAND del primo livello sono a 1 pertanto il latch è nello stato di hold.\\
 
 Essendo il latch costruito con delle porte NAND ho una situazione di instabilità quando gli ingressi delle porte sul secondo livello sono entrambe a 0. Questo può succedere solo se gli ingressi di tutte le porte sul primo livello sono 1. Il NOT tra i due ingressi evita questa situazione.\\
 L'enable è attivo alto. Cioè quando $enable = 0$ ho permanenza dello stato, infatti gli ingressi al secondo livello dei NAND sono sicuramente a 1. mentre posso avere evoluzione dello stato se il bit $enable = 1$.\\
-Quando l'ingresso enable è lasciato flottante il NAND forza la tensione a $5$V quindi il valore logico è   $enable = 1$ e l'uscita insegue l'ingresso, lo switch collega l'enable alla tensione di terra, dunque se chiudo l'interruttore l'enable viene forzato al valore logico basso e il flip-flop entra nello stato \emph{hold}.\\
+Quando l'ingresso enable è lasciato flottante il NAND forza la tensione a $5$V quindi il valore logico è   $enable = 1$ e l'uscita insegue l'ingresso, lo switch collega l'enable alla tensione di terra, dunque se chiudo l'interruttore l'enable viene forzato al valore logico basso e il flip-flop entra nello stato \emph{hold}.%si capisce male cosa vuoi dire: lo stato di hold sbaglio o lo hai descritto subito sopra?\\
 
-Si sono misurati i tempi di ritardo sulla salita e discesa dell'uscita del flip-flop rispetto all'ingresso (uscita del pulsatore). Le misure sono riportate nella tabella \ref{ritardo} sia per l'uscita $Q$ che per l'uscita $\bar{Q}$.
+Si sono misurati i tempi di ritardo sulla salita e discesa da una delle uscite del flip-flop rispetto all'ingresso (uscita del pulsatore). I tempi sono stati presi misurando la differenza di tempo fra i punti  delle discese ($t_{HL}$) oppure delle salite ($t_{LH}$) dei due segnali con potenziale pari a metà delle rispettive $v_{PP}$. Le misure sono riportate nella tabella \ref{ritardo} sia per l'uscita $Q$ che per l'uscita $\bar{Q}$.
 
 \begin{table}[!htb]
 \centering
@@ -83,29 +98,30 @@ $\bar{Q}$ & $36 \pm 2$ & $36 \pm 2$\\
 \caption{Misure dei tempi di ritardo in salita e discesa per il Flip-Flop.\label{ritardo}}
 \end{table}
 
-Tutti e quattro i tempi sono risultati compatibili tra di loro. IL tempo tipico di commutazione di una porta NAND è tra i $9$ns e i $15$ns. I valori misurati di circa $36$ns sono perfettamente compatibili con il tempo di commutazione di 4 porte NAND ($9 \cdot 4 = 36$ns).\\
+Tutti e quattro i tempi sono risultati compatibili tra di loro. IL tempo tipico di commutazione di una porta NAND è tra i $9$ns e i $15$ns. I valori misurati di circa $36$ns sono perfettamente compatibili con il tempo di commutazione di 4 porte NAND ($9 \cdot 4 = 36$ns)%non cpaisco bene perchè siano 4 commutazioni in serie: direi 2 più al max una per il not, ma non capisco perchè, sebbene ci siano 4 not, le commutazioni debbano avvenire una dopo l'altra e non a coppie di due.\\
 
 Di seguito sono riportate le immagini delle misure dei tempi di ritardo sull'oscilloscopio per l'uscita $Q$ solamente:\\
 
 \begin{figure}
 \centering
 \includegraphics[scale=1.0]{tphlQ.png}
-\caption{Misura del tempo $t_{HL}$ per l'uscita $Q$.\label{q1}}
+\caption{Tempo di ritardo  $t_{HL}$ rispetto a D (CH1) per l'uscita $Q$ (CH2).\label{q1}}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[scale=1.0]{tplhQ.png}
-\caption{Misura del tempo $t_{LH}$ per l'uscita $Q$.\label{q2}}
+\caption{Tempo $t_{LH}$ per l'uscita $Q$ (CH2).\label{q2}}
 \end{figure}
 
 
 
 \section{Divisori di frequenza}
-Si è realizzato un contatore a 4 bit come in figura \ref{contatore} connettendo l'uscita Q del primo JK (FF1) al clock del secondo JK (FF2),i restanti JK sono già interconnessi all'interno del package. Si vogliono utilizzare tutti i JK in modalità Toggle, cioè in modo che oscillino tra lo stato 0 e 1 alla transizione basso-alto del clock (per costruzione). Per fare ciò è necessario che l'ingresso J di ognuno dei flip-flop sia impostato a 1, questa configurazione è realizzata ponendo $R_0$ a terra e $R_1$ flottante (per il momento).\\
-Infatti la configurazione toggle del JK si ottiene se $J = 1$ e $K = 1$ dunque con K flottante questo è sempre uguale a 1, se uno egli ingressi del NAND è forzato a 0 la sua uscita sarà sempre 1 e sono quindi nella richiesta per i JK.\\  
-Poiché la transizione del valore di uscita Q di ognuno degli FF avviene con una frequenza dimezzata rispetto a quella del clock, le varie uscite $Q_i(t)$ oscillano con frequenze $\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}$ in quanto l'uscita $Q_i$ di un FF è il clock del successivo.\\
-Ogni uscita $Q_i$ è stata collegata a terra attraverso un LED e una resistenza (per limitare la corrente sul led). Questo e l'accorgimento di impostare un clock per il FF1 di 1 Hz (generato con Arduino) rende osservabili ad occhio le transizioni.\\
+Si è realizzato un contatore a 4 bit come in figura \ref{contatore} connettendo l'uscita Q del primo JK (FF1) al clock del secondo JK (FF2),i restanti JK sono già interconnessi all'interno del package. Si vogliono utilizzare tutti i JK in modalità Toggle, cioè in modo che oscillino tra lo stato 0 e 1 alla transizione basso-alto del clock (per costruzione). Per fare ciò è necessario che l'ingresso J di ognuno dei flip-flop sia impostato a 1; questa configurazione è realizzata ponendo $R_0$ a terra e $R_1$ flottante (per il momento).\\
+Infatti la configurazione toggle del JK si ottiene se $J = 1$ e $K = 1$. Se K è flottante questo assume sempre il valore logico 1, e se uno degli ingressi del NAND ($R_0$ nel nostro caso) è forzato a 0 la sua uscita sarà sempre 1. Con questa scelta quindi si soddisfano le condizioni richieste per i JK.\\  
+Poiché la transizione del valore di uscita Q di ognuno degli FF avviene con una frequenza dimezzata rispetto a quella del clock, le varie uscite $Q_i(t)$ oscillano con frequenze $\frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}$ della frequenza di CLK1 in quanto l'uscita $Q_i$ di un FF è il clock del successivo.\\
+Ogni uscita $Q_i$ è stata collegata a terra attraverso un LED e una resistenza (per limitare la corrente sul led). Questo e l'accorgimento di impostare un clock per il FF1 di circa 1 Hz (generato con Arduino)%mi pareva fosse il generatore di funzioni ma non dovrebbe cambiare il succo
+ rende osservabili ad occhio le transizioni.\\
 Interpretando il bit più a sinistra come bit meno significativo (1 per LED acceso e 0 per LED spento) si ottiene la rappresentazione fisica dei numeri da 0 a 15 in binario.\\
 
 \begin{figure}
@@ -142,7 +158,7 @@ Nelle figure successive si riportano le uscite $Q_A$, $Q_B$, $Q_C$, $Q_D$ visual
 \caption{Segnale all'uscita $Q_D$ con frequenza $f_0/16$.\label{freq16}}
 \end{figure}
 
-Il tempo di ritardo è definito come l'intervallo temporale tra i punti in cui i due segnali raggiungono le rispettive metà.\\
+%Il tempo di ritardo è definito come l'intervallo temporale tra i punti in cui i due segnali raggiungono le rispettive metà. ripetizione\\
 
 \begin{table}[!htb]
 \centering
@@ -183,7 +199,8 @@ I tempi di ritardo misurati sono tempi di propagazione attraverso la rete dei fl
 Si vuole realizzare un contatore decadico sincrono, cioè attivare il reset quando il contatore raggiunge il valore 10. Per identificare il valore 10 sulle uscite $Q_i$ si esegue un NAND tra le uscite $Q_2$ e $Q_4$, che da un segnale basso non appena i due bit sono attivati per la prima volta (cioè si raggiunge il 10). \\
 Il reset dei JK si ottiene per $J = 0$ e $K = 1$, dunque K viene sempre lasciato flottante.\\
 A questo punto sarebbe possibile fornire questo valore agli ingressi di reset del circuito, tuttavia per costruire un reset sincrono con il clock si utilizza un D-Latch al cui ingresso è collegata l'uscita del NAND.\\
-Il bit di reset $R_0$ viene collagato a 1 attraverso una resistenza, il bit $R_1$ è collegato all'uscita negata del latch in modalità enabled. In questo modo l'uscita $\bar{Q}$ diventa 1 non appena si raggiunge 10 sincronamente con il clock. Infine $\bar{Q}$ viene collegata al bit $R_2$ di reset e così si è realizzato il contatore decimale.\\
+Il bit di reset $R_0$ viene collagato a 1 attraverso una resistenza, il bit $R_1$ è collegato all'uscita negata del latch in modalità enabled. In questo modo l'uscita $\bar{Q}$ diventa 1 non appena si raggiunge 10 sincronamente con il clock. Infine $\bar{Q}$ viene collegata al bit $R_2$%cosa è R_2?
+ di reset e così si è realizzato il contatore decimale.\\
 Se non è ancora stato raggiunto il 10 vale $Q = 1$, $\bar{Q} = 0$ e dunque tutti i FF sono in modalità toggle (J = 0 NAND 1 = 1, K =1) e il conteggio continua. Non appena $\bar{Q} = 1$ , cioè ho raggiunto il 10 l'uscita degli FF viene impostata a 0, infatti J = 1 NAND 1 = 0, K = 1 che sappiamo corrispondere al settaggio di $Q = 0$.\\
 Si verifica che collegando il D-Latch allo stesso clock del contatore alla fine del ciclo i quattro LED visualizzano per mezzo ciclo di clock il valore 10 e poi passano a visualizzare lo 0. Questo problema si può risolvere collegando il D-Latch al clock negato. Con questo accorgimento il numero 9 permane per il tempo corretto (come si può verificare all'oscilloscopio) per poi passare allo zero.\\
 
@@ -201,10 +218,10 @@ Si verifica che collegando il D-Latch allo stesso clock del contatore alla fine 
 \end{figure}
 
 Le due figure \ref{sbagliato} e \ref{giusto} mostrano l'uscita $Q_D$ nel caso di collegamento sbagliato o giusto del clock (secondo quanto detto precedentemente). Si può vedere che \ref{sbagliato} mostra come $Q_D$ rimanga acceso per mezzo ciclo di clock più del dovuto questo causa il comportamento indesiderato descritto precedentemente.\\
-Ciò è dovuto al fatto che il contatore e il flip-flop sono sensibili rispettivamente al fronte di discesa e di alita del clock.\\
+Ciò è dovuto al fatto che il contatore e il flip-flop sono sensibili rispettivamente al fronte di discesa e di salita del clock.\\
 
 \section{Shift register con D-Latch}
-Abbiamo montato lo shift register come indicato in figura \ref{shift}, Si possono osservare gli stati dei vari flip-flop attraverso i diodi led. Si è verificato che il pulsante di preset imposta tutte le uscite di Q al valore alto. Quando si collega l'ingresso D a terra chiudendo lo switch si vedono i led spegnersi in sequenza sincronamente con il clock come atteso. Si è visto che per fare funzionare correttamente il circuito abbiamo avuto bisogno di inserire resistenze di pull-up ovunque necessario, i  particolare ai clear per tenderli al valore alto. Una maggior stabilità del sistema si poteva ottenere anche collegando il preset al valore alto della tensione attraverso uan resistenza durante la routine.\\
+Abbiamo montato lo shift register come indicato in figura \ref{shift}. Si possono osservare gli stati dei vari flip-flop attraverso i diodi led. Si è verificato che il pulsante di preset imposta tutte le uscite di Q al valore alto. Quando si collega l'ingresso D a terra chiudendo lo switch si vedono i led spegnersi in sequenza sincronamente con il clock come atteso. Si è visto che per fare funzionare correttamente il circuito abbiamo avuto bisogno di inserire resistenze di pull-up di circa $1.5 \mbox{k}\Omega$ ovunque necessario, in particolare ai clear per tenerli al valore alto. Una maggior stabilità del sistema si poteva ottenere anche collegando il preset al valore alto della tensione attraverso una resistenza durante la routine.%non capisco cosa intendi per routine\\
 
 \begin{figure}
 \centering
@@ -213,7 +230,7 @@ Abbiamo montato lo shift register come indicato in figura \ref{shift}, Si posson
 \end{figure}
 
 \section{Generatore di numeri casuali}
-Si è realizzato il circuito in figura \ref{pseudo} e inviando un clock a bassa frequenza si osservata (e riportata in seguito) la sequenza generata (che come si vede è completa). 
+Si è realizzato il circuito in figura \ref{pseudo} e inviando un clock a bassa frequenza si è osservata (e riportata in tabella \ref{CD}) la sequenza generata (che come si vede è completa). 
 Lo XOR è stato posto tra le uscite C e D e il risultato è stato mandato in input al primo  D-Latch.\\
 
 \begin{table}[!htb]
@@ -285,7 +302,7 @@ Si è provato ad inserire lo XOR anche tra le uscite $Q_A$ e $Q_D$ del contatore
 \end{tabular}
 \caption{Tabella di numeri generata da XOR tra $Q_A$ e $Q_D$.\label{AD}}  
 \end{table}
-
+%Manca discussione teorica su quali altri tap dsi potevano utilizzare. Galois/Fibonacci  ecc...
 \end{document}
 
 
