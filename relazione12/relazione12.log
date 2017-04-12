@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  4 APR 2017 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  12 APR 2017 14:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -627,124 +627,206 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
 <latchNand.png, id=1, 301.125pt x 235.63031pt>
 File: latchNand.png Graphic file (type png)
  <use latchNand.png>
-Package pdftex.def Info: latchNand.png used on input line 25.
+Package pdftex.def Info: latchNand.png used on input line 26.
 (pdftex.def)             Requested size: 150.56212pt x 117.81487pt.
 
 <flipflopDlatch.png, id=2, 647.41875pt x 301.125pt>
 File: flipflopDlatch.png Graphic file (type png)
  <use flipflopDlatch.png>
-Package pdftex.def Info: flipflopDlatch.png used on input line 31.
+Package pdftex.def Info: flipflopDlatch.png used on input line 32.
 (pdftex.def)             Requested size: 453.19003pt x 210.78606pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
-LaTeX Warning: Reference `segue' on page 1 undefined on input line 35.
+ []
 
+<FFD1in2Q.png, id=3, 301.125pt x 225.84375pt>
+File: FFD1in2Q.png Graphic file (type png)
+ <use FFD1in2Q.png>
+Package pdftex.def Info: FFD1in2Q.png used on input line 40.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
 
 
-LaTeX Warning: Reference `cong1' on page 1 undefined on input line 57.
-
-
-LaTeX Warning: Reference `cong2' on page 1 undefined on input line 57.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
+Underfull \hbox (badness 10000) in paragraph at lines 66--69
 
  []
 
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 76.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 76.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--62
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./latchNand.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 80--86
+[2 <./flipflopDlatch.png> <./FFD1in2Q.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
-<divisore.png, id=17, 978.65625pt x 444.66125pt>
+<tphlQ.png, id=22, 301.125pt x 225.84375pt>
+File: tphlQ.png Graphic file (type png)
+ <use tphlQ.png>
+Package pdftex.def Info: tphlQ.png used on input line 92.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<tplhQ.png, id=23, 301.125pt x 225.84375pt>
+File: tplhQ.png Graphic file (type png)
+ <use tplhQ.png>
+Package pdftex.def Info: tplhQ.png used on input line 98.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--110
+
+ []
+
+<divisore.png, id=24, 978.65625pt x 444.66125pt>
 File: divisore.png Graphic file (type png)
  <use divisore.png>
-Package pdftex.def Info: divisore.png used on input line 89.
+Package pdftex.def Info: divisore.png used on input line 113.
 (pdftex.def)             Requested size: 489.32693pt x 222.33008pt.
 
-Overfull \hbox (5.63007pt too wide) in paragraph at lines 89--90
+Overfull \hbox (5.63007pt too wide) in paragraph at lines 113--114
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 99.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 99.
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--118
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--125
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
-[2 <./flipflopDlatch.png>] <shift.png, id=22, 534.99875pt x 622.325pt>
+[3 <./tphlQ.png>] [4 <./tplhQ.png> <./divisore.png>]
+<QA1-2.png, id=34, 301.125pt x 225.84375pt>
+File: QA1-2.png Graphic file (type png)
+ <use QA1-2.png>
+Package pdftex.def Info: QA1-2.png used on input line 123.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<QB1-4.png, id=35, 301.125pt x 225.84375pt>
+File: QB1-4.png Graphic file (type png)
+ <use QB1-4.png>
+Package pdftex.def Info: QB1-4.png used on input line 129.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<QC1-8.png, id=36, 301.125pt x 225.84375pt>
+File: QC1-8.png Graphic file (type png)
+ <use QC1-8.png>
+Package pdftex.def Info: QC1-8.png used on input line 135.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<QD1-16.png, id=37, 301.125pt x 225.84375pt>
+File: QD1-16.png Graphic file (type png)
+ <use QD1-16.png>
+Package pdftex.def Info: QD1-16.png used on input line 141.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+<tphlQA.png, id=38, 301.125pt x 225.84375pt>
+File: tphlQA.png Graphic file (type png)
+ <use tphlQA.png>
+Package pdftex.def Info: tphlQA.png used on input line 169.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<tplhQA.png, id=39, 301.125pt x 225.84375pt>
+File: tplhQA.png Graphic file (type png)
+ <use tplhQA.png>
+Package pdftex.def Info: tplhQA.png used on input line 175.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--189
+
+ []
+
+<clocksbagliato.png, id=40, 301.125pt x 225.84375pt>
+File: clocksbagliato.png Graphic file (type png)
+ <use clocksbagliato.png>
+Package pdftex.def Info: clocksbagliato.png used on input line 193.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<clockgiusto.png, id=41, 301.125pt x 225.84375pt>
+File: clockgiusto.png Graphic file (type png)
+ <use clockgiusto.png>
+Package pdftex.def Info: clockgiusto.png used on input line 199.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
+
+ []
+
+[5 <./QA1-2.png>] [6 <./QB1-4.png> <./QC1-8.png>] [7 <./QD1-16.png> <./tphlQA.p
+ng>] [8 <./tplhQA.png> <./clocksbagliato.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+
+ []
+
+<shift.png, id=62, 534.99875pt x 622.325pt>
 File: shift.png Graphic file (type png)
-
-<use shift.png>
-Package pdftex.def Info: shift.png used on input line 134.
+ <use shift.png>
+Package pdftex.def Info: shift.png used on input line 211.
 (pdftex.def)             Requested size: 267.49872pt x 311.16173pt.
- <pseudi.png, id=23, 593.21625pt x 655.44875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--218
+
+ []
+
+<pseudi.png, id=63, 593.21625pt x 655.44875pt>
 File: pseudi.png Graphic file (type png)
-
-<use pseudi.png>
-Package pdftex.def Info: pseudi.png used on input line 145.
+ <use pseudi.png>
+Package pdftex.def Info: pseudi.png used on input line 259.
 (pdftex.def)             Requested size: 296.60739pt x 327.72357pt.
- [3 <./divisore.png>] [4 <./shift.png> <./pseudi.png>]
-(./relazione12.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ [9 <./clockgiusto.png>] [10 <./shift.png> <./pseudi.png>] [11] (./relazione12.
+aux) ) 
 Here is how much of TeX's memory you used:
- 3369 strings out of 494902
- 43531 string characters out of 6179890
- 112977 words of memory out of 5000000
- 6596 multiletter control sequences out of 15000+600000
- 11542 words of font info for 45 fonts, out of 8000000 for 9000
+ 3432 strings out of 494902
+ 44379 string characters out of 6179890
+ 113092 words of memory out of 5000000
+ 6649 multiletter control sequences out of 15000+600000
+ 11234 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 40i,9n,25p,577b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti10.pfb>
-Output written on relazione12.pdf (4 pages, 247085 bytes).
+ 40i,10n,25p,746b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmti10.pfb>
+Output written on relazione12.pdf (11 pages, 551841 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
