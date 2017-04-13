@@ -9,7 +9,7 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \newcommand{\rem}[1]{[\emph{#1}]}
 
-\author{Gruppo BN \\ Federico Belliardo, Lisa Bedini, Marco Costa}
+\author{Gruppo BN \\Lisa Bedini,  Federico Belliardo, Marco Costa}
 \title{Esperienza 12: Flip-Flop e contatori}
 
 \begin{document}
@@ -29,7 +29,7 @@ Lo scopo dell'esperienza è di montare e verificare il corretto funzionamento di
 \item DIP switch
 \item 4 LED
 \end{itemize}
-I valori delle resistenze sono state misurate con multimetro digitale (incertezza riportata sul manuale).
+I valori delle componenti sono state misurate con multimetro digitale (incertezza riportata sul manuale).
 Le differenze di potenziale sono state misurate tramite oscilloscopio, se non indicato diversamente, e come incertezza si è presa la sensibilità dei cursori più il 3\% di calibrazione.
 Per misurare i tempi si è usato l'oscilloscopio e come relativa incertezza si è preso il massimo fra la sensibilità dei cursori e la semidispersione dei valori plausibili.
 
@@ -37,7 +37,7 @@ Per misurare i tempi si è usato l'oscilloscopio e come relativa incertezza si �
 %Sono perplesso dalle prime tre figure... In particoalre dalla prima
 Si è realizzato un circuito Flip-Flop di tipo D-Latch, come mostrato in figura \ref{circuito}, utilizzando le porte NAND di due integrati. L'ingresso D, che corrisponde al dato da memorizzare, è stato collegato all'impulsatore realizzato con Arduino Nano. L'Enable è collegato alla terra attraverso uno switch manuale. La tensione di lavoro durante tutta l'esperienza è stata fissata a: $V_{CC} = 4.85 \pm 0.03$V (misurata tramite multimetro digitale, con incertezza presa dal manuale).\\ 
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.7]{flipflopDlatch.png}
 \caption{Circuito D-Latch NAND.\label{circuito}}
@@ -45,10 +45,10 @@ Si è realizzato un circuito Flip-Flop di tipo D-Latch, come mostrato in figura 
 
 In figura \ref{segue} si vede come il segnale $Q(t)$ in uscita dal Flip-Flop segua l'ingresso quando enable è alto riproducendo la tabella \ref{stati2}.\\
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=1.0]{FFD1in2Q.png}
-\caption{Circuito  D-Latch NAND.\label{segue}}
+\caption{Segnali D e Q quando enable è alto.\label{segue}}
 \end{figure}
 
 \begin{table}[!htb]
@@ -98,13 +98,13 @@ Tutti e quattro i tempi sono risultati compatibili tra di loro.\\
 
 Di seguito sono riportate le immagini delle misure dei tempi di ritardo sull'oscilloscopio per l'uscita $Q$ solamente:\\
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=1.0]{tphlQ.png}
 \caption{Tempo di ritardo  $t_{HL}$ rispetto a D (CH1) per l'uscita $Q$ (CH2).\label{q1}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=1.0]{tplhQ.png}
 \caption{Tempo $t_{LH}$ per l'uscita $Q$ (CH2).\label{q2}}
@@ -125,7 +125,7 @@ Interpretando il bit più a sinistra come bit meno significativo (1 per LED acce
 \caption{Contatore a 4 bit.\label{contatore}}
 \end{figure}
 
-Si è inviato in ingresso un segnale di frequenza $f_0 = 61 \pm 1$kHz e periodo $T = 16.40 \pm 0.02 \mu s$, si sono misurate le frequenze dei segnali $Q_i$ e i tempi di ritardo per la salita e la discesa rispetto al clock, definiti come differenza temporale tra i punti in cui i due segnali raggiungono la metà del rispettivo valore massimo quando avvengono le transizioni.\\
+Si è inviato in ingresso un segnale di frequenza $f_0 = 61 \pm 1$kHz e periodo $T = 16.40 \pm 0.02 \mu s$, si sono misurate le frequenze dei segnali $Q_i$ e i tempi di ritardo per la salita e la discesa rispetto al clock, definiti come differenza temporale tra i punti in cui i due segnali raggiungono la metà del rispettivo valore massimo quando avvengono le transizioni.\footnote{Per le misure ci siamo aiutati con i cursori che ci mostravano contemporanemante le coordinate temporali e il potenziale. Come incertezza si è presa la semidispersione dei tempi di ritardo in corrispondenza dei punti che avevano il potenziale richiesto entro l'errore dei cursori}\\
 
 Nelle figure successive si riportano le uscite $Q_A$, $Q_B$, $Q_C$, $Q_D$ visualizzate insieme al clock in ingresso. Si può osservare dal frequenzimetro dell'oscilloscopio come le frequenze rispettano la serie geometrica descritta precedentemente.\\
 
@@ -159,7 +159,7 @@ Nelle figure successive si riportano le uscite $Q_A$, $Q_B$, $Q_C$, $Q_D$ visual
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline 
-• & $T (\mu s)$ & $f (kHz)$ & $t_{HL}$ (ns) & $t_{LH}$(ns) \\ 
+• & $T (\mu \mbox{s})$ & $f (mbox{kHz})$ & $t_{HL}$ (ns) & $t_{LH}$(ns) \\ 
 \hline 
 $Q_A$ & $32.4 \pm 0.03$ & $30.8 \pm 0.3$ & $44 \pm 2$ & $43 \pm 2$ \\ 
 \hline 
@@ -199,13 +199,13 @@ Se non è ancora stato raggiunto il 10 vale $Q = 1$, $\bar{Q} = 0$ e dunque tutt
 Si verifica che collegando il D-Latch allo stesso clock del contatore alla fine del ciclo i quattro LED visualizzano per mezzo ciclo di clock il valore 10 e poi passano a visualizzare lo 0. Questo problema si può risolvere collegando il D-Latch al clock negato. Con questo accorgimento il numero 9 permane per il tempo corretto (come si può verificare all'oscilloscopio) per poi passare allo zero.\\
 
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=1.0]{clocksbagliato.png}
 \caption{Segnale $Q_D$ e clock nel caso in cui FF e contatore abbiano stesso clock.\label{sbagliato}}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=1.0]{clockgiusto.png}
 \caption{Segnale $Q_D$ e clock nel caso in cui FF e contatore abbiano clock invertiti.\label{giusto}}
@@ -265,7 +265,7 @@ Lo XOR è stato posto tra le uscite C e D e il risultato è stato mandato in inp
 \caption{Tabella di numeri generata da XOR tra $Q_C$ e $Q_D$.\label{CD}} 
 \end{table}
 
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.5]{pseudi.png}
 \caption{Generatore di numeri pseudo-casuali.\label{pseudo}}
@@ -298,7 +298,9 @@ Si è provato ad inserire lo XOR anche tra le uscite $Q_A$ e $Q_D$ del contatore
 \end{table}
 
 %Manca discussione teorica su quali altri tap dsi potevano utilizzare. Galois/Fibonacci  ecc... E non intenzione di farla.
-
+\section{Conclusioni}
+Il comportamento dei circuiti montati è in accordo con quanto atteso. Per il corretto funzionamento dello shift register e del generatore di sequenze pseudo-casuali è stato necessario utilizzare resistenza di pull-up per collegare ad a $V_{CC}$ i clear.
+Per il generatore di sequenze abbiamo provato ad utilizzare lo XOR anche in altre configurazioni, ma non si sono ottenute sequenze complete.
 \end{document}
 
 
