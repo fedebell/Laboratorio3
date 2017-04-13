@@ -76,7 +76,7 @@ Essendo il Latch costruito con delle porte NAND ho una situazione di instabilit�
 L'enable è attivo alto. Cioè quando $enable = 0$ ho permanenza dello stato, infatti gli ingressi al secondo livello dei NAND sono sicuramente a 1, mentre posso avere evoluzione dello stato se il bit $enable = 1$.\\
 Quando l'ingresso enable è lasciato flottante il NAND forza la tensione a $5$V quindi il valore logico è   $enable = 1$ e l'uscita insegue l'ingresso, lo switch collega l'enable alla tensione di terra, dunque se chiudo l'interruttore l'enable viene forzato al valore logico basso e il Flip-Flop entra nello stato \emph{hold}.%si capisce male cosa vuoi dire: lo stato di hold sbaglio o lo hai descritto subito sopra?\\ A me sembrano spiegazioni complementari.
 
-Si sono misurati i tempi di ritardo sulla salita e discesa delle uscite del Flip-Flop rispetto all'ingresso (uscita del pulsatore). I tempi sono stati presi misurando la differenza di tempo fra i punti $t_{HL}$ per le discese oppure $t_{LH}$ per le salite dei due segnali con potenziale pari a metà delle rispettive $V_{PP}$. Le misure sono riportate nella tabella \ref{ritardo} sia per l'uscita $Q$ che per l'uscita $\bar{Q}$.
+Si sono misurati i tempi di ritardo sulla salita e discesa delle uscite del Flip-Flop rispetto all'ingresso (uscita del pulsatore). I tempi sono stati presi misurando la differenza di tempo fra i punti $t_{HL}$ per le discese oppure $t_{LH}$ per le salite dei due segnali con potenziale pari a metà delle rispettive $V_{PP}$\footnote{Per le misure ci siamo aiutati con i cursori che ci mostravano contemporanemante le coordinate temporali e il potenziale. Come incertezza si è presa la semidispersione dei tempi di ritardo in corrispondenza dei punti che avevano il potenziale richiesto entro l'errore dei cursori}. Le misure sono riportate nella tabella \ref{ritardo} sia per l'uscita $Q$ che per l'uscita $\bar{Q}$.
 
 \begin{table}[!htb]
 \centering
@@ -125,7 +125,7 @@ Interpretando il bit più a sinistra come bit meno significativo (1 per LED acce
 \caption{Contatore a 4 bit.\label{contatore}}
 \end{figure}
 
-Si è inviato in ingresso un segnale di frequenza $f_0 = 61 \pm 1$kHz e periodo $T = 16.40 \pm 0.02 \mu s$, si sono misurate le frequenze dei segnali $Q_i$ e i tempi di ritardo per la salita e la discesa rispetto al clock, definiti come differenza temporale tra i punti in cui i due segnali raggiungono la metà del rispettivo valore massimo quando avvengono le transizioni.\footnote{Per le misure ci siamo aiutati con i cursori che ci mostravano contemporanemante le coordinate temporali e il potenziale. Come incertezza si è presa la semidispersione dei tempi di ritardo in corrispondenza dei punti che avevano il potenziale richiesto entro l'errore dei cursori}\\
+Si è inviato in ingresso un segnale di frequenza $f_0 = 61 \pm 1$kHz e periodo $T = 16.40 \pm 0.02 \mu s$, si sono misurate le frequenze dei segnali $Q_i$ e i tempi di ritardo per la salita e la discesa rispetto al clock, definiti come differenza temporale tra i punti in cui i due segnali raggiungono la metà del rispettivo valore massimo quando avvengono le transizioni.\footnote{La misura è stata eseguita nello stesso modo dei tempi di ritardo della sezione precedente}\\
 
 Nelle figure successive si riportano le uscite $Q_A$, $Q_B$, $Q_C$, $Q_D$ visualizzate insieme al clock in ingresso. Si può osservare dal frequenzimetro dell'oscilloscopio come le frequenze rispettano la serie geometrica descritta precedentemente.\\
 

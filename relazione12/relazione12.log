@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  13 APR 2017 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  13 APR 2017 16:06
 entering extended mode
 **./relazione12.tex
 (relazione12.tex
@@ -666,18 +666,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--98
 
  []
 
-[2 <./flipflopDlatch.png> <./FFD1in2Q.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-<tphlQ.png, id=20, 301.125pt x 225.84375pt>
+[2 <./flipflopDlatch.png> <./FFD1in2Q.png>]
+<tphlQ.png, id=23, 301.125pt x 225.84375pt>
 File: tphlQ.png Graphic file (type png)
  <use tphlQ.png>
 Package pdftex.def Info: tphlQ.png used on input line 103.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<tplhQ.png, id=21, 301.125pt x 225.84375pt>
+<tplhQ.png, id=24, 301.125pt x 225.84375pt>
 File: tplhQ.png Graphic file (type png)
  <use tplhQ.png>
 Package pdftex.def Info: tplhQ.png used on input line 109.
@@ -688,7 +689,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--121
  []
 
 [3 <./tphlQ.png> <./tplhQ.png>]
-<divisore.png, id=28, 978.65625pt x 444.66125pt>
+<divisore.png, id=30, 978.65625pt x 444.66125pt>
 File: divisore.png Graphic file (type png)
  <use divisore.png>
 Package pdftex.def Info: divisore.png used on input line 124.
@@ -708,37 +709,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
-<QA1-2.png, id=29, 301.125pt x 225.84375pt>
+<QA1-2.png, id=31, 301.125pt x 225.84375pt>
 File: QA1-2.png Graphic file (type png)
  <use QA1-2.png>
 Package pdftex.def Info: QA1-2.png used on input line 134.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<QB1-4.png, id=30, 301.125pt x 225.84375pt>
+<QB1-4.png, id=32, 301.125pt x 225.84375pt>
 File: QB1-4.png Graphic file (type png)
  <use QB1-4.png>
 Package pdftex.def Info: QB1-4.png used on input line 140.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<QC1-8.png, id=31, 301.125pt x 225.84375pt>
+<QC1-8.png, id=33, 301.125pt x 225.84375pt>
 File: QC1-8.png Graphic file (type png)
  <use QC1-8.png>
 Package pdftex.def Info: QC1-8.png used on input line 146.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<QD1-16.png, id=32, 301.125pt x 225.84375pt>
+<QD1-16.png, id=34, 301.125pt x 225.84375pt>
 File: QD1-16.png Graphic file (type png)
  <use QD1-16.png>
 Package pdftex.def Info: QD1-16.png used on input line 152.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<tphlQA.png, id=33, 301.125pt x 225.84375pt>
+<tphlQA.png, id=35, 301.125pt x 225.84375pt>
 File: tphlQA.png Graphic file (type png)
  <use tphlQA.png>
 Package pdftex.def Info: tphlQA.png used on input line 180.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<tplhQA.png, id=34, 301.125pt x 225.84375pt>
+<tplhQA.png, id=36, 301.125pt x 225.84375pt>
 File: tplhQA.png Graphic file (type png)
  <use tplhQA.png>
 Package pdftex.def Info: tplhQA.png used on input line 186.
@@ -748,13 +749,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
-
+[4 <./divisore.png>] [5 <./QA1-2.png> <./QB1-4.png>] [6 <./QC1-8.png> <./QD1-16
+.png>] [7 <./tphlQA.png> <./tplhQA.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 193--200
 
  []
 
-[4 <./divisore.png>] [5 <./QA1-2.png> <./QB1-4.png>] [6 <./QC1-8.png> <./QD1-16
-.png>] [7 <./tphlQA.png> <./tplhQA.png>]
 <clocksbagliato.png, id=56, 301.125pt x 225.84375pt>
 File: clocksbagliato.png Graphic file (type png)
  <use clocksbagliato.png>
@@ -771,8 +771,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
-[8 <./clocksbagliato.png> <./clockgiusto.png>]
-<shift.png, id=63, 534.99875pt x 622.325pt>
+<shift.png, id=58, 534.99875pt x 622.325pt>
 File: shift.png Graphic file (type png)
  <use shift.png>
 Package pdftex.def Info: shift.png used on input line 222.
@@ -782,36 +781,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--229
 
  []
 
-<pseudi.png, id=64, 593.21625pt x 655.44875pt>
+[8 <./clocksbagliato.png>] <pseudi.png, id=63, 593.21625pt x 655.44875pt>
 File: pseudi.png Graphic file (type png)
- <use pseudi.png>
+
+<use pseudi.png>
 Package pdftex.def Info: pseudi.png used on input line 270.
 (pdftex.def)             Requested size: 296.60739pt x 327.72357pt.
- [9 <./shift.png>]
+ [9 <./clockgiusto.png>]
 
 LaTeX Warning: Text page 10 contains only floats.
 
-[10 <./pseudi.png>] [11] (relazione12.aux) ) 
+[10 <./shift.png> <./pseudi.png>] [11] (relazione12.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  4113 strings out of 493334
  52458 string characters out of 3139252
- 138228 words of memory out of 3000000
+ 135228 words of memory out of 3000000
  7548 multiletter control sequences out of 15000+200000
  11234 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,10n,25p,798b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmti10.pfb>
-Output written on relazione12.pdf (11 pages, 513666 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on relazione12.pdf (11 pages, 515777 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
