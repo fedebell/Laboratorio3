@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  13 APR 2017 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.12.24)  13 APR 2017 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,8 +661,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--74
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./flipflopDlatch.png> 
-<./FFD1in2Q.png>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 95--98
 
  []
@@ -672,13 +671,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-<tphlQ.png, id=20, 301.125pt x 225.84375pt>
+[2 <./flipflopDlatch.png> <./FFD1in2Q.png>]
+<tphlQ.png, id=24, 301.125pt x 225.84375pt>
 File: tphlQ.png Graphic file (type png)
  <use tphlQ.png>
 Package pdftex.def Info: tphlQ.png used on input line 103.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<tplhQ.png, id=21, 301.125pt x 225.84375pt>
+<tplhQ.png, id=25, 301.125pt x 225.84375pt>
 File: tplhQ.png Graphic file (type png)
  <use tplhQ.png>
 Package pdftex.def Info: tplhQ.png used on input line 109.
@@ -688,10 +688,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--121
 
  []
 
-[3 <./tphlQ.png>] <divisore.png, id=28, 978.65625pt x 444.66125pt>
+[3 <./tphlQ.png> <./tplhQ.png>]
+<divisore.png, id=31, 978.65625pt x 444.66125pt>
 File: divisore.png Graphic file (type png)
-
-<use divisore.png>
+ <use divisore.png>
 Package pdftex.def Info: divisore.png used on input line 124.
 (pdftex.def)             Requested size: 489.32693pt x 222.33008pt.
 
@@ -709,37 +709,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
-<QA1-2.png, id=29, 301.125pt x 225.84375pt>
+<QA1-2.png, id=32, 301.125pt x 225.84375pt>
 File: QA1-2.png Graphic file (type png)
  <use QA1-2.png>
 Package pdftex.def Info: QA1-2.png used on input line 134.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<QB1-4.png, id=30, 301.125pt x 225.84375pt>
+<QB1-4.png, id=33, 301.125pt x 225.84375pt>
 File: QB1-4.png Graphic file (type png)
  <use QB1-4.png>
 Package pdftex.def Info: QB1-4.png used on input line 140.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<QC1-8.png, id=31, 301.125pt x 225.84375pt>
+<QC1-8.png, id=34, 301.125pt x 225.84375pt>
 File: QC1-8.png Graphic file (type png)
  <use QC1-8.png>
 Package pdftex.def Info: QC1-8.png used on input line 146.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<QD1-16.png, id=32, 301.125pt x 225.84375pt>
+<QD1-16.png, id=35, 301.125pt x 225.84375pt>
 File: QD1-16.png Graphic file (type png)
  <use QD1-16.png>
 Package pdftex.def Info: QD1-16.png used on input line 152.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<tphlQA.png, id=33, 301.125pt x 225.84375pt>
+<tphlQA.png, id=36, 301.125pt x 225.84375pt>
 File: tphlQA.png Graphic file (type png)
  <use tphlQA.png>
 Package pdftex.def Info: tphlQA.png used on input line 180.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<tplhQA.png, id=34, 301.125pt x 225.84375pt>
+<tplhQA.png, id=37, 301.125pt x 225.84375pt>
 File: tplhQA.png Graphic file (type png)
  <use tplhQA.png>
 Package pdftex.def Info: tplhQA.png used on input line 186.
@@ -754,15 +754,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--200
 
  []
 
-[4 <./tplhQ.png>] [5 <./divisore.png> <./QA1-2.png>] [6 <./QB1-4.png> <./QC1-8.
-png>] [7 <./QD1-16.png> <./tphlQA.png>]
-<clocksbagliato.png, id=54, 301.125pt x 225.84375pt>
+[4 <./divisore.png>] [5 <./QA1-2.png> <./QB1-4.png>] [6 <./QC1-8.png> <./QD1-16
+.png>] [7 <./tphlQA.png> <./tplhQA.png>]
+<clocksbagliato.png, id=57, 301.125pt x 225.84375pt>
 File: clocksbagliato.png Graphic file (type png)
  <use clocksbagliato.png>
 Package pdftex.def Info: clocksbagliato.png used on input line 204.
 (pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
 
-<clockgiusto.png, id=55, 301.125pt x 225.84375pt>
+<clockgiusto.png, id=58, 301.125pt x 225.84375pt>
 File: clockgiusto.png Graphic file (type png)
  <use clockgiusto.png>
 Package pdftex.def Info: clockgiusto.png used on input line 210.
@@ -772,7 +772,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
-<shift.png, id=56, 534.99875pt x 622.325pt>
+[8 <./clocksbagliato.png> <./clockgiusto.png>]
+<shift.png, id=64, 534.99875pt x 622.325pt>
 File: shift.png Graphic file (type png)
  <use shift.png>
 Package pdftex.def Info: shift.png used on input line 222.
@@ -782,38 +783,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--229
 
  []
 
-<pseudi.png, id=57, 593.21625pt x 655.44875pt>
+<pseudi.png, id=65, 593.21625pt x 655.44875pt>
 File: pseudi.png Graphic file (type png)
  <use pseudi.png>
 Package pdftex.def Info: pseudi.png used on input line 270.
 (pdftex.def)             Requested size: 296.60739pt x 327.72357pt.
- [8 <./tplhQA.png>] [9 <./clocksbagliato.png> <./clockgiusto.png>] [10 <./shift
-.png> <./pseudi.png>] [11] (./relazione12.aux)
+ [9 <./shift.png>]
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: Text page 10 contains only floats.
 
- ) 
+[10 <./pseudi.png>] [11] (./relazione12.aux) ) 
 Here is how much of TeX's memory you used:
- 3426 strings out of 494902
- 44286 string characters out of 6179890
- 113093 words of memory out of 5000000
- 6644 multiletter control sequences out of 15000+600000
+ 3425 strings out of 494902
+ 44279 string characters out of 6179890
+ 115081 words of memory out of 5000000
+ 6643 multiletter control sequences out of 15000+600000
  11234 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 40i,10n,25p,773b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti10.pfb>
-Output written on relazione12.pdf (11 pages, 567285 bytes).
+ 40i,9n,25p,773b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on relazione12.pdf (11 pages, 569089 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
