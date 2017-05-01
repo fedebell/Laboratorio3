@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  26 APR 2017 00:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  1 MAY 2017 01:30
 entering extended mode
 **./relazione13.tex
 (relazione13.tex
@@ -657,7 +657,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.44 ...ccessivi della relazione) $Q_2$ il bit più
+l.44 ...ccessivi della relazione) $Q_1$ il bit più
                                                    significativo, mentre $Q_...
 
 You need to provide a definition with \DeclareInputText 
@@ -671,7 +671,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.44 ...it più significativo, mentre $Q_1$ sarà se
+l.44 ...it più significativo, mentre $Q_0$ sarà se
                                                   mpre il bit meno significa...
 
 Your command was ignored.
@@ -692,7 +692,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 ...nte $Q_2$ e $Q_1$ nel nostro caso. Così ci
+l.51 ...nte $Q_1$ e $Q_0$ nel nostro caso. Così ci
                                                    sarà più facile in seguit...
 
 Your command was ignored.
@@ -707,7 +707,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 ...$ e $Q_1$ nel nostro caso. Così ci sarà pi
+l.51 ...$ e $Q_0$ nel nostro caso. Così ci sarà pi
                                                   ù facile in seguito poter ...
 
 Your command was ignored.
@@ -722,7 +722,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 ... e $Q_1$ nel nostro caso. Così ci sarà più
+l.51 ... e $Q_0$ nel nostro caso. Così ci sarà più
                                                    facile in seguito poter f...
 
 You need to provide a definition with \DeclareInputText 
@@ -803,6 +803,10 @@ You need to provide a definition with \DeclareInputText
 or \DeclareInputMath before using this key.
 
 
+LaTeX Warning: Reference `tab:transiozioneenabled' on page 1 undefined on input
+ line 52.
+
+
 ! Package inputenc Error: Unicode char àde (U+C9)
 (inputenc)                not set up for use with LaTeX.
 
@@ -810,7 +814,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.65 ...i due D-FF\label{tab:transiozioneenabled}}
+l.65 ...ei due D-FF\label{tab:transizioneenabled}}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -849,9 +853,23 @@ or  <return>  to continue without it.
 <inserted text> 
                 $
 l.69 Q_
-       {2, n+1} = \bar{Q_{1,n}}\qquad Q_{1,n+1} = \bar{Q_{1,n}}+Q_{2,n}
+       {1, n+1} = \bar{Q}_{0,n}\qquad Q_{0,n+1} = \bar{Q}_{0,n}\cdotQ_{1,n}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.69 ...0,n}\qquad Q_{0,n+1} = \bar{Q}_{0,n}\cdotQ
+                                                  _{1,n}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Double subscript.
+l.69 ...,n}\qquad Q_{0,n+1} = \bar{Q}_{0,n}\cdotQ_
+                                                  {1,n}
+I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! You can't use `\eqno' in math mode.
 \endmathdisplay@a ...\df@tag \@empty \else \veqno 
@@ -902,23 +920,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.71 COsì si
+l.71 Così si
              ha che lo stato non richiesto 01 ("solo giallo acceso"), transi...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char èev (U+E3)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.72 Una volta codificati gli stati, è ev
-                                         idente che i Led devono essereabbia...
 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -941,28 +944,360 @@ l.76 Questo era in effetti il modo più
 You need to provide a definition with \DeclareInputText 
 or \DeclareInputMath before using this key.
 
-[2 <./FSMenabled.png>] (relazione13.aux) ) 
+
+! Package inputenc Error: Unicode char òdia (U+130)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 ...l Led rosso $\bar{Q_1}$, a patto però di a
+                                                  vere 01 stato in cui sia i...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 .... Abbiamo preferito usare una porta in più
+                                                   qui e avere la possibilit...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char àdi (U+CD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 ...porta in più qui e avere la possibilità di
+                                                   controllare il Led giallo...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char èma (U+D6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 ...r realizzare il semaforo completo. Si è ma
+                                                  ntenuta la stessa codifica...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char èid (U+D5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 ...ce di transizione nello state Enabled è id
+                                                  entica a quella precedente...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char àpe (U+D5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.99 ...oro completo.\label{tab:semaforocompleto}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char àEn (U+B3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101 ... farlo transire verso 10 : in modalità En
+                                                  abled lo stato 00 aveva so...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char èri (U+E3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101 ...a aggiunta di un AND con il bit E si è ri
+                                                  usciti a mantenere il circ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char àmo (U+DC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101 ...è riusciti a mantenere il circuito già mo
+                                                  ntato in precedenza. Le tr...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.101 ...ive mappe di Karnaugh risultassero le più
+                                                   semplici possibili compat...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char ìot (U+EF)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102 Abbiamo così ot
+                     tenuto come funzioni logiche:
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char èli (U+DD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111 ...izzate nel punto precedente, e ci si è li
+                                                  mitato ad aggiungere un AN...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char èco (U+DA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 ... stato di abilitazione. Il Led Rosso è co
+                                                  llegato all'enable non tra...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char èac (U+CC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 ...on tramite altri D-Latch, quindi  se è ac
+                                                  ceso mentre $E$ passa da 1...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char èco (U+DA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 ...engono sul fronte alto del clock, si è co
+                                                  llegato $E$ direttamente a...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Warning: Reference `fig:sincrono' on page 2 undefined on input line 115.
+
+[2 <./FSMenabled.png>]
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 ...ptato per una macchina di tipo Moore, più
+                                                   semplice concettualmente ...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char èst (U+EF)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 L'enable è st
+                   ato collegato all'uscita 8, e nel programma è dichiarato ...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char èdi (U+D5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 ...legato all'uscita 8, e nel programma è di
+                                                  chiarato come INPUT-PULLUP...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121 ... si ha uno stato per ogni LED acceso, più
+                                                   lo stato spento e lo stat...
+
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+
+! Package inputenc Error: Unicode char èsp (U+EB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121 ...lizzazione (nello stato in cui tutto è sp
+                                                  ento) viene fatta da noi n...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char èch (U+D3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 ...inire. Il vantaggio rispetto a prima è ch
+                                                  e è possibile settare il t...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char èpo (U+E7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 ... Il vantaggio rispetto a prima è che è po
+                                                  ssibile settare il tempo d...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[3] (relazione13.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4031 strings out of 493334
- 51338 string characters out of 3139252
- 133062 words of memory out of 3000000
- 7481 multiletter control sequences out of 15000+200000
- 10888 words of font info for 43 fonts, out of 3000000 for 9000
+ 4051 strings out of 493334
+ 51510 string characters out of 3139252
+ 137070 words of memory out of 3000000
+ 7500 multiletter control sequences out of 15000+200000
+ 11196 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,10n,25p,798b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb>
-Output written on relazione13.pdf (2 pages, 122544 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on relazione13.pdf (3 pages, 139514 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
