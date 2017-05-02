@@ -59,106 +59,95 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(310,140)" to="(310,210)"/>
+    <wire from="(320,250)" to="(380,250)"/>
+    <wire from="(260,70)" to="(510,70)"/>
+    <wire from="(140,250)" to="(200,250)"/>
+    <wire from="(100,150)" to="(100,220)"/>
+    <wire from="(140,420)" to="(450,420)"/>
     <wire from="(200,360)" to="(510,360)"/>
     <wire from="(330,230)" to="(380,230)"/>
     <wire from="(70,380)" to="(700,380)"/>
+    <wire from="(450,300)" to="(630,300)"/>
     <wire from="(640,350)" to="(700,350)"/>
+    <wire from="(330,290)" to="(330,300)"/>
     <wire from="(550,360)" to="(590,360)"/>
     <wire from="(580,250)" to="(580,340)"/>
     <wire from="(630,80)" to="(630,300)"/>
     <wire from="(200,340)" to="(200,360)"/>
-    <wire from="(430,270)" to="(430,300)"/>
-    <wire from="(30,220)" to="(70,220)"/>
-    <wire from="(460,120)" to="(460,150)"/>
+    <wire from="(150,220)" to="(190,220)"/>
     <wire from="(690,210)" to="(690,230)"/>
-    <wire from="(40,280)" to="(330,280)"/>
     <wire from="(420,250)" to="(510,250)"/>
-    <wire from="(160,70)" to="(510,70)"/>
-    <wire from="(160,200)" to="(190,200)"/>
-    <wire from="(160,220)" to="(190,220)"/>
     <wire from="(290,320)" to="(380,320)"/>
-    <wire from="(310,140)" to="(400,140)"/>
+    <wire from="(420,300)" to="(450,300)"/>
     <wire from="(70,220)" to="(70,320)"/>
-    <wire from="(350,250)" to="(380,250)"/>
-    <wire from="(30,200)" to="(50,200)"/>
-    <wire from="(90,180)" to="(110,180)"/>
-    <wire from="(110,220)" to="(130,220)"/>
-    <wire from="(420,300)" to="(430,300)"/>
+    <wire from="(20,290)" to="(40,290)"/>
+    <wire from="(260,240)" to="(270,240)"/>
+    <wire from="(30,170)" to="(30,220)"/>
     <wire from="(510,70)" to="(510,250)"/>
     <wire from="(20,220)" to="(30,220)"/>
-    <wire from="(40,180)" to="(50,180)"/>
-    <wire from="(330,230)" to="(330,280)"/>
+    <wire from="(90,150)" to="(100,150)"/>
     <wire from="(420,320)" to="(550,320)"/>
-    <wire from="(240,210)" to="(310,210)"/>
-    <wire from="(280,150)" to="(280,270)"/>
+    <wire from="(330,230)" to="(330,290)"/>
     <wire from="(580,340)" to="(590,340)"/>
-    <wire from="(160,70)" to="(160,200)"/>
+    <wire from="(450,300)" to="(450,420)"/>
     <wire from="(750,360)" to="(800,360)"/>
     <wire from="(330,300)" to="(380,300)"/>
-    <wire from="(330,280)" to="(330,300)"/>
-    <wire from="(30,200)" to="(30,220)"/>
-    <wire from="(80,130)" to="(80,150)"/>
-    <wire from="(350,150)" to="(460,150)"/>
+    <wire from="(40,150)" to="(40,290)"/>
+    <wire from="(380,250)" to="(380,260)"/>
+    <wire from="(190,220)" to="(190,240)"/>
     <wire from="(70,320)" to="(240,320)"/>
     <wire from="(690,210)" to="(800,210)"/>
     <wire from="(200,340)" to="(240,340)"/>
+    <wire from="(40,290)" to="(330,290)"/>
     <wire from="(630,80)" to="(800,80)"/>
     <wire from="(550,320)" to="(550,360)"/>
-    <wire from="(350,150)" to="(350,250)"/>
-    <wire from="(40,180)" to="(40,280)"/>
+    <wire from="(70,220)" to="(100,220)"/>
+    <wire from="(140,250)" to="(140,420)"/>
     <wire from="(510,250)" to="(510,360)"/>
-    <wire from="(80,70)" to="(80,110)"/>
-    <wire from="(110,180)" to="(110,220)"/>
-    <wire from="(20,280)" to="(40,280)"/>
-    <wire from="(280,270)" to="(430,270)"/>
-    <wire from="(450,120)" to="(460,120)"/>
-    <wire from="(80,70)" to="(160,70)"/>
+    <wire from="(260,70)" to="(260,240)"/>
+    <wire from="(30,170)" to="(50,170)"/>
+    <wire from="(100,220)" to="(120,220)"/>
+    <wire from="(250,250)" to="(270,250)"/>
     <wire from="(420,230)" to="(690,230)"/>
-    <wire from="(50,200)" to="(60,200)"/>
-    <wire from="(80,130)" to="(90,130)"/>
-    <wire from="(80,110)" to="(90,110)"/>
-    <wire from="(80,150)" to="(280,150)"/>
+    <wire from="(190,240)" to="(200,240)"/>
+    <wire from="(40,150)" to="(50,150)"/>
     <wire from="(510,250)" to="(580,250)"/>
     <wire from="(70,320)" to="(70,380)"/>
-    <wire from="(430,300)" to="(630,300)"/>
-    <wire from="(140,120)" to="(400,120)"/>
-    <comp lib="4" loc="(90,180)" name="D Flip-Flop"/>
-    <comp lib="6" loc="(218,498)" name="Text">
-      <a name="text" val="Codifica stati: 11 Verde Giallo; 10 Verde; 00 Rosso; 01 GialloRosso credo...."/>
-    </comp>
-    <comp lib="5" loc="(20,220)" name="Button"/>
     <comp lib="5" loc="(800,80)" name="LED">
       <a name="color" val="#4ff01e"/>
       <a name="label" val="Verde"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="1" loc="(750,360)" name="AND Gate"/>
-    <comp lib="0" loc="(20,280)" name="Clock"/>
-    <comp lib="1" loc="(140,120)" name="AND Gate"/>
+    <comp lib="5" loc="(20,220)" name="Button"/>
+    <comp lib="1" loc="(320,250)" name="AND Gate"/>
+    <comp lib="4" loc="(90,150)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(20,290)" name="Clock"/>
+    <comp lib="6" loc="(218,498)" name="Text">
+      <a name="text" val="Codifica stati: 11 Verde Giallo; 10 Verde; 00 Rosso; 01 GialloRosso credo...."/>
+    </comp>
+    <comp lib="1" loc="(150,220)" name="NOT Gate"/>
     <comp lib="5" loc="(800,360)" name="LED">
       <a name="label" val="Rosso"/>
       <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="1" loc="(750,360)" name="AND Gate"/>
+    <comp lib="6" loc="(739,77)" name="Text"/>
+    <comp lib="1" loc="(290,320)" name="AND Gate"/>
+    <comp lib="6" loc="(176,44)" name="Text">
+      <a name="text" val="Enabled attivo alto:; ossia quando il pulsante è premuto!"/>
+    </comp>
+    <comp lib="1" loc="(640,350)" name="AND Gate"/>
+    <comp lib="1" loc="(250,250)" name="OR Gate"/>
+    <comp lib="4" loc="(420,230)" name="D Flip-Flop">
+      <a name="label" val="Q1"/>
+    </comp>
+    <comp lib="4" loc="(420,300)" name="D Flip-Flop">
+      <a name="label" val="Q2"/>
     </comp>
     <comp lib="5" loc="(800,210)" name="LED">
       <a name="color" val="#dcf025"/>
       <a name="label" val="Giallo"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="1" loc="(290,320)" name="AND Gate"/>
-    <comp lib="6" loc="(176,44)" name="Text">
-      <a name="text" val="Enabled attivo alto:; ossia quando il pulsante è premuto!"/>
-    </comp>
-    <comp lib="1" loc="(640,350)" name="AND Gate"/>
-    <comp lib="1" loc="(160,220)" name="NOT Gate"/>
-    <comp lib="4" loc="(420,300)" name="D Flip-Flop">
-      <a name="label" val="Q2"/>
-    </comp>
-    <comp lib="4" loc="(420,230)" name="D Flip-Flop">
-      <a name="label" val="Q1"/>
-    </comp>
-    <comp lib="1" loc="(240,210)" name="AND Gate"/>
-    <comp lib="6" loc="(739,77)" name="Text"/>
-    <comp lib="1" loc="(450,120)" name="OR Gate"/>
   </circuit>
 </project>
