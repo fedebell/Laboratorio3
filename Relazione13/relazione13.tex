@@ -75,16 +75,32 @@ Una volta codificati gli stati, abbiamo assegnato alle uscite $L_V$ (Led Verde),
 \begin{equation}
 L_V = Q_1 \qquad L_G = Q_0 \qquad L_R = \bar{Q}_0\cdot \bar{Q}_1
 \end{equation}
-Questo era in effetti il modo più semplice per realizzare i collegamenti fra i FF e le uscite: per come erano stati codificati gli stati, i led verde e giallo sono pilotabili direttamente dal rispettivo bit, mentre per il Led rosso abbiamo scelto l'unica funzione che valga 1 solo sullo stato 00. In effetti avremmo pure potuto prendere come funzione per pilotare il Led rosso $\bar{Q_1}$, a patto però di avere 01 stato in cui sia il giallo che il rosso sono accesi. Abbiamo preferito usare una porta in più qui e avere la possibilità di controllare il Led giallo direttamente.
+Questo era in effetti il modo più semplice per realizzare i collegamenti fra i FF e le uscite: per come erano stati codificati gli stati, i led verde e giallo sono pilotabili direttamente dal rispettivo bit, mentre per il Led rosso abbiamo scelto l'unica funzione che valga 1 solo sullo stato 00. %In effetti avremmo pure potuto prendere come funzione per pilotare il Led rosso $\bar{Q_1}$, a patto però di avere 01 stato in cui sia il giallo che il rosso sono accesi. Abbiamo preferito usare una porta in più qui e avere la possibilità di controllare il Led giallo direttamente.
 % e ce credo, erano davvero una cazzata...
 %non mi piace come è scritta questa parte: ad esempio all'inizio dico subito che lo stato 0 1 è il giallo ma solo ora dichiao in effetti a cosa sia collegata l'uscita L_G... Inoltre, sebbne la tabella di transizione la ho scritta bene, devo far capire che poi i q_n+1 sarebbero gli ingressi D...
 Abbiamo implementato il circuito come in figura\ref{fig:circenable}.
-Abbiamo collegato i clear e reset dei FF a $V_CC$ tramite resistenze di pull-up di resistenza circa $1.5\mbox{k}\Omega$.
+Abbiamo collegato i clear e reset dei FF a $V_CC = 4.9\pm0.1 $V tramite resistenze di pull-up di resistenza circa $1.5\mbox{k}\Omega$.
 Abbiamo collegato i Led a terra tramite resistenza da circa $330\Omega$ per limitare la corrente.  
 Abbiamo preso le forme d'onda di Clock e ciascuno dei tre Led tramite oscilloscopio.
-%Inserire figure!
-Si osservi che i segnali dei Led (e quindi delle uscite dei FF, a meno di ritardi trascurabili) diventano positive quando il clock è sul fronte positivo (abbiamo edge-positive triggered Flip-Flop).
-Inoltre, come atteso, si osserva che il Led Giallo e Rosso stanno accesi per un periodo e spenti per i due successivi, mentre il Verde il contrario.
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.7]{clock-verde.png}
+\caption{In CH1 il segnale del clock, in CH2 quello del Led Verde\label{fig:verde}}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.7]{clock-giallo.png}
+\caption{In CH1 il segnale del clock, in CH2 quello del Led Giallo\label{fig:giallo}}
+\end{figure}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.7]{clock-rosso.png}
+\caption{In CH1 il segnale del clock, in CH2 quello del Led Rosso\label{fig:rosso}}
+\end{figure}
+Si osservi che i segnali dei Led (e quindi delle uscite dei FF, a meno di ritardi trascurabili) diventano positivi quando il clock è sul fronte positivo (abbiamo edge-positive triggered Flip-Flop).
+Inoltre, come atteso, si osserva che il Led Giallo e Rosso stanno accesi per un periodo di clock e spenti per i due successivi (Figure \ref{fig:giallo} e \ref{fig:rosso}), mentre il Verde il contrario (Figura \ref{fig:verde}).
 
 \section{Semaforo completo}
 Abbiamo optato di usare una macchina di Mealy per realizzare il semaforo completo. Si è mantenuta la stessa codifica degli stati in termini di bit utilizzata precedentemente. In questo modo la funzione di transizione nello state Enabled è identica a quella precedente. Abbiamo chiamato E il valore logico dell'enable.
@@ -109,8 +125,8 @@ $E$ & $Q_{1,n}$ & $Q_{0, n}$ & $Q_{1, n+1}$ & $Q_{0, n+1}$ & $LV$ & $LG$ & $LR$\
 \end{tabular}
 \caption{Matrice di transizione e valori di verità per le uscite nel caso di semaforo completo.\label{tab:semaforocompleto}}
 \end{table} 
-Nel caso Not Enabled, abbiamo deciso di mantenere lo stato 01 ad essere con solo il Led giallo acceso. Abbiamo deciso di farlo transire verso 10 : in modalità Enabled lo stato 00 aveva solo il Led rosso acceso, pertanto con una aggiunta di un AND con il bit E si è riusciti a mantenere il circuito già montato in precedenza. Le transizioni degli altri stati (10 e 11) sono state scelte in modo che le relative mappe di Karnaugh risultassero le più semplici possibili compatibilmente col fatto che gli stati 10 e 11 non devono permanere mai.
-Abbiamo così ottenuto come funzioni logiche:
+Nel caso Not Enabled, abbiamo deciso di mantenere lo stato 01 ad essere con solo il Led giallo acceso. Abbiamo deciso di farlo transire verso 10 : in modalità Enabled lo stato 00 aveva solo il Led rosso acceso, pertanto con una aggiunta di un AND con il bit E si è riusciti a mantenere il circuito già montato in precedenza. Le transizioni degli altri stati (10 e 11) sono state scelte in modo che le relative mappe di Karnaugh risultassero le più semplici possibili compatibilmente col fatto che gli stati 10 e 11 non devono permanere mai nel ciclo.
+Abbiamo così ottenuto come funzioni logiche per le transizioni:
 \begin{equation}
 Q_{0, n+1} = \bar{Q}_{0,n}\cdot(\bar{E}+Q_{1,n})\qquad
 Q_{1, n+1} = E\cdot \bar{Q}_{0, n}
@@ -120,7 +136,6 @@ Con lo stesso modo si sono scelte le funzioni di output dei Led relativamente ai
 LV = Q_1\qquad LG = Q_0\qquad LR = E\cdot(\bar{Q}_1\cdot\bar{Q}_0)
 \end{equation}
 
-%in realtà ni: penso di aver aggiuynto uan porta per evitare di effettuare scollegamenti nel punto precedente
 Si osservi che in questo caso abbiamo implementato un meccanismo di abilitazione asincrona: non appena si cambia lo stato di $E$, indipendentemente dal fronte del clock, si ha che il semaforo cambia stato di abilitazione. Il Led Rosso è collegato all'enable non tramite altri D-Latch, quindi  se è acceso mentre $E$ passa da 1 a 0, avviene immediatamente il cambio dei valori logici delle uscite previste nel caso di $E = 0$, ossia si passa all'uscita $LG=1$ senza aspettare il clock.
 Per le altre uscite non ci sono problemi in quanto sono collegate ad $E$ solo tramite i vecchi D-Latch.
 Per realizzare un meccanismo di abilitazione sincrona, ossia per fare in modo che il semaforo registri solo cambiamenti di $E$ che avvengono sul fronte alto del clock, si è collegato $E$ direttamente ad un terzo D-Latch, come in figura\ref{fig:sincrono}.
@@ -130,8 +145,16 @@ Adesso vogliamo implementare lo stesso semaforo programmando Arduino. Abbiamo op
 Abbiamo collegato le uscite di Arduino 9, 10, 11 tramite il buffer rispettivamente ai Led Verde, Giallo, Rosso, inserendo resistenza da $330\Omega$ su ciascuno per limitare la corrente.
 Queste uscite sono state dichiarate come OUTPUT nel programma utilizzato.
 L'enable è stato collegato all'uscita 8, e nel programma è dichiarato come INPUT-PULLUP (ossia alto se interruttore aperto e basso se chiuso).
-Dato che con Arduino si hanno in genere un numero di bit a sufficienza, nello scriere il programma abbiamo assegnato ad ogni LED un bit diverso. In questo modo si ha uno stato per ogni LED acceso, più lo stato spento e lo stato in cui Verde e Giallo sono accesi. Abbiamo considerato solo i vari stati che ci servono: quelli indesiderati non si presentano mai dato che l'inizializzazione (nello stato in cui tutto è spento) viene fatta da noi nel programma e non casualmente come nel caso dei FF.
-Il funzionamento del programma mima il comportamento della macchina a stati finiti precedentemente costruita: legge lo stato in cui si trova attualmente, legge il valore di Enable (attivo alto) e a quel punto decide in che stato finire. Il vantaggio rispetto a prima è che è possibile settare il tempo di permanenza di uno stato in modo indipendente dagli altri. Dopo viene Letto il valore di Enable (abilitazione sincrona) e vengono cambiati i valori di output secondo lo stato in cui si trova la macchina (che essendo di tipo Moore, ha ad ogni stato associato un ben definito valore di output)
+Dato che con Arduino si hanno in genere un numero di bit a sufficienza, nello scrivere il programma abbiamo assegnato ad ogni LED un bit diverso. In questo modo si ha uno stato per ogni LED acceso, più lo stato spento e lo stato in cui Verde e Giallo sono accesi. Abbiamo considerato solo i vari stati che ci servono: quelli indesiderati non si presentano mai dato che l'inizializzazione (nello stato in cui tutto è spento) viene fatta da noi nel programma e non casualmente come nel caso dei FF.
+Il funzionamento del programma mima il comportamento della macchina a stati finiti precedentemente costruita:
+\begin{itemize}
+\item Legge il valore dell'Enable (attivo alto)
+\item Legge lo stato in cui si trova attualmente
+\item Calcola lo stato successivo in cui andare a seconda dello stato attuale e del valore di Enable
+\item Accende i Led relativi allo stato in cui si trova la macchina (E' di tipo Moore, quindi lo stato determina le uscite) per il tempo impostato
+\item Dopo l'attesa, ripete il ciclo dall'inizio
+\end{itemize}
+Si osservi che in questa macchina si ha una abilitazione sincrona (avviene solo ad inizio ciclo la lettura dell'input)
 %spiega meglio l'ordine, anche perchè non è proprio questo l'ordine utilizzato nel programmino  del prof.
 \section{Conclusioni}
 Abbiamo realizzato una macchina a stati finiti secondo le specifiche richieste.
