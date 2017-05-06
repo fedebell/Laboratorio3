@@ -62,6 +62,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,250)" to="(380,250)"/>
     <wire from="(260,70)" to="(510,70)"/>
     <wire from="(140,250)" to="(200,250)"/>
+    <wire from="(100,150)" to="(100,220)"/>
     <wire from="(140,420)" to="(450,420)"/>
     <wire from="(200,360)" to="(510,360)"/>
     <wire from="(330,230)" to="(380,230)"/>
@@ -73,21 +74,25 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(580,250)" to="(580,340)"/>
     <wire from="(630,80)" to="(630,300)"/>
     <wire from="(200,340)" to="(200,360)"/>
+    <wire from="(150,220)" to="(190,220)"/>
     <wire from="(690,210)" to="(690,230)"/>
     <wire from="(420,250)" to="(510,250)"/>
     <wire from="(290,320)" to="(380,320)"/>
-    <wire from="(40,220)" to="(70,220)"/>
     <wire from="(420,300)" to="(450,300)"/>
     <wire from="(70,220)" to="(70,320)"/>
-    <wire from="(70,220)" to="(90,220)"/>
+    <wire from="(20,290)" to="(40,290)"/>
     <wire from="(260,240)" to="(270,240)"/>
+    <wire from="(30,170)" to="(30,220)"/>
     <wire from="(510,70)" to="(510,250)"/>
+    <wire from="(20,220)" to="(30,220)"/>
+    <wire from="(90,150)" to="(100,150)"/>
     <wire from="(420,320)" to="(550,320)"/>
     <wire from="(330,230)" to="(330,290)"/>
     <wire from="(580,340)" to="(590,340)"/>
     <wire from="(450,300)" to="(450,420)"/>
     <wire from="(750,360)" to="(800,360)"/>
     <wire from="(330,300)" to="(380,300)"/>
+    <wire from="(40,150)" to="(40,290)"/>
     <wire from="(380,250)" to="(380,260)"/>
     <wire from="(190,220)" to="(190,240)"/>
     <wire from="(70,320)" to="(240,320)"/>
@@ -96,29 +101,45 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(40,290)" to="(330,290)"/>
     <wire from="(630,80)" to="(800,80)"/>
     <wire from="(550,320)" to="(550,360)"/>
+    <wire from="(70,220)" to="(100,220)"/>
     <wire from="(140,250)" to="(140,420)"/>
     <wire from="(510,250)" to="(510,360)"/>
     <wire from="(260,70)" to="(260,240)"/>
+    <wire from="(30,170)" to="(50,170)"/>
+    <wire from="(100,220)" to="(120,220)"/>
     <wire from="(250,250)" to="(270,250)"/>
     <wire from="(420,230)" to="(690,230)"/>
     <wire from="(190,240)" to="(200,240)"/>
-    <wire from="(120,220)" to="(190,220)"/>
+    <wire from="(40,150)" to="(50,150)"/>
     <wire from="(510,250)" to="(580,250)"/>
     <wire from="(70,320)" to="(70,380)"/>
-    <comp lib="6" loc="(739,77)" name="Text"/>
-    <comp lib="1" loc="(290,320)" name="AND Gate"/>
-    <comp lib="1" loc="(250,250)" name="OR Gate"/>
     <comp lib="5" loc="(800,80)" name="LED">
       <a name="color" val="#4ff01e"/>
       <a name="label" val="Verde"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="4" loc="(420,230)" name="D Flip-Flop">
-      <a name="label" val="Q1"/>
+    <comp lib="5" loc="(20,220)" name="Button"/>
+    <comp lib="1" loc="(320,250)" name="AND Gate"/>
+    <comp lib="4" loc="(90,150)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(20,290)" name="Clock"/>
+    <comp lib="6" loc="(218,498)" name="Text">
+      <a name="text" val="Codifica stati: 11 Verde Giallo; 10 Verde; 00 Rosso; 01 GialloRosso credo...."/>
     </comp>
+    <comp lib="1" loc="(150,220)" name="NOT Gate"/>
     <comp lib="5" loc="(800,360)" name="LED">
       <a name="label" val="Rosso"/>
       <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="1" loc="(750,360)" name="AND Gate"/>
+    <comp lib="6" loc="(739,77)" name="Text"/>
+    <comp lib="1" loc="(290,320)" name="AND Gate"/>
+    <comp lib="6" loc="(176,44)" name="Text">
+      <a name="text" val="Enabled attivo alto:; ossia quando il pulsante è premuto!"/>
+    </comp>
+    <comp lib="1" loc="(640,350)" name="AND Gate"/>
+    <comp lib="1" loc="(250,250)" name="OR Gate"/>
+    <comp lib="4" loc="(420,230)" name="D Flip-Flop">
+      <a name="label" val="Q1"/>
     </comp>
     <comp lib="4" loc="(420,300)" name="D Flip-Flop">
       <a name="label" val="Q2"/>
@@ -128,17 +149,5 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Giallo"/>
       <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="6" loc="(218,498)" name="Text">
-      <a name="text" val="Codifica stati: 11 Verde Giallo; 10 Verde; 00 Rosso; 01 GialloRosso credo...."/>
-    </comp>
-    <comp lib="5" loc="(40,220)" name="Button"/>
-    <comp lib="1" loc="(750,360)" name="AND Gate"/>
-    <comp lib="6" loc="(176,44)" name="Text">
-      <a name="text" val="Enabled attivo alto:; ossia quando il pulsante è premuto!"/>
-    </comp>
-    <comp lib="0" loc="(40,290)" name="Clock"/>
-    <comp lib="1" loc="(120,220)" name="NOT Gate"/>
-    <comp lib="1" loc="(320,250)" name="AND Gate"/>
-    <comp lib="1" loc="(640,350)" name="AND Gate"/>
   </circuit>
 </project>
