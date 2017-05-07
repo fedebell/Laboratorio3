@@ -45,12 +45,12 @@ Per realizzare il solo stato enabled abbiamo optato per una macchina di Moore, n
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.7]{FSMenabled.png}
-\caption{Diagramma dello stato Enabled. Le transizioni avvengono aad ogni colpo di clock.\label{fig:FSMenabled}}
+\caption{Diagramma dello stato Enabled. Le transizioni avvengono ad ogni colpo di clock.\label{fig:FSMenabled}}
 \end{figure}
 %In arrivo frase ambigua
 Abbiamo deciso di codificare lo stato logico rimanente ($Q_1 = 0$, $Q_0 = 1$ in termini di bit) come lo stato fisico in cui il solo Led Giallo è acceso. Tale stato compare nel circuito solo nella eventualità in cui i FF si accendano in questa configurazione. Salvo in questo caso, 01 non compare più nei cicli successivi.
 Il vantaggio di questa codifica è che il Led Verde e il Led Giallo sono pilotati da due bit distinti, rispettivamente $Q_1$ e $Q_0$ nel nostro caso. In questo modo ci sarà più facile in seguito poter far lampeggiare il solo Led Giallo.
-Le tabelle di transizione implementate sono riportate in tabella \ref{tab:transiozioneenabled}. I \emph{don't care} sono già stati assegnati in questa tabella. Nelle sezioni successive diamo una breve spiegazione su come sono stati eliminati. Nella tabella $D_0$ e $D_!$ sono ovviamente gli ingressi dei flip-flop. Come si può vedere dalla tabella le uscite $Q_{1,n+1}$ e $Q_{0,n+1}$ diventano gli ingressi dei FF $D_{1, n}$ e $D_{0, n}$.
+Le tabelle di transizione implementate sono riportate in tabella \ref{tab:transizioneenabled}. I \emph{don't care} sono già stati assegnati in questa tabella. Nelle sezioni successive daremo una breve spiegazione su come sono stati eliminati. Nella tabella $D_0$ e $D_1$ rappresentano gli ingressi dei Flip-Flop. Come si può vedere dalla tabella le uscite $Q_{1,n+1}$ e $Q_{0,n+1}$ diventano gli ingressi dei FF $D_{1, n}$ e $D_{0, n}$.
 \begin{table}[!htb]
 \centering
 \begin{tabular}{|c|c|c|c||c|c||c|c|c|}
@@ -68,7 +68,7 @@ $Q_{1,n}$ & $Q_{0,n}$ & $D_{1, n}$ & $D_{0, n}$& $Q_{1,n+1}$ & $Q_{0,n+1}$ & $LV
 \subsection{Funzioni logiche delle transizioni}
 Nella funzione di transizione, abbiamo libertà di scegliere la transizione dello stato 'Giallo' 01.
 Con una semplificazione tramite mappe di Karnaugh si ottiene che ponendo i due \emph{don't care} 
-\footnote{In realtà non sono prorpiamente dei \emph{don't care}: è' lecito assegnare a questi  tutte le combinazione tranne 01, caso in cui la macchina resterebbe perpetuamente in questo stato.} pari a 0 si ottiene che la funzione logica richiesta è \begin{equation}
+\footnote{In realtà non sono propriamente dei \emph{don't care}: è' lecito assegnare a questi  tutte le combinazione tranne 01, caso in cui la macchina resterebbe perpetuamente in questo stato.} pari a 0 si ottiene che la funzione logica richiesta è \begin{equation}
 Q_{1, n+1} = \bar {Q}_{0,n} \qquad Q_{0,n+1} = \bar {Q}_{0,n} \cdot Q_{1,n} 
 \end{equation}
 Così si ha che lo stato non richiesto 01 ("solo giallo acceso"), transisce nello stato 00 ("solo rosso acceso").
@@ -88,7 +88,7 @@ Questo era in effetti il modo più semplice per realizzare i collegamenti fra i 
 %non mi piace come è scritta questa parte: ad esempio all'inizio dico subito che lo stato 0 1 è il giallo ma solo ora dichiao in effetti a cosa sia collegata l'uscita L_G... Inoltre, sebbne la tabella di transizione la ho scritta bene, devo far capire che poi i q_n+1 sarebbero gli ingressi D...
 \subsection{Implementazione del circuito}
 Abbiamo implementato il circuito come in figura\ref{fig:circenable}.
-Sono stati collegati i clear e reset dei FF a $V_{CC} = 4.9\pm0.1 $V tramite resistenze di pull-up di valore circa $1.5\mbox{k}\Omega$. Abbiamo collegato i Led a terra tramite resistenze da circa $330\Omega$ che fungono da limitatori di corrente.
+Sono stati collegati i Clear e Reset dei FF a $V_{CC} = 4.9\pm0.1 $V tramite resistenze di pull-up di valore circa $1.5\,\mbox{k}\Omega$. Abbiamo collegato i Led a terra tramite resistenze da circa $330\,\Omega$ che hanno lo scopo di limitare la corrente.
 Le forme d'onda del clock e del segnale a ciascuno dei tre Led sono state acquisite mediante l'oscilloscopio.
 
 \begin{figure}[!htb]
@@ -109,7 +109,7 @@ Le forme d'onda del clock e del segnale a ciascuno dei tre Led sono state acquis
 \caption{In CH1 il segnale del clock, in CH2 quello del Led Rosso.\label{fig:rosso}}
 \end{figure}
 
-Si osservi che i segnali dei Led (e quindi delle uscite dei FF, a meno di ritardi trascurabili) diventano positivi quando il clock è sul fronte positivo (abbiamo utilizzato degli \emph{edge-positive triggered} Flip-Flop). Inoltre, come atteso, si osserva che il Led Giallo e Rosso stanno accesi per un periodo di clock e spenti per i due successivi (Figure \ref{fig:giallo} e \ref{fig:rosso}), mentre il Verde si comporta al contrario cioè sta acceso per due periodo e spento per il successivo (Figura \ref{fig:verde}).
+Si osservi che i segnali dei Led (e quindi delle uscite dei FF, a meno di ritardi trascurabili) diventano positivi quando il clock è sul fronte positivo (abbiamo utilizzato degli \emph{edge-positive triggered} Flip-Flop). Inoltre, come atteso, si osserva che il Led Giallo e Rosso stanno accesi per un periodo di clock e spenti per i due successivi (Figure \ref{fig:giallo} e \ref{fig:rosso}), mentre il Verde si comporta al contrario cioè sta acceso per due periodi e spento per il successivo (Figura \ref{fig:verde}).
 
 \section{Semaforo completo}
 Abbiamo scelto di usare una macchina di Mealy per realizzare il semaforo completo. Si è mantenuta la stessa codifica degli stati in termini di bit utilizzata precedentemente. In questo modo la funzione di transizione nello state Enabled è identica a quella precedente. Abbiamo chiamato E il valore logico dell'enable.
@@ -140,13 +140,13 @@ $E$ & $Q_{1,n}$ & $Q_{0, n}$ & $D_{1,n}$ & $D_{0,n}$ & $Q_{1, n+1}$ & $Q_{0, n+1
 1 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
 \hline
 \end{tabular}
-\caption{Matrice di transizione e valori di verità per le uscite nel caso di semaforo completo. (Uscite funzione dello stato $n$) \label{tab:semaforocompleto}}
+\caption{Matrice di transizione e valori di verità per le uscite nel caso di semaforo completo. (Uscite funzione dello stato $n$). \label{tab:semaforocompleto}}
 \end{table} 
 
 
 \subsection{Funzioni logiche delle transizioni}
 %TODO Di con esattezza tra cosa e cosa è l'AND che ti permette di tenere il circuito precedente.
-Nel caso Not Enabled, abbiamo deciso di mantenere lo stato logico 01 come stato fisico con solo il Led Giallo acceso. Si è deciso (arbitrariamente) di farlo transire verso 10: in modalità Enabled lo stato 00 aveva solo il Led Rosso acceso, pertanto con l'aggiunta di un AND con il bit E si è riusciti a mantenere il circuito già montato in precedenza. Le transizioni degli altri stati (10 e 11) sono state scelte in modo che le relative mappe di Karnaugh risultassero le più semplici possibili compatibilmente col fatto che gli stati 10 e 11 non devono ricomparire mai più nel ciclo.
+Nel caso Not Enabled, abbiamo deciso di mantenere lo stato logico 01 come stato fisico con solo il Led Giallo acceso. Si è deciso (arbitrariamente) di farlo transire verso 10: in modalità Enabled lo stato 00 aveva solo il Led Rosso acceso, pertanto con l'aggiunta di un AND con il bit E si è riusciti a mantenere il circuito già montato in precedenza. Le transizioni degli altri stati (10 e 11) sono state scelte in modo che le relative mappe di Karnaugh risultassero le più semplici possibili compatibilmente col fatto che gli stati 10 e 11 non devono ricomparire più nel ciclo.
 Abbiamo così ottenuto come funzioni logiche per le transizioni:
 \begin{equation}
 Q_{0, n+1} = \bar{Q}_{0,n}\cdot(\bar{E}+Q_{1,n})\qquad
@@ -168,7 +168,7 @@ In figura \ref{fig:lampeggiante} possiamo osservare come nello stato Not Enabled
 \begin{figure}
 \centering
 \includegraphics[scale=0.7]{ch1clock-ch2giallolamp.png}
-\caption{In alto il sengale del clock, in basso l'uscita al Led Giallo in modalità Not Enabled\label{fig:lampeggiante}}
+\caption{In alto il sengale del clock, in basso l'uscita al Led Giallo in modalità Not Enabled.\label{fig:lampeggiante}}
 \end{figure} 
 
 %Il Led Rosso è collegato all'enable non tramite altri D-Latch, quindi  se è acceso mentre $E$ passa da 1 a 0, avviene immediatamente il cambio dei valori logici delle uscite previste nel caso di $E = 0$, ossia si passa all'uscita $LG=1$ senza aspettare il clock.
@@ -193,10 +193,10 @@ Il funzionamento del programma mima il comportamento della macchina a stati fini
 \item Legge il valore dell'Enable (attivo alto)
 \item Legge lo stato in cui si trova attualmente
 \item Calcola lo stato successivo in cui andare a seconda dello stato attuale e del valore di Enable
-\item Accende i Led relativi allo stato in cui si trova la macchina (E' di tipo Moore, quindi lo stato determina le uscite) e attende per il tempo preimpostato.
+\item Accende i Led relativi allo stato in cui si trova la macchina (è di tipo Moore, quindi lo stato determina le uscite) e attende per il tempo preimpostato.
 \item Dopo l'attesa, ripete il ciclo dall'inizio
 \end{itemize}
-Si osservi che in questa macchina si ha una abilitazione sincrona (avviene solo ad inizio ciclo la lettura dell'input)
+Si osservi che in questa macchina si ha una abilitazione sincrona (avviene solo ad inizio ciclo la lettura dell'input).
 
 \section{Conclusioni}
 Abbiamo concludo con successo le realizzazioni delle macchine secondo le specifiche richieste. Si è realizzato in aggiunta un meccanismo di Enable sia asincrono che sincrono per il semaforo costruito con i FF.
