@@ -50,7 +50,7 @@ Per realizzare il solo stato enabled abbiamo optato per una macchina di Moore, n
 %In arrivo ftrase ambigua
 Abbiamo deciso di codificare lo stato rimanente (10 in termini di bit) come lo stato in cui il solo Led Giallo è acceso. Tale stato compare nel circuito solo nella eventualità in cui i FF si accendano in questo stato. Salvo in questo caso, 01 non compare più nei cicli successivi.
 Il vantaggio di questa codifica è che il Led Verde e il Led Giallo sono pilotati da due bit distinti, rispettivamente $Q_1$ e $Q_0$ nel nostro caso. In questo modo ci sarà più facile in seguito poter far lampeggiare il solo Led Giallo.
-Le tabelle di transizione implementate sono riportate in tabella \ref{tab:transiozioneenabled} (I don't care sono stati assegnati in questa tabella).
+Le tabelle di transizione implementate sono riportate in tabella \ref{tab:transiozioneenabled} (I don't care sono stati assegnati in questa tabella: nelle sezioni successive diamo una breve spiegazione su come sono stati eliminati).
 \begin{table}[!htb]
 \centering
 \begin{tabular}{|c|c|c|c||c|c||c|c|c|}
@@ -118,17 +118,17 @@ In tabella \ref{tab:semaforocompleto} abbiamo le transizioni e i valori delle us
 \centering
 \begin{tabular}{|c||c|c|c|c||c|c||c|c|c|}
 \hline
-$E$ & $Q_{1,n}$ & $Q_{0, n}$ $D_{1,n}$ & $D_{0,n}$ & $Q_{1, n+1}$ & $Q_{0, n+1}$ & $LV$ & $LG$ & $LR$\\
+$E$ & $Q_{1,n}$ & $Q_{0, n}$ & $D_{1,n}$ & $D_{0,n}$ & $Q_{1, n+1}$ & $Q_{0, n+1}$ & $LV$ & $LG$ & $LR$\\
 \hline
 0 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\
 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
 0 & 1 & 0 & 0 & 1 & 0 & 1 & 1 & 0 & 0\\
 0 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
 \hline
-0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \\
-0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
-1 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 0\\
-1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
+1 & 0 & 0 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \\
+1 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 0 & 0\\
+1 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 0\\
 \hline
 \end{tabular}
 \caption{Matrice di transizione e valori di verità per le uscite nel caso di semaforo completo. (Uscite funzione dello stato $n$) \label{tab:semaforocompleto}}
@@ -141,7 +141,7 @@ Q_{0, n+1} = \bar{Q}_{0,n}\cdot(\bar{E}+Q_{1,n})\qquad
 Q_{1, n+1} = E\cdot \bar{Q}_{0, n}
 \end{equation}
 \subsection{Funzioni logiche delle uscite}
-Con lo stesso modo si sono scelte le funzioni di output dei Led relativamente ai soliti stati indesiderati 11 e 10. Stavolta i valori logici degli output sono dei veri don't care. Abbiamo ottenuto le seguenti equazioni:
+Con lo stesso modo si sono scelte le funzioni di output dei Led relativamente ai soliti stati indesiderati 11 e 10. Stavolta i valori logici degli output sono dei veri don't care (possiamo effettivamene asseganre ad essi qualsiasi valore logico). Abbiamo ottenuto le seguenti equazioni:
 \begin{equation}
 LV = Q_1\qquad LG = Q_0\qquad LR = E\cdot(\bar{Q}_1\cdot\bar{Q}_0)
 \end{equation}
@@ -151,7 +151,13 @@ Si osservi che il Led Verde in teoria può essere acceso nello stato Not Enabled
 Abbiamo implementato il circuito in figura \ref{fig:circ}.
 %figura circuito con piedini numerati
 Si osservi che in questo caso abbiamo implementato un meccanismo di abilitazione asincrona: non appena si cambia lo stato di $E$, indipendentemente dal fronte del clock, si ha che il semaforo cambia stato di abilitazione.
-Dalla figura \ref{fig:circ} si può in effetti vedere che il passaggio di $E$ da 1 a 0 disabilita istantaneamente la porta AND che precede il Led Rosso. Pertanto se si è nello stato enabled $E=1$ a $E=0$ mentre è acceso il Led Rosso, si ha un immediato suo immediato spegnimento (e quindi si hanno tutte le uscite con valore logico 0). Si osservi tuttavia che lo stato dei FF non è cambiato: questi cambiano solo dopo un colpo di clock. %Il Led Rosso è collegato all'enable non tramite altri D-Latch, quindi  se è acceso mentre $E$ passa da 1 a 0, avviene immediatamente il cambio dei valori logici delle uscite previste nel caso di $E = 0$, ossia si passa all'uscita $LG=1$ senza aspettare il clock.
+Dalla figura \ref{fig:circ} si può in effetti vedere che il passaggio di $E$ da 1 a 0 disabilita istantaneamente la porta AND che precede il Led Rosso. Pertanto se si è nello stato enabled $E=1$ a $E=0$ mentre è acceso il Led Rosso, si ha un immediato suo immediato spegnimento (e quindi si hanno tutte le uscite con valore logico 0). Si osservi tuttavia che lo stato dei FF non è cambiato: questi cambiano solo dopo un colpo di clock.
+In figura \ref{fig:lampeggiante} possiamo osservare come nello stato Not Enabled il Led Giallo si accenda e si spenga il periodo di clock successivo.
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{ch1clock-ch2giallolamp.png}
+\caption{In alto il sengale del clock, in basso l'uscita al Led Giallo in modalità Not Enabled\label{fig:lampeggiante}}
+\end{figure} %Il Led Rosso è collegato all'enable non tramite altri D-Latch, quindi  se è acceso mentre $E$ passa da 1 a 0, avviene immediatamente il cambio dei valori logici delle uscite previste nel caso di $E = 0$, ossia si passa all'uscita $LG=1$ senza aspettare il clock.
 %Per le altre uscite non ci sono problemi in quanto sono collegate ad $E$ solo tramite i vecchi D-Latch.
 \subsection{Abilitazione sincrona}
 Per realizzare un meccanismo di abilitazione sincrona, ossia per fare in modo che il semaforo registri solo cambiamenti di $E$ che avvengono sul fronte alto del clock, si è collegato $E$ all'AND che lo porta al Led Rosso (che causava cambi di output istantanei) tramite un terzo D-Latch, come in figura\ref{fig:sincrono}.
@@ -177,7 +183,6 @@ Si osservi che in questa macchina si ha una abilitazione sincrona (avviene solo 
 Abbiamo realizzato una macchina a stati finiti secondo le specifiche richieste.
 Si è realizzato un meccanismo di Enable sia asincrono che sincrono.
 Non sono state riscontrate deviazioni del comportamento dei circuiti costruiti rispetto a quanto atteso nel caso di macchina ideale.
-%dire il problema del verde 
 \end{document}
 
 
