@@ -15,8 +15,6 @@
 \begin{document}
 \maketitle
 
-%TODO - Secondo me in tutta la relazione le immagini non sono il massimo avrei voluto mettere le immagini del flip-flop congelato, ma non le abbiamo prese. Le immagini che mostrano le misure dei tempi non sono il massimo. Io le toglierei.
-
 \section{Scopo dell'esperienza}
 Lo scopo dell'esperienza è di realizzare un semaforo come macchina a stati finiti tale che
 \begin{itemize}
@@ -76,19 +74,18 @@ Così si ha che lo stato non richiesto 01 ("solo giallo acceso"), transisce nell
 Dato che abbiamo dei FF di tipo D, il valore di $Q_{i, n+1}$ è uguale al valore dell'ingresso $D_i$ nello stato $n$: minimizzare quindi il numero di operazioni logiche nelle funzioni dei $Q_{i,n+1}$ effettivamente minimizza il numero di porte logiche da implementare fisicamente.
 
 \subsection{Funzioni logiche delle uscite}
-Una volta codificati gli stati, abbiamo assegnato alle uscite $L_V$ (Led Verde), $L_G$ (Led Giallo), $L_R$ (Led Rosso) i seguenti valori:
+Una volta codificati gli stati, abbiamo assegnato alle uscite $LV$ (Led Verde), $LG$ (Led Giallo), $LR$ (Led Rosso) i seguenti valori:
 \begin{equation}
-L_V = Q_1 \qquad L_G = Q_0 \qquad L_R = \bar{Q}_0\cdot \bar{Q}_1
+LV = Q_1 \qquad LG = Q_0 \qquad LR = \bar{Q}_0\cdot \bar{Q}_1
 \end{equation}
 Questo era in effetti il modo più semplice per realizzare i collegamenti fra i FF e le uscite: per come sono stati codificati gli stati, i Led Verde e Giallo sono pilotabili direttamente dal rispettivo bit, mentre per il Led Rosso abbiamo scelto l'unica funzione che valga 1 solo sullo stato 00. 
 
 %In effetti avremmo pure potuto prendere come funzione per pilotare il Led rosso $\bar{Q_1}$, a patto però di avere 01 stato in cui sia il giallo che il rosso sono accesi. Abbiamo preferito usare una porta in più qui e avere la possibilità di controllare il Led giallo direttamente.
-%TODO: non ho capito a cosa di rifersci on la riga sotto... XD
-% e ce credo, erano davvero una cazzata...
+%TODO: non ho capito a cosa di rifersci on la riga sotto... XD Era un commento stupido circa la parte virgolettata sopra, che è inutile e infatti è commentata
 %non mi piace come è scritta questa parte: ad esempio all'inizio dico subito che lo stato 0 1 è il giallo ma solo ora dichiao in effetti a cosa sia collegata l'uscita L_G... Inoltre, sebbne la tabella di transizione la ho scritta bene, devo far capire che poi i q_n+1 sarebbero gli ingressi D...
 \subsection{Implementazione del circuito}
 Abbiamo implementato il circuito come in figura\ref{fig:circenable}.
-Sono stati collegati i Clear e Reset dei FF a $V_{CC} = 4.9\pm0.1 $V tramite resistenze di pull-up di valore circa $1.5\,\mbox{k}\Omega$. Abbiamo collegato i Led a terra tramite resistenze da circa $330\,\Omega$ che hanno lo scopo di limitare la corrente.
+Sono stati collegati i Clear e Reset dei FF alla tensione di alimentazione $V_{CC} = 4.9\pm0.1 $V\footnote{Misurata tramite multimetro digitale; incertezza riportata sul manuale} tramite resistenze di pull-up di valore nominale di $1.5\,\mbox{k}\Omega$. Abbiamo collegato i Led a terra tramite resistenze da $330\,\Omega$ nominali che hanno lo scopo di limitare la corrente.
 Le forme d'onda del clock e del segnale a ciascuno dei tre Led sono state acquisite mediante l'oscilloscopio.
 
 \begin{figure}[!htb]
@@ -113,8 +110,8 @@ Si osservi che i segnali dei Led (e quindi delle uscite dei FF, a meno di ritard
 
 \section{Semaforo completo}
 Abbiamo scelto di usare una macchina di Mealy per realizzare il semaforo completo. Si è mantenuta la stessa codifica degli stati in termini di bit utilizzata precedentemente. In questo modo la funzione di transizione nello state Enabled è identica a quella precedente. Abbiamo chiamato E il valore logico dell'enable.
-%TODO spiega meglio perchè per convenianza si è scelto quello
-Si è deciso (per convenienza) di scegliere lo stato Enabled attivo alto (ossia quando $E = 1$). In tabella \ref{tab:semaforocompleto} abbiamo riportato le transizioni dei FF (i \emph{don't care} sono già stati assegnati), mentre in figura \ref{fig:FSMcomplete} è stata disegnata la mappa schematica delle transizioni (nella figura gli output sono stati codificati nell'ordine LV-LG-LR).
+%TODO spiega meglio perchè per convenianza si è scelto quello. Così ti garba?
+Si è deciso (per convenienza) di scegliere lo stato Enabled attivo alto (ossia quando $E = 1$): in questo modo possiamo disabilitare una uscita nello stato Not Enabled semplicemente con una porta AND fra l'uscita e $E$. In tabella \ref{tab:semaforocompleto} abbiamo riportato le transizioni dei FF (i \emph{don't care} sono già stati assegnati), mentre in figura \ref{fig:FSMcomplete} è stata disegnata la mappa schematica delle transizioni (nella figura gli output sono stati codificati nell'ordine LV-LG-LR).
 
 \begin{figure}[!htb]
 \centering
@@ -145,8 +142,8 @@ $E$ & $Q_{1,n}$ & $Q_{0, n}$ & $D_{1,n}$ & $D_{0,n}$ & $Q_{1, n+1}$ & $Q_{0, n+1
 
 
 \subsection{Funzioni logiche delle transizioni}
-%TODO Di con esattezza tra cosa e cosa è l'AND che ti permette di tenere il circuito precedente.
-Nel caso Not Enabled, abbiamo deciso di mantenere lo stato logico 01 come stato fisico con solo il Led Giallo acceso. Si è deciso (arbitrariamente) di farlo transire verso 10: in modalità Enabled lo stato 00 aveva solo il Led Rosso acceso, pertanto con l'aggiunta di un AND con il bit E si è riusciti a mantenere il circuito già montato in precedenza. Le transizioni degli altri stati (10 e 11) sono state scelte in modo che le relative mappe di Karnaugh risultassero le più semplici possibili compatibilmente col fatto che gli stati 10 e 11 non devono ricomparire più nel ciclo.
+%TODO Di con esattezza tra cosa e cosa è l'AND che ti permette di tenere il circuito precedente. Così ti piace?
+Nel caso Not Enabled, abbiamo deciso di mantenere lo stato logico 01 come stato fisico con solo il Led Giallo acceso. Si è deciso (arbitrariamente) di farlo transire verso 00 (che sarà lo stato con uscite tutte spente). Infatti in modalità Enabled lo stato 00 ha solo il Led Rosso acceso, pertanto con l'aggiunta di un AND fra questo ed il bit E si è riusciti ad avere tutte le uscite spente, mantenendo il circuito costruito in precedenza. Le transizioni degli altri stati (10 e 11) sono state scelte in modo che le relative mappe di Karnaugh risultassero le più semplici possibili compatibilmente col fatto che gli stati 10 e 11 non devono ricomparire più nel ciclo.
 Abbiamo così ottenuto come funzioni logiche per le transizioni:
 \begin{equation}
 Q_{0, n+1} = \bar{Q}_{0,n}\cdot(\bar{E}+Q_{1,n})\qquad
@@ -179,7 +176,7 @@ Per realizzare un meccanismo di abilitazione sincrona, ossia per fare in modo ch
 E' sufficiente l'aggiunta di questo solo FF perché gli altri due collegamenti che coinvolgono l'Enable sono verso gli ingressi D dei FF, che registrano i cambiamenti degli input in modo sincrono.
 
 %TODO Nella relazione hai gi scritto che implementi quello che non passa per il VERDE?
-
+%Sì, questo circuito non passa per il VERDE
 %Si osservi che a differenza di prima, si osserva una transizione diversa se passiamo da Enabled a Not Enabled quando ci troviamo nello stato 00 (Led Rosso acceso); nel circuito costruito prima si passa subito a stato spento 00, che poi transisce a 01 (ossia con il solo Led Giallo acceso). Adesso si ha una transizione a 10, in cui si ha il Led Verde acceso, e poi si entra nel ciclo 00/01, in cui si ha il Led Giallo lampeggiante.
 
 \section{Semaforo con Arduino}
@@ -199,7 +196,7 @@ Il funzionamento del programma mima il comportamento della macchina a stati fini
 Si osservi che in questa macchina si ha una abilitazione sincrona (avviene solo ad inizio ciclo la lettura dell'input).
 
 \section{Conclusioni}
-Abbiamo concludo con successo le realizzazioni delle macchine secondo le specifiche richieste. Si è realizzato in aggiunta un meccanismo di Enable sia asincrono che sincrono per il semaforo costruito con i FF.
+Abbiamo concluso con successo le realizzazioni delle macchine secondo le specifiche richieste. Si è realizzato in aggiunta un meccanismo di Enable sia asincrono che sincrono per il semaforo costruito con i FF.
 \end{document}
 
 
