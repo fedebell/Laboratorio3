@@ -1,7 +1,7 @@
 import numpy
 import pylab
 from scipy.optimize import curve_fit
-vout, dvout, f, df = pylab.loadtxt('/home/federico/Laboratorio3/relazione2/datiPassaBasso.txt', unpack = True)
+vout, dvout, f, df = pylab.loadtxt('/home/federico/Laboratorio3/relazione15/datiBode.txt', unpack = True)
 vin=5
 dvin=0.15
 pylab.figure(1)
@@ -88,6 +88,9 @@ pylab.ylabel('Gain [dB]')
 #pylab.xlim(80,1500000)
 pylab.title('one-parameter fit')
 pylab.grid()
+
+#rendere piu smooth questa cosa
+
 pylab.plot(f, 20*pylab.log10(fit_function(f, ft, a)), color = 'green', label = 'fit')
 pylab.legend(numpoints=1, loc = 'upper right')
 pylab.show()
