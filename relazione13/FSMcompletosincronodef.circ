@@ -113,13 +113,40 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(540,110)" to="(540,300)"/>
     <wire from="(110,460)" to="(120,460)"/>
     <wire from="(510,470)" to="(650,470)"/>
-    <comp lib="1" loc="(700,460)" name="AND Gate"/>
-    <comp lib="1" loc="(110,380)" name="NAND Gate">
-      <a name="facing" val="north"/>
-    </comp>
     <comp lib="5" loc="(890,320)" name="LED">
       <a name="color" val="#f0ef46"/>
       <a name="label" val="LG"/>
+      <a name="labelloc" val="south"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="6" loc="(398,53)" name="Text">
+      <a name="text" val="D0 = (E'+Q1).Q0'"/>
+      <a name="font" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="1" loc="(190,270)" name="OR Gate"/>
+    <comp lib="0" loc="(30,330)" name="Clock"/>
+    <comp lib="1" loc="(110,380)" name="NAND Gate">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(820,470)" name="AND Gate"/>
+    <comp lib="1" loc="(300,250)" name="AND Gate"/>
+    <comp lib="5" loc="(890,170)" name="LED">
+      <a name="color" val="#26f023"/>
+      <a name="label" val="LV"/>
+      <a name="labelloc" val="south"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="1" loc="(290,440)" name="AND Gate"/>
+    <comp lib="4" loc="(420,230)" name="D Flip-Flop">
+      <a name="label" val="Q0"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="6" loc="(782,95)" name="Text">
+      <a name="text" val="LG=Q0"/>
+      <a name="font" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="5" loc="(40,510)" name="Button">
+      <a name="label" val="Enable"/>
       <a name="labelloc" val="south"/>
       <a name="labelfont" val="SansSerif bold 16"/>
     </comp>
@@ -128,34 +155,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="south"/>
       <a name="labelfont" val="SansSerif bold 16"/>
     </comp>
-    <comp lib="1" loc="(190,270)" name="OR Gate"/>
-    <comp lib="5" loc="(40,510)" name="Button">
-      <a name="label" val="Enable"/>
-      <a name="labelloc" val="south"/>
-      <a name="labelfont" val="SansSerif bold 16"/>
-    </comp>
-    <comp lib="5" loc="(890,170)" name="LED">
-      <a name="color" val="#26f023"/>
-      <a name="label" val="LV"/>
-      <a name="labelloc" val="south"/>
-      <a name="labelfont" val="SansSerif bold 16"/>
-    </comp>
     <comp lib="6" loc="(369,103)" name="Text">
       <a name="text" val="D2=E"/>
-      <a name="font" val="SansSerif bold 16"/>
-    </comp>
-    <comp lib="6" loc="(398,53)" name="Text">
-      <a name="text" val="D0 = (E'+Q1).Q0'"/>
       <a name="font" val="SansSerif bold 16"/>
     </comp>
     <comp lib="4" loc="(420,490)" name="D Flip-Flop">
       <a name="label" val="Q2"/>
       <a name="labelfont" val="SansSerif bold 16"/>
     </comp>
-    <comp lib="1" loc="(820,470)" name="AND Gate"/>
-    <comp lib="1" loc="(290,440)" name="AND Gate"/>
-    <comp lib="6" loc="(777,62)" name="Text">
-      <a name="text" val="LV=Q1"/>
+    <comp lib="6" loc="(381,79)" name="Text">
+      <a name="text" val="D1=Q0'.E"/>
       <a name="font" val="SansSerif bold 16"/>
     </comp>
     <comp lib="6" loc="(798,126)" name="Text">
@@ -166,22 +175,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Q1"/>
       <a name="labelfont" val="SansSerif bold 16"/>
     </comp>
-    <comp lib="0" loc="(30,330)" name="Clock"/>
-    <comp lib="6" loc="(782,95)" name="Text">
-      <a name="text" val="LG=Q0"/>
+    <comp lib="6" loc="(777,62)" name="Text">
+      <a name="text" val="LV=Q1"/>
       <a name="font" val="SansSerif bold 16"/>
     </comp>
-    <comp lib="6" loc="(381,79)" name="Text">
-      <a name="text" val="D1=Q0'.E"/>
-      <a name="font" val="SansSerif bold 16"/>
-    </comp>
-    <comp lib="4" loc="(420,230)" name="D Flip-Flop">
-      <a name="label" val="Q0"/>
-      <a name="labelfont" val="SansSerif bold 16"/>
-    </comp>
-    <comp lib="1" loc="(300,250)" name="AND Gate"/>
-    <comp lib="6" loc="(567,575)" name="Text">
-      <a name="text" val="Codifica stati: 11 Verde Giallo; 10 Verde; 00 Rosso; 01 Giallo"/>
-    </comp>
+    <comp lib="1" loc="(700,460)" name="AND Gate"/>
   </circuit>
 </project>
