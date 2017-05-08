@@ -85,6 +85,11 @@ Questo era in effetti il modo più semplice per realizzare i collegamenti fra i 
 %non mi piace come è scritta questa parte: ad esempio all'inizio dico subito che lo stato 0 1 è il giallo ma solo ora dichiao in effetti a cosa sia collegata l'uscita L_G... Inoltre, sebbne la tabella di transizione la ho scritta bene, devo far capire che poi i q_n+1 sarebbero gli ingressi D...
 \subsection{Implementazione del circuito}
 Abbiamo implementato il circuito come in figura\ref{fig:circenable}.
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.5]{circenable.png}
+\caption{Circuito implementato per il solo stato Enabled. Nella figura non si sono riportati per semplicità i collegamenti dei LED a terra , le alimentazioni e i collegamenti dei Reset e Clear. $E$ è collegato a massa tramite interruttore: se è aperto vale 1 (logica TTL), se chiuso 0\label{fig:circenable}}
+\end{figure}
 Sono stati collegati i Clear e Reset dei FF alla tensione di alimentazione $V_{CC} = 4.9\pm0.1 $V\footnote{Misurata tramite multimetro digitale; incertezza riportata sul manuale} tramite resistenze di pull-up di valore nominale di $1.5\,\mbox{k}\Omega$. Abbiamo collegato i Led a terra tramite resistenze da $330\,\Omega$ nominali che hanno lo scopo di limitare la corrente.
 Le forme d'onda del clock e del segnale a ciascuno dei tre Led sono state acquisite mediante l'oscilloscopio.
 
@@ -157,7 +162,12 @@ LV = Q_1\qquad LG = Q_0\qquad LR = E\cdot(\bar{Q}_1\cdot\bar{Q}_0)
 Si osservi che il Led Verde in teoria può essere acceso nello stato Not Enabled, ma questo può accadere solo se la macchina viene inizializzata in uno degli stati in cui è acceso. Dopo il primo colpo di clock il Led Verde si spegne e non si riaccende più. La macchina entra infatti nell'oscillazione desiderata.\\
 
 \subsection{Implementazione del circuito}
-Abbiamo implementato il circuito in figura \ref{fig:circ}.
+Abbiamo implementato il circuito in figura \ref{fig:circcomplete}.
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.5]{circcomplete.png}
+\caption{Circuito implementato con Enable. Nella figura non si sono riportati per semplicità i collegamenti dei LED a terra , le alimentazioni e i collegamenti dei Reset e Clear. $E$ è collegato a massa tramite interruttore: se è aperto vale 1 (logica TTL), se chiuso 0\label{fig:circcomplete}}
+\end{figure}
 %figura circuito con piedini numerati
 Si osservi che in questa situazione è stato implementato un meccanismo di abilitazione asincrona: non appena si cambia lo stato di $E$, indipendentemente dal fronte del clock, si ha che i Led cambiano stato con effetto immediato. Dalla figura \ref{fig:circ} si può in effetti vedere che il passaggio di $E$ da 1 a 0 disabilita istantaneamente la porta AND che precede il Led Rosso. Si osservi tuttavia che lo stato dei FF non è cambiato: questi cambiano solo dopo un colpo di clock. Dunque in un certo senso l'effetto dell'abilitazione asincrona del semaforo rende indefinito lo stato del semaforo fino al prossimo colpo di clock.\\
 In figura \ref{fig:lampeggiante} possiamo osservare come nello stato Not Enabled il Led Giallo si accenda e si spenga il periodo di clock successivo. Il semaforo funziona come programmato.
@@ -172,8 +182,13 @@ In figura \ref{fig:lampeggiante} possiamo osservare come nello stato Not Enabled
 %Per le altre uscite non ci sono problemi in quanto sono collegate ad $E$ solo tramite i vecchi D-Latch.
 
 \subsection{Abilitazione sincrona}
-Per realizzare un meccanismo di abilitazione sincrona, ossia per fare in modo che il semaforo registri solo cambiamenti di $E$ che avvengono sul fronte alto del clock, si è collegato $E$ all'AND che lo porta al Led Rosso (che causava cambi di output istantanei) tramite un terzo D-Latch, come in figura\ref{fig:sincrono}.
+Per realizzare un meccanismo di abilitazione sincrona, ossia per fare in modo che il semaforo registri solo cambiamenti di $E$ che avvengono sul fronte alto del clock, si è collegato $E$ all'AND che lo porta al Led Rosso (che causava cambi di output istantanei) tramite un terzo D-Latch, come in figura\ref{fig:circcompletesincrono}.
 E' sufficiente l'aggiunta di questo solo FF perché gli altri due collegamenti che coinvolgono l'Enable sono verso gli ingressi D dei FF, che registrano i cambiamenti degli input in modo sincrono.
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.5]{circcompletesincrono.png}
+\caption{Circuito implementato con abilitzione sincrona. Nella figura non si sono riportati per semplicità i collegamenti dei LED a terra , le alimentazioni e i collegamenti dei Reset e Clear. $E$ è collegato a massa tramite interruttore: se è aperto vale 1 (logica TTL), se chiuso 0\label{fig:circcompletesincrono}}
+\end{figure}
 
 %TODO Nella relazione hai gi scritto che implementi quello che non passa per il VERDE?
 %Sì, questo circuito non passa per il VERDE
