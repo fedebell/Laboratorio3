@@ -70,8 +70,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(780,230)" to="(780,320)"/>
     <wire from="(430,300)" to="(540,300)"/>
     <wire from="(100,440)" to="(100,460)"/>
-    <wire from="(120,440)" to="(120,460)"/>
     <wire from="(50,110)" to="(50,260)"/>
+    <wire from="(120,440)" to="(120,460)"/>
     <wire from="(210,380)" to="(510,380)"/>
     <wire from="(510,160)" to="(510,250)"/>
     <wire from="(510,380)" to="(510,470)"/>
@@ -112,7 +112,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(540,110)" to="(540,300)"/>
     <wire from="(110,460)" to="(120,460)"/>
     <wire from="(510,470)" to="(650,470)"/>
-    <comp lib="1" loc="(300,250)" name="AND Gate"/>
+    <comp lib="1" loc="(300,250)" name="AND Gate">
+      <a name="label" val="A1"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
     <comp lib="5" loc="(890,320)" name="LED">
       <a name="color" val="#f0ef46"/>
       <a name="label" val="LG"/>
@@ -123,14 +126,17 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="text" val="LV=Q1"/>
       <a name="font" val="SansSerif bold 16"/>
     </comp>
-    <comp lib="1" loc="(820,470)" name="AND Gate"/>
-    <comp lib="1" loc="(190,270)" name="OR Gate"/>
+    <comp lib="1" loc="(820,470)" name="AND Gate">
+      <a name="label" val="A3"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="1" loc="(190,270)" name="OR Gate">
+      <a name="label" val="O1"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
     <comp lib="4" loc="(420,230)" name="D Flip-Flop">
       <a name="label" val="Q0"/>
       <a name="labelfont" val="SansSerif bold 16"/>
-    </comp>
-    <comp lib="1" loc="(110,380)" name="NAND Gate">
-      <a name="facing" val="north"/>
     </comp>
     <comp lib="6" loc="(381,83)" name="Text">
       <a name="text" val="D1=Q0'.E"/>
@@ -163,13 +169,24 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="south"/>
       <a name="labelfont" val="SansSerif bold 16"/>
     </comp>
+    <comp lib="1" loc="(110,380)" name="NAND Gate">
+      <a name="facing" val="north"/>
+      <a name="label" val="U1"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
     <comp lib="0" loc="(30,330)" name="Clock"/>
     <comp lib="5" loc="(890,470)" name="LED">
       <a name="label" val="LR"/>
       <a name="labelloc" val="south"/>
       <a name="labelfont" val="SansSerif bold 16"/>
     </comp>
-    <comp lib="1" loc="(290,440)" name="AND Gate"/>
-    <comp lib="1" loc="(700,460)" name="AND Gate"/>
+    <comp lib="1" loc="(290,440)" name="AND Gate">
+      <a name="label" val="A4"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="1" loc="(700,460)" name="AND Gate">
+      <a name="label" val="A2"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
   </circuit>
 </project>

@@ -169,7 +169,7 @@ Abbiamo implementato il circuito in figura \ref{fig:circcomplete}.
 \caption{Circuito implementato con Enable. Nella figura non si sono riportati per semplicità i collegamenti dei LED a terra , le alimentazioni e i collegamenti dei Preset e Clear. $E$ è collegato a massa tramite switch: se è aperto vale 1 (logica TTL), se chiuso 0\label{fig:circcomplete}}
 \end{figure}
 %figura circuito con piedini numerati
-Si osservi che in questa situazione è stato implementato un meccanismo di abilitazione asincrona: non appena si cambia lo stato di $E$, indipendentemente dal fronte del clock, si ha che i Led cambiano stato con effetto immediato. Dalla figura \ref{fig:circcomplete} si può in effetti vedere che il passaggio di $E$ da 1 a 0 disabilita istantaneamente la porta AND che precede il Led Rosso. Si osservi tuttavia che lo stato dei FF non è cambiato: questi cambiano solo dopo un colpo di clock. Dunque in un certo senso l'effetto dell'abilitazione asincrona del semaforo rende indefinito lo stato del semaforo fino al prossimo colpo di clock.\\
+Si osservi che in questa situazione è stato implementato un meccanismo di abilitazione asincrona: non appena si cambia lo stato di $E$, indipendentemente dal fronte del clock, si ha che i Led cambiano stato con effetto immediato. Dalla figura \ref{fig:circcomplete} si può in effetti vedere che il passaggio di $E$ da 1 a 0 disabilita istantaneamente la porta AND A3 che precede il Led Rosso. Si osservi tuttavia che lo stato dei FF non è cambiato: questi cambiano solo dopo un colpo di clock. Dunque in un certo senso l'effetto dell'abilitazione asincrona del semaforo rende indefinito lo stato del semaforo fino al prossimo colpo di clock.\\
 In figura \ref{fig:lampeggiante} possiamo osservare come nello stato Not Enabled il Led Giallo si accenda e si spenga il periodo di clock successivo. Il semaforo funziona come programmato.
 
 \begin{figure}
@@ -182,7 +182,7 @@ In figura \ref{fig:lampeggiante} possiamo osservare come nello stato Not Enabled
 %Per le altre uscite non ci sono problemi in quanto sono collegate ad $E$ solo tramite i vecchi D-Latch.
 
 \subsection{Abilitazione sincrona}
-Per realizzare un meccanismo di abilitazione sincrona, ossia per fare in modo che il semaforo registri solo cambiamenti di $E$ che avvengono sul fronte alto del clock, si è collegato $E$ all'AND che lo porta al Led Rosso (che causava cambi di output istantanei) tramite un terzo D-Latch, come in figura\ref{fig:circcompletesincrono}.
+Per realizzare un meccanismo di abilitazione sincrona, ossia per fare in modo che il semaforo registri solo cambiamenti di $E$ che avvengono sul fronte alto del clock, si è collegato $E$ all'AND A3 (che causava cambi di output istantanei) tramite un terzo D-Latch, come in figura\ref{fig:circcompletesincrono}.
 E' sufficiente l'aggiunta di questo solo FF perché gli altri due collegamenti che coinvolgono l'Enable sono verso gli ingressi D dei FF, che registrano i cambiamenti degli input in modo sincrono.
 \begin{figure}[!htb]
 \centering

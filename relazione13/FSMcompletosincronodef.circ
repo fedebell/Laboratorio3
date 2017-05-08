@@ -123,20 +123,34 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="text" val="D0 = (E'+Q1).Q0'"/>
       <a name="font" val="SansSerif bold 16"/>
     </comp>
-    <comp lib="1" loc="(190,270)" name="OR Gate"/>
+    <comp lib="1" loc="(190,270)" name="OR Gate">
+      <a name="label" val="O1"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
     <comp lib="0" loc="(30,330)" name="Clock"/>
     <comp lib="1" loc="(110,380)" name="NAND Gate">
       <a name="facing" val="north"/>
+      <a name="label" val="U1"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
     </comp>
-    <comp lib="1" loc="(820,470)" name="AND Gate"/>
-    <comp lib="1" loc="(300,250)" name="AND Gate"/>
+    <comp lib="1" loc="(820,470)" name="AND Gate">
+      <a name="label" val="A3"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
+    <comp lib="1" loc="(300,250)" name="AND Gate">
+      <a name="label" val="A1"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
     <comp lib="5" loc="(890,170)" name="LED">
       <a name="color" val="#26f023"/>
       <a name="label" val="LV"/>
       <a name="labelloc" val="south"/>
       <a name="labelfont" val="SansSerif bold 16"/>
     </comp>
-    <comp lib="1" loc="(290,440)" name="AND Gate"/>
+    <comp lib="1" loc="(290,440)" name="AND Gate">
+      <a name="label" val="A4"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
     <comp lib="4" loc="(420,230)" name="D Flip-Flop">
       <a name="label" val="Q0"/>
       <a name="labelfont" val="SansSerif bold 16"/>
@@ -179,6 +193,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="text" val="LV=Q1"/>
       <a name="font" val="SansSerif bold 16"/>
     </comp>
-    <comp lib="1" loc="(700,460)" name="AND Gate"/>
+    <comp lib="1" loc="(700,460)" name="AND Gate">
+      <a name="label" val="A2"/>
+      <a name="labelfont" val="SansSerif bold 16"/>
+    </comp>
   </circuit>
 </project>
