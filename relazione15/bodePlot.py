@@ -89,7 +89,7 @@ pylab.ylabel('Gain [dB]')
 pylab.title('one-parameter fit')
 pylab.grid()
 
-#rendere piu smooth questa cosa
+#FIXME rendere piu smooth questa cosa usando il mio metodo della suddivisione per tracciare i punti.
 
 pylab.plot(f, 20*pylab.log10(fit_function(f, ft, a)), color = 'green', label = 'fit')
 pylab.legend(numpoints=1, loc = 'upper right')
