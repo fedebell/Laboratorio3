@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.5.1)  9 MAY 2017 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.5.1)  9 MAY 2017 10:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -501,30 +501,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks22
 )
-(./relazione13.aux
-
-! Package babel Error: You haven't defined the language italian yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 \select@language{italian}
-                             
-Your command will be ignored, type <return> to proceed
-
-
-! Package babel Error: You haven't defined the language italian yet.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \select@language{italian}
-                             
-Your command will be ignored, type <return> to proceed
-
-)
+(./relazione13.aux)
 \openout1 = `relazione13.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -539,7 +516,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count103
 \scratchdimen=\dimen122
@@ -672,44 +650,44 @@ Package pdftex.def Info: FSMenabled.png used on input line 45.
 <circenable.png, id=19, 874.26625pt x 562.1pt>
 File: circenable.png Graphic file (type png)
  <use circenable.png>
-Package pdftex.def Info: circenable.png used on input line 93.
+Package pdftex.def Info: circenable.png used on input line 94.
 (pdftex.def)             Requested size: 437.13205pt x 281.04932pt.
 
 <clock-verde.png, id=20, 301.125pt x 225.84375pt>
 File: clock-verde.png Graphic file (type png)
  <use clock-verde.png>
-Package pdftex.def Info: clock-verde.png used on input line 101.
+Package pdftex.def Info: clock-verde.png used on input line 102.
 (pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
 
 <clock-gialloverde.png, id=22, 301.125pt x 225.84375pt>
 File: clock-gialloverde.png Graphic file (type png)
 
 <use clock-gialloverde.png>
-Package pdftex.def Info: clock-gialloverde.png used on input line 107.
+Package pdftex.def Info: clock-gialloverde.png used on input line 108.
 (pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
  <clock-rosso.png, id=23, 301.125pt x 225.84375pt>
 File: clock-rosso.png Graphic file (type png)
 
 <use clock-rosso.png>
-Package pdftex.def Info: clock-rosso.png used on input line 113.
+Package pdftex.def Info: clock-rosso.png used on input line 114.
 (pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
  [2 <./FSMenabled.png>]
 <FSMcomplete.png, id=27, 437.83575pt x 324.0105pt>
 File: FSMcomplete.png Graphic file (type png)
  <use FSMcomplete.png>
-Package pdftex.def Info: FSMcomplete.png used on input line 126.
+Package pdftex.def Info: FSMcomplete.png used on input line 129.
 (pdftex.def)             Requested size: 306.48294pt x 226.8058pt.
 
 [3 <./circenable.png (PNG copy)> <./clock-verde.png>] [4 <./clock-gialloverde.p
 ng> <./clock-rosso.png> <./FSMcomplete.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 164--166
+Underfull \hbox (badness 10000) in paragraph at lines 167--169
 
  []
 
 <circcomplete.png, id=38, 920.43875pt x 522.95375pt>
 File: circcomplete.png Graphic file (type png)
  <use circcomplete.png>
-Package pdftex.def Info: circcomplete.png used on input line 171.
+Package pdftex.def Info: circcomplete.png used on input line 174.
 (pdftex.def)             Requested size: 460.21825pt x 261.47623pt.
 
 [5 <./circcomplete.png (PNG copy)>]
@@ -717,22 +695,22 @@ Package pdftex.def Info: circcomplete.png used on input line 171.
 File: ch1clock-ch2giallolamp.png Graphic file (type png)
 
 <use ch1clock-ch2giallolamp.png>
-Package pdftex.def Info: ch1clock-ch2giallolamp.png used on input line 180.
+Package pdftex.def Info: ch1clock-ch2giallolamp.png used on input line 183.
 (pdftex.def)             Requested size: 210.78606pt x 158.08954pt.
 
 <circcompletesincrono.png, id=43, 920.43875pt x 522.95375pt>
 File: circcompletesincrono.png Graphic file (type png)
 
 <use circcompletesincrono.png>
-Package pdftex.def Info: circcompletesincrono.png used on input line 192.
+Package pdftex.def Info: circcompletesincrono.png used on input line 195.
 (pdftex.def)             Requested size: 460.21825pt x 261.47623pt.
  [6 <./ch1clock-ch2giallolamp.png> <./circcompletesincrono.png (PNG copy)>] [7]
  (./relazione13.aux) ) 
 Here is how much of TeX's memory you used:
- 3400 strings out of 494902
- 44331 string characters out of 6179892
+ 3398 strings out of 494902
+ 44313 string characters out of 6179892
  114140 words of memory out of 5000000
- 6623 multiletter control sequences out of 15000+600000
+ 6621 multiletter control sequences out of 15000+600000
  11893 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  39i,9n,25p,738b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -748,7 +726,7 @@ ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmti8.pfb>
-Output written on relazione13.pdf (7 pages, 280376 bytes).
+Output written on relazione13.pdf (7 pages, 280419 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream

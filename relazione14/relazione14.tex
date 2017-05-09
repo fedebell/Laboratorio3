@@ -79,8 +79,24 @@ v_{out}(s) = \left( \frac{s C_3 (R_{13} + P_2)}{1 + s C_3 (R_{13} + P_2)} \frac{
 \end{equation}
 %C'è anche una attenuazione da passa alto
 Come si vede l'output presenta un offset costante positivo $-\frac{R_{12} V_{EE}}{R_8+P_3}$ il cui valore massimo risulta essere circa $0.61$V. L'aumento della resistenza $P_3$ si vede che causa una diminuzione anche dell'ampiezza del segnale proporzionale a $V_in$. 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.75]{schemablocchi.png}
+\caption{Schema a blocchi del circuito Lock-in.\label{fig:schemablocchi}}
+\end{figure}
+
 Il circuito applica anche uno sfasamento rispetto al segnale originario regolabile con $P_2$. L'uscita viene mandata alla base di un transistor la cui polarizzazione è tale da potersi muovere sulla retta di carico solamente (in pratica) tra la zona di saturazione e quella di interdizione. Il segnale in arrivo sulla base è molto vicino alla tensione di polarizzazione diretta della giunzione BE, dunque la variazione dell'ampiezza della componente oscillante che arriva in base è direttamente legata alla frazione di tempo per cui questo segnale è sufficientemente alto da polarizzare in diretta la giunzione BE mandando quindi il transistor in saturazione. Variare $P_2$ varia in effetti della stesso fattore sia la componente continua che quella oscillante della tensione sulla base, quindi di fatto agisce come un coefficiente di dilatazione che permette al segnale di attraversare la barriera di potenziale oltre a cui si ha saturazione per una frazione controllabile del periodo.
 Il transistor alternativamente in saturazione e interdizione produce su S3 un'onda quadra (sfasata di $\pi$ rispetto al segnale in base ma è irrilevante).\\
+
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.75]{transistor.jpg}
+\caption{Retta di carico del transistor.\label{fig:transistor}}
+\end{figure}
+
+Come si vede in figura \ref{fig:transistor} la retta do carico del transistor (in rosso) è molto bassa e non permette mai di entrare veramente in regime attivo. Variare la tensione sulla base commuta quindi il transistor tra gli stati di interdizione e di saturazione.\\
 
 %TODO : Verdficare questa ipotesi e prendere una immagine del segnale il base da schiaffare. Sull'immagin della tenzione in base disegnare la tenzione a cui il transistor viene mandato insaturazione.
 
