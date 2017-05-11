@@ -64,7 +64,7 @@ pylab.plot(bucket, retta, color = "black")
 da=cov[0][0]**0.5
 db=cov[1][1]**0.5
 
-print("Si ricavano a = ", a ,"+-" ,da, "e di b =",  b, "+-", db)
+print("Si ricavano a = ", -1/a ,"+-" ,da, "e di b =",  pylab.exp(b), "+-", db)
 
 
 
