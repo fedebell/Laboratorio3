@@ -10,7 +10,7 @@
 \newcommand{\rem}[1]{[\emph{#1}]}
 
 \author{Gruppo BN \\ Federico Belliardo, Marco Costa, Lisa Bedini}
-\title{Lock in}
+\title{Esperienza 14: Misura del coefficiente di assorbimento del Mylar tramite circuito di Lock in}
 \begin{document}
 
 \maketitle
@@ -31,10 +31,12 @@ Questa esperienza è finalizzata alla misura della costante di assorbimento del 
 \end{itemize}
 
 
-Tutte le resistenze, i condensatori e la tensione di alimentazione sono stati misurati con il multimetro digitale, quindi l'errore è stato propagato secondo le specifiche nel manuale ($0.8\% + 3$digit per le resistenze e $0.5\% + 1$digit per i voltaggi). I tempi e le restanti tensioni sono state misurate con i cursori dell'oscilloscopio: l'errore sui tempi è dato dalla risoluzione dei cursori stessi mentre quello sulle tensioni è stato propagato considerando sia l'errore sul posizionamento dei cursori sia l'errore sistematico del $3\%$.
+Tutte le resistenze, i condensatori e la tensione di alimentazione sono stati misurati con il multimetro digitale, quindi l'errore è stato propagato secondo le specifiche nel manuale ($0.8\% + 3$digit per le resistenze e $0.5\% + 1$digit per i voltaggi).
+%Mi pare anche 4% per le capacità; la tensione finale è stta presa solo con multimetro
+ I tempi e le restanti tensioni sono state misurate con i cursori dell'oscilloscopio: l'errore sui tempi è dato dalla risoluzione dei cursori stessi mentre quello sulle tensioni è stato propagato considerando sia l'errore sul posizionamento dei cursori sia l'errore sistematico del $3\%$.
 
 \section{Schema a blocchi}
-Il circuito Lock-in è usato per effettuare misure di segnali deboli in un ambiente molto rumoroso. Nel nostro caso il segnale è la luce emessa dal LED. Tale segnale non è continuo ma modulato da un' onda sinusoidale prodotta dal generatore di funzioni. Abbiamo scelto una frequenza pari a $1\,\mbox{kHz}$ per eliminare il rumore \emph{1/f} dovuto alla presenza di dispositivi attivi\footnote{Può essere prodotto dalle discontinuità intrinseche dei materiali costruttivi.}. In figura \ref{fig:schemablocchi} si nota come questo circuito complesso sia costituito da sottocircuiti (che saranno analizzati e spiegati successivamente); in particolare nella parte superiore dello schema si trovano i circuiti che servono a sfruttare sia la parte positiva che negativa del segnale per la misura e nella parte inferiore si trovano i circuiti di amplificazione del segnale da misurare.
+Il circuito Lock-in è usato per effettuare misure di segnali deboli in un ambiente molto rumoroso. Nel nostro caso il segnale è la luce emessa dal LED. Tale segnale non è continuo ma modulato da un' onda sinusoidale prodotta dal generatore di funzioni. Abbiamo scelto una frequenza pari a circa $1\,\mbox{kHz}$ per eliminare il rumore \emph{1/f} dovuto alla presenza di dispositivi attivi\footnote{Può essere prodotto dalle discontinuità intrinseche dei materiali costruttivi.}. In figura \ref{fig:schemablocchi} si nota come questo circuito complesso sia costituito da sottocircuiti (che saranno analizzati e spiegati successivamente); in particolare nella parte superiore dello schema si trovano i circuiti che servono a sfruttare sia la parte positiva che negativa del segnale per la misura e nella parte inferiore si trovano i circuiti di amplificazione del segnale da misurare.
 
 \begin{figure}[!htb]
   \centering
@@ -47,14 +49,15 @@ Il circuito Lock-in è usato per effettuare misure di segnali deboli in un ambie
 
 \subparagraph{Amplificatore di potenza e preamplificatore}
 Abbiamo montato il circuito in figura \ref{fig:ampli-preampli} misurando tramite multimetro digitale: $R_1=10k$, $R_2=1.5k$, $R_3=82k$, $R_4=56k$, $R_5=18k$, $R_6=120k$, $R_7=3.9k$, $R_9=1.2M$, $C_1=100n$ e $C_2=100n$.\\
-
+%mettere errori e unità di misura
 Il circuito consiste in un amplificatore di potenza realizzato con un transistor npn che permette di pilotare l'accessione del Led con l'onda del generatore di funzioni, che controlla la corrente in base.
 Il transistor è dotato di circuito di polarizzazione quindi come anticipato prima l'effetto del segnale alternato è di modulare la corrente di collettore e quindi l'intensità luminosa.
 Nella seconda parte (elettricamente separata dalla prima) troviamo un  circuito di lettura del fotodiodo, che grazie all'opAmp presenta un alta impedenza di ingresso e bassa impedenza di uscita e permette quindi di osservare la risposta del diodo senza alterarla.
-Il segnale del fotodiodo viene poi derivato (per ottenere un segnale a media nulla) e mandato in un comune amplificatore non invertente dal guadagno di circa $A = 30$.\\
+%in realtà credo che sia più che atro un amplificatore a transimpedenza: parto da una corrente (quella del fotodiodo) e ottengo una ddp opportunamente amplificata in uscita
+Il segnale del fotodiodo viene poi derivato (per ottenere un segnale a media nulla) e mandato in un comune amplificatore non invertente dal guadagno di circa $A = 30$.%SICURI?\\
 
 \subparagraph{Misura della costante di assorbimento senza Lock-in}
-Per limitare l'influenza della luce ambientale tutte le seguenti misure sono state eseguite coprendo l'apparato con %TODO %che cosa?%.
+Per limitare l'influenza della luce ambientale tutte le seguenti misure sono state eseguite coprendo l'apparato con %TODO %che cosa? non è stato fatto, quindi cancellare%.
 Si è inviato all'ingresso (S1) un segnale sinusoidale di frequenza pari a $1 kHz$ e ampiezza picco-picco $V_{pp}= 6 \pm \,\mbox{V}$. All'uscita (S6) si ottiene la forma d'onda sinusoidale in figura \ref{fig:S6} che ha ampiezza TOT. Abbiamo ripetuto la misura della tensione in uscita in funzione del numero $n$ di lastrine di Mylar poste fra LED e fotodiodo, i dati sono rappresentati in tabella \ref{tab:ampli-preampli}. Sapendo che l'andamento teorico della tensione è $V_{out}=V_0exp(-n/n_0)$ si è fatto il grafico e eseguito il fit, ottenendo $n_0= V_0= \chi^2=$. Conoscendo lo spessore costante delle lastrine ($150\mu \mbox{m}$) si osserva che il numero $n$ è direttamente proporzionale alla lunghezza percorsa dalla luce nel Mylar. Sostituendo otteniamo direttamente a esponente della legge la lunghezza caratteristica di assorbimento: $x_0= TOT$.
 
 \begin{figure}[!htb]
@@ -78,7 +81,7 @@ v_{out}(s) = \left( \frac{s C_3 (R_{13} + P_2)}{1 + s C_3 (R_{13} + P_2)} \frac{
 \, \, \, \, \, \, ; V_{EE} = -5V.
 \end{equation}
 %C'è anche una attenuazione da passa alto
-Come si vede l'output presenta un offset costante positivo $-\frac{R_{12} V_{EE}}{R_8+P_3}$ il cui valore massimo risulta essere circa $0.61$V. L'aumento della resistenza $P_3$ si vede che causa una diminuzione anche dell'ampiezza del segnale proporzionale a $V_in$. 
+Come si vede l'output presenta un offset costante positivo $-\frac{R_{12} V_{EE}}{R_8+P_3}$ il cui valore massimo risulta essere circa $0.61$V. L'aumento della resistenza $P_3$ causa una diminuzione anche dell'ampiezza del segnale proporzionale a $V_in$. 
 
 \begin{figure}[!htb]
   \centering
