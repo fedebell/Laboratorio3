@@ -28,7 +28,7 @@ Questa esperienza è finalizzata alla misura della costante di assorbimento del 
 \item fotodiodo;
 \end{itemize}
 
-Tutte le resistenze, i condensatori, le tensioni di alimentazione e la tensione in uscita dal Lock-in sono stati misurati con il multimetro digitale, quindi l'errore è stato propagato secondo le specifiche nel manuale ($0.8\% + 3\,\mbox{digit}$ per le resistenze,  per i condensatori $0.5\% + 1\,\mbox{digit}$ per i voltaggi). I tempi e le restanti tensioni sono state misurate con i cursori dell'oscilloscopio: l'errore sui tempi è dato dalla risoluzione dei cursori stessi mentre quello sulle tensioni è stato propagato considerando sia l'errore sul posizionamento dei cursori sia l'errore sistematico del $3\%$.
+Tutte le resistenze, i condensatori, le tensioni di alimentazione e la tensione in uscita dal Lock-in sono stati misurati con il multimetro digitale (in DC), quindi l'errore è stato propagato secondo le specifiche nel manuale ($0.8\% + 3\,\mbox{digit}$ per le resistenze,$4\% + 3\, \mbox{digit}$  per i condensatori, $0.5\% + 1\,\mbox{digit}$ per i voltaggi). I tempi e le restanti tensioni sono state misurate con i cursori dell'oscilloscopio: l'errore sui tempi è dato dalla risoluzione dei cursori stessi mentre quello sulle tensioni è stato propagato considerando sia l'errore sul posizionamento dei cursori sia l'errore sistematico del $3\%$.
 
 \section{Schema a blocchi}
 Il circuito Lock-in è usato per effettuare misure di segnali deboli in un ambiente molto rumoroso. Nel nostro caso il segnale è la luce emessa dal LED. Tale segnale non è continuo ma modulato da un' onda sinusoidale prodotta dal generatore di funzioni. Abbiamo impostato una frequenza pari a $1\,\mbox{kHz}$ per eliminare il rumore \emph{1/f} dovuto alla presenza di dispositivi attivi\footnote{Può essere prodotto dalle discontinuità intrinseche dei materiali costruttivi.}. In figura \ref{fig:schemablocchi} si nota come questo circuito complesso sia costituito da sottocircuiti (che saranno analizzati e spiegati successivamente); in particolare nella parte superiore dello schema si trovano i circuiti che servono a sfruttare sia la parte positiva che negativa del segnale per la misura, mentre nella parte inferiore si trovano i circuiti di amplificazione del segnale da misurare.
@@ -133,11 +133,11 @@ Il transistor alternativamente in saturazione e interdizione produce su S3 un'on
  %vi piace questa specifica?
 
 
-%\begin{figure}[!htb]
- % \centering
- % \includegraphics[scale=0.75]{transistor.jpg}
-%\caption{Retta di carico del transistor.\label{fig:transistor}}
-%\end{figure}
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.6]{transistorbjt.png}
+\caption{Retta di carico del transistor.\label{fig:transistor}}
+\end{figure}
 
 Come si vede in figura \ref{fig:transistor} la retta di carico del transistor (in rosso) è molto bassa e non permette mai di entrare veramente in regime attivo. Variare la tensione sulla base commuta quindi il transistor tra gli stati di interdizione e di saturazione.\\
 
@@ -225,7 +225,8 @@ Infine due integratori (uno RC e l'altro con OpAmp) rendono continuo il segnale.
 \end{figure}
 
 \section{Presa dati}
-Si è posto il deviatore nella posizione 90\degree per effettuare le misure di tensione in funzione del numero di lastrine di Mylar. Durante la presa dati, si è verificato periodicamente (ogni 5 lastrine), che il segnale con 0 lastrine fosse sempre lo stesso. I dati sono presenti in tabella \ref{tab:abs2}. Come in precedenza abbiamo eseguito un fit esponenziale e uno lineare. Dal fit esponenziale (vedi grafico a sinistra della figura \ref{plot2}) abbiamo ottenuto i seguenti parametri: $n_0= 1.388\pm 0.001$, $V_0=6.355\pm0.006\,\mbox{V}$ ma un $\chi^2_{rid}$ molto alto, $x_{ass}=0.208\pm0.001{mm}$. Dal fit lineare (vedi grafico a destra della figura \ref{plot2}) abbiamo ottenuto $a=-0.155\pm0.001$, $b=0.322\pm0.004$ e $\chi^2_{rid}=2.6$, quindi $n_0= 6.45\pm 0.04$, $V_0=1.38\pm0.02\,\mbox{V}$, $x_{ass}=0.967\pm0.006{mm}$.
+Dopo aver settato il segnale con il deviatore a 0\degree su 0, si è posto il deviatore nella posizione 90\degree per effettuare le misure di tensione in funzione del numero di lastrine di Mylar.
+Le misure delle tensioni sono state prese tramite multimetro. Durante la presa dati, si è verificato periodicamente (ogni 5 lastrine), che il segnale con 0 lastrine fosse sempre lo stesso. I dati sono presenti in tabella \ref{tab:abs2}. Come in precedenza abbiamo eseguito un fit esponenziale e uno lineare. Dal fit esponenziale (vedi grafico a sinistra della figura \ref{plot2}) abbiamo ottenuto i seguenti parametri: $n_0= 1.388\pm 0.001$, $V_0=6.355\pm0.006\,\mbox{V}$ ma un $\chi^2_{rid}$ molto alto, $x_{ass}=0.208\pm0.001{mm}$. Dal fit lineare (vedi grafico a destra della figura \ref{plot2}) abbiamo ottenuto $a=-0.155\pm0.001$, $b=0.322\pm0.004$ e $\chi^2_{rid}=2.6$, quindi $n_0= 6.45\pm 0.04$, $V_0=1.38\pm0.02\,\mbox{V}$, $x_{ass}=0.967\pm0.006{mm}$.
 
 \begin{table}
 \centering
@@ -269,7 +270,7 @@ n	&	$V_{out}\,\mbox{[V]}$	&	$\Delta V\,\mbox{[V]}$\\
 
 \section{Conclusioni}
 
-CONFRONTO DEI VALORI OTTENUTI CON E SENZA LOCK-IN E COMMENTI
+Le misure eseguite con lock-in risultano non affette da rumore in maniera significativa, pertanto l'incertezza associata è solo strumentale. Nelle misure senza lock-in si aveva una incertezza non solo strumentale, ma dovuta anche al fatto che il rumore spostava significativamente i massimi dei segnali. I dati inoltre sono in maggiore accordo con l'andamento previsto rispetto ai dati presi senza lock-in: infatti nel primo caso si ha un $\chi_{rid} ^2 = $ ,  migliore che nel secondo caso.%specificare quanto è 
  
 
 
