@@ -6,9 +6,8 @@ import math
 
 n, V, dV = pylab.loadtxt('C:\\Users\\Lisa\\Desktop\\Lab3\\Lock-In\\dati2marco.txt', unpack=True)
 
-V= -1*V
-y=pylab.log(V)
-dy=dV/V
+y=V
+dy=dV
 
 pylab.figure(1)
 
@@ -25,26 +24,24 @@ pylab.grid(color = "gray")
 pylab.plot(n,y, '.', label='data', color = 'black')
 pylab.errorbar(n, y, dy, linestyle='', marker='+', color = 'black')
 
-def linear(x,a,b):
-    return a*x+b
-    
-#a=-1/n_o
-#b=lnV_o
-    
+
+def exponential(x, v0, n0):
+        return v0*pylab.exp(-x/n0)
 #Fare attenzione che gli errori devono essere sempre sommati con le stesse unita di misura, 
 #quindi nel coeffiente ci cade anche il fattore per passare da una unita di misura all'altra
-a = -0.2
-b = 0.4
+n0 = 1
+v0 = 1
 #Contollare unit di misura
 error = pylab.sqrt(dy**2)
-init = numpy.array([a, b])
-par, cov = curve_fit(linear, n, y, init, error, "true")
+init = numpy.array([n0, v0])
+par, cov = curve_fit(exponential, n, y, init, error, "true")
 #trattazione statistica degli errori
 print(par, cov)
 
-a = par[0]
-b = par[1]
-chisq = (((y-linear(n, a, b))/error)**2)
+n0 = par[0]
+v0 = par[1]
+
+chisq = (((y-exponential(n, v0, n0))/error)**2)
 print('le differenze sono', chisq)
 somma = sum(chisq)
 ndof = len(n) - 2 #Tolgo due parametri estratti dal fit
@@ -59,14 +56,14 @@ retta = numpy.array([0.0 for i in range(div)])
 inc = (n.max()-n.min())/div 
 for i in range(len(bucket)):
         bucket[i]=float(i)*inc + n.min()
-        retta[i] = linear(bucket[i], par[0], par[1])
+        retta[i] = exponential(bucket[i], par[0], par[1])
 pylab.plot(bucket, retta, color = "black")
 
 
-da=cov[0][0]**0.5
-db=cov[1][1]**0.5
+dn0=cov[0][0]**0.5
+dv0=cov[1][1]**0.5
 
-print("Si ricavano a = ", a ,"+-" ,da, "e di b =",  b, "+-", db)
+print("Si ricavano n0 = ",(-1)*n0  ,"+-" ,dn0, "e di v0 =",  v0, "+-", dv0)
 
 
 

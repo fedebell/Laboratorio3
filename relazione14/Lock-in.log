@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.27)  8 MAY 2017 11:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.1.27)  14 MAY 2017 17:34
 entering extended mode
 **Lock-in.tex
-(C:\Users\Lisa\Desktop\Lock-in.tex
+(C:\Users\Lisa\Desktop\Lab3\Lock-In\Lock-in.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -408,7 +408,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks22
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-No file Lock-in.aux.
+(C:\Users\Lisa\Desktop\Lab3\Lock-In\Lock-in.aux
+
+LaTeX Warning: Label `fig:schemablocchi' multiply defined.
+
+
+LaTeX Warning: Label `osc:devS9' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
@@ -423,6 +430,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Info: Redefining \it@ocap on input line 14.
 LaTeX Info: Redefining \it@ccap on input line 14.
+
 
 File italian.ldf warning: 
 italian.ldf    With OT1 encoding guillemets are poorly faked
@@ -541,98 +549,243 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 22.
 
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 23.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
+<schemablocchi.png, id=1, 498.36188pt x 228.855pt>
+File: schemablocchi.png Graphic file (type png)
+ <use schemablocchi.png>
+Package pdftex.def Info: schemablocchi.png used on input line 38.
+(pdftex.def)             Requested size: 373.7705pt x 171.64082pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.52 
-     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: File `nand1.png' not found on input line 55.
-
-
-! Package pdftex.def Error: File `nand1.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55   \includegraphics[scale=0.75]{nand1.png}
-                                              \includegraphics[scale=0.75]{n...
-
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `nand2.png' not found on input line 55.
-
-
-! Package pdftex.def Error: File `nand2.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 ...ng}\includegraphics[scale=0.75]{nand2.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-(C:\Users\Lisa\Desktop\Lock-in.aux)
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: Reference `fig:S6' on page 2 undefined on input line 55.
+
+<ampli-preampli.png, id=19, 460.72125pt x 197.98969pt>
+File: ampli-preampli.png Graphic file (type png)
+
+<use ampli-preampli.png>
+Package pdftex.def Info: ampli-preampli.png used on input line 65.
+(pdftex.def)             Requested size: 345.54008pt x 148.4919pt.
+ <S6.png, id=20, 301.125pt x 225.84375pt>
+File: S6.png Graphic file (type png)
+ <use S6.png>
+Package pdftex.def Info: S6.png used on input line 71.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+
+<plot-exp1.png, id=21, 578.16pt x 431.4519pt>
+File: plot-exp1.png Graphic file (type png)
+ <use plot-exp1.png>
+Package pdftex.def Info: plot-exp1.png used on input line 103.
+(pdftex.def)             Requested size: 260.16959pt x 194.15157pt.
+
+<plot-lin1.png, id=22, 578.16pt x 431.4519pt>
+File: plot-lin1.png Graphic file (type png)
+ <use plot-lin1.png>
+Package pdftex.def Info: plot-lin1.png used on input line 103.
+(pdftex.def)             Requested size: 260.16959pt x 194.15157pt.
+
+Overfull \hbox (36.6423pt too wide) in paragraph at lines 103--104
+ [][][] 
+ []
+
+[2 <C:/Users/Lisa/Desktop/Lab3/Lock-In/schemablocchi.png> <C:/Users/Lisa/Deskto
+p/Lab3/Lock-In/ampli-preampli.png>]
+File: schemablocchi.png Graphic file (type png)
+ <use schemablocchi.png>
+Package pdftex.def Info: schemablocchi.png used on input line 121.
+(pdftex.def)             Requested size: 373.7705pt x 171.64082pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--127
+
+ []
+
+[3 <C:/Users/Lisa/Desktop/Lab3/Lock-In/S6.png> <C:/Users/Lisa/Desktop/Lab3/Lock
+-In/plot-exp1.png> <C:/Users/Lisa/Desktop/Lab3/Lock-In/plot-lin1.png>]
+
+LaTeX Warning: Reference `fig:transistor' on page 4 undefined on input line 135
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+<sfasatori.png, id=38, 521.69907pt x 245.41687pt>
+File: sfasatori.png Graphic file (type png)
+ <use sfasatori.png>
+Package pdftex.def Info: sfasatori.png used on input line 149.
+(pdftex.def)             Requested size: 391.27333pt x 184.0622pt.
+
+<sfasamento90.png, id=39, 301.125pt x 225.84375pt>
+File: sfasamento90.png Graphic file (type png)
+ <use sfasamento90.png>
+Package pdftex.def Info: sfasamento90.png used on input line 155.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+
+<dutycycle50.png, id=40, 301.125pt x 225.84375pt>
+File: dutycycle50.png Graphic file (type png)
+ <use dutycycle50.png>
+Package pdftex.def Info: dutycycle50.png used on input line 161.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+
+<deviatore0.png, id=41, 301.125pt x 225.84375pt>
+File: deviatore0.png Graphic file (type png)
+ <use deviatore0.png>
+Package pdftex.def Info: deviatore0.png used on input line 167.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+
+<deviatore90.png, id=42, 301.125pt x 225.84375pt>
+File: deviatore90.png Graphic file (type png)
+ <use deviatore90.png>
+Package pdftex.def Info: deviatore90.png used on input line 167.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+
+
+LaTeX Warning: Reference `osc:s4s5' on page 4 undefined on input line 173.
+
+<sqadratore-campionatore.png, id=43, 487.8225pt x 262.73157pt>
+File: sqadratore-campionatore.png Graphic file (type png)
+
+<use sqadratore-campionatore.png>
+Package pdftex.def Info: sqadratore-campionatore.png used on input line 178.
+(pdftex.def)             Requested size: 365.86597pt x 197.04817pt.
+
+<dev0ch1S8-ch2S7.png, id=44, 301.125pt x 225.84375pt>
+File: dev0ch1S8-ch2S7.png Graphic file (type png)
+
+<use dev0ch1S8-ch2S7.png>
+Package pdftex.def Info: dev0ch1S8-ch2S7.png used on input line 184.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+
+<dev90ch1S8-ch2S7.png, id=45, 301.125pt x 225.84375pt>
+File: dev90ch1S8-ch2S7.png Graphic file (type png)
+
+<use dev90ch1S8-ch2S7.png>
+Package pdftex.def Info: dev90ch1S8-ch2S7.png used on input line 184.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+
+<perFedech1S8-ch2S7.png, id=46, 301.125pt x 225.84375pt>
+File: perFedech1S8-ch2S7.png Graphic file (type png)
+
+<use perFedech1S8-ch2S7.png>
+Package pdftex.def Info: perFedech1S8-ch2S7.png used on input line 190.
+(pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
+
+
+LaTeX Warning: Reference `osc:S9(zero)' on page 4 undefined on input line 197.
+
+[4 <C:/Users/Lisa/Desktop/Lab3/Lock-In/sfasatori.png>] [5 <C:/Users/Lisa/Deskto
+p/Lab3/Lock-In/sfasamento90.png> <C:/Users/Lisa/Desktop/Lab3/Lock-In/dutycycle5
+0.png> <C:/Users/Lisa/Desktop/Lab3/Lock-In/deviatore0.png> <C:/Users/Lisa/Deskt
+op/Lab3/Lock-In/deviatore90.png>]
+<amplificatorediff-mediatore.png, id=58, 467.49657pt x 164.86594pt>
+File: amplificatorediff-mediatore.png Graphic file (type png)
+
+<use amplificatorediff-mediatore.png>
+Package pdftex.def Info: amplificatorediff-mediatore.png used on input line 201
+.
+(pdftex.def)             Requested size: 350.62157pt x 123.64912pt.
+
+<dev0ch1S9-ch2S1.png, id=59, 301.125pt x 225.84375pt>
+File: dev0ch1S9-ch2S1.png Graphic file (type png)
+
+<use dev0ch1S9-ch2S1.png>
+Package pdftex.def Info: dev0ch1S9-ch2S1.png used on input line 207.
+(pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
+
+<dev90ch1S9-ch2S1.png, id=60, 301.125pt x 225.84375pt>
+File: dev90ch1S9-ch2S1.png Graphic file (type png)
+
+<use dev90ch1S9-ch2S1.png>
+Package pdftex.def Info: dev90ch1S9-ch2S1.png used on input line 207.
+(pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
+
+<dev0ch1S9-ch2S1(zero).png, id=61, 301.125pt x 225.84375pt>
+File: dev0ch1S9-ch2S1(zero).png Graphic file (type png)
+
+<use dev0ch1S9-ch2S1(zero).png>
+Package pdftex.def Info: dev0ch1S9-ch2S1(zero).png used on input line 213.
+(pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
+
+<dev90ch1S9-ch2S1(zero).png, id=62, 301.125pt x 225.84375pt>
+File: dev90ch1S9-ch2S1(zero).png Graphic file (type png)
+
+<use dev90ch1S9-ch2S1(zero).png>
+Package pdftex.def Info: dev90ch1S9-ch2S1(zero).png used on input line 213.
+(pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
+ [6 <C:/Users/Lisa/Desktop/Lab3/Lock-In/sqadratore-campionatore.png> <C:/Users/
+Lisa/Desktop/Lab3/Lock-In/dev0ch1S8-ch2S7.png> <C:/Users/Lisa/Desktop/Lab3/Lock
+-In/dev90ch1S8-ch2S7.png> <C:/Users/Lisa/Desktop/Lab3/Lock-In/perFedech1S8-ch2S
+7.png>]
+<plot-exp2.png, id=71, 578.16pt x 431.4519pt>
+File: plot-exp2.png Graphic file (type png)
+ <use plot-exp2.png>
+Package pdftex.def Info: plot-exp2.png used on input line 256.
+(pdftex.def)             Requested size: 260.16959pt x 194.15157pt.
+
+<plot-lin2.png, id=72, 578.16pt x 431.4519pt>
+File: plot-lin2.png Graphic file (type png)
+ <use plot-lin2.png>
+Package pdftex.def Info: plot-lin2.png used on input line 256.
+(pdftex.def)             Requested size: 260.16959pt x 194.15157pt.
+
+Overfull \hbox (36.6423pt too wide) in paragraph at lines 256--257
+ [][][] 
+ []
+
+[7 <C:/Users/Lisa/Desktop/Lab3/Lock-In/amplificatorediff-mediatore.png> <C:/Use
+rs/Lisa/Desktop/Lab3/Lock-In/dev0ch1S9-ch2S1.png> <C:/Users/Lisa/Desktop/Lab3/L
+ock-In/dev90ch1S9-ch2S1.png> <C:/Users/Lisa/Desktop/Lab3/Lock-In/dev0ch1S9-ch2S
+1(zero).png> <C:/Users/Lisa/Desktop/Lab3/Lock-In/dev90ch1S9-ch2S1(zero).png>]
+[8 <C:/Users/Lisa/Desktop/Lab3/Lock-In/plot-exp2.png> <C:/Users/Lisa/Desktop/La
+b3/Lock-In/plot-lin2.png>] (C:\Users\Lisa\Desktop\Lab3\Lock-In\Lock-in.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3868 strings out of 493921
- 49521 string characters out of 3147285
- 124585 words of memory out of 3000000
- 7080 multiletter control sequences out of 15000+200000
- 11364 words of font info for 45 fonts, out of 3000000 for 9000
+ 3993 strings out of 493921
+ 52210 string characters out of 3147285
+ 124758 words of memory out of 3000000
+ 7184 multiletter control sequences out of 15000+200000
+ 11542 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 40i,8n,25p,792b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,9n,25p,1095b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Lock-in.pdf (2 pages, 146570 bytes).
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb>
+Output written on Lock-in.pdf (8 pages, 822895 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
+ 140 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
