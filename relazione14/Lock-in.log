@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  15 MAY 2017 17:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  15 MAY 2017 19:04
 entering extended mode
 **./Lock-in.tex
 (Lock-in.tex
@@ -647,30 +647,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--51
 [1
 
 {C:/Users/marco/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<ampli-preampli.png, id=19, 460.72125pt x 197.98969pt>
+<ampli-preampli.png, id=18, 460.72125pt x 197.98969pt>
 File: ampli-preampli.png Graphic file (type png)
 
 <use ampli-preampli.png>
 Package pdftex.def Info: ampli-preampli.png used on input line 69.
 (pdftex.def)             Requested size: 345.54008pt x 148.4919pt.
- <S6.png, id=20, 301.125pt x 225.84375pt>
+ <S6.png, id=19, 301.125pt x 225.84375pt>
 File: S6.png Graphic file (type png)
  <use S6.png>
 Package pdftex.def Info: S6.png used on input line 75.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<plot-lin1.png, id=21, 578.16pt x 430.0065pt>
+<plot-lin1.png, id=20, 578.16pt x 430.0065pt>
 File: plot-lin1.png Graphic file (type png)
  <use plot-lin1.png>
 Package pdftex.def Info: plot-lin1.png used on input line 107.
 (pdftex.def)             Requested size: 404.70924pt x 301.00249pt.
- [2 <./schemablocchi.png> <./ampli-preampli.png>] [3 <./S6.png> <./plot-lin1.pn
-g>]
+ [2 <./schemablocchi.png> <./ampli-preampli.png>]
+Overfull \vbox (20.00964pt too high) has occurred while \output is active []
+
+
+[3 <./S6.png> <./plot-lin1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 129--133
 
  []
 
-<transistorbjt.png, id=33, 435.42674pt x 326.4195pt>
+<transistorbjt.png, id=32, 435.42674pt x 326.4195pt>
 File: transistorbjt.png Graphic file (type png)
  <use transistorbjt.png>
 Package pdftex.def Info: transistorbjt.png used on input line 137.
@@ -680,37 +683,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-<sfasatori.png, id=34, 521.69907pt x 245.41687pt>
+<sfasatori.png, id=33, 521.69907pt x 245.41687pt>
 File: sfasatori.png Graphic file (type png)
  <use sfasatori.png>
 Package pdftex.def Info: sfasatori.png used on input line 156.
 (pdftex.def)             Requested size: 391.27333pt x 184.0622pt.
 
-<sfasamento90.png, id=35, 301.125pt x 225.84375pt>
+<sfasamento90.png, id=34, 301.125pt x 225.84375pt>
 File: sfasamento90.png Graphic file (type png)
  <use sfasamento90.png>
 Package pdftex.def Info: sfasamento90.png used on input line 162.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<dutycycle50.png, id=36, 301.125pt x 225.84375pt>
+<dutycycle50.png, id=35, 301.125pt x 225.84375pt>
 File: dutycycle50.png Graphic file (type png)
  <use dutycycle50.png>
 Package pdftex.def Info: dutycycle50.png used on input line 168.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<deviatore0.png, id=37, 301.125pt x 225.84375pt>
+<deviatore0.png, id=36, 301.125pt x 225.84375pt>
 File: deviatore0.png Graphic file (type png)
  <use deviatore0.png>
 Package pdftex.def Info: deviatore0.png used on input line 174.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<deviatore90.png, id=38, 301.125pt x 225.84375pt>
+<deviatore90.png, id=37, 301.125pt x 225.84375pt>
 File: deviatore90.png Graphic file (type png)
  <use deviatore90.png>
 Package pdftex.def Info: deviatore90.png used on input line 174.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<sqadratore-campionatore.png, id=39, 487.8225pt x 262.73157pt>
+<sqadratore-campionatore.png, id=38, 487.8225pt x 262.73157pt>
 File: sqadratore-campionatore.png Graphic file (type png)
 
 <use sqadratore-campionatore.png>
@@ -744,77 +747,76 @@ File: perFedech1S8-ch2S7.png Graphic file (type png)
 <use perFedech1S8-ch2S7.png>
 Package pdftex.def Info: perFedech1S8-ch2S7.png used on input line 206.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
-
-<amplificatorediff-mediatore.png, id=57, 467.49657pt x 164.86594pt>
+ [6 <./deviatore0.png> <./deviatore90.png> <./sqadratore-campionatore.png>]
+<amplificatorediff-mediatore.png, id=63, 467.49657pt x 164.86594pt>
 File: amplificatorediff-mediatore.png Graphic file (type png)
 
 <use amplificatorediff-mediatore.png>
-Package pdftex.def Info: amplificatorediff-mediatore.png used on input line 221
+Package pdftex.def Info: amplificatorediff-mediatore.png used on input line 223
 .
 (pdftex.def)             Requested size: 350.62157pt x 123.64912pt.
 
-<dev0ch1S9-ch2S1.png, id=58, 301.125pt x 225.84375pt>
+<dev0ch1S9-ch2S1.png, id=64, 301.125pt x 225.84375pt>
 File: dev0ch1S9-ch2S1.png Graphic file (type png)
 
 <use dev0ch1S9-ch2S1.png>
-Package pdftex.def Info: dev0ch1S9-ch2S1.png used on input line 227.
+Package pdftex.def Info: dev0ch1S9-ch2S1.png used on input line 229.
 (pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
 
-<dev90ch1S9-ch2S1.png, id=59, 301.125pt x 225.84375pt>
+<dev90ch1S9-ch2S1.png, id=65, 301.125pt x 225.84375pt>
 File: dev90ch1S9-ch2S1.png Graphic file (type png)
 
 <use dev90ch1S9-ch2S1.png>
-Package pdftex.def Info: dev90ch1S9-ch2S1.png used on input line 227.
+Package pdftex.def Info: dev90ch1S9-ch2S1.png used on input line 229.
 (pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
 
-<dev0ch1S9-ch2S1(zero).png, id=60, 301.125pt x 225.84375pt>
+<dev0ch1S9-ch2S1(zero).png, id=66, 301.125pt x 225.84375pt>
 File: dev0ch1S9-ch2S1(zero).png Graphic file (type png)
 
 <use dev0ch1S9-ch2S1(zero).png>
-Package pdftex.def Info: dev0ch1S9-ch2S1(zero).png used on input line 233.
+Package pdftex.def Info: dev0ch1S9-ch2S1(zero).png used on input line 235.
 (pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
 
-<dev90ch1S9-ch2S1(zero).png, id=61, 301.125pt x 225.84375pt>
+<dev90ch1S9-ch2S1(zero).png, id=67, 301.125pt x 225.84375pt>
 File: dev90ch1S9-ch2S1(zero).png Graphic file (type png)
 
 <use dev90ch1S9-ch2S1(zero).png>
-Package pdftex.def Info: dev90ch1S9-ch2S1(zero).png used on input line 233.
+Package pdftex.def Info: dev90ch1S9-ch2S1(zero).png used on input line 235.
 (pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
- [6 <./deviatore0.png> <./deviatore90.png> <./sqadratore-campionatore.png>] <pl
-ot-lin2.png, id=68, 578.16pt x 430.0065pt>
-File: plot-lin2.png Graphic file (type png)
-
-<use plot-lin2.png>
-Package pdftex.def Info: plot-lin2.png used on input line 279.
-(pdftex.def)             Requested size: 404.70924pt x 301.00249pt.
  [7 <./CH1S4-CH2S5.png> <./dev0ch1S8-ch2S7.png> <./dev90ch1S8-ch2S7.png> <./per
-Fedech1S8-ch2S7.png>] [8 <./amplificatorediff-mediatore.png> <./dev0ch1S9-ch2S1
-.png> <./dev90ch1S9-ch2S1.png> <./dev0ch1S9-ch2S1(zero).png> <./dev90ch1S9-ch2S
-1(zero).png>] [9 <./plot-lin2.png>] (Lock-in.aux) ) 
+Fedech1S8-ch2S7.png>]
+<plot-lin2.png, id=76, 578.16pt x 430.0065pt>
+File: plot-lin2.png Graphic file (type png)
+ <use plot-lin2.png>
+Package pdftex.def Info: plot-lin2.png used on input line 281.
+(pdftex.def)             Requested size: 404.70924pt x 301.00249pt.
+ [8 <./amplificatorediff-mediatore.png> <./dev0ch1S9-ch2S1.png> <./dev90ch1S9-c
+h2S1.png> <./dev0ch1S9-ch2S1(zero).png> <./dev90ch1S9-ch2S1(zero).png>] [9 <./p
+lot-lin2.png>] (Lock-in.aux) ) 
 Here is how much of TeX's memory you used:
- 4144 strings out of 493334
- 53734 string characters out of 3139252
- 135264 words of memory out of 3000000
+ 4143 strings out of 493334
+ 53728 string characters out of 3139252
+ 136264 words of memory out of 3000000
  7572 multiletter control sequences out of 15000+200000
- 11542 words of font info for 45 fonts, out of 3000000 for 9000
+ 11541 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,9n,25p,1317b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Lock-in.pdf (9 pages, 912911 bytes).
+ 40i,9n,25p,1334b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Lock-in.pdf (9 pages, 915174 bytes).
 PDF statistics:
  139 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

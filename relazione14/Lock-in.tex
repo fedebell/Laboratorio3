@@ -42,21 +42,22 @@ Il circuito Lock-in è usato per effettuare misure di segnali deboli in un ambie
 
 \section{Implementazione schema a blocchi}
 
-\subparagraph{Amplificatore di potenza e preamplificatore}
+\subsection{Amplificatore di potenza e preamplificatore}
 Abbiamo montato il circuito in figura \ref{fig:ampli-preampli} inviando a S1 un'onda sinusoidale di ampiezza picco-picco pari a $V_{pp}= 5.9\pm0.1 \,\mbox{V}$ e frequenza $f=1.03\pm0.01\,\mbox{kHz}$. 
 
 Il circuito consiste in un amplificatore di potenza realizzato con un transistor NPN. Tale transistor è
 dotato di circuito di polarizzazione che riceve in ingresso il segnale dal generatore di funzioni, che controlla la corrente di base, quindi l'intensità luminosa. Nella seconda parte, elettricamente separata dalla prima, troviamo il  circuito di lettura del fotodiodo. Questo converte la fotocorrente in una differenza di potenziale; inoltre  l'OpAmp presenta un alta impedenza di ingresso e bassa impedenza di uscita, quindi permette di osservare la risposta del diodo senza alterarla.%dovrebbe esse un amplificatore a transimpedenza
 Il segnale del fotodiodo è successivamente derivato per ottenere un segnale a media nulla, quindi inviato all'amplificatore non invertente dal guadagno di circa $A = 30$.\\ 
 
-\subparagraph{Misura della costante di assorbimento senza Lock-in}
+\subsection{Misura della costante di assorbimento senza Lock-in}
 Il circuito è sensibile alla luce ambientale, quindi abbiamo posto particolare attenzione a questo fatto durante la presa dati. %ceeeerto...ci si mette questa cosa o no? direi di no
 All'uscita S6 si ottiene una forma d'onda sinusoidale in figura \ref{osc:S6}, alla quale è sommato un rumore a bassa frequenza, probabilmente dovuto all'illuminazione ambientale. Abbiamo misurato l' ampiezza del segnale fra un minimo ed un massimo relativi consecutivi, e che non fossero nè il massimo nè il minimo assoluti (per limitare l'effetto del rumore. Si è ottenuto $V=3.26\pm0.05\,\mbox{V}$.%E' picco picco?
+
+%forse meglio dire come podo, errore 1\%? Dovremmo dire come abbimo effettuato le misure dato che c'è un evidente problema di rumore che modula. Da lì dovremmo poi stabilire quale errore abbiamo preso. 
+Abbiamo ripetuto la misura della tensione in uscita in funzione del numero $n$ di lastrine di Mylar poste fra LED e fotodiodo, facendo attenzione a prendere   la misura sempre sugli stessi picchi. 
 Abbiamo preso come incertezza sui segnali la semidispersione fra i valori dei punti che sembravano plausibili per la misura.
 %TO DO:vi piace????????
-Non abbiamo riportato l'incertezza dovuta alla  calibrazione dell'oscilloscopio perchè sistematica e non influente sul fit.
-%forse meglio dire come podo, errore 1\%? Dovremmo dire come abbimo effettuato le misure dato che c'è un evidente problema di rumore che modula. Da lì dovremmo poi stabilire quale errore abbiamo preso. 
-Abbiamo ripetuto la misura della tensione in uscita in funzione del numero $n$ di lastrine di Mylar poste fra LED e fotodiodo, facendo attenzione a prendere   la misura sempre sugli stessi picchi. I dati sono rappresentati in tabella \ref{tab:abs1}. 
+Non abbiamo riportato l'incertezza dovuta alla  calibrazione dell'oscilloscopio perchè sistematica e non influente sul fit. I dati sono rappresentati in tabella \ref{tab:abs1}. 
 
 E' noto l'andamento teorico della tensione: $V_{out}=V_0 exp(-n/n_0)$. Abbiamo eseguito un fit del tipo $\ln(V_{out})=b-\frac{n}{a}$ (così da fittare una retta in carta logaritmica). %magari scriviamo dettagli del fit
 %Dal fit esponenziale (vedi grafico a sinistra in figura\ref{plot1}) si ottengono $n_0=3.44\pm0.04$, $V_0=5.74\pm0.09\,\mbox{V}$ e un $\chi^2 _{rid}=600$\footnote{Probabilmente dovuto a una sottostima dell'errore.}; da questi dati, sapendo che lo spessore di ogni lastrina è pari a $150\mu \mbox{m}$ si ottiene la lunghezza caratteristica di assorbimento $x_{ass}=0.52\pm0.01\,\mbox{mm}$. 
@@ -109,13 +110,13 @@ n	&	$V_{out}\,\mbox{[V]}$	&	$\Delta V\,\mbox{[V]}$\\
 \end{figure}
 
 
-\subparagraph{Sfasatore di 90\degree e sfasatore variabile}
-I circuiti relativi sono quelli in figura \ref{fig:sfasatori}. L'ingresso S1 è ancora collegato all'uscita del generatore di funzioni. Abbiamo regolato il trimmer P1 in modo da ottenere in S2 la stessa forma d'onda dell'ingresso sfasata di 90\degree (figura \ref{osc:sfasamento}). In S3 l'uscita sarà un'onda quadra e abbiamo regolato il trimmer P3 in modo che il \emph{duty cycle} fosse pari al 50\% (ciò è stato verificato con l'opportuna funzione dell'oscilloscopio, vedi figura \ref{osc:duty}). Se si agisce sul deviatore si bypassa lo sfasatore quindi all'ingresso dello sfasatore variabile l'onda sarà la stessa dell' ingresso S1.\\
+\subsection{Sfasatore di 90\degree e sfasatore variabile}
+I circuiti relativi sono quelli in figura \ref{fig:sfasatori}. L'ingresso S1 è ancora collegato all'uscita del generatore di funzioni.
 L'analisi dello sfasatore mostra che esso ha una funzione di trasferimento nel dominio di Laplace pari a
 \begin{equation}
  G(s) = -\frac{1-s(R_{16} +P_1) C_{4}}{1+s(R_{16} + P_1)C_{4}}
 \end{equation}
-Si osservi che il guadagno è unitario per tutte le frequenze, quindi il circuito si limita ad aggiungere una fase che può essere scelta calibrando il trimmer $P_1$. Inoltre esiste un solo valore della resistenza di trimmer per cui a $1$kHz si ha uno sfasamento positivo di $\frac{\pi}{2}$.\\
+Si osservi che il guadagno è unitario per tutte le frequenze, quindi il circuito si limita ad aggiungere una fase che può essere scelta calibrando il trimmer $P_1$. Inoltre esiste un solo valore della resistenza di trimmer per cui a $1$kHz si ha uno sfasamento positivo di $\frac{\pi}{2}$.Abbiamo quindi regolato il trimmer P1 in modo da ottenere in S2 la stessa forma d'onda dell'ingresso sfasata di 90\degree (figura \ref{osc:sfasamento}). In S3 l'uscita sarà un'onda quadra e abbiamo regolato il trimmer P3 in modo che il \emph{duty cycle} fosse pari al 50\% (ciò è stato verificato con l'opportuna funzione dell'oscilloscopio, vedi figura \ref{osc:duty}).\\ Se si agisce sul deviatore si bypassa lo sfasatore quindi all'ingresso dello sfasatore variabile l'onda sarà la stessa dell' ingresso S1.\\
 L'analisi del circuito che regola il duty cycle (escludendo il transistor finale) si presenta simile, l'uscita S3 risulta in questo caso essere:
 \begin{equation}
 v_{out}(s) = \left( \frac{s C_3 (R_{13} + P_2)}{1 + s C_3 (R_{13} + P_2)} \frac{R_{12}}{R_8+P_3} -\frac{1-s(R_{13} +P_2) C_{3}}{1+s(R_{13} + P_2)C_{3}} \right) V_{in}-\frac{R_{12} V_{EE}}{R_8+P_3}
@@ -175,7 +176,7 @@ Come si vede in figura \ref{fig:transistor} la retta di carico del transistor (i
 \caption{Forma d'onda in S3, a sinistra con deviatore a 0\degree, a destra con deviatore a 90\degree.\label{osc:dev}}
 \end{figure}
 
-\subparagraph{Squadratore e campionatore}
+\subsection{Squadratore e campionatore}
 
 \begin{figure}[!htb]
   \centering
@@ -185,7 +186,7 @@ Come si vede in figura \ref{fig:transistor} la retta di carico del transistor (i
 
 Abbiamo montato i circuiti in figura \ref{fig:sqadratore-campionatore}. Ricordiamo che S3 corrisponde all'onda quadra in uscita dallo sfasatore variabile; questo viene inviato ai due NOT U1 e U2 (che hanno la funzione di rendere più squadrato il segnale), quindi il segnale S4 e il suo negato S5 vengono mandati al campionatore realizzato con un circuito integrato contenente interruttori MOSFET. Seguendo la logica del circuito in figura \ref{fig:sqadratore-campionatore} si vede che S4 e S5 selezionano alternativamente l'uscita S8 o S7 su cui mandare il segnale S6. L'uscita che non lo riceve viene in quel semiperiodo messa a terra.
 Cambiando la posizione del deviatore si varia la fase dell'onda che controlla gli interruttori rispetto al segnale da campionare: in questo modo si ottengono segnali con stesso segno (S4 in fase con S1), o a media nulla (S4 sfasato di $90\circ$ rispetto a S1)\\
-In figura \ref{osc:s4s5} si osservano i segnali S4 e S5 in opposizione di fase, come atteso, mentre in figura \ref{osc:S7S8} si trovano le forme d'onda S7 e S8 nelle due posizioni del deviatore. In queste ultime due immagini si nota una modulazione dovuta al rumore, infatti in figura \ref{osc:rumore50hz} si osserva rumore a $\simeq 50\,\mbox{Hz}$, che è la frequenza della luce ambientale fornita dalle lampadine. %Fede qui volevi commentare?
+In figura \ref{osc:s4s5} si osservano i segnali S4 e S5 in opposizione di fase, come atteso, mentre in figura \ref{osc:S7S8} si trovano le forme d'onda S7 e S8 nelle due posizioni del deviatore. Si osservi come questi segnali siano non nulli solo per un semiperiodo e che quando uno è nullo, l'altro non lo è.\\ In queste ultime due immagini si nota una modulazione dovuta al rumore, infatti in figura \ref{osc:rumore50hz} si osserva rumore a $\simeq 50\,\mbox{Hz}$, che è la frequenza della luce ambientale fornita dalle lampadine. %Fede qui volevi commentare?
 Un'ulteriore osservazione riguarda i picchi dei segnali S7 e S8: pensiamo che siano dovuti a una regolazione non perfetta delle fasi o a un ritardo nella propagazione del segnale.
 
 \begin{figure}
@@ -198,7 +199,7 @@ Un'ulteriore osservazione riguarda i picchi dei segnali S7 e S8: pensiamo che si
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.75]{dev0ch1S8-ch2S7.png}\includegraphics[scale=0.75]{dev90ch1S8-ch2S7.png}
-\caption{Onda S8 in canale 1 e S7 in canale 2. Nell'immagine a sinistra il deviatore è collegato a 0\degree mentre in quella a destra a 90\degree . Si nota la modulazione indotta dal rumore a bassa frequenza.\label{osc:S7S8}}
+\caption{Onda S8 in canale 1 (inb basso) e S7 in canale 2 (in alto). Nell'immagine a sinistra il deviatore è collegato a 0\degree mentre in quella a destra a 90\degree . Si nota la modulazione indotta dal rumore a bassa frequenza.\label{osc:S7S8}}
 \end{figure}
 
 \begin{figure}[!htb]
@@ -208,12 +209,14 @@ Un'ulteriore osservazione riguarda i picchi dei segnali S7 e S8: pensiamo che si
 \end{figure}
 
 
-\subparagraph{Amplificatore differenziale e mediatore}
-Infine abbiamo realizzato il circuito in figura \ref{fig:amplificatorediff-mediatore}. Le onde agli ingressi S7 e S8 sono sommate dall'amplificatore differenziale, il quale amplifica la differenza, così da ottenere un output di segno definito o a media nulla, a seconda della posizione del deviatore. In figura \ref{osc:devS9} si trova il segnale S9 per le due posizioni del deviatore, i risultati sono in accordo con quanto detto precedentemente.
-Infine si ha un circuito mediatore che effettua la media del segnale in ingresso. %Le frequenze di taglio di entrambi sono dell'ordine delle decine di Hz, dunque per il segnale a $1\,\mbox{kHz}$ funzionano bene come integratori.
+\subsection{Amplificatore differenziale e mediatore}
+Infine abbiamo realizzato il circuito in figura \ref{fig:amplificatorediff-mediatore}. Le onde agli ingressi S7 e S8 sono sommate dall'amplificatore differenziale, il quale amplifica la differenza, così da ottenere un output di segno definito o a media nulla, a seconda della posizione del deviatore. In questo modo si può ricostruire un segnale che non sia mai nullo.
+%volevo specificare questa cosa perchè è l'alternativa smart alla rettificazione scaursa, quindi secondo me è importante)
+In figura \ref{osc:devS9} si trova il segnale S9 per le due posizioni del deviatore, i risultati sono in accordo con quanto detto precedentemente.
+Infine si ha un circuito mediatore che effettua la media del segnale in ingresso. In uscita si osserva un segnale costante nel tempo, il cui valore dipende dalla posizione del deviatore. %Le frequenze di taglio di entrambi sono dell'ordine delle decine di Hz, dunque per il segnale a $1\,\mbox{kHz}$ funzionano bene come integratori.
 Il segnale mediato è negativo perchè S8 è collegato all'ingresso non invertente dell'OpAmp, infatti scambiando S7 e S8 il segnale risulta positivo.
 % MI ricordo di questa cosa in lab, ma dalle figure che abbiamo messo non sembra che il segnale S9 possa avere media negativa!
- Prima di effettuare le misure di tensione abbiamo posto il deviatore a 0\degree e collegato l'uscita al multimetro digitale, quindi abbiamo regolato il trimmer $P_2$ in modo da avere una tensione nulla per una delle due posizioni del deviatore. Inizialmente abbiamo provato ad annullare il segnale con il deviatore nella posizione 90\degree ma in questo modo non si riusciva per nessuna posizone del potenziometro ad annullare la tensione in uscita a causa della limitata escursione di fase. $V=0.0\pm0.1\,\mbox{V}$. Si è quindi posizionato $P_2$ in modo che fosse nullo il segnale nella posizione a 0\degree (verificato tramite oscilloscopio e multimetro digitale in continua). Abbiamo quindi riacquisito le immagini dei segnali: in figura \ref{osc:S9(zero)} si osserva la forma d'onda S9 nelle due configurazioni del deviatore e anche in questo caso si nota la modulazione indotta dal rumore. Il fatto di avere un segnale a media nulla implica che il segnale all'uscita del Lock-in nell'altra posizione del deviatore sia correttamente rettificato. E' proprio questo il meccanismo su cui si basa il Lock-in: solo il segnale correttamente rettificato ha media non nulla (ha la frequenza giusta), mentre tutti i rumori a frequenze diverse non vengono rettificati e vengono mediati a 0.
+ Prima di effettuare le misure di tensione abbiamo posto il deviatore a 0\degree e collegato l'uscita al multimetro digitale, quindi abbiamo regolato il trimmer $P_2$ in modo da avere una tensione nulla (entro l'errore) per una delle due posizioni del deviatore. Inizialmente abbiamo provato ad annullare il segnale con il deviatore nella posizione 90\degree ma in questo modo non si riusciva per nessuna posizone del potenziometro ad annullare la tensione in uscita a causa della limitata escursione di fase. $V=0.0\pm0.1\,\mbox{V}$. Si è quindi posizionato $P_2$ in modo che fosse nullo il segnale nella posizione a 0\degree (verificato tramite oscilloscopio e multimetro digitale in continua). Abbiamo quindi riacquisito le immagini dei segnali: in figura \ref{osc:S9(zero)} si osserva la forma d'onda S9 nelle due configurazioni del deviatore e anche in questo caso si nota la modulazione indotta dal rumore. Il fatto di avere un segnale a media nulla implica che il segnale all'uscita del Lock-in nell'altra posizione del deviatore sia correttamente rettificato. E' proprio questo il meccanismo su cui si basa il Lock-in: solo il segnale correttamente rettificato ha media non nulla (ha la frequenza giusta), mentre tutti i rumori a frequenze diverse non vengono rettificati e vengono mediati a 0.
  %spiegazione rudimentale ma necessaria. Migliorare!
 
 \begin{figure}[!htb]
@@ -225,18 +228,18 @@ Il segnale mediato è negativo perchè S8 è collegato all'ingresso non inverten
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.45]{dev0ch1S9-ch2S1.png}\includegraphics[scale=0.45]{dev90ch1S9-ch2S1.png}
-\caption{La forma d'onda S1 (dal generatore di funzioni) è in canale 2 (in basso), mentre S9 in canale 1 (in alto). A sinistra il deviatore è a 0\degree, nella figura a destra è a 90\degree. \label{osc:devS9}}
+\caption{La forma d'onda S1 (dal generatore di funzioni) è in canale 2 (in basso), mentre S9 in canale 1 (in alto). A sinistra il deviatore è a 0\degree, nella figura a destra è a 90\degree. Non siamo riusciti ad annullare la media del segnale a destra e quindi non abbiamo eseguito la misura sul segnale S9 a sinistra . \label{osc:devS9}}
 \end{figure}
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.45]{dev0ch1S9-ch2S1(zero).png}\includegraphics[scale=0.45]{dev90ch1S9-ch2S1(zero).png}
-\caption{La forma d'onda S1 (dal generatore di funzioni) è in canale 2 (in basso), mentre S9 in canale 1 (in alto). A sinistra il deviatore è a 0\degree, nella figura a destra è a 90\degree. \label{osc:S9(zero)}}
+\caption{La forma d'onda S1 (dal generatore di funzioni) è in canale 2 (in basso), mentre S9 in canale 1 (in alto). A sinistra il deviatore è a 0\degree, nella figura a destra è a 90\degree. La misura è stata effettuata sulla media del segnale S9 a destra. \label{osc:S9(zero)}}
 \end{figure}
 
 \section{Presa dati}
-Dopo aver settato il segnale con il deviatore a 0\degree su 0, si è posto il deviatore nella posizione 90\degree per effettuare le misure di tensione in funzione del numero di lastrine di Mylar.
-Le misure delle tensioni sono state prese tramite multimetro. Durante la presa dati, si è verificato periodicamente (ogni 5 lastrine), che il segnale con 0 lastrine fosse sempre lo stesso. I dati sono presenti in tabella \ref{tab:abs2}. Come in precedenza abbiamo eseguito un fit lineare.
+Dopo aver settato il segnale con il deviatore a 0\degree su 0, si è posto il deviatore nella posizione 90\degree per effettuare le misure di tensione in funzione del numero di lastrine di Mylar interposte tra LED e fotodiodo.
+Le misure delle tensioni sono state prese tramite multimetro in DC. Durante la presa dati, si è verificato periodicamente (ogni 5 lastrine), che il segnale con 0 lastrine fosse sempre lo stesso. I dati sono presenti in tabella \ref{tab:abs2}. Come in precedenza abbiamo eseguito un fit lineare.
 % Dal fit esponenziale (vedi grafico a sinistra della figura \ref{plot2}) abbiamo ottenuto i seguenti parametri: $n_0= 1.388\pm 0.001$, $V_0=6.355\pm0.006\,\mbox{V}$ ma un $\chi^2_{rid}$ molto alto, $x_{ass}=0.208\pm0.001{mm}$. 
 Dal fit (vedi grafico a destra della figura \ref{plot2}) abbiamo ottenuto $a=-0.155\pm0.001$, $b=0.322\pm0.004$ e $\chi^2_{rid}=2.6$, quindi $n_0= 6.45\pm 0.04$, $V_0=1.38\pm0.02\,\mbox{V}$, $x_{ass}=0.967\pm0.006{mm}$.
 
