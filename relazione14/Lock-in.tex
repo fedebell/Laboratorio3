@@ -51,18 +51,23 @@ Il segnale del fotodiodo è successivamente derivato per ottenere un segnale a m
 
 \subparagraph{Misura della costante di assorbimento senza Lock-in}
 Il circuito è sensibile alla luce ambientale, quindi abbiamo posto particolare attenzione a questo fatto durante la presa dati. %ceeeerto...ci si mette questa cosa o no? direi di no
-All'uscita S6 si ottiene la forma d'onda sinusoidale in figura \ref{fig:S6} che ha ampiezza $V=3.26\pm0.05\,\mbox{V}$. Si nota che questa tensione è affetta da rumore a bassa frequenza, probabilmente dovuto all'illuminazione ambientale, pertanto l'errore su tali misure sarà maggiore di quello strumentale.
+All'uscita S6 si ottiene una forma d'onda sinusoidale in figura \ref{fig:S6},alla quale è sommato un rumore a bassa frequenza, probabilmente dovuto all'illuminazione ambientale. Abbiamo misurato l' ampiezza del segnale fra un minimo ed un massimo relativi consecutivi, e che non fossero nè il massimo nè il minimo assoluti (per limitare l'effetto del rumore. Si è ottenuto $V=3.26\pm0.05\,\mbox{V}$.%E' picco picco?
+Abbiamo preso come incertezza sui segnali la semidispersione fra i valori dei punti che sembravano plausibili per la misura.
+%TO DO:vi piace????????
+Non abbiamo riportato l'incertezza dovuta alla  calibrazione dell'oscilloscopio perchè sistematica e non influente sul fit.
 %forse meglio dire come podo, errore 1\%? Dovremmo dire come abbimo effettuato le misure dato che c'è un evidente problema di rumore che modula. Da lì dovremmo poi stabilire quale errore abbiamo preso. 
-Abbiamo ripetuto la misura della tensione in uscita in funzione del numero $n$ di lastrine di Mylar poste fra LED e fotodiodo, i dati sono rappresentati in tabella \ref{tab:abs1}. 
+Abbiamo ripetuto la misura della tensione in uscita in funzione del numero $n$ di lastrine di Mylar poste fra LED e fotodiodo, facendo attenzione a prendere   la misura sempre sugli stessi picchi. I dati sono rappresentati in tabella \ref{tab:abs1}. 
 
-E' noto l'andamento teorico della tensione: $V_{out}=V_0 exp(-n/n_0)$. Abbiamo eseguito sia un fit esponenziale  sia logaritmico del tipo $ln(V_{out})=b-\frac{n}{a}$ (così da fittare una retta in carta logaritmica). Dal fit esponenziale (vedi grafico a sinistra in figura\ref{plot1}) si ottengono $n_0=3.44\pm0.04$, $V_0=5.74\pm0.09\,\mbox{V}$ e un $\chi^2 _{rid}=600$\footnote{Probabilmente dovuto a una sottostima dell'errore.}; da questi dati, sapendo che lo spessore di ogni lastrina è pari a $150\mu \mbox{m}$ si ottiene la lunghezza caratteristica di assorbimento $x_{ass}=0.52\pm0.01\,\mbox{mm}$. Dal fit lineare (vedi grafico a destra in figura \ref{plot1}) si ottengono $a=-0.174\pm0.003$ e $b=1.24\pm0.02$ con un $\chi^2_{rid}=7.6$; quindi $V_0= 3.46\pm0.06\,\mbox{V}$ e $n_0=5.7\pm0.1$ e $x_{ass}=0.86\pm0.01\,\mbox{mm}$.
+E' noto l'andamento teorico della tensione: $V_{out}=V_0 exp(-n/n_0)$. Abbiamo eseguito un fit del tipo $\ln(V_{out})=b-\frac{n}{a}$ (così da fittare una retta in carta logaritmica). %magari scriviamo dettagli del fit
+%Dal fit esponenziale (vedi grafico a sinistra in figura\ref{plot1}) si ottengono $n_0=3.44\pm0.04$, $V_0=5.74\pm0.09\,\mbox{V}$ e un $\chi^2 _{rid}=600$\footnote{Probabilmente dovuto a una sottostima dell'errore.}; da questi dati, sapendo che lo spessore di ogni lastrina è pari a $150\mu \mbox{m}$ si ottiene la lunghezza caratteristica di assorbimento $x_{ass}=0.52\pm0.01\,\mbox{mm}$. 
+Dal fit lineare (in figura \ref{plot1}) si ottengono $a=-0.174\pm0.003$ e $b=1.24\pm0.02$ con un $\chi^2_{rid}=7.6$; quindi $V_0= 3.46\pm0.06\,\mbox{V}$ e $n_0=5.7\pm0.1$ e $x_{ass}=0.86\pm0.01\,\mbox{mm}$.
 
 %dato il chi^2 metterei solo il lineare. Ok, d'accordo: se non mettiamo offset nel fit esponenziale è inutile mettere tutti e due
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.75]{ampli-preampli.png}
-\caption{Schema a blocchi del circuito Lock-in.\label{fig:ampli-preampli}}
+\caption{Schema circuitale dell'amplificatore di potenza e del preamplificatore.\label{fig:ampli-preampli}}
 \end{figure}
 
 \begin{figure}[!htb]
@@ -99,8 +104,8 @@ n	&	$V_{out}\,\mbox{[V]}$	&	$\Delta V\,\mbox{[V]}$\\
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[scale=0.45]{plot-exp1.png}\includegraphics[scale=0.45]{plot-lin1.png}
-\caption{A sinistra grafico del fit esponenziale mentre a destra di quello lineare.\label{plot1}}
+\includegraphics[scale=0.7]{plot-lin1.png}
+\caption{Grafico del fit lineare dei dati presi senza Lock-in.\label{plot1}}
 \end{figure}
 
 
@@ -119,13 +124,7 @@ v_{out}(s) = \left( \frac{s C_3 (R_{13} + P_2)}{1 + s C_3 (R_{13} + P_2)} \frac{
 %C'è anche una attenuazione da passa alto
 Come si vede l'output presenta un offset costante positivo $-\frac{R_{12} V_{EE}}{R_8+P_3}$ il cui valore massimo risulta essere circa $0.61$V. L'aumento della resistenza $P_3$ si vede che causa una diminuzione anche dell'ampiezza del segnale proporzionale a $V_{in}$. 
 
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[scale=0.75]{schemablocchi.png}
-\caption{Schema a blocchi del circuito Lock-in.\label{fig:schemablocchi}}
-\end{figure}
-
-%perchè la abbiamo rimessa?
+%QUi c'era una immagine dello schema a blocchi... ci stiamo dimenticando quelahce immagine????
 
 Il circuito applica anche uno sfasamento rispetto al segnale originario regolabile con $P_2$. L'uscita viene mandata alla base di un transistor la cui polarizzazione è tale da potersi muovere sulla retta di carico solamente  tra la zona di saturazione e quella di interdizione. Il segnale in arrivo sulla base è molto vicino alla tensione di polarizzazione diretta della giunzione BE, dunque la variazione dell'ampiezza della componente oscillante che arriva in base è direttamente legata alla frazione di tempo per cui questo segnale è sufficientemente alto da polarizzare in diretta la giunzione BE mandando quindi il transistor in saturazione. Variare $P_3$ significa modificare dello stesso fattore sia la componente continua che quella oscillante della tensione sulla base, quindi agisce come un coefficiente di dilatazione che permette al segnale di attraversare la barriera di potenziale oltre a cui si ha saturazione per una frazione controllabile del periodo.
 Il transistor alternativamente in saturazione e interdizione produce su S3 un'onda quadra (sfasata di $\pi$ rispetto al segnale in base, ma ciò è irrilevante ai fini della nostra analisi).\\
@@ -197,36 +196,41 @@ Un'ulteriore osservazione riguarda i picchi dei segnali S7 e S8: pensiamo che si
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.75]{perFedech1S8-ch2S7.png}
-\caption{Onda S8 in canale 1 e S7 in canale 2. Rumore a bassa frequenza $\simeq 50\,\mbox{Hz}$.\label{osc:rumore50hz}}
+\caption{Onda S8 in canale 1 (in basso) e S7 in canale 2 (in alto). Rumore a bassa frequenza $\simeq 50\,\mbox{Hz}$.\label{osc:rumore50hz}}
 \end{figure}
 
 
 \subparagraph{Amplificatore differenziale e mediatore}
 Infine abbiamo realizzato il circuito in figura \ref{fig:amplificatorediff-mediatore}. Le onde agli ingressi S7 e S8 sono sommate dall'amplificatore differenziale, il quale amplifica la differenza, così da ottenere un output di segno definito o a media nulla, a seconda della posizione del deviatore. In figura \ref{osc:devS9} si trova il segnale S9 per le due posizioni del deviatore, i risultati sono in accordo con quanto detto precedentemente.
-Infine due integratori (uno RC e l'altro con OpAmp) rendono continuo il segnale. Le frequenze di taglio di entrambi sono dell'ordine delle decine di Hz, dunque per il segnale a $1\,\mbox{kHz}$ funzionano bene come integratori.% Il segnale mediato è negativo perchè S8 è collegato all'ingresso non invertente dell'OpAmp, infatti scambiando S7 e S8 il segnale risulta positivo. MI ricordo di questa cosa in lab, ma dalle figure che abbiamo messo non sembra che il segnale S9 possa avere media negativa!
- Prima di effettuare le misure di tensione abbiamo posto il deviatore a 0\degree e collegato l'uscita al multimetro digitale, quindi abbiamo regolato il trimmer $P_2$ in modo da avere una tensione nulla per una delle due posizioni del deviatore. Inizialmente abbiamo provato ad annullare il segnale con il deviatore nella posizione 90\degree ma in questo modo non si riusciva per nessunia posizone del potenziometro ad annullare la tensione in uscita a causa della limitata escursione di fase. $V=0.0\pm0.1\,\mbox{V}$. Si è quindi posizionato $P_2$ in modo che fosse nullo il segnale nella posizione a 0\degree (verificato tramite oscilloscopio e multimetro digitale in continua). Abbiamo quindi riacquisito le immagini dei segnali: in figura \ref{osc:S9(zero)} si osserva la forma d'onda S9 nelle due configurazioni del deviatore e anche in questo caso si nota la modulazione indotta dal rumore.
+Infine si ha un circuito mediatore che effettua la media del segnale in ingresso. %Le frequenze di taglio di entrambi sono dell'ordine delle decine di Hz, dunque per il segnale a $1\,\mbox{kHz}$ funzionano bene come integratori.
+Il segnale mediato è negativo perchè S8 è collegato all'ingresso non invertente dell'OpAmp, infatti scambiando S7 e S8 il segnale risulta positivo.
+% MI ricordo di questa cosa in lab, ma dalle figure che abbiamo messo non sembra che il segnale S9 possa avere media negativa!
+ Prima di effettuare le misure di tensione abbiamo posto il deviatore a 0\degree e collegato l'uscita al multimetro digitale, quindi abbiamo regolato il trimmer $P_2$ in modo da avere una tensione nulla per una delle due posizioni del deviatore. Inizialmente abbiamo provato ad annullare il segnale con il deviatore nella posizione 90\degree ma in questo modo non si riusciva per nessuna posizone del potenziometro ad annullare la tensione in uscita a causa della limitata escursione di fase. $V=0.0\pm0.1\,\mbox{V}$. Si è quindi posizionato $P_2$ in modo che fosse nullo il segnale nella posizione a 0\degree (verificato tramite oscilloscopio e multimetro digitale in continua). Abbiamo quindi riacquisito le immagini dei segnali: in figura \ref{osc:S9(zero)} si osserva la forma d'onda S9 nelle due configurazioni del deviatore e anche in questo caso si nota la modulazione indotta dal rumore. Il fatto di avere un segnale a media nulla implica che il segnale all'uscita del Lock-in nell'altra posizione del deviatore sia correttamente rettificato. E' proprio questo il meccanismo su cui si basa il Lock-in: solo il segnale correttamente rettificato ha media non nulla (ha la frequenza giusta), mentre tutti i rumori a frequenze diverse non vengono rettificati e vengono mediati a 0.
+ %spiegazione rudimentale ma necessaria. Migliorare!
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.75]{amplificatorediff-mediatore.png}
-\caption{Schema a blocchi del circuito Lock-in.\label{fig:amplificatorediff-mediatore}}
+\caption{Schema dell'amplificatore differenziale e mediatore.\label{fig:amplificatorediff-mediatore}}
 \end{figure}
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.45]{dev0ch1S9-ch2S1.png}\includegraphics[scale=0.45]{dev90ch1S9-ch2S1.png}
-\caption{La forma d'onda S1 (dal generatore di funzioni) è in canale 2, mentre S9 in canale 1. A sinistra il deviatore è a 0\degree, nella figura a destra è a 90\degree. \label{osc:devS9}}
+\caption{La forma d'onda S1 (dal generatore di funzioni) è in canale 2 (in basso), mentre S9 in canale 1 (in alto). A sinistra il deviatore è a 0\degree, nella figura a destra è a 90\degree. \label{osc:devS9}}
 \end{figure}
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.45]{dev0ch1S9-ch2S1(zero).png}\includegraphics[scale=0.45]{dev90ch1S9-ch2S1(zero).png}
-\caption{La forma d'onda S1 (dal generatore di funzioni) è in canale 2, mentre S9 in canale 1. A sinistra il deviatore è a 0\degree, nella figura a destra è a 90\degree. \label{osc:devS9}}
+\caption{La forma d'onda S1 (dal generatore di funzioni) è in canale 2 (in basso), mentre S9 in canale 1 (in alto). A sinistra il deviatore è a 0\degree, nella figura a destra è a 90\degree. \label{osc:devS9}}
 \end{figure}
 
 \section{Presa dati}
 Dopo aver settato il segnale con il deviatore a 0\degree su 0, si è posto il deviatore nella posizione 90\degree per effettuare le misure di tensione in funzione del numero di lastrine di Mylar.
-Le misure delle tensioni sono state prese tramite multimetro. Durante la presa dati, si è verificato periodicamente (ogni 5 lastrine), che il segnale con 0 lastrine fosse sempre lo stesso. I dati sono presenti in tabella \ref{tab:abs2}. Come in precedenza abbiamo eseguito un fit esponenziale e uno lineare. Dal fit esponenziale (vedi grafico a sinistra della figura \ref{plot2}) abbiamo ottenuto i seguenti parametri: $n_0= 1.388\pm 0.001$, $V_0=6.355\pm0.006\,\mbox{V}$ ma un $\chi^2_{rid}$ molto alto, $x_{ass}=0.208\pm0.001{mm}$. Dal fit lineare (vedi grafico a destra della figura \ref{plot2}) abbiamo ottenuto $a=-0.155\pm0.001$, $b=0.322\pm0.004$ e $\chi^2_{rid}=2.6$, quindi $n_0= 6.45\pm 0.04$, $V_0=1.38\pm0.02\,\mbox{V}$, $x_{ass}=0.967\pm0.006{mm}$.
+Le misure delle tensioni sono state prese tramite multimetro. Durante la presa dati, si è verificato periodicamente (ogni 5 lastrine), che il segnale con 0 lastrine fosse sempre lo stesso. I dati sono presenti in tabella \ref{tab:abs2}. Come in precedenza abbiamo eseguito un fit lineare.
+% Dal fit esponenziale (vedi grafico a sinistra della figura \ref{plot2}) abbiamo ottenuto i seguenti parametri: $n_0= 1.388\pm 0.001$, $V_0=6.355\pm0.006\,\mbox{V}$ ma un $\chi^2_{rid}$ molto alto, $x_{ass}=0.208\pm0.001{mm}$. 
+Dal fit (vedi grafico a destra della figura \ref{plot2}) abbiamo ottenuto $a=-0.155\pm0.001$, $b=0.322\pm0.004$ e $\chi^2_{rid}=2.6$, quindi $n_0= 6.45\pm 0.04$, $V_0=1.38\pm0.02\,\mbox{V}$, $x_{ass}=0.967\pm0.006{mm}$.
 
 \begin{table}
 \centering
@@ -264,13 +268,14 @@ n	&	$V_{out}\,\mbox{[V]}$	&	$\Delta V\,\mbox{[V]}$\\
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[scale=0.45]{plot-exp2.png}\includegraphics[scale=0.45]{plot-lin2.png}
-\caption{A sinistra grafico del fit esponenziale mentre a destra di quello lineare.\label{plot2}}
+\includegraphics[scale=0.7]{plot-lin2.png}
+\caption{Grafico del fit lineare. Si osservi che abbiamo riportato i valori assoluti delle tensioni misurate\label{plot2}}
 \end{figure}
 
 \section{Conclusioni}
-
-Le misure eseguite con lock-in risultano non affette da rumore in maniera significativa, pertanto l'incertezza associata è solo strumentale. Nelle misure senza lock-in si aveva una incertezza non solo strumentale, ma dovuta anche al fatto che il rumore spostava significativamente i massimi dei segnali. I dati inoltre sono in maggiore accordo con l'andamento previsto rispetto ai dati presi senza lock-in: infatti nel primo caso si ha un $\chi_{rid} ^2 = $ ,  migliore che nel secondo caso.%specificare quanto è 
+Nelle misure senza lock-in si aveva una incertezza non solo strumentale, ma dovuta anche al fatto che il rumore spostava significativamente i massimi dei segnali.
+Le misure eseguite con lock-in risultano non affette da rumore in maniera significativa, pertanto l'incertezza associata è solo strumentale.
+I dati inoltre sono in maggiore accordo con l'andamento previsto rispetto ai dati presi senza lock-in: infatti senza di esso si ha $\chi_{rid} ^2 = 7.6$ ,  mentre con si ha $\chi_{rid}^2 = 2.6$.%specificare quanto è 
  
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  15 MAY 2017 01:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  15 MAY 2017 15:56
 entering extended mode
 **./Lock-in.tex
 (Lock-in.tex
@@ -492,9 +492,6 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (Lock-in.aux
 
-LaTeX Warning: Label `fig:schemablocchi' multiply defined.
-
-
 LaTeX Warning: Label `osc:devS9' multiply defined.
 
 )
@@ -661,173 +658,146 @@ LaTeX Warning: Reference `fig:S6' on page 2 undefined on input line 54.
 File: ampli-preampli.png Graphic file (type png)
 
 <use ampli-preampli.png>
-Package pdftex.def Info: ampli-preampli.png used on input line 64.
+Package pdftex.def Info: ampli-preampli.png used on input line 69.
 (pdftex.def)             Requested size: 345.54008pt x 148.4919pt.
  <S6.png, id=20, 301.125pt x 225.84375pt>
 File: S6.png Graphic file (type png)
  <use S6.png>
-Package pdftex.def Info: S6.png used on input line 70.
+Package pdftex.def Info: S6.png used on input line 75.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<plot-exp1.png, id=21, 578.16pt x 431.4519pt>
-File: plot-exp1.png Graphic file (type png)
- <use plot-exp1.png>
-Package pdftex.def Info: plot-exp1.png used on input line 102.
-(pdftex.def)             Requested size: 260.16959pt x 194.15157pt.
-
-<plot-lin1.png, id=22, 578.16pt x 431.4519pt>
+<plot-lin1.png, id=21, 578.16pt x 430.0065pt>
 File: plot-lin1.png Graphic file (type png)
  <use plot-lin1.png>
-Package pdftex.def Info: plot-lin1.png used on input line 102.
-(pdftex.def)             Requested size: 260.16959pt x 194.15157pt.
-
-Overfull \hbox (36.6423pt too wide) in paragraph at lines 102--103
- [][][] 
- []
-
-[2 <./schemablocchi.png> <./ampli-preampli.png>] [3 <./S6.png> <./plot-exp1.png
-> <./plot-lin1.png>]
-File: schemablocchi.png Graphic file (type png)
- <use schemablocchi.png>
-Package pdftex.def Info: schemablocchi.png used on input line 124.
-(pdftex.def)             Requested size: 373.7705pt x 171.64082pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--134
+Package pdftex.def Info: plot-lin1.png used on input line 107.
+(pdftex.def)             Requested size: 404.70924pt x 301.00249pt.
+ [2 <./schemablocchi.png> <./ampli-preampli.png>] [3 <./S6.png> <./plot-lin1.pn
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 129--133
 
  []
 
-<transistorbjt.png, id=36, 435.42674pt x 326.4195pt>
+<transistorbjt.png, id=33, 435.42674pt x 326.4195pt>
 File: transistorbjt.png Graphic file (type png)
  <use transistorbjt.png>
-Package pdftex.def Info: transistorbjt.png used on input line 138.
+Package pdftex.def Info: transistorbjt.png used on input line 137.
 (pdftex.def)             Requested size: 261.25806pt x 195.8532pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-<sfasatori.png, id=37, 521.69907pt x 245.41687pt>
+<sfasatori.png, id=34, 521.69907pt x 245.41687pt>
 File: sfasatori.png Graphic file (type png)
  <use sfasatori.png>
-Package pdftex.def Info: sfasatori.png used on input line 157.
+Package pdftex.def Info: sfasatori.png used on input line 156.
 (pdftex.def)             Requested size: 391.27333pt x 184.0622pt.
 
-<sfasamento90.png, id=38, 301.125pt x 225.84375pt>
+<sfasamento90.png, id=35, 301.125pt x 225.84375pt>
 File: sfasamento90.png Graphic file (type png)
  <use sfasamento90.png>
-Package pdftex.def Info: sfasamento90.png used on input line 163.
+Package pdftex.def Info: sfasamento90.png used on input line 162.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<dutycycle50.png, id=39, 301.125pt x 225.84375pt>
+<dutycycle50.png, id=36, 301.125pt x 225.84375pt>
 File: dutycycle50.png Graphic file (type png)
  <use dutycycle50.png>
-Package pdftex.def Info: dutycycle50.png used on input line 169.
+Package pdftex.def Info: dutycycle50.png used on input line 168.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<deviatore0.png, id=40, 301.125pt x 225.84375pt>
+<deviatore0.png, id=37, 301.125pt x 225.84375pt>
 File: deviatore0.png Graphic file (type png)
  <use deviatore0.png>
-Package pdftex.def Info: deviatore0.png used on input line 175.
+Package pdftex.def Info: deviatore0.png used on input line 174.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<deviatore90.png, id=41, 301.125pt x 225.84375pt>
+<deviatore90.png, id=38, 301.125pt x 225.84375pt>
 File: deviatore90.png Graphic file (type png)
  <use deviatore90.png>
-Package pdftex.def Info: deviatore90.png used on input line 175.
+Package pdftex.def Info: deviatore90.png used on input line 174.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
 
-LaTeX Warning: Reference `osc:s4s5' on page 4 undefined on input line 182.
+LaTeX Warning: Reference `osc:s4s5' on page 4 undefined on input line 181.
 
 [4 <./transistorbjt.png>] [5 <./sfasatori.png> <./sfasamento90.png> <./dutycycl
-e50.png>] <sqadratore-campionatore.png, id=54, 487.8225pt x 262.73157pt>
+e50.png>] <sqadratore-campionatore.png, id=52, 487.8225pt x 262.73157pt>
 File: sqadratore-campionatore.png Graphic file (type png)
 
 <use sqadratore-campionatore.png>
-Package pdftex.def Info: sqadratore-campionatore.png used on input line 187.
+Package pdftex.def Info: sqadratore-campionatore.png used on input line 186.
 (pdftex.def)             Requested size: 365.86597pt x 197.04817pt.
 
-<dev0ch1S8-ch2S7.png, id=55, 301.125pt x 225.84375pt>
+<dev0ch1S8-ch2S7.png, id=53, 301.125pt x 225.84375pt>
 File: dev0ch1S8-ch2S7.png Graphic file (type png)
 
 <use dev0ch1S8-ch2S7.png>
-Package pdftex.def Info: dev0ch1S8-ch2S7.png used on input line 193.
+Package pdftex.def Info: dev0ch1S8-ch2S7.png used on input line 192.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<dev90ch1S8-ch2S7.png, id=56, 301.125pt x 225.84375pt>
+<dev90ch1S8-ch2S7.png, id=54, 301.125pt x 225.84375pt>
 File: dev90ch1S8-ch2S7.png Graphic file (type png)
 
 <use dev90ch1S8-ch2S7.png>
-Package pdftex.def Info: dev90ch1S8-ch2S7.png used on input line 193.
+Package pdftex.def Info: dev90ch1S8-ch2S7.png used on input line 192.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
-<perFedech1S8-ch2S7.png, id=57, 301.125pt x 225.84375pt>
+<perFedech1S8-ch2S7.png, id=55, 301.125pt x 225.84375pt>
 File: perFedech1S8-ch2S7.png Graphic file (type png)
 
 <use perFedech1S8-ch2S7.png>
-Package pdftex.def Info: perFedech1S8-ch2S7.png used on input line 199.
+Package pdftex.def Info: perFedech1S8-ch2S7.png used on input line 198.
 (pdftex.def)             Requested size: 225.84319pt x 169.38239pt.
 
 
-LaTeX Warning: Reference `osc:S9(zero)' on page 6 undefined on input line 207.
+LaTeX Warning: Reference `osc:S9(zero)' on page 6 undefined on input line 208.
 
-<amplificatorediff-mediatore.png, id=58, 467.49657pt x 164.86594pt>
+[6 <./deviatore0.png> <./deviatore90.png> <./sqadratore-campionatore.png> <./de
+v0ch1S8-ch2S7.png> <./dev90ch1S8-ch2S7.png>]
+<amplificatorediff-mediatore.png, id=64, 467.49657pt x 164.86594pt>
 File: amplificatorediff-mediatore.png Graphic file (type png)
 
 <use amplificatorediff-mediatore.png>
-Package pdftex.def Info: amplificatorediff-mediatore.png used on input line 211
+Package pdftex.def Info: amplificatorediff-mediatore.png used on input line 213
 .
 (pdftex.def)             Requested size: 350.62157pt x 123.64912pt.
 
-<dev0ch1S9-ch2S1.png, id=59, 301.125pt x 225.84375pt>
+<dev0ch1S9-ch2S1.png, id=65, 301.125pt x 225.84375pt>
 File: dev0ch1S9-ch2S1.png Graphic file (type png)
 
 <use dev0ch1S9-ch2S1.png>
-Package pdftex.def Info: dev0ch1S9-ch2S1.png used on input line 217.
+Package pdftex.def Info: dev0ch1S9-ch2S1.png used on input line 219.
 (pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
 
-<dev90ch1S9-ch2S1.png, id=60, 301.125pt x 225.84375pt>
+<dev90ch1S9-ch2S1.png, id=66, 301.125pt x 225.84375pt>
 File: dev90ch1S9-ch2S1.png Graphic file (type png)
 
 <use dev90ch1S9-ch2S1.png>
-Package pdftex.def Info: dev90ch1S9-ch2S1.png used on input line 217.
+Package pdftex.def Info: dev90ch1S9-ch2S1.png used on input line 219.
 (pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
 
-<dev0ch1S9-ch2S1(zero).png, id=61, 301.125pt x 225.84375pt>
+<dev0ch1S9-ch2S1(zero).png, id=67, 301.125pt x 225.84375pt>
 File: dev0ch1S9-ch2S1(zero).png Graphic file (type png)
 
 <use dev0ch1S9-ch2S1(zero).png>
-Package pdftex.def Info: dev0ch1S9-ch2S1(zero).png used on input line 223.
+Package pdftex.def Info: dev0ch1S9-ch2S1(zero).png used on input line 225.
 (pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
 
-<dev90ch1S9-ch2S1(zero).png, id=62, 301.125pt x 225.84375pt>
+<dev90ch1S9-ch2S1(zero).png, id=68, 301.125pt x 225.84375pt>
 File: dev90ch1S9-ch2S1(zero).png Graphic file (type png)
 
 <use dev90ch1S9-ch2S1(zero).png>
-Package pdftex.def Info: dev90ch1S9-ch2S1(zero).png used on input line 223.
+Package pdftex.def Info: dev90ch1S9-ch2S1(zero).png used on input line 225.
 (pdftex.def)             Requested size: 135.50499pt x 101.62874pt.
- [6 <./deviatore0.png> <./deviatore90.png> <./sqadratore-campionatore.png>] <pl
-ot-exp2.png, id=69, 578.16pt x 431.4519pt>
-File: plot-exp2.png Graphic file (type png)
-
-<use plot-exp2.png>
-Package pdftex.def Info: plot-exp2.png used on input line 267.
-(pdftex.def)             Requested size: 260.16959pt x 194.15157pt.
- <plot-lin2.png, id=70, 578.16pt x 431.4519pt>
+ <plot-lin2.png, id=69, 578.16pt x 430.0065pt>
 File: plot-lin2.png Graphic file (type png)
 
 <use plot-lin2.png>
-Package pdftex.def Info: plot-lin2.png used on input line 267.
-(pdftex.def)             Requested size: 260.16959pt x 194.15157pt.
-
-Overfull \hbox (36.6423pt too wide) in paragraph at lines 267--268
- [][][] 
- []
-
-[7 <./dev0ch1S8-ch2S7.png> <./dev90ch1S8-ch2S7.png> <./perFedech1S8-ch2S7.png> 
-<./amplificatorediff-mediatore.png>] [8 <./dev0ch1S9-ch2S1.png> <./dev90ch1S9-c
-h2S1.png> <./dev0ch1S9-ch2S1(zero).png> <./dev90ch1S9-ch2S1(zero).png>]
-[9 <./plot-exp2.png> <./plot-lin2.png>] (Lock-in.aux)
+Package pdftex.def Info: plot-lin2.png used on input line 271.
+(pdftex.def)             Requested size: 404.70924pt x 301.00249pt.
+ [7 <./perFedech1S8-ch2S7.png> <./amplificatorediff-mediatore.png>] [8 <./dev0c
+h1S9-ch2S1.png> <./dev90ch1S9-ch2S1.png> <./dev0ch1S9-ch2S1(zero).png> <./dev90
+ch1S9-ch2S1(zero).png>] [9 <./plot-lin2.png>] (Lock-in.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -836,13 +806,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4150 strings out of 493334
- 53816 string characters out of 3139252
- 134286 words of memory out of 3000000
- 7577 multiletter control sequences out of 15000+200000
+ 4140 strings out of 493334
+ 53648 string characters out of 3139252
+ 135285 words of memory out of 3000000
+ 7569 multiletter control sequences out of 15000+200000
  11542 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,9n,25p,997b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,9n,25p,1318b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
@@ -858,9 +828,9 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb>
-Output written on Lock-in.pdf (9 pages, 1008667 bytes).
+Output written on Lock-in.pdf (9 pages, 986383 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 137 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
