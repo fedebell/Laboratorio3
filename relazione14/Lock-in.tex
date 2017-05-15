@@ -28,10 +28,10 @@ Questa esperienza è finalizzata alla misura della costante di assorbimento del 
 \item fotodiodo;
 \end{itemize}
 
-Tutte le resistenze, i condensatori, le tensioni di alimentazione e la tensione in uscita dal Lock-in sono stati misurati con il multimetro digitale (in DC), quindi l'errore è stato propagato secondo le specifiche nel manuale ($0.8\% + 3\,\mbox{digit}$ per le resistenze,$4\% + 3\, \mbox{digit}$  per i condensatori, $0.5\% + 1\,\mbox{digit}$ per i voltaggi). I tempi e le restanti tensioni sono state misurate con i cursori dell'oscilloscopio: l'errore sui tempi è dato dalla risoluzione dei cursori stessi mentre quello sulle tensioni è stato propagato considerando sia l'errore sul posizionamento dei cursori sia l'errore sistematico del $3\%$.
+Tutte le resistenze, i condensatori, le tensioni di alimentazione e la tensione in uscita dal Lock-in sono stati misurati con il multimetro digitale (in DC), quindi l'errore è stato propagato secondo le specifiche nel manuale ($0.8\% + 3\,\mbox{digit}$ per le resistenze,$4\% + 3\, \mbox{digit}$  per i condensatori, $0.5\% + 1\,\mbox{digit}$ per i voltaggi). I tempi e le restanti tensioni sono state misurate con i cursori dell'oscilloscopio: l'errore sui tempi è dato dalla risoluzione dei cursori stessi mentre quello sulle tensioni è stato propagato considerando sia l'errore sul posizionamento dei cursori sia l'errore sistematico del $3\%$, se non altrimenti specificato.
 
 \section{Schema a blocchi}
-Il circuito Lock-in è usato per effettuare misure di segnali deboli in un ambiente molto rumoroso. Nel nostro caso il segnale è la luce emessa dal LED. Tale segnale non è continuo ma modulato da un' onda sinusoidale prodotta dal generatore di funzioni. Abbiamo impostato una frequenza pari a $1\,\mbox{kHz}$ per eliminare il rumore \emph{1/f} dovuto alla presenza di dispositivi attivi\footnote{Può essere prodotto dalle discontinuità intrinseche dei materiali costruttivi.}. In figura \ref{fig:schemablocchi} si nota come questo circuito complesso sia costituito da sottocircuiti (che saranno analizzati e spiegati successivamente); in particolare nella parte superiore dello schema si trovano i circuiti che servono a sfruttare sia la parte positiva che negativa del segnale per la misura, mentre nella parte inferiore si trovano i circuiti di amplificazione del segnale da misurare.
+Il circuito Lock-in è usato per effettuare misure di segnali deboli in un ambiente molto rumoroso. Nel nostro caso il segnale è la luce emessa dal LED. Tale segnale non è continuo ma modulato da un' onda sinusoidale prodotta dal generatore di funzioni. Abbiamo impostato una frequenza di circa $1\,\mbox{kHz}$ per eliminare il rumore \emph{1/f} dovuto alla presenza di dispositivi attivi\footnote{Può essere prodotto dalle discontinuità intrinseche dei materiali costruttivi.}. In figura \ref{fig:schemablocchi} si nota come questo circuito complesso sia costituito da sottocircuiti (che saranno analizzati e spiegati successivamente); in particolare nella parte superiore dello schema si trovano i circuiti che servono a sfruttare sia la parte positiva che negativa del segnale per la misura, mentre nella parte inferiore si trovano i circuiti di amplificazione del segnale da misurare.
 
 \begin{figure}[!htb]
   \centering
@@ -43,15 +43,15 @@ Il circuito Lock-in è usato per effettuare misure di segnali deboli in un ambie
 \section{Implementazione schema a blocchi}
 
 \subparagraph{Amplificatore di potenza e preamplificatore}
-Abbiamo montato il circuito in figura \ref{fig:ampli-preampli} inviando a S1 un'onda sinusoidale di ampiezza picco-picco pari a $V_{pp}= 5.92\pm0.03 \,\mbox{V}$ e frequenza $f=1.03\pm0.01\,\mbox{kHz}$. 
+Abbiamo montato il circuito in figura \ref{fig:ampli-preampli} inviando a S1 un'onda sinusoidale di ampiezza picco-picco pari a $V_{pp}= 5.9\pm0.1 \,\mbox{V}$ e frequenza $f=1.03\pm0.01\,\mbox{kHz}$. 
 
 Il circuito consiste in un amplificatore di potenza realizzato con un transistor NPN. Tale transistor è
-dotato di circuito di polarizzazione che riceve in ingresso il segnale dal generatore di funzioni, che controlla la corrente di base, quindi l'intensità luminosa. Nella seconda parte, elettricamente separata dalla prima, troviamo il  circuito di lettura del fotodiodo, che a causa dell'OpAmp presenta un alta impedenza di ingresso e bassa impedenza di uscita e permette quindi di osservare la risposta del diodo senza alterarla.%dovrebbe esse un amplificatore a transimpedenza
+dotato di circuito di polarizzazione che riceve in ingresso il segnale dal generatore di funzioni, che controlla la corrente di base, quindi l'intensità luminosa. Nella seconda parte, elettricamente separata dalla prima, troviamo il  circuito di lettura del fotodiodo. Questo converte la fotocorrente in una differenza di potenziale; inoltre  l'OpAmp presenta un alta impedenza di ingresso e bassa impedenza di uscita, quindi permette di osservare la risposta del diodo senza alterarla.%dovrebbe esse un amplificatore a transimpedenza
 Il segnale del fotodiodo è successivamente derivato per ottenere un segnale a media nulla, quindi inviato all'amplificatore non invertente dal guadagno di circa $A = 30$.\\ 
 
 \subparagraph{Misura della costante di assorbimento senza Lock-in}
 Il circuito è sensibile alla luce ambientale, quindi abbiamo posto particolare attenzione a questo fatto durante la presa dati. %ceeeerto...ci si mette questa cosa o no? direi di no
-All'uscita S6 si ottiene una forma d'onda sinusoidale in figura \ref{fig:S6},alla quale è sommato un rumore a bassa frequenza, probabilmente dovuto all'illuminazione ambientale. Abbiamo misurato l' ampiezza del segnale fra un minimo ed un massimo relativi consecutivi, e che non fossero nè il massimo nè il minimo assoluti (per limitare l'effetto del rumore. Si è ottenuto $V=3.26\pm0.05\,\mbox{V}$.%E' picco picco?
+All'uscita S6 si ottiene una forma d'onda sinusoidale in figura \ref{osc:S6}, alla quale è sommato un rumore a bassa frequenza, probabilmente dovuto all'illuminazione ambientale. Abbiamo misurato l' ampiezza del segnale fra un minimo ed un massimo relativi consecutivi, e che non fossero nè il massimo nè il minimo assoluti (per limitare l'effetto del rumore. Si è ottenuto $V=3.26\pm0.05\,\mbox{V}$.%E' picco picco?
 Abbiamo preso come incertezza sui segnali la semidispersione fra i valori dei punti che sembravano plausibili per la misura.
 %TO DO:vi piace????????
 Non abbiamo riportato l'incertezza dovuta alla  calibrazione dell'oscilloscopio perchè sistematica e non influente sul fit.
@@ -73,7 +73,7 @@ Dal fit lineare (in figura \ref{plot1}) si ottengono $a=-0.174\pm0.003$ e $b=1.2
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.75]{S6.png}
-\caption{Onda in S6; si nota che il segnale presenta rumore a bassa frequenza.\label{osc:S6}}
+\caption{Onda in S6; si nota che il segnale presenta rumore a bassa frequenza che "modula" le ampiezze.\label{osc:S6}}
 \end{figure}
 
 \begin{table}[!htb]
@@ -176,16 +176,24 @@ Come si vede in figura \ref{fig:transistor} la retta di carico del transistor (i
 \end{figure}
 
 \subparagraph{Squadratore e campionatore}
-Abbiamo montato i circuiti in figura \ref{fig:sqadratore-campionatore}. Ricordiamo che S3 corrisponde all'onda quadra in uscita dallo sfasatore variabile; questo viene inviato ai due NOT U1 e U2 (che hanno la funzione di rendere più squadrato il segnale), quindi il segnale S4 e il suo negato S5 vengono mandati al campionatore realizzato con un circuito integrato contenente interruttori MOSFET. Seguendo la logica del circuito in figura \ref{fig:sqadratore-campionatore} si vede che S4 e S5 selezionano alternativamente l'uscita S8 o S7 su cui mandare il segnale S6. L'uscita che non lo riceve viene in quel semiperiodo messa a terra.
-Cambiando la posizione del deviatore si varia la fase dell'onda che controlla gli interruttori rispetto al segnale da campionare: in questo modo si ottengono segnali con stesso segno (S4 in fase con S1), o a media nulla (S4 sfasato di $90\circ$ rispetto a S1)\\
-In figura \ref{osc:s4s5} si osservano i segnali S4 e S5 in opposizione di fase, come atteso, mentre in figura \ref{osc:S7S8} si trovano le forme d'onda S7 e S8 nelle due posizioni del deviatore. In queste ultime due immagini si nota una modulazione dovuta al rumore, infatti in figura \ref{osc:rumore50hz} si osserva rumore a $\simeq 50\,\mbox{Hz}$, che è la frequenza della luce ambientale fornita dalle lampadine. %Fede qui volevi commentare?
-Un'ulteriore osservazione riguarda i picchi dei segnali S7 e S8: pensiamo che siano dovuti a una regolazione non perfetta delle fasi o a un ritardo nella propagazione del segnale.
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.75]{sqadratore-campionatore.png}
 \caption{Schema circuitale dello squadratore e del campionatore.\label{fig:sqadratore-campionatore}}
 \end{figure}
+
+Abbiamo montato i circuiti in figura \ref{fig:sqadratore-campionatore}. Ricordiamo che S3 corrisponde all'onda quadra in uscita dallo sfasatore variabile; questo viene inviato ai due NOT U1 e U2 (che hanno la funzione di rendere più squadrato il segnale), quindi il segnale S4 e il suo negato S5 vengono mandati al campionatore realizzato con un circuito integrato contenente interruttori MOSFET. Seguendo la logica del circuito in figura \ref{fig:sqadratore-campionatore} si vede che S4 e S5 selezionano alternativamente l'uscita S8 o S7 su cui mandare il segnale S6. L'uscita che non lo riceve viene in quel semiperiodo messa a terra.
+Cambiando la posizione del deviatore si varia la fase dell'onda che controlla gli interruttori rispetto al segnale da campionare: in questo modo si ottengono segnali con stesso segno (S4 in fase con S1), o a media nulla (S4 sfasato di $90\circ$ rispetto a S1)\\
+In figura \ref{osc:s4s5} si osservano i segnali S4 e S5 in opposizione di fase, come atteso, mentre in figura \ref{osc:S7S8} si trovano le forme d'onda S7 e S8 nelle due posizioni del deviatore. In queste ultime due immagini si nota una modulazione dovuta al rumore, infatti in figura \ref{osc:rumore50hz} si osserva rumore a $\simeq 50\,\mbox{Hz}$, che è la frequenza della luce ambientale fornita dalle lampadine. %Fede qui volevi commentare?
+Un'ulteriore osservazione riguarda i picchi dei segnali S7 e S8: pensiamo che siano dovuti a una regolazione non perfetta delle fasi o a un ritardo nella propagazione del segnale.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{CH1S4-CH2S5.png}
+\caption{Segnale S4 (in basso) e S5 (in alto). Si osservi che sono in opposizione di fase.\label{osc:s4s5}}
+\end{figure}
+
 
 \begin{figure}[!htb]
   \centering
@@ -223,7 +231,7 @@ Il segnale mediato è negativo perchè S8 è collegato all'ingresso non inverten
 \begin{figure}[!htb]
   \centering
   \includegraphics[scale=0.45]{dev0ch1S9-ch2S1(zero).png}\includegraphics[scale=0.45]{dev90ch1S9-ch2S1(zero).png}
-\caption{La forma d'onda S1 (dal generatore di funzioni) è in canale 2 (in basso), mentre S9 in canale 1 (in alto). A sinistra il deviatore è a 0\degree, nella figura a destra è a 90\degree. \label{osc:devS9}}
+\caption{La forma d'onda S1 (dal generatore di funzioni) è in canale 2 (in basso), mentre S9 in canale 1 (in alto). A sinistra il deviatore è a 0\degree, nella figura a destra è a 90\degree. \label{osc:S9(zero)}}
 \end{figure}
 
 \section{Presa dati}
