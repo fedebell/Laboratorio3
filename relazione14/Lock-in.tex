@@ -58,7 +58,7 @@ Abbiamo preso come incertezza sui segnali la semidispersione fra i valori dei pu
 %TO DO:vi piace????????
 Non abbiamo riportato l'incertezza dovuta alla  calibrazione dell'oscilloscopio perché sistematica e non influente sul fit. I dati sono rappresentati in tabella \ref{tab:abs1}. 
 
-E' noto l'andamento teorico della tensione: $V_{out}=V_0 \exp(-n/n_0)$ derivante dall'ipotesi di assorbimento uniforme nel materiale. Abbiamo eseguito un fit del tipo $\ln(V_{out})=b-\frac{n}{a}$ (così da \emph{fittare} una retta in carta logaritmica). \\ %magari scriviamo dettagli del fit
+E' noto l'andamento teorico della tensione: $V_{out}=V_0 \exp(-n/n_0)$ derivante dall'ipotesi di assorbimento uniforme nel materiale. Abbiamo eseguito un fit del tipo $\ln(V_{out})=b-\frac{n}{a}$ (così da \emph{fittare} una retta in carta logaritmica). Il fit è stato eseguito con pacchetto "curve_fit"di python utilizzando l'opzione 'absolute_sigma = True'. \\ %magari scriviamo dettagli del fit
 %Dal fit esponenziale (vedi grafico a sinistra in figura\ref{plot1}) si ottengono $n_0=3.44\pm0.04$, $V_0=5.74\pm0.09\,\mbox{V}$ e un $\chi^2 _{rid}=600$\footnote{Probabilmente dovuto a una sottostima dell'errore.}; da questi dati, sapendo che lo spessore di ogni lastrina è pari a $150\mu \mbox{m}$ si ottiene la lunghezza caratteristica di assorbimento $x_{ass}=0.52\pm0.01\,\mbox{mm}$. 
 Dal fit lineare (in figura \ref{plot1}) si ottengono $a=-0.174\pm0.003$ e $b=1.24\pm0.02$ con un $\chi^2_{rid}=7.6$; quindi $V_0= 3.46\pm0.06\,\mbox{V}$, $n_0=5.7\pm0.1$ e $x_{ass}=0.86\pm0.01\,\mbox{mm}$.
 
@@ -251,7 +251,7 @@ Il segnale mediato è negativo perché S8 è collegato all'ingresso non inverten
 
 \section{Presa dati}
 Dopo aver eseguito la procedura di calibrazione della rettificazione mediante il potenziometri, si è posto il deviatore nella posizione 90\degree per effettuare le misure di tensione in funzione del numero di lastrine di Mylar interposte tra LED e fotodiodo.
-Le misure delle tensioni sono state prese tramite multimetro in DC. Durante la presa dati, si è verificato periodicamente (ogni 5 lastrine), che il segnale con 0 lastrine fosse sempre lo stesso. I dati sono riportati in tabella \ref{tab:abs2}. Come in precedenza abbiamo eseguito un fit lineare.
+Le misure delle tensioni sono state prese tramite multimetro in DC. Durante la presa dati, si è verificato periodicamente (ogni 5 lastrine), che il segnale con 0 lastrine fosse sempre lo stesso. I dati sono riportati in tabella \ref{tab:abs2}. Come in precedenza abbiamo eseguito un fit lineare. Il fit è stato eseguito con pacchetto "curve_fit"di python utilizzando l'opzione 'absolute_sigma = True'
 % Dal fit esponenziale (vedi grafico a sinistra della figura \ref{plot2}) abbiamo ottenuto i seguenti parametri: $n_0= 1.388\pm 0.001$, $V_0=6.355\pm0.006\,\mbox{V}$ ma un $\chi^2_{rid}$ molto alto, $x_{ass}=0.208\pm0.001{mm}$. 
 Dal fit (vedi grafico a destra della figura \ref{plot2}) abbiamo ottenuto $a=-0.155\pm0.001$, $b=0.322\pm0.004$ e $\chi^2_{rid}=2.6$, quindi $n_0= 6.45\pm 0.04$, $V_0=1.38\pm0.02\,\mbox{V}$, $x_{ass}=0.967\pm0.006{mm}$.
 
@@ -300,7 +300,7 @@ Nelle misure senza lock-in si aveva una incertezza non solo strumentale, ma dovu
 Le misure eseguite con lock-in risultano non affette da rumore in maniera significativa, pertanto l'incertezza associata è solo strumentale.
 I dati inoltre sono in maggiore accordo con l'andamento previsto rispetto ai dati presi senza lock-in: infatti senza di esso si ha $\chi_{rid} ^2 = 7.6$ ,  mentre con il lock-in si ha $\chi_{rid}^2 = 2.6$.%specificare quanto è 
 %TODO  %TODO  %TODO  %TODO  %TODO  %TODO  %TODO 
-%La misura torna con quella che trovi su intrnet??
+%La misura torna con quella che trovi su intrnet?? NON SONO RIUSCITO A TROVARLA
 
 
 \end{document}
