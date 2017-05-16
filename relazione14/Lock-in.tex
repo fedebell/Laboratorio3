@@ -58,9 +58,9 @@ Abbiamo preso come incertezza sui segnali la semidispersione fra i valori dei pu
 %TO DO:vi piace????????
 Non abbiamo riportato l'incertezza dovuta alla  calibrazione dell'oscilloscopio perché sistematica e non influente sul fit. I dati sono rappresentati in tabella \ref{tab:abs1}. 
 
-E' noto l'andamento teorico della tensione: $V_{out}=V_0 \exp(-n/n_0)$ derivante dall'ipotesi di assorbimento uniforme nel materiale. Abbiamo eseguito un fit del tipo $\ln(V_{out})=b-\frac{n}{a}$ (così da \emph{fittare} una retta in carta logaritmica). Il fit è stato eseguito con pacchetto "curve_fit"di python utilizzando l'opzione 'absolute_sigma = True'. \\ %magari scriviamo dettagli del fit
-%Dal fit esponenziale (vedi grafico a sinistra in figura\ref{plot1}) si ottengono $n_0=3.44\pm0.04$, $V_0=5.74\pm0.09\,\mbox{V}$ e un $\chi^2 _{rid}=600$\footnote{Probabilmente dovuto a una sottostima dell'errore.}; da questi dati, sapendo che lo spessore di ogni lastrina è pari a $150\mu \mbox{m}$ si ottiene la lunghezza caratteristica di assorbimento $x_{ass}=0.52\pm0.01\,\mbox{mm}$. 
-Dal fit lineare (in figura \ref{plot1}) si ottengono $a=-0.174\pm0.003$ e $b=1.24\pm0.02$ con un $\chi^2_{rid}=7.6$; quindi $V_0= 3.46\pm0.06\,\mbox{V}$, $n_0=5.7\pm0.1$ e $x_{ass}=0.86\pm0.01\,\mbox{mm}$.
+E' noto l'andamento teorico della tensione: $V_{out}=V_0 \exp(-n/n_0)$ derivante dall'ipotesi di assorbimento uniforme nel materiale. Abbiamo eseguito un fit del tipo $\ln(V_{out})=b-\frac{n}{a}$ (così da \emph{fittare} una retta in carta logaritmica). Il fit è stato eseguito con pacchetto "curve fit"di python utilizzando l'opzione 'absolute sigma = True'. \\ %magari scriviamo dettagli del fit
+%Dal fit esponenziale (vedi grafico a sinistra in figura\ref{plot1}) si ottengono $n_0=3.44\pm0.04$, $V_0=5.74\pm0.09\,\mbox{V}$ e un $\chi^2 _{rid}=600$\footnote{Probabilmente dovuto a una sottostima dell'errore.};  $x_{ass}=0.52\pm0.01\,\mbox{mm}$. 
+Dal fit lineare (in figura \ref{plot1}) si ottengono $a=-0.174\pm0.003$ e $b=1.24\pm0.02$ con un $\chi^2_{rid}=7.6$; quindi $V_0= 3.46\pm0.06\,\mbox{V}$, $n_0=5.7\pm0.1$. Da questi dati, sapendo che lo spessore di ogni lastrina è pari a $150\mu \mbox{m}$ si ottiene la lunghezza caratteristica di assorbimento $x_{ass}=0.86\pm0.01\,\mbox{mm}$ (per il calcolo della lunghezza di assorbimento non abbiamo tenuto in considerazione l'errore sullo spessore delle lastrine di Mylar in quanto ignoto).
 
 %dato il chi^2 metterei solo il lineare. Ok, d'accordo: se non mettiamo offset nel fit esponenziale è inutile mettere tutti e due
 
@@ -116,7 +116,7 @@ L'analisi dello sfasatore mostra che esso ha una funzione di trasferimento nel d
 \begin{equation}
  G(s) = -\frac{1-s(R_{16} +P_1) C_{4}}{1+s(R_{16} + P_1)C_{4}}
 \end{equation}
-Si osservi che il guadagno è unitario per tutte le frequenze, quindi il circuito si limita ad aggiungere una fase che può essere scelta calibrando il trimmer $P_1$. Inoltre esiste un solo valore della resistenza di trimmer per cui a $1$kHz si ha uno sfasamento positivo di $\frac{\pi}{2}$. Abbiamo quindi regolato il trimmer P1 in modo da ottenere in S2 la stessa forma d'onda dell'ingresso sfasata di 90\degree (figura \ref{osc:sfasamento}). In S3 l'uscita sarà un'onda quadra e abbiamo regolato il trimmer P3 in modo che il \emph{duty cycle} fosse pari al 50\% (ciò è stato verificato con l'opportuna funzione dell'oscilloscopio, vedi figura \ref{osc:duty}).\\
+Si osservi che il guadagno è unitario per tutte le frequenze, quindi il circuito si limita ad aggiungere una fase che può essere scelta calibrando il trimmer $P_1$. Inoltre esiste un solo valore della resistenza di trimmer per cui a $1$kHz si ha uno sfasamento positivo di $\frac{\pi}{2}$ radianti. Abbiamo quindi regolato il trimmer P1 in modo da ottenere in S2 la stessa forma d'onda dell'ingresso sfasata di 90\degree (figura \ref{osc:sfasamento}). In S3 l'uscita sarà un'onda quadra e abbiamo regolato il trimmer P3 in modo che il \emph{duty cycle} fosse pari al 50\% (ciò è stato verificato con l'opportuna funzione dell'oscilloscopio, vedi figura \ref{osc:duty}).\\
 Se si agisce sul deviatore si bypassa lo sfasatore quindi all'ingresso dello sfasatore variabile l'onda sarà la stessa dell' ingresso S1.\\
 L'analisi del circuito che regola il duty cycle (escludendo il transistor finale) si presenta simile, l'uscita S3 risulta in questo caso essere:
 \begin{equation}
@@ -134,14 +134,14 @@ Come si vede l'output presenta un offset costante positivo $-\frac{R_{12} V_{EE}
 \end{figure}
 
 
-Il circuito applica anche uno sfasamento rispetto al segnale originario regolabile con $P_2$. L'uscita viene mandata alla base di un transistor la cui polarizzazione è tale da potersi muovere sulla retta di carico solamente  tra la zona di saturazione e quella di interdizione. Il segnale in arrivo sulla base è molto vicino alla tensione di polarizzazione diretta della giunzione BE, dunque la variazione dell'ampiezza della componente oscillante che arriva in base è direttamente legata alla frazione di tempo per cui questo segnale è sufficientemente alto da polarizzare in diretta la giunzione BE mandando quindi il transistor in saturazione. Variare $P_3$ significa modificare dello stesso fattore sia la componente continua che quella oscillante della tensione sulla base, quindi agisce come un coefficiente di dilatazione che permette al segnale di attraversare la barriera di potenziale oltre a cui si ha saturazione per una frazione controllabile del periodo. La figura \ref{base} riporta la tensione sulla base del transistor (prima di $R_{17}$ in realtà) che mostra l'andamento oscillante (con offset) previsto. Si nota anche come superata la tensione di soglia per la polarizzazione di BE ci sia un taglio (non linerità) sulla tensione che rimane circa costante. 
+Il circuito applica anche uno sfasamento rispetto al segnale originario regolabile con $P_2$. L'uscita viene mandata alla base di un transistor la cui polarizzazione è tale da potersi muovere sulla retta di carico solamente  tra la zona di saturazione e quella di interdizione. Il segnale in arrivo sulla base è molto vicino alla tensione di polarizzazione diretta della giunzione BE, dunque la variazione dell'ampiezza della componente oscillante che arriva in base è direttamente legata alla frazione di tempo per cui questo segnale è sufficientemente alto da polarizzare in diretta la giunzione BE mandando quindi il transistor in saturazione. Variare $P_3$ significa modificare dello stesso fattore sia la componente continua che quella oscillante della tensione sulla base, quindi agisce come un coefficiente di dilatazione che permette al segnale di attraversare la barriera di potenziale oltre a cui si ha saturazione per una frazione controllabile del periodo. La figura \ref{base} riporta la tensione sulla base del transistor (prima di $R_{17}$ in realtà) che mostra l'andamento oscillante (con offset) previsto. Si nota anche come superata la tensione di soglia per la polarizzazione di BE ci sia un taglio (non linearità) sulla tensione che rimane circa costante. 
 
 %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO
 %TODO NON SONO SIRURO DI DOVE ABBIMAO PRESO QUESTA COSA SE PRIMA O DOPO LA RESISTENZA R 17!!! NON MI TORNA UN CAZZO CHE SIA PRIMA MA LE SCALE DELL?OSCILLOSCOPIO SEMPRANO SUGGERIRE QUESTO--- SE NON RIUSCIAMO A SPIEGARE TOGLIERE!!!!
 %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
 
 Il transistor alternativamente in saturazione e interdizione produce su S3 un'onda quadra (sfasata di $\pi$ rispetto al segnale in base, ma ciò è irrilevante ai fini della nostra analisi).\\
-Abbiamo misurato che si ha un'escursione di fase di $4/5 \pi$ agendo sul trimmer $P_2$. La misura dello sfasamento possibile è stata fatta misurando i tempi intercorrenti fra i punti di 0 dell'onda sinusoidale in S1 e i punti a metà ampiezza  dell'onda quadra in S3.\\
+Abbiamo misurato che si ha un'escursione di fase di circa $4/5 \pi$ radianti agendo sul trimmer $P_2$. La misura dello sfasamento possibile è stata fatta misurando i tempi intercorrenti fra i punti di 0 dell'onda sinusoidale in S1 e i punti a metà ampiezza  dell'onda quadra in S3.\\
  %vi piace questa specifica? si
 
 
@@ -179,13 +179,13 @@ Come si vede in figura \ref{fig:transistor} la retta di carico del transistor (i
 \begin{figure}[!htb]
 \centering
   \includegraphics[scale=0.75]{dutycycle50.png}
-\caption{Forma d'onda in S3 con duty cycle pari al 50\%. 
+\caption{Forma d'onda in S3 con duty cycle pari al 50\%. La scala dei voltaggi è moltiplicata per 10 (in realtà un quadretto corrisponde a 1V) 
 \label{osc:duty}}
 \end{figure}
 
 \begin{figure}[!htb]
   \includegraphics[scale=0.75]{deviatore0.png}\includegraphics[scale=0.75]{deviatore90.png}
-\caption{Forma d'onda in S3, a sinistra con deviatore a 0\degree, a destra con deviatore a 90\degree.\label{osc:dev}}
+\caption{Forma d'onda in S3 in alto (CH2) e di S1 in basso, a sinistra con deviatore a 0\degree, a destra con deviatore a 90\degree La scala dei voltaggi del CH2 è moltiplicata per 10.\label{osc:dev}}
 \end{figure}
 
 \subsection{Squadratore e campionatore}
@@ -251,7 +251,7 @@ Il segnale mediato è negativo perché S8 è collegato all'ingresso non inverten
 
 \section{Presa dati}
 Dopo aver eseguito la procedura di calibrazione della rettificazione mediante il potenziometri, si è posto il deviatore nella posizione 90\degree per effettuare le misure di tensione in funzione del numero di lastrine di Mylar interposte tra LED e fotodiodo.
-Le misure delle tensioni sono state prese tramite multimetro in DC. Durante la presa dati, si è verificato periodicamente (ogni 5 lastrine), che il segnale con 0 lastrine fosse sempre lo stesso. I dati sono riportati in tabella \ref{tab:abs2}. Come in precedenza abbiamo eseguito un fit lineare. Il fit è stato eseguito con pacchetto "curve_fit"di python utilizzando l'opzione 'absolute_sigma = True'
+Le misure delle tensioni sono state prese tramite multimetro in DC. Durante la presa dati, si è verificato periodicamente (ogni 5 lastrine), che il segnale con 0 lastrine fosse sempre lo stesso. I dati sono riportati in tabella \ref{tab:abs2}. Come in precedenza abbiamo eseguito un fit lineare. Il fit è stato eseguito con pacchetto "curve fit"di python utilizzando l'opzione 'absolute sigma = True'
 % Dal fit esponenziale (vedi grafico a sinistra della figura \ref{plot2}) abbiamo ottenuto i seguenti parametri: $n_0= 1.388\pm 0.001$, $V_0=6.355\pm0.006\,\mbox{V}$ ma un $\chi^2_{rid}$ molto alto, $x_{ass}=0.208\pm0.001{mm}$. 
 Dal fit (vedi grafico a destra della figura \ref{plot2}) abbiamo ottenuto $a=-0.155\pm0.001$, $b=0.322\pm0.004$ e $\chi^2_{rid}=2.6$, quindi $n_0= 6.45\pm 0.04$, $V_0=1.38\pm0.02\,\mbox{V}$, $x_{ass}=0.967\pm0.006{mm}$.
 
