@@ -53,12 +53,13 @@ Il primo stadio di amplificazione è stato realizzato con un \emph{Precision ins
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.5]{preamp.png}
-\caption{Preamplificatore realizzato con opAmp AD708 e INA114.\label{preamp}}
+\caption{Preamplificatore realizzato con OpAmp AD708 e INA114.\label{preamp}}
 \end{figure}
 
 %TODO Parlare di come è fatto dentro l'INA (sono 3 opAmp)?
 
 Per limitare il rumore tutte le terre di uno stesso "blocchetto" della breadboard sono state collegate ai "blocchetti" adiacenti. Sono state collegate anche le due linee di terra usate in modo trasversale alla linea stessa. In questo modo si sono evitati offset spuri nel circuito. %ditemi se vi piace la frase.
+
 Il circuito è stato analizzato fornendo in ingresso con il generatore di funzioni un onda sinusoidale di piccola ampiezza ($V_0 = 7.1 \pm 0.1$mV picco-picco) e misurando l'ampiezza picco picco del segnale in uscita. L'ampiezza del segnale in ingresso è stata scelta come la più alta possibile che non mandasse in saturazione l'opAmp a bassa frequenza, ossia nella zona dove è atteso il guadagno massimo. L'ingresso è prima dell'integrato INA114 e l'uscita dopo l'amplificatore invertente. %frase forse ridondante
 I dati raccolti sono in tabella \ref{tabellaBode1} e riportati nel diagramma di bode in figura \ref{bode}.
 Si è eseguito un fit (con la funzione \emph{curve fit} di \emph{pylab})con la funzione di trasferimento di un integratore: $A(\omega) = \frac{A_1}{\sqrt{1+\left( \frac{f}{f_t} \right) }}$. Da questo si vede che il preAmp si comporta effettivamente come un filtro passa basso con una frequenza di taglio $f_t = 14 \pm 1$kHz e un'ampiezza massima $A_{1} = 770 \pm 10$, che è maggiore di quella attesa poiché le resistenze reali hanno un valore leggermente diverso da quello di progettazione. La matrice di covarianza\footnote{In tutta la relazione non si sono mai riportate le unità di misura delle entrate della matrice di covarianza, poiché sono le ovvie combinazioni delle unità in cui sono stati riportati i dati numerici: in questo caso $mV$ e $\mbox{kHz}$.} è: $\Sigma_{ij} = \left( \begin{array}{cc}
@@ -101,7 +102,7 @@ $V_{out} (mV)$ & $\Delta V_{out} (mV)$ & $f (\mbox{kHz})$ & $\Delta f (\mbox{kHz
 %Altra frase da evitare
 %Abbiamo usato accoppiamento AC dell'oscilloscopio
 
-Per frequenze basse si vede in figura \ref{integratoreBasso} che il circuito agisce da amplificatore e esegue uno sfasamento del segnale di $\pi \, rad$. Infatti l'integrato che funziona da passa basso aggiunge una fase nulla ma dopo si ha  l'amplificatore invertente che sfasa il segnale. Alle alte frequenze (figura \ref{integratoreAlto}) l'integratore sfasa di $-\frac{\pi}{2}$, dunque lo sfasamento complessivo è $\frac{\pi}{2}$ e il segnale di uscita è anticipato.
+Per frequenze basse si vede in figura \ref{integratoreBasso} che il circuito agisce da amplificatore e esegue uno sfasamento del segnale di $\pi \, rad$. Infatti l'integrato che funziona da passa-basso aggiunge una fase nulla ed è l'amplificatore invertente che sfasa il segnale. Alle alte frequenze (figura \ref{integratoreAlto}) l'integratore sfasa di $-\frac{\pi}{2}$, dunque lo sfasamento complessivo è $\frac{\pi}{2}$ e il segnale di uscita è anticipato.
 
 \begin{figure}[!htb]
 \centering
@@ -115,7 +116,7 @@ Per frequenze basse si vede in figura \ref{integratoreBasso} che il circuito agi
 \caption{Onde sfasate di $\frac{\pi}{2}$ rad in ingresso e uscita al preamplificatore.\label{integratoreAlto}}
 \end{figure}
 
-Si vede che alle alte frequenze l'attenuazione per decade è maggiore di quella attesa di $20\frac{dB}{decade}$. Questo è compatibile con la presenza di ulteriori poli che diventano importanti ad alta frequenza all'interno dell'opAmp. La deviazione dalla legge attesa (che rappresenta un andamento non solamente un errore sperimentale) è la causa del $\chi^2$ fuori misura.
+Si vede che alle alte frequenze l'attenuazione per decade è maggiore di quella attesa di $20\frac{dB}{decade}$. Questo è compatibile con la presenza di ulteriori poli che diventano importanti ad alta frequenza all'interno dell'OpAmp. La deviazione dalla legge attesa (che rappresenta un andamento non solamente un errore sperimentale) è la causa del $\chi^2$ fuori misura.
 
 In realtà ai fini della misura del solo guadagno massimo è più efficace eseguire un fit alla sola retta dai dati a bassa frequenza, cioè dei primi sei punti con valori tutti uguali di $V_{out}$, ciò corrisponde a eseguire la semplice divisione con propagazione dell'errore che fornisce $A_1 = 754 \pm 12$.
 
@@ -125,22 +126,21 @@ Si sono realizzati il filtro passa-banda e il postamplificatore come mostrato ne
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.5]{banda.png}
-\caption{Filtro passa-banda realizzato con opAmp.\label{banda}}
+\caption{Filtro passa-banda realizzato con OpAmp.\label{banda}}
 \end{figure}
 
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.5]{postamp.png}
-\caption{Postamplificatore realizzato con opAmp.\label{postamp}}
+\caption{Postamplificatore realizzato con OpAmp.\label{postamp}}
 \end{figure}
 
 L'analisi teorica del circuito passa-banda indica che questo ha una amplificazione massima $A_{banda} = \frac{R_3}{2 R_1} = 8.7$ in corrispondenza della frequenza $f_t = \frac{1}{2 \pi C} \sqrt{\frac{\frac{1}{R_1} + \frac{1}{R_2}}{R_3}} = 6.7 \mbox{kHz}$. %errori si mettono?
-La larghezza i banda prevista è: $\Delta f = \frac{1}{\pi R_3 C} = 667$Hz, agli estremi della quale l'amplificazione è di $3 dB$ inferiore a quella di picco. Il postamplificatore ha invece un guadagno $A_{post} = 1 + \frac{R_2}{R_1} = 34$, come è ben noto. L'amplificazione a centro banda attesa è dunque $A_{2} = A_{banda} A_{post} = 269$.
+La larghezza di banda prevista è: $\Delta f = \frac{1}{\pi R_3 C} = 667$Hz, agli estremi della quale l'amplificazione è di $3 dB$ inferiore a quella di picco. Il postamplificatore ha invece un guadagno $A_{post} = 1 + \frac{R_2}{R_1} = 34$, come è ben noto. L'amplificazione a centro banda attesa è dunque $A_{2} = A_{banda} A_{post} = 269$.
 %TODO Piccolo sforzo per unificare le notazioni in fatto di ampiezze. Stimare errore su banda passante
 
-L'analisi in frequenza (e la costruzione del relativo diagramma di Bode) è stata eseguita con un segnale sinusoidale di ampiezza picco-picco $V_{in} = 28.6 \pm 0.5$ mV. Abbiamo scelto questa ampiezza come la massima possibile che non mandi in saturazione gli opAmp. L'ingresso è prima del passabanda e l'uscita è dopo il postamplificatore. I dati sono riportati in tabella \ref{tabellaBode2}.
-
+L'analisi in frequenza (e la costruzione del relativo diagramma di Bode) è stata eseguita con un segnale sinusoidale di ampiezza picco-picco $V_{in} = 28.6 \pm 0.5$ mV. Abbiamo scelto questa ampiezza come la massima possibile che non mandi in saturazione gli OpAmp. L'ingresso è prima del passa-banda e l'uscita è dopo il postamplificatore. I dati sono riportati in tabella \ref{tabellaBode2}.
 E' stato eseguito un fit (figura \ref{bandaFit}) a tre parametri della funzione $A(f) = \frac{A_2 \Delta f}{\sqrt{(f^2-f_0^2)^2+f \Delta f}}$, ottenuta dal modello teorico con il principio della massa virtuale. Esso ha riportato come risultati: $A_2 = 235.6 \pm 1.2$, $f_0 = 6.349 \pm 0.002$kHz, $\Delta f = 638 \pm 6$Hz. La matrice di covarianza risulta essere: $ \Sigma_{ij} = \left( \begin{array}{ccc}
 1.34 & -2.93 \cdot 10^{-4} & -5.68 \cdot 10^{-3}\\ 
 -2.93 \cdot 10^{-4} & 5.55 \cdot 10^{-4} & 1.36 \cdot 10^{-6}\\
@@ -183,18 +183,18 @@ $V_{out} (mV)$ & $\Delta V_{out} (mV)$ & $f (\mbox{kHz})$ & $\Delta f (\mbox{kHz
 0.097 & 0.001 & 27.6 & 0.3\\
 \hline
 \end{tabular}
-\caption{Tensioni in uscita dal passa banda e postamplificatore $V_{out}$ in funzione della frequenza $f$.}
+\caption{Tensioni in uscita dal passa-banda e postamplificatore $V_{out}$ in funzione della frequenza $f$.}
 \label{tabellaBode2}
 \end{table}
 
 %In queste misure del secondo bode non si è mai osservato alcun offset!!
 
-Né l'amplificazione massima né la larghezza di banda misurate sono compatibili con quanto atteso. Questo è probabilmente dovuto a poli dell'opAmp (non idealità) che non sono stati considerati.
+Né l'amplificazione massima né la larghezza di banda misurate sono compatibili con quanto atteso. Questo è probabilmente dovuto a poli dell'OpAmp (non idealità) che non sono stati considerati.
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=.7]{passabanda.png}
-\caption{Fit del diagramma di Bode del circuito passa banda.\label{bandaFit}}
+\caption{Fit del diagramma di Bode del circuito passa-banda.\label{bandaFit}}
 \end{figure}
 
 Ai fini di determinare solamente il guadagno massimo è stato eseguito un fit con un set di dati ridotto intorno al massimo della curva (figura \ref{bandaFitRidotta}). Esso da $A_2 = 234.9 \pm 1.2$, $f_0 = 6.349 \pm 0.002$kHz, $\Delta f = 638 \pm 6$Hz. La matrice di covarianza risulta essere: $ \Sigma_{ij} = \left( \begin{array}{ccc}
@@ -213,7 +213,7 @@ Ai fini di determinare solamente il guadagno massimo è stato eseguito un fit co
 In conclusione l'amplificazione totale del circuito a centro banda, ottenuta moltiplicando i guadagni di tutti gli amplificatori misurati è: $A_0 = A_1 A_2 = (1.78 \pm 0.03) \cdot 10^5$, qui riportata perché usata nei calcoli seguenti.
 
 \subsection{Convertitore RMS}
-L'ultima parte del circuito ha lo scopo di trasformare un segnale alternato in un segnale continuo restituendone il valore quadratico medio ed è stato realizzato con l'apposito integrato nel circuito riportato in figura \ref{rmsCircuito}:
+L'ultima parte del circuito ha lo scopo di trasformare un segnale alternato in un segnale continuo restituendone il valore quadratico medio ed è stato realizzato con l'apposito integrato nel circuito riportato in figura \ref{rmsCircuito}.
 
 \begin{figure}[!htb]
 \centering
@@ -221,7 +221,7 @@ L'ultima parte del circuito ha lo scopo di trasformare un segnale alternato in u
 \caption{Circuito RMS realizzato con appostito integrato.\label{rmsCircuito}}
 \end{figure}
 
-Inviando un segnale sinusoidale di ampiezza $V_{in} = 174 \pm 4$mV ci aspettiamo un segnale in uscita continuo $V_{out, att} = 123 \pm 3$mV, in ottimo accordo con quello misurato $V_{out, mis} = 124 \pm 4$mV. In  figura \ref{rms} si osservano il segnale in ingresso sinusoidale e il suo valore quadratico medio. Abbiamo verificato che entro il range di frequenze $500 \mbox{Hz} - 10 \mbox{kHz}$ il sistema funziona bene come RMS, fuori questo no. La banda passante del passabanda è ampiamente contenuta in questo range dunque questa limitazione non è un problema.
+Inviando un segnale sinusoidale di ampiezza $V_{in} = 174 \pm 4$mV ci aspettiamo un segnale in uscita continuo $V_{out, att} = 123 \pm 3$mV, in ottimo accordo con quello misurato $V_{out, mis} = 124 \pm 4$mV. In  figura \ref{rms} si osservano il segnale in ingresso sinusoidale e il suo valore quadratico medio. Abbiamo verificato che entro il range di frequenze $500 \mbox{Hz} - 10 \mbox{kHz}$ il sistema funziona bene come RMS, ma al di fuori di questo no. La banda passante del passa-banda è ampiamente contenuta in questo range dunque questa limitazione non è un problema.
 
 \begin{figure}[!htb]
 \centering
@@ -237,9 +237,9 @@ V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}+(\frac{R}{R_n})^2}
 \end{equation}
 dove:
 \begin{itemize}
-\item $V_0$ è il rumore in uscita a resistenza nulla (dato solo dal rumore in serie all'amplificatore)
+\item $V_0$ è il rumore in uscita a resistenza nulla (dato solo dal rumore in serie all'amplificatore).
 %non dovrebbe essere il rumore dell'amplificatore?
-\item $R_t = \frac{V_0^2}{4 k_b T A_0^2 \Delta f}$ è la resistenza equivalente del rumore in serie sull'ingresso dell'amplificatore (resistenza che genererebbe un rumore termico equivalente). Il parametro $A_0$ è l'amplificazione totale del circuito utilizzato (misurata), $\Delta f$ è la larghezza di banda del circuito (a cui si suppone contribuisca solo il passabanda), $T$ è la temperatura ambiente.\\
+\item $R_t = \frac{V_0^2}{4 k_b T A_0^2 \Delta f}$ è la resistenza equivalente del rumore in serie sull'ingresso dell'amplificatore (resistenza che genererebbe un rumore termico equivalente). Il parametro $A_0$ è l'amplificazione totale del circuito utilizzato (misurata), $\Delta f$ è la larghezza di banda del circuito (a cui si suppone contribuisca solo il passa-banda), $T$ è la temperatura ambiente.\\
 \item $R_n$ è il rapporto tra il rumore in parallelo e il rumore in serie dell'amplificatore. E' chiaro che il rumore in parallelo (a differenza del rumore in serie) è presente solamente se vi è una resistenza ai capi dell'ingresso dell'amplificatore.%Casi resitenza infinta e nulla non tonano proprio ma non scrivere (?) che cacchio ho scritto?
 \end{itemize}
 
@@ -279,7 +279,7 @@ $R (\mbox{k}\Omega)$ & $\Delta R (\mbox{k}\Omega)$ & $V_{rms} (mV)$ & $\Delta V_
 \caption{Plot di tutti i dati misurati $V_{rms}$ vs $R$.\label{boltzmannEsteso}}
 \end{figure}
 
-Si è eseguito inizialmente un fit a tre parametri della funzione $V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}+(\frac{R}{R_n})^2}$. Il parametro $R_n$ risultava tuttavia essere dell'ordine delle decine di $\mbox{M}\Omega$ dunque ininfluente. In effetti $R_n$ restituito dall'algoritmo di fit fluttuava anche di un ordine di grandezza al variare del valore iniziale dal quale si esegue la minimizzazione del $\chi^2$. Per questi motivi il fit è stato ripetuto a due parametri: $V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}}$.
+Si è eseguito inizialmente un fit a tre parametri della funzione $V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}+(\frac{R}{R_n})^2}$. Il parametro $R_n$ risultava tuttavia essere dell'ordine delle decine di $\mbox{M}\Omega$ dunque l'ultimo termine si può considerare ininfluente. In effetti $R_n$ restituito dall'algoritmo di fit fluttuava anche di un ordine di grandezza al variare del valore iniziale dal quale si esegue la minimizzazione del $\chi^2$. Per questi motivi il fit è stato ripetuto a due parametri: $V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}}$.
 \\
 %TODO non capisco qua perchè non hai messo i risultati del fit!
 Nel successivo fit sono stati escluse le righe marcate con l'asterisco nella tabella \ref{bodeEstesi} poiché affetti da fluttuazioni troppo grandi come si può vedere dagli errori\footnote{Alla procedura di fit sono stati forniti solo gli errori sulle tensioni e non quelli sulle resistenze in quanto trascurabili nella regione di dati usata.}.
