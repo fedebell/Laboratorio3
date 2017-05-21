@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.5.1)  7 MAY 2017 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.5.1)  21 MAY 2017 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -639,123 +639,147 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-
- []
-
 <powerfilter.png, id=1, 520.94624pt x 325.215pt>
 File: powerfilter.png Graphic file (type png)
  <use powerfilter.png>
-Package pdftex.def Info: powerfilter.png used on input line 33.
+Package pdftex.def Info: powerfilter.png used on input line 38.
 (pdftex.def)             Requested size: 260.47249pt x 162.6071pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--42
-
- []
 
 <preamp.png, id=3, 1007.765pt x 319.1925pt>
 File: preamp.png Graphic file (type png)
  <use preamp.png>
-Package pdftex.def Info: preamp.png used on input line 45.
+Package pdftex.def Info: preamp.png used on input line 52.
 (pdftex.def)             Requested size: 503.88127pt x 159.59586pt.
 
-Overfull \hbox (20.1844pt too wide) in paragraph at lines 45--46
+Overfull \hbox (20.1844pt too wide) in paragraph at lines 52--53
  [][] 
- []
-
-! Undefined control sequence.
-l.49 ... di Bode, come visualizzato in figura \fig
-                                                  {bode}. Esso si comporta c...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
-
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./powerfilter.png>]
-<banda.png, id=19, 606.265pt x 385.44pt>
-File: banda.png Graphic file (type png)
- <use banda.png>
-Package pdftex.def Info: banda.png used on input line 57.
-(pdftex.def)             Requested size: 303.13176pt x 192.71953pt.
+<bodeBasso.png, id=16, 703.9098pt x 351.2322pt>
+File: bodeBasso.png Graphic file (type png)
+ <use bodeBasso.png>
+Package pdftex.def Info: bodeBasso.png used on input line 91.
+(pdftex.def)             Requested size: 492.7335pt x 245.86086pt.
 
-<postamp.png, id=20, 800.9925pt x 321.2pt>
+Overfull \hbox (9.03664pt too wide) in paragraph at lines 91--92
+ [][] 
+ []
+
+<integratoreBassaFrequenza.jpg, id=17, 301.125pt x 225.84375pt>
+File: integratoreBassaFrequenza.jpg Graphic file (type jpg)
+
+<use integratoreBassaFrequenza.jpg>
+Package pdftex.def Info: integratoreBassaFrequenza.jpg used on input line 105.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+
+<integratoreAltaFreq.jpg, id=18, 301.125pt x 225.84375pt>
+File: integratoreAltaFreq.jpg Graphic file (type jpg)
+
+<use integratoreAltaFreq.jpg>
+Package pdftex.def Info: integratoreAltaFreq.jpg used on input line 111.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ <banda.png, id=19, 606.265pt x 385.44pt>
+File: banda.png Graphic file (type png)
+
+<use banda.png>
+Package pdftex.def Info: banda.png used on input line 123.
+(pdftex.def)             Requested size: 303.13176pt x 192.71953pt.
+ [2 <./preamp.png>] <postamp.png, id=33, 800.9925pt x 321.2pt>
 File: postamp.png Graphic file (type png)
- <use postamp.png>
-Package pdftex.def Info: postamp.png used on input line 64.
+
+<use postamp.png>
+Package pdftex.def Info: postamp.png used on input line 130.
 (pdftex.def)             Requested size: 400.49527pt x 160.59961pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-
+Overfull \hbox (42.90665pt too wide) in paragraph at lines 139--145
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 002$kHz, $^^A\OML/cmm/m/it/1
+0 f \OT1/cmr/m/n/10 = 638 \OMS/cmsy/m/n/10 ^^F \OT1/cmr/m/n/10 6$Hz. La ma-tric
+e di co-var-i-anza risulta es-sere: $^^F[] = []$.
  []
 
-[2 <./preamp.png> <./banda.png> <./postamp.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+[3 <./bodeBasso.png> <./integratoreBassaFrequenza.jpg>] [4 <./integratoreAltaFr
+eq.jpg> <./banda.png> <./postamp.png>]
+<passabanda.png, id=42, 693.0693pt x 363.5181pt>
+File: passabanda.png Graphic file (type png)
+ <use passabanda.png>
+Package pdftex.def Info: passabanda.png used on input line 191.
+(pdftex.def)             Requested size: 485.1452pt x 254.46094pt.
 
+Overfull \hbox (1.44833pt too wide) in paragraph at lines 191--192
+ [][] 
  []
 
+<passabandaZoom.png, id=43, 693.0693pt x 363.5181pt>
+File: passabandaZoom.png Graphic file (type png)
+ <use passabandaZoom.png>
+Package pdftex.def Info: passabandaZoom.png used on input line 197.
+(pdftex.def)             Requested size: 485.1452pt x 254.46094pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
-
+Overfull \hbox (1.44833pt too wide) in paragraph at lines 197--198
+ [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-
- []
-
-<rms.png, id=25, 585.18625pt x 353.32pt>
+[5 <./passabanda.png>] <rms.png, id=48, 585.18625pt x 353.32pt>
 File: rms.png Graphic file (type png)
  <use rms.png>
-Package pdftex.def Info: rms.png used on input line 82.
+Package pdftex.def Info: rms.png used on input line 208.
 (pdftex.def)             Requested size: 292.5924pt x 176.65956pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+<vrms.jpg, id=49, 301.125pt x 225.84375pt>
+File: vrms.jpg Graphic file (type jpg)
+ <use vrms.jpg>
+Package pdftex.def Info: vrms.jpg used on input line 216.
+(pdftex.def)             Requested size: 301.12425pt x 225.84319pt.
+ [6 <./passabandaZoom.png> <./rms.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
+<boltzmannEsteso.png, id=54, 616.4631pt x 346.896pt>
+File: boltzmannEsteso.png Graphic file (type png)
+ <use boltzmannEsteso.png>
+Package pdftex.def Info: boltzmannEsteso.png used on input line 260.
+(pdftex.def)             Requested size: 431.52122pt x 242.82553pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+[7 <./vrms.jpg>] <boltzmann.png, id=59, 638.8668pt x 349.0641pt>
+File: boltzmann.png Graphic file (type png)
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
-
- []
-
-[3 <./rms.png>] [4] (./relazione15.aux) ) 
+<use boltzmann.png>
+Package pdftex.def Info: boltzmann.png used on input line 277.
+(pdftex.def)             Requested size: 447.2037pt x 244.3432pt.
+ [8 <./boltzmannEsteso.png> <./boltzmann.png>]
+(./relazione15.aux) ) 
 Here is how much of TeX's memory you used:
- 3366 strings out of 494902
- 43492 string characters out of 6179892
- 109118 words of memory out of 5000000
- 6594 multiletter control sequences out of 15000+600000
+ 3421 strings out of 494902
+ 44504 string characters out of 6179892
+ 113210 words of memory out of 5000000
+ 6640 multiletter control sequences out of 15000+600000
  11541 words of font info for 45 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 39i,6n,25p,619b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on relazione15.pdf (4 pages, 230426 bytes).
+ 39i,9n,25p,898b,221s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cme
+x7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on relazione15.pdf (8 pages, 468937 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

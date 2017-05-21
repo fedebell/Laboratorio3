@@ -3,9 +3,8 @@ Lettura di dati dal file "INPUT", scrittura in "OUTPUT"
 Legge i dati e li inserisce in una tabella Latex formattata
 '''
 
-INPUT = 'C:\\Users\\marco\\Desktop\\Laboratorio3\\relazione10\\VinIin.txt'
-OUTPUT = 'C:\\Users\\marco\\Desktop\\Laboratorio3\\relazione10\\VinIintabella.txt'
-
+INPUT = '/home/federico/Laboratorio3/relazione15/boltmannEstesi.txt'
+OUTPUT = '/home/federico/Laboratorio3/relazione15/boltzmannEstesiFormattati.txt'
 
 import pylab
 import numpy
