@@ -111,6 +111,12 @@ n	&	$V_{out}\,\mbox{[V]}$	&	$\Delta V\,\mbox{[V]}$\\
 \newpage
 
 \subsection{Sfasatore di 90\degree e sfasatore variabile}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.75]{sfasatori.png}
+\caption{Schema circuitale dello sfasatore di 90\degree e dello sfasatore variabile.\label{fig:sfasatori}}
+\end{figure}
 I circuiti relativi sono quelli in figura \ref{fig:sfasatori}. L'ingresso S1 è ancora collegato all'uscita del generatore di funzioni.
 L'analisi dello sfasatore mostra che esso ha una funzione di trasferimento nel dominio di Laplace pari a
 \begin{equation}
@@ -118,7 +124,7 @@ L'analisi dello sfasatore mostra che esso ha una funzione di trasferimento nel d
 \end{equation}
 Si osservi che il guadagno è unitario per tutte le frequenze, quindi il circuito si limita ad aggiungere una fase che può essere scelta calibrando il trimmer $P_1$. Inoltre esiste un solo valore della resistenza di trimmer per cui a $1$kHz si ha uno sfasamento positivo di $\frac{\pi}{2}$ radianti. Abbiamo quindi regolato il trimmer P1 in modo da ottenere in S2 la stessa forma d'onda dell'ingresso sfasata di 90\degree (figura \ref{osc:sfasamento}). In S3 l'uscita sarà un'onda quadra e abbiamo regolato il trimmer P3 in modo che il \emph{duty cycle} fosse pari al 50\% (ciò è stato verificato con l'opportuna funzione dell'oscilloscopio, vedi figura \ref{osc:duty}).\\
 Se si agisce sul deviatore si bypassa lo sfasatore quindi all'ingresso dello sfasatore variabile l'onda sarà la stessa dell' ingresso S1.\\
-L'analisi del circuito che regola il duty cycle (escludendo il transistor finale) si presenta simile, l'uscita S3 risulta in questo caso essere:
+L'analisi del circuito che regola il duty cycle (escludendo il transistor finale) si presenta simile, l'uscita del secondo OpAmp risulta in questo caso essere:
 \begin{equation}
 v_{out}(s) = \left( \frac{s C_3 (R_{13} + P_2)}{1 + s C_3 (R_{13} + P_2)} \frac{R_{12}}{R_8+P_3} -\frac{1-s(R_{13} +P_2) C_{3}}{1+s(R_{13} + P_2)C_{3}} \right) v_{in}(s)-\frac{R_{12} V_{EE}}{R_8+P_3} \delta (s)
 \, \, \, \, \, \, ; V_{EE} = -5V.
@@ -130,17 +136,18 @@ Come si vede l'output presenta un offset costante positivo $-\frac{R_{12} V_{EE}
 \begin{figure}[!htb]
   \centering
 \includegraphics[scale=0.7]{baseq2.png}
-\caption{Misura della tenione di base sul transistor. La scala dei voltaggi è moltiplicata per 10 (in realtà un quadretto corrisponde a 0.1V) \label{base}}
+\caption{Misura della tenione di base sul transistor. La scala dei voltaggi è moltiplicata per 10 (modalità sonda x10; in realtà un quadretto corrisponde a 0.1V ) \label{base}}
 \end{figure}
 
 
-Il circuito applica anche uno sfasamento rispetto al segnale originario regolabile con $P_2$. L'uscita viene mandata alla base di un transistor la cui polarizzazione è tale da potersi muovere sulla retta di carico solamente  tra la zona di saturazione e quella di interdizione. Il segnale in arrivo sulla base è molto vicino alla tensione di polarizzazione diretta della giunzione BE, dunque la variazione dell'ampiezza della componente oscillante che arriva in base è direttamente legata alla frazione di tempo per cui questo segnale è sufficientemente alto da polarizzare in diretta la giunzione BE mandando quindi il transistor in saturazione. Variare $P_3$ significa modificare dello stesso fattore sia la componente continua che quella oscillante della tensione sulla base, quindi agisce come un coefficiente di dilatazione che permette al segnale di attraversare la barriera di potenziale oltre a cui si ha saturazione per una frazione controllabile del periodo. La figura \ref{base} riporta la tensione sulla base del transistor che mostra l'andamento oscillante (con offset) previsto. Si nota anche come superata la tensione di soglia per la polarizzazione di BE ci sia un taglio (non linearità) sulla tensione, che rimane circa costante. Il valore dell'offset a cui è sommato il segnale oscillante si può stimare essere circa $V \approx 0.6$V come previsto.
+L'uscita viene mandata alla base di un transistor la cui polarizzazione è tale da potersi muovere sulla retta di carico solamente  tra la zona di saturazione e quella di interdizione. Il segnale in arrivo sulla base è molto vicino alla tensione di polarizzazione diretta della giunzione BE, dunque la variazione dell'ampiezza della componente oscillante che arriva in base è direttamente legata alla frazione di tempo per cui questo segnale è sufficientemente alto da polarizzare in diretta la giunzione BE mandando quindi il transistor in saturazione. Variare $P_3$ significa modificare dello stesso fattore sia la componente continua che quella oscillante della tensione sulla base, quindi agisce come un coefficiente di dilatazione che permette al segnale di attraversare la barriera di potenziale oltre a cui si ha saturazione per una frazione controllabile del periodo. La figura \ref{base} riporta la tensione sulla base del transistor che mostra l'andamento oscillante (con offset) previsto. Si nota anche come superata la tensione di soglia per la polarizzazione di BE ci sia un taglio (non linearità) sulla tensione, che rimane circa costante. Il valore dell'offset a cui è sommato il segnale oscillante si può stimare essere circa $V \approx 0.6$V come previsto.
 
 %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO
 %TODO NON SONO SIRURO DI DOVE ABBIMAO PRESO QUESTA COSA SE PRIMA O DOPO LA RESISTENZA R 17!!! NON MI TORNA UN CAZZO CHE SIA PRIMA MA LE SCALE DELL?OSCILLOSCOPIO SEMPRANO SUGGERIRE QUESTO--- SE NON RIUSCIAMO A SPIEGARE TOGLIERE!!!!
 %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO %TODO 
 
 Il transistor alternativamente in saturazione e interdizione produce su S3 un'onda quadra (sfasata di $\pi$ rispetto al segnale in base, ma ciò è irrilevante ai fini della nostra analisi).\\
+Il circuito applica anche uno sfasamento rispetto al segnale originario regolabile con $P_2$. 
 Abbiamo misurato che si ha un'escursione di fase di circa $4/5 \pi$ radianti agendo sul trimmer $P_2$. La misura dello sfasamento possibile è stata fatta misurando i tempi intercorrenti fra i punti di 0 dell'onda sinusoidale in S1 e i punti a metà ampiezza  dell'onda quadra in S3.\\
  %vi piace questa specifica? si
 
@@ -164,11 +171,7 @@ Come si vede in figura \ref{fig:transistor} la retta di carico del transistor (i
  
 %ci sono tante immagini di fila, cerco un modo per metterle belline
 
-\begin{figure}[!htb]
-  \centering
-  \includegraphics[scale=0.75]{sfasatori.png}
-\caption{Schema circuitale dello sfasatore di 90\degree e dello sfasatore variabile.\label{fig:sfasatori}}
-\end{figure}
+
 
 \begin{figure}[!htb]
   \centering

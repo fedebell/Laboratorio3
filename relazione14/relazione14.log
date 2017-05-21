@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  13 MAY 2017 21:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.19)  16 MAY 2017 14:44
 entering extended mode
 **./relazione14.tex
 (relazione14.tex
@@ -491,7 +491,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks22
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-(relazione14.aux)
+(relazione14.aux
+
+LaTeX Warning: Label `fig:schemablocchi' multiply defined.
+
+)
 \openout1 = `relazione14.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -638,86 +642,72 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 <schemablocchi.png, id=1, 498.36188pt x 228.855pt>
 File: schemablocchi.png Graphic file (type png)
  <use schemablocchi.png>
-Package pdftex.def Info: schemablocchi.png used on input line 41.
+Package pdftex.def Info: schemablocchi.png used on input line 43.
 (pdftex.def)             Requested size: 373.7705pt x 171.64082pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--55
-
- []
 
 [1
 
 {C:/Users/marco/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
-LaTeX Warning: Reference `fig:S6' on page 2 undefined on input line 58.
+LaTeX Warning: Reference `fig:S6' on page 2 undefined on input line 61.
 
 
 LaTeX Warning: Reference `tab:ampli-preampli' on page 2 undefined on input line
- 58.
+ 61.
 
 <ampli-preampli.png, id=18, 460.72125pt x 197.98969pt>
 File: ampli-preampli.png Graphic file (type png)
 
 <use ampli-preampli.png>
-Package pdftex.def Info: ampli-preampli.png used on input line 62.
+Package pdftex.def Info: ampli-preampli.png used on input line 65.
 (pdftex.def)             Requested size: 345.54008pt x 148.4919pt.
 
 
-LaTeX Warning: Reference `osc:sfasatore90' on page 2 undefined on input line 73
+LaTeX Warning: Reference `osc:sfasatore90' on page 2 undefined on input line 76
 .
 
 [2 <./schemablocchi.png> <./ampli-preampli.png>]
 File: schemablocchi.png Graphic file (type png)
  <use schemablocchi.png>
-Package pdftex.def Info: schemablocchi.png used on input line 85.
+Package pdftex.def Info: schemablocchi.png used on input line 88.
 (pdftex.def)             Requested size: 373.7705pt x 171.64082pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
 
  []
 
-<transistor.jpg, id=26, 516.93124pt x 398.48875pt>
+<transistor.jpg, id=27, 516.93124pt x 398.48875pt>
 File: transistor.jpg Graphic file (type jpg)
  <use transistor.jpg>
-Package pdftex.def Info: transistor.jpg used on input line 95.
+Package pdftex.def Info: transistor.jpg used on input line 98.
 (pdftex.def)             Requested size: 387.69748pt x 298.86583pt.
 
-
-LaTeX Warning: Reference `fig:transistor' on page 3 undefined on input line 99.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-<sfasatori.png, id=27, 521.69907pt x 245.41687pt>
+<sfasatori.png, id=28, 521.69907pt x 245.41687pt>
 File: sfasatori.png Graphic file (type png)
  <use sfasatori.png>
-Package pdftex.def Info: sfasatori.png used on input line 109.
+Package pdftex.def Info: sfasatori.png used on input line 112.
 (pdftex.def)             Requested size: 391.27333pt x 184.0622pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-<sqadratore-campionatore.png, id=28, 487.8225pt x 262.73157pt>
+<sqadratore-campionatore.png, id=29, 487.8225pt x 262.73157pt>
 File: sqadratore-campionatore.png Graphic file (type png)
 
 <use sqadratore-campionatore.png>
-Package pdftex.def Info: sqadratore-campionatore.png used on input line 123.
+Package pdftex.def Info: sqadratore-campionatore.png used on input line 126.
 (pdftex.def)             Requested size: 365.86597pt x 197.04817pt.
  [3]
 <amplificatorediff-mediatore.png, id=35, 467.49657pt x 164.86594pt>
 File: amplificatorediff-mediatore.png Graphic file (type png)
 
 <use amplificatorediff-mediatore.png>
-Package pdftex.def Info: amplificatorediff-mediatore.png used on input line 140
+Package pdftex.def Info: amplificatorediff-mediatore.png used on input line 143
 .
 (pdftex.def)             Requested size: 350.62157pt x 123.64912pt.
  [4 <./transistor.jpg> <./sfasatori.png>]
@@ -727,13 +717,13 @@ Package pdftex.def Info: amplificatorediff-mediatore.png used on input line 140
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  4060 strings out of 493334
  52104 string characters out of 3139252
- 134079 words of memory out of 3000000
+ 133211 words of memory out of 3000000
  7502 multiletter control sequences out of 15000+200000
  11542 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -753,7 +743,7 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb>
-Output written on relazione14.pdf (5 pages, 410041 bytes).
+Output written on relazione14.pdf (5 pages, 414049 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

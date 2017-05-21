@@ -4,9 +4,9 @@ from scipy.optimize import curve_fit
 import matplotlib
 import math
 
-n, V, dV = pylab.loadtxt('C:\\Users\\marco\\Desktop\\Laboratorio3\\relazione14\\dati1(lisa).txt', unpack=True)
+n, V, dV = pylab.loadtxt('C:\\Users\\marco\\Desktop\\Laboratorio3\\relazione14\\dati2marco.txt', unpack=True)
 
-V= 1*V
+V= -1*V
 y=pylab.log(V)
 dy=dV/V
 
