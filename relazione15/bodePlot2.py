@@ -1,7 +1,7 @@
 import numpy
 import pylab
 from scipy.optimize import curve_fit
-vout, dvout, f1, f, df1, df = pylab.loadtxt('/home/federico/Laboratorio3/relazione15/datiBode2.txt', unpack = True)
+vout, dvout, f1, f, df1, df = pylab.loadtxt('/home/federico/Laboratorio3/relazione15/datiBode2Ridotti.txt', unpack = True)
 vin=0.0286
 dvin=0.0001
 
@@ -17,7 +17,7 @@ dA = (dvin/vin + dvout/vout)*A
 
 #fit un par
 initial_values = (150, 6.34, 1.56)
-pars, covm = curve_fit(fit_function, f, A, initial_values)
+pars, covm = curve_fit(fit_function, f, A, initial_values, dA)
 A0, omega0, tau = pars
 dA0 = pylab.sqrt(covm.diagonal())[0]
 domega0 = pylab.sqrt(covm.diagonal())[1]
@@ -57,7 +57,7 @@ pylab.xscale('log')
 pylab.errorbar(f, A, dA, df, linestyle='', marker = '.')
 pylab.xlabel('Frequency [kHz]')
 pylab.ylabel('Gain [dB]')
-pylab.title("Bode Plot filtro passa banda")
+pylab.title("Bode Plot filtro passa banda - Dati ridotti")
 #pylab.xlim(80,1500000)
 pylab.grid()
 pylab.show()

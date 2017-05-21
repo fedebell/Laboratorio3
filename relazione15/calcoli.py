@@ -10,15 +10,16 @@ import scipy.stats
 import uncertainties 
 from uncertainties import unumpy
 
-A1 = ufloat(770.35408428197263, 12.93)
-A2 = ufloat(235.2198112656061, 1.158273259)
-
-
+#TODO ATTENZIONE CORREGGERE 
+A1 = ufloat(754.929577, 12.0331)
+A2 = ufloat(234.61388927953405, 1.2427815)
 df = ufloat(0.63809213546403709, 0.006032255878)*1000
-V0 = ufloat(79.964038454691433, 3.5171616346795327)
-Rt = ufloat(23.103687379322871,  3.79566958464680182)
-T = ufloat(28.0+217.15, 1)
+cov_matrix = [[ 12.37042596,  12.33819617],
+       [ 12.33819617,  14.4071076 ]]
+(V0, Rt) = uncertainties.correlated_values([79.964038454691433, 23.103687379322871], cov_matrix)
+T = ufloat(25.0+273.15, 2)
 A = A1*A2
-
+print(A)
+print(T)
 k = (V0/1000)**2/(4*(Rt*1000)*(T)*(df)*(A**2))
 print(k)

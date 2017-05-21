@@ -12,7 +12,7 @@ A = vout/vin
 dA = (dvin/vin + dvout/vout)*A
 
 #fit un par
-initial_values = ( 1.0, 1.0)
+initial_values = ( 16.0, 770.0)
 def fit_function(f, ft, a):
     return a/(1 + (f/ft)**2)**0.5
 #TODO Viene tutto meglio se non metto gli errori
