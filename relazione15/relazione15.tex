@@ -118,7 +118,7 @@ Per frequenze basse si vede in figura \ref{integratoreBasso} che il circuito agi
 
 Si vede che alle alte frequenze l'attenuazione per decade è maggiore di quella attesa di $20\frac{dB}{decade}$. Questo è compatibile con la presenza di ulteriori poli che diventano importanti ad alta frequenza all'interno dell'OpAmp. La deviazione dalla legge attesa (che rappresenta un andamento non solamente un errore sperimentale) è la causa del $\chi^2$ fuori misura.
 
-In realtà ai fini della misura del solo guadagno massimo è più efficace eseguire un fit alla sola retta dai dati a bassa frequenza, cioè dei primi sei punti con valori tutti uguali di $V_{out}$, ciò corrisponde a eseguire la semplice divisione con propagazione dell'errore che fornisce $A_1 = 754 \pm 12$.
+In realtà ai fini della misura del solo guadagno massimo è più efficace eseguire un fit alla sola retta sui dati a bassa frequenza, cioè dei primi sei punti con valori tutti uguali di $V_{out}$, ciò corrisponde a eseguire la semplice divisione $\frac{V_{out}}{V_{in}}$ con propagazione dell'errore, che fornisce $A_1 = 754 \pm 12$.
 
 \subsection{Filtro passa-banda e postamplificatore}
 Si sono realizzati il filtro passa-banda e il postamplificatore come mostrato nelle figure \ref{banda} e \ref{postamp} rispettivamente.
@@ -151,6 +151,9 @@ Nuovamente il $\chi^2$ elevato è dovuto al fatto che ad alte frequenze l'andame
 %TODO Notare che non riporto mai le unità di misura per la matrice di covarianza per non appesantire la notazione. Sono quelle ovvie
 
 %TODO Non sono in ordine ma non importa a nessuno. Le ordino io in freq.
+%TODO %TODO %TODO %TODO  %TODO  %TODO  %TODO 
+%TODO Nel fit si potrebbe considerare l'erore sulle resistenze!!
+%TODO %TODO %TODO %TODO  %TODO  %TODO  %TODO 
 \begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -233,7 +236,7 @@ Inviando un segnale sinusoidale di ampiezza $V_{in} = 174 \pm 4$mV ci aspettiamo
 
 Il rumore ($V_{rms})$ totale è determinato dalla somma in quadratura dei rumori associati alla resistenza e quelli dovuti all'amplificatore, parametrizzati come rumori in serie e in parallelo all'amplificatore. Dalla teoria ci aspettiamo dunque 
 \begin{equation}
-V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}+(\frac{R}{R_n})^2}
+V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}+ \left \frac{R}{R_n} \right ^2}
 \end{equation}
 dove:
 \begin{itemize}
@@ -289,7 +292,7 @@ I parametri riportati dal fit sono $V_0 = 80 \pm 3$mV e $R_t = 23 \pm 3 \mbox{k}
 12.1 & 11.8\\ 
 11.8 & 13.9\\
 \end{array} \right)$. Con un $\chi^2/ndof = 2.76/5$ (basso per probabile sovrastima delle incertezze).\\
-Invertendo la formula per $R_t$ otteniamo: $k_B = \frac{V_0^2}{4 R_t T A_0^2 \Delta f}=(1.43 \pm 0.14) \cdot 10^{-23} \frac{J}{K}$. La temperatura è stata stimata (arbitrariamente) come $T = 298 \pm 2$K. Gli errori più significativi che si propagano (in quadratura) in questa formula sono quelli sui parametri del fit della curva di rumore.
+Invertendo la formula per $R_t$ otteniamo: $k_B = \frac{V_0^2}{4 R_t T A_0^2 \Delta f}=(1.16 \pm 0.11) \cdot 10^{-23} \frac{J}{K}$. La temperatura è stata stimata (arbitrariamente) come $T = 298 \pm 2$K. Gli errori più significativi che si propagano (in quadratura, considerando la covarianza) in questa formula sono quelli sui parametri del fit della curva di rumore.
 %TODO dire che abbiamo preso come tempertura 28 gradi (mi pare) e mettiamoci un più o meno 3  gradi di incertezza direi... diciamo stima arbitraria?
 %A rigore la propagazione in qudratura è sbagliata per la temp. ma per gli altri è giusta.
 
@@ -314,7 +317,7 @@ I parametri estratti (e non utilizzati) sono $V_0 = 81 \pm 3$mV e $R_t = 24 \pm 
 
 %TODO Forse in effetti sarebbe meglio usare questi dati che sembrano avere meno errore, in barba a quello che avevo detto prima.
 
-Il valore atteso della costante di Boltzmann è $k_{B} = 1.38 \cdot 10^{-23} \frac{J}{K}$. Il valore da noi misurato è ragionevolmente in accordo con esso.
+Il valore atteso della costante di Boltzmann è $k_{B} = 1.38 \cdot 10^{-23} \frac{J}{K}$, che non è compatibile entro l'errore con il valore trovato. Ci aspettiamo in effetti una sottostima della costante a causa del fatto che il guadagno sulla banda passante è comunque senza minore o ugual de, guadagno massimo. Pertanto $A_0$ è in effetti una sovrastima del guadagno totale e pertanto porta a una sottostima di $k_B$.
 
 \end{document}
 

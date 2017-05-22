@@ -16,7 +16,7 @@ initial_values = ( 16.0, 770.0)
 def fit_function(f, ft, a):
     return a/(1 + (f/ft)**2)**0.5
 #TODO Viene tutto meglio se non metto gli errori
-pars,covm = curve_fit(fit_function, f, A, initial_values)
+pars,covm = curve_fit(fit_function, f, A, initial_values, dA)
 ft, a = pars
 dft = pylab.sqrt(covm.diagonal())[0]
 da = pylab.sqrt(covm.diagonal())[1]

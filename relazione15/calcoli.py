@@ -10,7 +10,6 @@ import scipy.stats
 import uncertainties 
 from uncertainties import unumpy
 
-#TODO ATTENZIONE CORREGGERE 
 A1 = ufloat(754.929577, 12.0331)
 A2 = ufloat(234.61388927953405, 1.2427815)
 df = ufloat(0.63809213546403709, 0.006032255878)*1000
