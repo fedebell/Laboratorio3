@@ -11,7 +11,7 @@
 
 \author{Gruppo BN \\Lisa Bedini,  Federico Belliardo, Marco Costa}
 \title{Esperienza 15: Misura della costante di Boltzmann}
-%TODO diminuire dimensione foto oscilloscopio e aumentare quella dei grafici
+
 \begin{document}
 \maketitle
 \section{Scopo dell'esperienza}
@@ -26,7 +26,7 @@ Misurare la costante di Boltzmann dal rumore termico (Johnson-Nyquist) di una re
 
 %TO DO: l'errore sul voltaggio in uscita è stato preso come sedmidispersione dell'oscillazione
 Tutte le resistenze, i condensatori, le tensioni di alimentazione sono stati misurati con il multimetro digitale (in DC), quindi l'errore è stato propagato secondo le specifiche nel manuale ($0.8\% + 3\,\mbox{digit}$ per le resistenze,$4\% + 3\, \mbox{digit}$  per i condensatori, $0.5\% + 1\,\mbox{digit}$ per i voltaggi).
-Date le fluttuazioni dei valori della tensione in uscita,  per queste l'errore è stato stimato come semidispersione rispetto al valore centrale. I tempi e le restanti tensioni sono state misurate con i cursori dell'oscilloscopio: l'errore sui tempi è dato dalla risoluzione dei cursori stessi mentre quello sulle tensioni è stato propagato considerando solamente l'errore sul posizionamento dei cursori. E' stato trascurato l'errore sistematico del $3\%$ dell'oscilloscopio nella misure di tensione poiché queste compaiono solo in rapporti e la componente sistematica tende a compensarsi.
+Anche la tensione in uscita al circuito è stata misurata tramite multimetro, ma date le fluttuazioni di tali valori l'errore è stato stimato come semidispersione rispetto al valore centrale. I tempi e le restanti tensioni sono state misurate con i cursori dell'oscilloscopio: l'errore sui tempi è dato dalla risoluzione dei cursori stessi mentre quello sulle tensioni è stato propagato considerando solamente l'errore sul posizionamento dei cursori. E' stato trascurato l'errore sistematico del $3\%$ dell'oscilloscopio nella misure di tensione poiché queste compaiono solo in rapporti e la componente sistematica tende a compensarsi.
 
 %TODO Dire come si sono propagati gli errori in tutta l'esperienza: Nei bode l'errore non è stato proprio considerato questa cosa è tecnicamente sbagliata ma venivano orribili se li consideravo, non scrivere. In rutti gli altri l'errore è stato propagato statistico.
 %TODO Forse dovrei aggiungere qualcosa su come si sono propagati gli errori, di fatto l'unica formula in cui propago arrori è l'ultima per kb e ho detto che si sono propagati in quadratura. Ripeto nei bode non considero l'errore. NEl fit di Boltzmann considero l'errore solo sulle tensioni.
@@ -106,19 +106,19 @@ Per frequenze basse si vede in figura \ref{integratoreBasso} che il circuito agi
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=1.0]{integratoreBassaFrequenza.jpg}
+\includegraphics[scale=0.7]{integratoreBassaFrequenza.jpg}
 \caption{Onde sfasate di $\pi$ rad in ingresso e uscita al preamplificatore.\label{integratoreBasso}}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=1.0]{integratoreAltaFreq.jpg}
+\includegraphics[scale=0.7]{integratoreAltaFreq.jpg}
 \caption{Onde sfasate di $\frac{\pi}{2}$ rad in ingresso e uscita al preamplificatore.\label{integratoreAlto}}
 \end{figure}
 
 Si vede che alle alte frequenze l'attenuazione per decade è maggiore di quella attesa di $20\frac{dB}{decade}$. Questo è compatibile con la presenza di ulteriori poli che diventano importanti ad alta frequenza all'interno dell'OpAmp. La deviazione dalla legge attesa (che rappresenta un andamento non solamente un errore sperimentale) è la causa del $\chi^2$ fuori misura.
 
-In realtà ai fini della misura del solo guadagno massimo è più efficace eseguire un fit alla sola retta sui dati a bassa frequenza, cioè dei primi sei punti con valori tutti uguali di $V_{out}$, ciò corrisponde a eseguire la semplice divisione $\frac{V_{out}}{V_{in}}$ con propagazione dell'errore, che fornisce $A_1 = 754 \pm 12$.
+In realtà ai fini della misura del solo guadagno massimo è più efficace eseguire un fit alla sola retta sui dati a bassa frequenza, cioè dei primi sei punti con valori tutti uguali di $V_{out}$, ciò corrisponde a eseguire la semplice divisione $\frac{V_{out}}{V_{in}}$ con propagazione dell'errore, che fornisce $A_1 = 754 \pm 12$. %TODO hai effetivamente usato queto valore per i calcoli successivi? dovresti specificare meglio
 
 \subsection{Filtro passa-banda e postamplificatore}
 Si sono realizzati il filtro passa-banda e il postamplificatore come mostrato nelle figure \ref{banda} e \ref{postamp} rispettivamente.
@@ -148,9 +148,7 @@ E' stato eseguito un fit (figura \ref{bandaFit}) a tre parametri della funzione 
 \end{array} \right)$. Con un $\chi^2/ndof = 136/22$.\\
 Nuovamente il $\chi^2$ elevato è dovuto al fatto che ad alte frequenze l'andamento è apprezzabilmente diverso da quello \emph{fittato}.
 
-%TODO Notare che non riporto mai le unità di misura per la matrice di covarianza per non appesantire la notazione. Sono quelle ovvie
 
-%TODO Non sono in ordine ma non importa a nessuno. Le ordino io in freq.
 %TODO %TODO %TODO %TODO  %TODO  %TODO  %TODO 
 %TODO Nel fit si potrebbe considerare l'erore sulle resistenze!!
 %TODO %TODO %TODO %TODO  %TODO  %TODO  %TODO 
@@ -228,13 +226,13 @@ Inviando un segnale sinusoidale di ampiezza $V_{in} = 174 \pm 4$mV ci aspettiamo
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=1.0]{vrms.jpg}
-\caption{Verifica del funzionamento del circuito RMS.\label{rms}}
+\includegraphics[scale=0.7]{vrms.jpg}
+\caption{Verifica del funzionamento del circuito RMS: segnale in ingresso sinusoidale e rispettivo valore RMS.\label{rms}}
 \end{figure}
 
 \section{Misura della costante di Boltzmann}
 
-Il rumore ($V_{rms})$ totale è determinato dalla somma in quadratura dei rumori associati alla resistenza e quelli dovuti all'amplificatore, parametrizzati come rumori in serie e in parallelo all'amplificatore. Dalla teoria ci aspettiamo dunque 
+Il rumore ($V_{rms})$ totale è determinato dalla somma in quadratura dei rumori associati alla resistenza e quelli dovuti all'amplificatore, modellizzati come rumori in serie e in parallelo all'amplificatore. Dalla teoria ci aspettiamo dunque 
 \begin{equation}
 V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}+ \left \frac{R}{R_n} \right ^2}
 \end{equation}
@@ -251,7 +249,6 @@ Le misure sono state eseguite misurando la tensione in uscita dal convertitore R
 
 In tabella \ref{bodeEstesi} e in figura \ref{boltzmannEsteso} sono riportati i valori di $V_{rms}$ per un range di resistenze che va da $1.78\mbox{k}\Omega$ a $216\mbox{k}\Omega$. Per resistenze di valore superiore i dati sono risultati essere totalmente inaffidabili: in particolare non si osservava più una dipendenza apprezzabile di $V_{rms}$ dal valore della resistenza.
 
-%TODO Dire perch erano totalmente affidabili. Sopra i 100 ballano un sacco ma per resistenze veramente alte ho saturazione a un valore costante. Che cippa succede nel mezzo? Come è l'andamento di raccordo? non lo sappiamo
 
 \begin{table}[!htb]\centering
 \begin{tabular}{|c|c|c|c|}
@@ -278,13 +275,12 @@ $R (\mbox{k}\Omega)$ & $\Delta R (\mbox{k}\Omega)$ & $V_{rms} (mV)$ & $\Delta V_
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.7]{boltzmannEsteso.png}
+\includegraphics[scale=0.8]{boltzmannEsteso.png}
 \caption{Plot di tutti i dati misurati $V_{rms}$ vs $R$.\label{boltzmannEsteso}}
 \end{figure}
 
-Si è eseguito inizialmente un fit a tre parametri della funzione $V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}+(\frac{R}{R_n})^2}$. Il parametro $R_n$ risultava tuttavia essere dell'ordine delle decine di $\mbox{M}\Omega$ dunque l'ultimo termine si può considerare ininfluente. In effetti $R_n$ restituito dall'algoritmo di fit fluttuava anche di un ordine di grandezza al variare del valore iniziale dal quale si esegue la minimizzazione del $\chi^2$. Per questi motivi il fit è stato ripetuto a due parametri: $V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}}$.
+Si è eseguito inizialmente un fit a tre parametri della funzione $V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}+(\frac{R}{R_n})^2}$. Il parametro $R_n$ risultava tuttavia essere dell'ordine delle decine di $\mbox{M}\Omega$ dunque l'ultimo termine si può considerare ininfluente. In effetti $R_n$ restituito dall'algoritmo di fit fluttuava anche di un ordine di grandezza al variare del valore iniziale dal quale si esegue la minimizzazione del $\chi^2$. Per questi motivi il fit è stato ripetuto a due parametri secondo il modello: $V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}}$.
 \\
-%TODO non capisco qua perchè non hai messo i risultati del fit!
 Nel successivo fit sono stati escluse le righe marcate con l'asterisco nella tabella \ref{bodeEstesi} poiché affetti da fluttuazioni troppo grandi come si può vedere dagli errori\footnote{Alla procedura di fit sono stati forniti solo gli errori sulle tensioni e non quelli sulle resistenze in quanto trascurabili nella regione di dati usata.}.
 
 %Ho scritto come si propagano gli errori... In quadratura. 
@@ -293,20 +289,19 @@ I parametri riportati dal fit sono $V_0 = 80 \pm 3$mV e $R_t = 23 \pm 3 \mbox{k}
 11.8 & 13.9\\
 \end{array} \right)$. Con un $\chi^2/ndof = 2.76/5$ (basso per probabile sovrastima delle incertezze).\\
 Invertendo la formula per $R_t$ otteniamo: $k_B = \frac{V_0^2}{4 R_t T A_0^2 \Delta f}=(1.16 \pm 0.11) \cdot 10^{-23} \frac{J}{K}$. La temperatura è stata stimata (arbitrariamente) come $T = 298 \pm 2$K. Gli errori più significativi che si propagano (in quadratura, considerando la covarianza) in questa formula sono quelli sui parametri del fit della curva di rumore.
-%TODO dire che abbiamo preso come tempertura 28 gradi (mi pare) e mettiamoci un più o meno 3  gradi di incertezza direi... diciamo stima arbitraria?
 %A rigore la propagazione in qudratura è sbagliata per la temp. ma per gli altri è giusta.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.7]{boltzmann.png}
+\includegraphics[scale=0.8]{boltzmann.png}
 \caption{Fit $V_{rms}$ vs $R$ con i dati più stabili.\label{boltzmannFit}}
 \end{figure}
 
-Di seguito (figura \ref{boltzEstesi}) è riportato il fi eseguito con tutti i dati nella tabella \ref{bodeEstesi}.
+Di seguito (figura \ref{boltzEstesi}) è riportato il fit eseguito con tutti i dati nella tabella \ref{bodeEstesi}.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.7]{boltzmannEstesoFit.png}
+\includegraphics[scale=0.8]{boltzmannEstesoFit.png}
 \caption{Fit $V_{rms}$ vs $R$ con tutti i dati.\label{boltzEstesi}}
 \end{figure}
 
@@ -315,9 +310,10 @@ I parametri estratti (e non utilizzati) sono $V_0 = 81 \pm 3$mV e $R_t = 24 \pm 
 7.56 & 7.48\\
 \end{array} \right)$. Con $\chi^2/ndof = 13/10$.
 
-%TODO Forse in effetti sarebbe meglio usare questi dati che sembrano avere meno errore, in barba a quello che avevo detto prima.
+%TODO Forse in effetti sarebbe meglio usare questi dati che sembrano avere meno errore, in barba a quello che avevo detto prima.  
+%TODO Manca quanto fa Kb con questi dati, è inutile altrimenti mettere il fit
 
-Il valore atteso della costante di Boltzmann è $k_{B} = 1.38 \cdot 10^{-23} \frac{J}{K}$, che non è compatibile entro l'errore con il valore trovato. Ci aspettiamo in effetti una sottostima della costante a causa del fatto che il guadagno sulla banda passante è comunque senza minore o ugual de, guadagno massimo. Pertanto $A_0$ è in effetti una sovrastima del guadagno totale e pertanto porta a una sottostima di $k_B$.
+Il valore atteso della costante di Boltzmann è $k_{B} = 1.38 \cdot 10^{-23} \frac{J}{K}$, che non è compatibile entro l'errore con il valore trovato. Ci aspettiamo in effetti una sottostima della costante a causa del fatto che il guadagno sulla banda passante è comunque sempre minore o uguale del guadagno massimo. Pertanto $A_0$ è in effetti una sovrastima del guadagno totale e pertanto porta a una sottostima di $k_B$.
 
 \end{document}
 
