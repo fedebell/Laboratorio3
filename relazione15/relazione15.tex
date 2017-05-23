@@ -116,7 +116,7 @@ Per frequenze basse si vede in figura \ref{integratoreBasso} che il circuito agi
 \caption{Onde sfasate di $\frac{\pi}{2}$ rad in ingresso e uscita al preamplificatore.\label{integratoreAlto}}
 \end{figure}
 
-Si vede che alle alte frequenze l'attenuazione per decade è maggiore di quella attesa di $20\frac{dB}{decade}$. Questo è compatibile con la presenza di ulteriori poli che diventano importanti ad alta frequenza all'interno dell'OpAmp. Il prodotto $GWB$ dell'opAmp è $GBW = 4 Mhz$ dunque con un guadagno di circa 50 ci aspettiamo che la finitezza di $GBW$ inizi a diventare rilevante a frequenze di circa $80 kHz$, come in effetti accade. La deviazione dalla legge attesa (che rappresenta un andamento non solamente un errore sperimentale) è la causa del $\chi^2$ fuori misura.
+Si vede che alle alte frequenze l'attenuazione per decade è maggiore di quella attesa di $20\frac{dB}{decade}$. Questo è compatibile con la presenza di ulteriori poli che diventano importanti ad alta frequenza all'interno dell'OpAmp. Il prodotto $GWB$ dell'opAmp è $GBW = 4 \mbox{MHz}$ dunque con un guadagno di circa 50 ci aspettiamo che la finitezza di $GBW$ inizi a diventare rilevante a frequenze di circa $80 \mbox{kHz}$, come in effetti accade. La deviazione dalla legge attesa (che rappresenta un andamento non solamente un errore sperimentale) è la causa del $\chi^2$ fuori misura.
 
 In realtà ai fini della misura del solo guadagno massimo è più efficace eseguire un fit alla sola retta sui dati a bassa frequenza, cioè dei primi sei punti con valori tutti uguali di $V_{out}$, ciò corrisponde a eseguire la semplice divisione $\frac{V_{out}}{V_{in}}$ con propagazione dell'errore, che fornisce $A_1 = 754 \pm 12$. Questo è il valore usato nei calcoli successivi.
 
@@ -308,7 +308,7 @@ Di seguito (figura \ref{boltzEstesi}) è riportato il fit eseguito con tutti i d
 I parametri estratti sono $V_0 = 81 \pm 3$mV e $R_t = 24 \pm 3 \mbox{k}\Omega$. La matrice di covarianza è:  $\Sigma_{ij} = \left( \begin{array}{cc}
 8.80 & 7.76\\ 
 7.56 & 7.48\\
-\end{array} \right)$. Con $\chi^2/ndof = 13/10$. La costante di Boltzmann con questi dati risulta essere $k_B = (1.15 \pm 0.11) \cdot 10^{-23} \frac{J}{K}$. Duqnue non significativamente diverso dal valore prima ottenuto, nonostante l'accortezza non inserire i dati più affetti da fluttuazioni nel fit precedente.
+\end{array} \right)$. Con $\chi^2/ndof = 13/10$. La costante di Boltzmann con questi dati risulta essere $k_B = (1.15 \pm 0.11) \cdot 10^{-23} \frac{J}{K}$. Dunque non significativamente diverso dal valore prima ottenuto, nonostante l'accortezza di non inserire i dati più affetti da fluttuazioni nel fit precedente.
 
 %TODO Forse in effetti sarebbe meglio usare questi dati che sembrano avere meno errore, in barba a quello che avevo detto prima.  
 %TODO Manca quanto fa Kb con questi dati, è inutile altrimenti mettere il fit
