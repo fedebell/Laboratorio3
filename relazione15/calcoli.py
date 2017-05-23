@@ -11,7 +11,7 @@ import uncertainties
 from uncertainties import unumpy
 
 A1 = ufloat(754.929577, 12.0331)
-A2 = ufloat(234.61388927953405, 1.2427815)
+A2 = ufloat(215, 15)
 df = ufloat(0.63809213546403709, 0.006032255878)*1000
 cov_matrix = [[ 12.37042596,  12.33819617],
        [ 12.33819617,  14.4071076 ]]

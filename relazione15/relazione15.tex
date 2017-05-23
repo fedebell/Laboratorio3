@@ -116,9 +116,9 @@ Per frequenze basse si vede in figura \ref{integratoreBasso} che il circuito agi
 \caption{Onde sfasate di $\frac{\pi}{2}$ rad in ingresso e uscita al preamplificatore.\label{integratoreAlto}}
 \end{figure}
 
-Si vede che alle alte frequenze l'attenuazione per decade è maggiore di quella attesa di $20\frac{dB}{decade}$. Questo è compatibile con la presenza di ulteriori poli che diventano importanti ad alta frequenza all'interno dell'OpAmp. La deviazione dalla legge attesa (che rappresenta un andamento non solamente un errore sperimentale) è la causa del $\chi^2$ fuori misura.
+Si vede che alle alte frequenze l'attenuazione per decade è maggiore di quella attesa di $20\frac{dB}{decade}$. Questo è compatibile con la presenza di ulteriori poli che diventano importanti ad alta frequenza all'interno dell'OpAmp. Il prodotto $GWB$ dell'opAmp è $GBW = 4 Mhz$ dunque con un guadagno di circa 50 ci aspettiamo che la finitezza di $GBW$ inizi a diventare rilevante a frequenze di circa $80 kHz$, come in effetti accade. La deviazione dalla legge attesa (che rappresenta un andamento non solamente un errore sperimentale) è la causa del $\chi^2$ fuori misura.
 
-In realtà ai fini della misura del solo guadagno massimo è più efficace eseguire un fit alla sola retta sui dati a bassa frequenza, cioè dei primi sei punti con valori tutti uguali di $V_{out}$, ciò corrisponde a eseguire la semplice divisione $\frac{V_{out}}{V_{in}}$ con propagazione dell'errore, che fornisce $A_1 = 754 \pm 12$. %TODO hai effetivamente usato queto valore per i calcoli successivi? dovresti specificare meglio
+In realtà ai fini della misura del solo guadagno massimo è più efficace eseguire un fit alla sola retta sui dati a bassa frequenza, cioè dei primi sei punti con valori tutti uguali di $V_{out}$, ciò corrisponde a eseguire la semplice divisione $\frac{V_{out}}{V_{in}}$ con propagazione dell'errore, che fornisce $A_1 = 754 \pm 12$. Questo è il valore usato nei calcoli successivi.
 
 \subsection{Filtro passa-banda e postamplificatore}
 Si sono realizzati il filtro passa-banda e il postamplificatore come mostrato nelle figure \ref{banda} e \ref{postamp} rispettivamente.
@@ -234,7 +234,7 @@ Inviando un segnale sinusoidale di ampiezza $V_{in} = 174 \pm 4$mV ci aspettiamo
 
 Il rumore ($V_{rms})$ totale è determinato dalla somma in quadratura dei rumori associati alla resistenza e quelli dovuti all'amplificatore, modellizzati come rumori in serie e in parallelo all'amplificatore. Dalla teoria ci aspettiamo dunque 
 \begin{equation}
-V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}+ \left \frac{R}{R_n} \right ^2}
+V_{rms} = V_0 \sqrt{1+\frac{R}{R_t}+ \left( \frac{R}{R_n} \right) ^2}
 \end{equation}
 dove:
 \begin{itemize}
@@ -301,19 +301,22 @@ Di seguito (figura \ref{boltzEstesi}) è riportato il fit eseguito con tutti i d
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=0.8]{boltzmannEstesoFit.png}
+\includegraphics[scale=0.7]{boltzmannEstesoFit.png}
 \caption{Fit $V_{rms}$ vs $R$ con tutti i dati.\label{boltzEstesi}}
 \end{figure}
 
-I parametri estratti (e non utilizzati) sono $V_0 = 81 \pm 3$mV e $R_t = 24 \pm 3 \mbox{k}\Omega$. La matrice di covarianza è:  $\Sigma_{ij} = \left( \begin{array}{cc}
+I parametri estratti sono $V_0 = 81 \pm 3$mV e $R_t = 24 \pm 3 \mbox{k}\Omega$. La matrice di covarianza è:  $\Sigma_{ij} = \left( \begin{array}{cc}
 8.80 & 7.76\\ 
 7.56 & 7.48\\
-\end{array} \right)$. Con $\chi^2/ndof = 13/10$.
+\end{array} \right)$. Con $\chi^2/ndof = 13/10$. La costante di Boltzmann con questi dati risulta essere $k_B = (1.15 \pm 0.11) \cdot 10^{-23} \frac{J}{K}$. Duqnue non significativamente diverso dal valore prima ottenuto, nonostante l'accortezza non inserire i dati più affetti da fluttuazioni nel fit precedente.
 
 %TODO Forse in effetti sarebbe meglio usare questi dati che sembrano avere meno errore, in barba a quello che avevo detto prima.  
 %TODO Manca quanto fa Kb con questi dati, è inutile altrimenti mettere il fit
 
-Il valore atteso della costante di Boltzmann è $k_{B} = 1.38 \cdot 10^{-23} \frac{J}{K}$, che non è compatibile entro l'errore con il valore trovato. Ci aspettiamo in effetti una sottostima della costante a causa del fatto che il guadagno sulla banda passante è comunque sempre minore o uguale del guadagno massimo. Pertanto $A_0$ è in effetti una sovrastima del guadagno totale e pertanto porta a una sottostima di $k_B$.
+Il valore atteso della costante di Boltzmann è $k_{B} = 1.38 \cdot 10^{-23} \frac{J}{K}$, che non è compatibile entro l'errore con il valore trovato. Ci aspettiamo in effetti una sottostima della costante perch guadagno sulla banda passante è comunque sempre minore o uguale del guadagno massimo. Pertanto $A_0$ è in effetti una sovrastima del guadagno totale e pertanto porta a una sottostima di $k_B$. 
+Se si prende come $A_2$ la media tra il guadagno massimo e quello agli estremi della banda passante, assegnandogli come incertezza la semidispersione (arbitrariamente) si ottiene $A_2 = 215 \pm 15$ e $A_0 =1.62 \pm 0.12 \cdot 10^{5}$. Si può eseguire questo calcolo ricordando che il guadagno agli estremi della banda è $A_2^{max} - 3 dB$. Sostituendo nella formula $k_B = \frac{V_0^2}{4 R_t T A_0^2 \Delta f}=(1.4 \pm 0.2) \cdot 10^{-23} \frac{J}{K}$. Il valore ottenuto contiene il valore vero citato sopra entro l'incertezza.
+Il metodo descritto per stimare $A_2$ è molto grossolano, tuttavia risponde al problema reale che l'amplificazione non sarà quella massima in tutta la banda passante, il risultato ottenuto è pertanto da considerasi attendibile. Inoltre mette in luce come $k_B$ misurata sia fortemente sensibile all'amplificazione su tutta la banda passante. 
+%TODO é quasi una mia credenza che sia attendibile ma ok.
 
 \end{document}
 
