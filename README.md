@@ -22,7 +22,7 @@ Il ciclo tipico di utilizzo è:
 
 Per eseguire questi passaggi, si può usare un programma a interfaccia grafica (**consigliato**) oppure direttamente `git` da terminale.
 
-I programmi GUI che consiglio (li ho provati sul Mac, ci sono anche per Windows):
+I programmi GUI che consiglio:
 
 * [GitHub desktop](https://desktop.github.com) il programma ufficiale di GitHub. Molto semplice da usare.
 * [SourceTree](https://www.sourcetreeapp.com) comunque semplice da usare ma con più funzionalità. Anche lui supporta direttamente gli account GitHub.
